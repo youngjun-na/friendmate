@@ -13,8 +13,7 @@ class BirthdaySelector extends React.Component {
     this.years = [];
     this.currDate = new Date();
     let y = this.currDate.getFullYear();
-    let z = y-114;
-    while (y >= z) {
+    while (y >= 1905) {
       this.years.push(y--)
     }
     this.state = {
@@ -22,12 +21,15 @@ class BirthdaySelector extends React.Component {
       month: this.currDate.getMonth(),
       day: this.currDate.getDate(),
     }
+    this.update = this.update.bind(this);
   }
   update(type) {
     return e => {
       let value = event.target.value;
-      if (type === "month") value = this.months.indexOf(e.target.value)
+      if (type === "month") value = this.months.indexOf(e.target.value) 
       this.setState({ [type]: value });
+      debugger;
+      this.props.handleBirthday(this.state.year, this.state.month, this.state.day);
     };
   }
   render() {

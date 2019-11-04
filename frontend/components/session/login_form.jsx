@@ -26,24 +26,17 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-cont">
-        <form className="login-form">
-          <h3>Log Into Facebook</h3>
-          <ul>
-            {this.props.errors.map((error) => (
-              <li>{error}</li>
-            )
-            )}
-          </ul>
-          <label>
-            <input className="form-input" type="text" value={this.state.email} onChange={this.handleInput("email")} placeholder="Email"/>
-          </label>
-          <br />
-          <label>
-            <input className="form-input" type="password" value={this.state.password} onChange={this.handleInput("password")} placeholder="Password"/>
-          </label>
-          <br />
-          <button className="form-button" onClick={this.handleSubmit}>Log In</button>
+      <div className="li-c">
+        <form className="li-f">
+          <div>
+            <div className="li-l">Email</div>
+            <input className="li-fi" type="text" value={this.state.email} onChange={this.handleInput("email")}/>
+          </div>
+          <div>
+            <div className="li-l">Password</div>
+            <input className="li-fi" type="password" value={this.state.password} onChange={this.handleInput("password")}/>  
+          </div>
+          <button className="li-b" onClick={this.handleSubmit}>Log In</button>
         </form>
       </div>
 

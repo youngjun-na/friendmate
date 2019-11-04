@@ -14,25 +14,22 @@ class GenderSelector extends React.Component {
     let customDiv = document.querySelector(".su-g-cd")
     if (e.currentTarget.value === "Custom") {
       customDiv.classList.remove("su-g-h");
-      this.setState({
-        gender: ""
-      });
+      this.props.handleGender("")
     }
     else {
       customDiv.classList.add("su-g-h");
-      this.setState({
-        gender: e.currentTarget.value
-      });
+      this.props.handleGender(e.currentTarget.value)
     }
   }
 
   handleInput(e) {
-    this.setState({
-      gender: e.currentTarget.value
-    })
+    this.props.handleGender(e.currentTarget.value)
+    // this.setState({
+    //   gender: e.currentTarget.value
+    // })
   }
   render() {
-    // if (!this.state.gender) return null;
+    let gender = this.props.gender;
     return (
       <div>
         <div className="su-l" > Gender</div>
@@ -55,7 +52,7 @@ class GenderSelector extends React.Component {
             <option>They: "Wish them a happy birthday!</option>
           </select>
           <div className="su-sl">Your pronoun is visible to everyone.</div>
-          <input type="text" className="fi" value={this.state.gender} placeholder="Gender (optional)" onChange={this.handleInput}/>
+          <input type="text" className="fi" value={gender} placeholder="Gender (optional)" onChange={this.handleInput}/>
         </div>
       </div>
     );

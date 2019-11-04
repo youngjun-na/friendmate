@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LoginFormContainer from '../session/login_form_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -12,9 +13,10 @@ class Greeting extends React.Component {
   }
 
   render() {
+    
     const greeting = this.props.user ? (
       <div>
-        <h4>Welcome, {this.props.user.username}!</h4>
+        <h4>Welcome, {this.props.user.first_name}!</h4>
         <button onClick={this.handleClick}>Log Out</button>
       </div>
     ) : (
@@ -25,7 +27,8 @@ class Greeting extends React.Component {
     return (
       <div className="nav-bar-cont">
         <h1 className="nav-bar-h1 noselect">facebook</h1>
-        greeting
+        <LoginFormContainer />
+        {/* {greeting} */}
       </div>
     )
   }
