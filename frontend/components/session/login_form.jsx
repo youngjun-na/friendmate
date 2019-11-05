@@ -8,7 +8,7 @@ class SessionForm extends React.Component {
       email: "",
       password: "",
     }
-    this.errors = this.props.errors;
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleInput(type) {
@@ -16,17 +16,20 @@ class SessionForm extends React.Component {
       this.setState({ [type]: e.target.value });
     }
   }
-
+  componentDidUpdate() {
+    this.handleErrors();
+  }
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.errors = [];
     this.props.login(user)
-      .then(() => this.props.history.push('/feed'));
+      .then(() => this.props.history.push('/feed'),
+            ()=> this.handleErrors());
+          }
+  handleErrors() {
     const errorDiv = document.querySelector(".li-err");
-    this.errors ? errorDiv.classList.remove("invis") : errorDiv.classList.add("invis");
-  }
-
+    this.props.errors.join("").includes("Login") ? errorDiv.classList.remove("invis") : errorDiv.classList.add("invis");
+  }      
   render() {
    
     return (

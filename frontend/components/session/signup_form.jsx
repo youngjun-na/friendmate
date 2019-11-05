@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGender = this.handleGender.bind(this);
     this.handleBirthday = this.handleBirthday.bind(this);
-    this.errors = this.props.errors;
+    // this.errors = this.props.errors;
   }
 
   handleInput(type) {
@@ -43,14 +43,13 @@ class SessionForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    this.errors = [];
     const user = Object.assign({}, this.state);
     this.props.signup(user)
       .then(() => this.props.history.push('/feed'),
       ()=>this.handleErrors());
   }
   handleErrors() {
-    let err = this.errors.join("")
+    let err = this.props.errors.join("")
     this.checkError("First",".fi-fn", err);
     this.checkError("Last",".fi-ln", err);
     this.checkError("Email", ".fi-e", err)
@@ -71,11 +70,13 @@ class SessionForm extends React.Component {
   }
 
   handleFocus() {
-    return e => {
-      if (e.currentTarget.classList.contains("red-bord")) {
-        document.querySelector(type).classList.remove("invis")
-      }
-    }
+    console.log("Hello!")
+    // COME BACK TO FIX THIS //
+    // return e => {
+    //   if (e.currentTarget.classList.contains("red-bord")) {
+    //     document.querySelector(type).classList.remove("invis")
+    //   }
+    // }
   }
   render() {
     return (

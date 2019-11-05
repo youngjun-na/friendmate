@@ -12,7 +12,7 @@ const App = () => (
     </header>
     <ProtectedRoute path="/feed" component={FeedContainer}/>
     <Route path="/login" component={LoginFormContainer} />
-    <Route exact path="/" component={SignupFormContainer} />
+    <AuthRoute exact path="/" component={SignupFormContainer} />
   </div>
 );
 

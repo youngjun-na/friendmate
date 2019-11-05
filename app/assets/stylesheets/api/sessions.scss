@@ -17,7 +17,7 @@
   color: white;
   font-size: 38px;
   padding: 10px;
-  margin: 17px 0 0 200px;
+  margin: 17px 0 0 150px;
   font-weight: bold;
   letter-spacing: -1px;
   cursor: pointer;
@@ -81,7 +81,9 @@
   width: 55px;
 }
 .li-c{
-  margin-right: 200px;
+  margin-left: 50px;
+  width: 600px;
+  justify-content: flex-end;
 }
 .li-err{
   
@@ -91,6 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .li-err-d{
   background-color: #BE4B49;

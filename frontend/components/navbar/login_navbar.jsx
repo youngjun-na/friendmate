@@ -16,7 +16,6 @@ class Greeting extends React.Component {
     return (
       <div className="lnb-c">
         <a className="link-clear" href='/'><h1 className="lnb-h1 noselect">facebook</h1></a>
-        <div></div>
         <LoginFormContainer />
       </div>
     )
