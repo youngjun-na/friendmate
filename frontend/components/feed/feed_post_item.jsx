@@ -1,16 +1,18 @@
 import React from 'react';
 
 export default class FeedPostItem extends React.Component {
-  constructor(props) {
+  constructor({props}) {
     super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
   handleDelete(e) {
     e.preventDefault();
-    this.props.deletePost(post)
+    this.props.deletePost(this.props.post);
   }
   handleEdit(e) {
     e.preventDefault();
-    this.props.editPost(post)
+    this.props.editPost(this.props.post);
   }
 
   render() {
@@ -24,8 +26,16 @@ export default class FeedPostItem extends React.Component {
             {post.updated_at}
           </div>
         </div>
-        <div>
+        <div className="pi-b">
           {post.body}
+        </div>
+        <div className="pi-lc">
+          <span>Like</span>
+          <span>Comment</span>
+        </div>
+        <div>
+          <div className="c-c">
+          </div>
         </div>
       </div>
     )

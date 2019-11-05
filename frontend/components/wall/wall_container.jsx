@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import  Feed from './feed';
+import Feed from './feed';
 import { fetchFeedPosts, updatePost, deletePost } from '../../actions/post_actions';
-const mapStateToProps = (state={}) => ({
-  posts: Object.values(state.entities.posts),
-  currentUserId: state.session.id,
+const mapStateToProps = (state = {}, ownProps) => ({
+  posts: Object.values(state.entities.posts).reverse(),
+  userId: ownProps,
 });
 
 const mapDispatchToProps = dispatch => ({

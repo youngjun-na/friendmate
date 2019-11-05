@@ -24,7 +24,6 @@ class BirthdaySelector extends React.Component {
     this.update = this.update.bind(this);
   }
   update(type) {
-    // let that = this;
     return e => {
       let value = parseInt(event.target.value);
       if (type === "month") value = this.months.indexOf(e.target.value);

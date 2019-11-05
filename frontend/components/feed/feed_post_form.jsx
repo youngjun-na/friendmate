@@ -20,8 +20,9 @@ class FeedPostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
-    this.props.createPost(this.state);
+    this.props.createPost(this.state)
+      .then(() => this.props.fetchFeedPosts(this.props.currentUserId))
+      .then(()=> this.setState({body: ""}));
   }
 
   render() {
@@ -30,7 +31,7 @@ class FeedPostForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div>Create Post</div>
           <div>
-            <textarea placeholder="What's on your mind?" onChange={this.handleInput} />
+            <textarea placeholder="What's on your mind?" onChange={this.handleInput} value={this.state.body}/>
           </div>
           <button>Post</button>
         </form>
