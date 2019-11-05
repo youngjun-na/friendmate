@@ -13,11 +13,11 @@ class GenderSelector extends React.Component {
   handleClick(e) {
     let customDiv = document.querySelector(".su-g-cd")
     if (e.currentTarget.value === "Custom") {
-      customDiv.classList.remove("su-g-h");
+      customDiv.classList.remove("nodisp");
       this.props.handleGender("")
     }
     else {
-      customDiv.classList.add("su-g-h");
+      customDiv.classList.add("nodisp");
       this.props.handleGender(e.currentTarget.value)
     }
   }
@@ -28,23 +28,27 @@ class GenderSelector extends React.Component {
     //   gender: e.currentTarget.value
     // })
   }
+
+  handleFocus(e) {
+    console.log("WOW");
+  }
   render() {
     let gender = this.props.gender;
     return (
       <div>
         <div className="su-l" > Gender</div>
-        <div className="su-g">
-          <div className="su-g-r">
+        <div className="su-g" onFocus={this.handleFocus}>
+          <div className="su-g-r-f" >
             <input type="radio" name="gender" value="Female" onChange={this.handleClick}/><span>Female</span>
           </div>
-          <div className="su-g-r" >
+          <div className="su-g-r-m" >
             <input type="radio" name="gender" value="Male" onChange={this.handleClick}/><span>Male</span>
           </div>
-          <div className="su-g-r" >
+          <div className="su-g-r-c" >
             <input type="radio" name="gender" value="Custom" onChange={this.handleClick}/><span>Custom</span>
           </div>
         </div>
-        <div className="su-g-cd su-g-h">
+        <div className="su-g-cd nodisp">
           <select className="gs-s">
             <option disabled>Select your pronoun</option>
             <option>She: "Wish her a happy birthday!"</option>

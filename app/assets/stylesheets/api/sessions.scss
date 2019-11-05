@@ -4,25 +4,36 @@
 .noselect {
   user-select: none;
 }
-.nav-bar-cont {
+.lnb-c {
   display: flex;
   height: 82px;
   min-width: 980px;
   background-color: #3b5998;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.nav-bar-h1 {
+.lnb-h1 {
   color: white;
   font-size: 38px;
   padding: 10px;
-  margin: 17px 0 0 460px;
+  margin: 17px 0 0 200px;
   font-weight: bold;
   letter-spacing: -1px;
   cursor: pointer;
 }
 
+.nb-c {
+  display: flex;
+  height: 42px;
+  min-width: 980px;
+  background-color: #3b5998;
+  justify-content: space-around;
+  align-items: center;
+}
+.link-clear {
+  text-decoration: none;
+}
 .signup-cont {
   background-color: #eaebef;
   padding : 20px;
@@ -67,9 +78,28 @@
   font-weight: 500;
   height: 24px;
   margin: 11px 0 0 5px;
+  width: 55px;
 }
 .li-c{
-  margin-right: 460px;
+  margin-right: 200px;
+}
+.li-err{
+  
+  height: 30px;
+  width: 150px;
+  margin: 12px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.li-err-d{
+  background-color: #BE4B49;
+  box-shadow:0 0 0 1px rgba(139, 3, 0, .75), 0 1px 10px rgba(0, 0, 0, .35);
+  font-size: 12px;
+  color: white;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px;
 }
 .li-f {
   display: flex;
@@ -79,12 +109,16 @@
   margin: 5px;
   border: 1px black solid;
   height: 20px;
-  width: 140px;
+  width: 150px;
 }
 .li-l {
   margin-left: 5px;
   font-size: 12px;
   color: white;
+}
+.lo {
+  margin: 0;
+  width: 65px;
 }
 .signup-cont {
   display: flex;
@@ -114,11 +148,19 @@
 .su-g-cd {
  margin-bottom: 15px;
 }
-.su-g-h {
+.nodisp {
   display: none !important;
 }
-.su-g-r {
+.invis {
+  visibility: hidden;
+}
+.red-bord {
+  border: 1px solid red !important;
+}
+.su-g-r-m, .su-g-r-f, .su-g-r-c {
   margin-right: 15px;
+  border-radius: 5px;
+  padding: 5px;
 }
 .su-g-r>input {
   margin-right: 5px;
@@ -154,7 +196,14 @@
   margin: 5px 0 5px 0;
   color: #606770;
 }
-
+.triangle {
+  width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 10px solid #BE4B49;
+  border-bottom: 5px solid transparent;
+ 
+}
 .fb-gb {
   background: linear-gradient(#67ae55, #578843);
   background-color: #69a74e;

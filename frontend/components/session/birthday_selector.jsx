@@ -24,12 +24,11 @@ class BirthdaySelector extends React.Component {
     this.update = this.update.bind(this);
   }
   update(type) {
+    // let that = this;
     return e => {
-      let value = event.target.value;
-      if (type === "month") value = this.months.indexOf(e.target.value) 
-      this.setState({ [type]: value });
-      debugger;
-      this.props.handleBirthday(this.state.year, this.state.month, this.state.day);
+      let value = parseInt(event.target.value);
+      if (type === "month") value = this.months.indexOf(e.target.value);
+      this.setState({ [type]: value }, () => this.props.handleBirthday(this.state.year, this.state.month, this.state.day));  
     };
   }
   render() {

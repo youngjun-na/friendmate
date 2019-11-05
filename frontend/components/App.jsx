@@ -2,15 +2,17 @@ import React from 'react';
 import NavbarContainer from './navbar/navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import FeedContainer from './fb/feed_container';
 import { Route } from 'react-router-dom';
-
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      < NavbarContainer />
+      <ProtectedRoute path='/' component={NavbarContainer} />
     </header>
+    <ProtectedRoute path="/feed" component={FeedContainer}/>
     <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupFormContainer} />
+    <Route exact path="/" component={SignupFormContainer} />
   </div>
 );
 
