@@ -34,6 +34,11 @@ export const fetchFeedPosts = userId => dispatch => (
     .then(posts => dispatch(receiveAllPosts(posts)))
 );
 
+export const fetchPost = postId => dispatch => (
+  PostAPIUtil.fetchPost(postId)
+    .then(post => dispatch(receivePost(post)))
+);
+
 export const createPost = post => dispatch => {
   return PostAPIUtil.createPost(post)
     .then(post => dispatch(receivePost(post)))

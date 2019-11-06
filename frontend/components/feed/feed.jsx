@@ -1,5 +1,5 @@
 import React from 'react';
-import FeedPostFormContainer from './feed_post_form_container';
+import PostEditFormContainer from './post_edit_form_container';
 import FeedIndex from './feed_index';
 export default class Feed extends React.Component {
   constructor(props) {
@@ -12,20 +12,25 @@ export default class Feed extends React.Component {
   render() {
     return(
       <div className="f-c">
-        <div>
-          <FeedPostFormContainer 
+        {/* <div>
+          <PostEditFormContainer 
           createPost={this.props.createPost} 
           currentUserId={this.props.currentUserId}
           fetchFeedPosts={this.props.fetchFeedPosts}/>
-        </div>
+        </div> */}
+      
         <div></div>
         <div className="f-st">
-          <div>
-            <div className="f-pfp-h">
+          <div className="f-php-c">
+            <div className="f-php-h">
               <div className="f-php-h-t">Create Post</div>
             </div>
-            <div className="f-pfp-b">
-
+            <div className="f-php-b">
+              <div className="f-php-t" onClick={() => this.props.openModal("post")}>
+                <div className="f-php-tx noselect">
+                  What's on your mind, {this.props.currentUser.firstName}?
+                </div>
+              </div>
             </div>
           </div>
          

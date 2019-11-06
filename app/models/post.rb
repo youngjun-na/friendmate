@@ -9,8 +9,8 @@ class Post < ApplicationRecord
     foreign_key: :host_id,
     class_name: :User 
   
-  def self.all_wall_posts(host_id)
-    Post.where("host_id = ?", host_id) #.order("updated_at asc")
+  def self.all_wall_posts(user_id)
+    Post.where("host_id = ?", user_id) #.order("updated_at asc")
   end
 
   def self.all_related_posts(user_id)

@@ -1,5 +1,7 @@
 import React from 'react';
 import timeUtil from '../../util/time_util';
+import grayOptions from '../../../app/assets/images/gray_options.png';
+import blackOptions from '../../../app/assets/images/black_options.png';
 
 export default class FeedPostItem extends React.Component {
   constructor({props}) {
@@ -13,7 +15,7 @@ export default class FeedPostItem extends React.Component {
   }
   handleEdit(e) {
     e.preventDefault();
-    this.props.editPost(this.props.post);
+    this.props.openModal("editPost", this.props.post.id);
   }
 
   render() {
@@ -21,13 +23,21 @@ export default class FeedPostItem extends React.Component {
     return(
       <div className="pi-c">
         <div>
+          <div className="g-o-b">
+            {/* <Image
+              style={{ width: 40, height: 40 }}
+              source={yourImage}
+              tintColor='red'
+            />src={grayOptions}/> */}
+            {/* <img src={grayOptions}/> */}
+          </div>
           <button onClick={this.handleDelete}>Delete Post</button>
           <button onClick={this.handleEdit}>Edit Post</button>
           <div>
-            {this.props.allUsers[post.author_id].first_name} {this.props.allUsers[post.author_id].last_name}
+            {this.props.allUsers[this.props.post.authorId].firstName} {this.props.allUsers[post.authorId].lastName}
           </div>
           <div>
-            {timeUtil(post.created_at)}
+            {timeUtil(post.createdAt)}
           </div>
         </div>
         <div className="pi-b">

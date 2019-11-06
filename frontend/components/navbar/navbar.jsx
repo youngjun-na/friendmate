@@ -7,7 +7,8 @@ export default class Feed extends React.Component {
   }
   handleClick(e) {
     e.preventDefault();
-    this.props.logout();
+    this.props.logout()
+      .then(this.props.history.push('/'));
   }
   render() {
     return (
@@ -15,6 +16,7 @@ export default class Feed extends React.Component {
         <div className="nb-s">
           <input type="text"/>
         </div>
+        
         <button className="li-b lo" onClick={this.handleClick}>Log Out</button>
       </div>
     );

@@ -19,3 +19,31 @@
  body {
   font-family: "Lucida Grande";
 }
+
+.modal-b {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(66, 66, 66, 0.7);
+  z-index: 10;
+}
+.modal-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.g-o-b {
+  height: 15px;
+  width: 15px;
+  background: url("");
+}
+.g-o-b:hover {
+  background: url('app/assets/images/black_options.png');
+}

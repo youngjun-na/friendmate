@@ -1,16 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Wall from './wall';
-import { fetchFeedPosts, updatePost, deletePost } from '../../actions/post_actions';
+import { fetchWallPosts, updatePost, deletePost } from '../../actions/post_actions';
+import { fetchAllUsers } from '../../actions/user_actions';
 const mapStateToProps = (state = {}, ownProps) => ({
   posts: Object.values(state.entities.posts).reverse(),
-  userId: ownProps,
+  userId: ownProps.match.params.userId,
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchFeedPosts: userId => dispatch(fetchFeedPosts(userId)),
+  fetchWallPosts: userId => dispatch(fetchWallPosts(userId)),
   updatePost: post => dispatch(updatePost(post)),
   deletePost: post => dispatch(deletePost(post)),
+  fetchAllUsers: () => dispatch(fetchAllUsers()),
 });
 
 

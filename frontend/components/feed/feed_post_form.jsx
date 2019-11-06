@@ -1,12 +1,13 @@
 import React from 'react';
 
+
 class FeedPostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       body: "",
-      host_id: this.props.currentUserId,
-      author_id: this.props.currentUserId,
+      hostId: this.props.currentUserId,
+      authorId: this.props.currentUserId,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -22,21 +23,26 @@ class FeedPostForm extends React.Component {
     e.preventDefault();
     this.props.createPost(this.state)
       .then(() => this.props.fetchFeedPosts(this.props.currentUserId))
-      .then(()=> this.setState({body: ""}));
+      .then(()=> this.props.closeModal(), this.setState({body: ""}))
+            
+      
   }
 
   render() {
     return(
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>Create Post</div>
-          <div>
-            <textarea placeholder="What's on your mind?" onChange={this.handleInput} value={this.state.body}/>
+        <form className="f-php-c" onSubmit={this.handleSubmit}>
+        <div className="f-php-h">
+          <div className="f-php-h-t">Create Post</div>
+        </div>
+        <div className="f-php-b">
+          <div className="f-php-t">
+            <textarea className="f-php-ta" autoFocus placeholder={`What's on your mind, ${this.props.allUsers[this.props.currentUserId].firstName}?`} onChange={this.handleInput} value={this.state.body} />   
           </div>
-          <button>Post</button>
+        </div>
+        <div className="f-php-bot">
+            <button className="but-p">Post</button>
+        </div>
         </form>
-
-      </div>
     )
   }
 }

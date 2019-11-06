@@ -1,10 +1,10 @@
-export const fetchWallPosts = (host_id) => (
-  $.ajax({
+export const fetchWallPosts = (user_id) => {
+  return $.ajax({
     method: 'GET',
     url: '/api/walls',
-    data: { host_id },
+    data: { user_id },
   })
-);
+};
 
 export const fetchFeedPosts = (user_id) => (
   $.ajax({
@@ -13,9 +13,15 @@ export const fetchFeedPosts = (user_id) => (
     data: { user_id },
   })
 );
+export const fetchPost = (postId) => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/posts/${postId}`,
+  })
+);
 
 export const updatePost = (post) => (
-  $,ajax({
+  $.ajax({
     method: 'PATCH',
     url: `/api/posts/${post.id}`,
     data: { post },

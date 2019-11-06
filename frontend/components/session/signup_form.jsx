@@ -11,8 +11,8 @@ class SessionForm extends React.Component {
     super(props);
     let currDate = new Date();
     this.state = {
-      first_name: "",
-      last_name: "",
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
       birthday: currDate,
@@ -110,14 +110,14 @@ class SessionForm extends React.Component {
               <input className="fi fi-fn" 
                 type="text" 
                 value={this.state.firstName} 
-                onChange={this.handleInput("first_name")}
-                onFocus={this.handleFocus("first_name")} 
+                onChange={this.handleInput("firstName")}
+                onFocus={this.handleFocus("firstName")} 
                 placeholder="First name" />
               <input className="fi fi-ln" 
                 type="text" 
                 value={this.state.lastName} 
-                onChange={this.handleInput("last_name")}
-                onFocus={this.handleFocus("last_name")}  
+                onChange={this.handleInput("lastName")}
+                onFocus={this.handleFocus("lastName")}  
                 placeholder="Last name" />
             </label>
             <br />

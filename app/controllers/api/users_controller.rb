@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  before_action :underscore_params!
   def create
     @user = User.new(user_params)
     if @user.save
@@ -9,6 +10,7 @@ class Api::UsersController < ApplicationController
     end
   end
 
+
   def index
     @users = User.all 
     render :index
@@ -18,4 +20,25 @@ class Api::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :password, :email, :birthday, :gender)
   end
+
+  def underscore_params!(val = params)
+    underscore_hash = -> (hash) do
+      hash.transform_keys!(&:underscore)
+      hash.each do |key, value|
+      if value.is_a?(ActionController::Parameters)
+        underscore_hash.call(value)
+      elsif value.is_a?(Array)
+        value.each do |item|
+          next unless item.is_a?(ActionController::Parameters)
+            underscore_hash.call(item)
+          end
+        end
+      end
+     end
+    underscore_hash.call(params)
+  end
 end
+
+
+
+
