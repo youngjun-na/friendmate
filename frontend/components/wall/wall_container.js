@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Feed from './feed';
+import Wall from './wall';
 import { fetchFeedPosts, updatePost, deletePost } from '../../actions/post_actions';
 const mapStateToProps = (state = {}, ownProps) => ({
   posts: Object.values(state.entities.posts).reverse(),
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Feed);
+export default connect(mapStateToProps, mapDispatchToProps)(Wall);

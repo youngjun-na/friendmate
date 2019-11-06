@@ -1,4 +1,5 @@
 import React from 'react';
+import timeUtil from '../../util/time_util';
 
 export default class FeedPostItem extends React.Component {
   constructor({props}) {
@@ -23,7 +24,10 @@ export default class FeedPostItem extends React.Component {
           <button onClick={this.handleDelete}>Delete Post</button>
           <button onClick={this.handleEdit}>Edit Post</button>
           <div>
-            {post.updated_at}
+            {this.props.allUsers[post.author_id].first_name} {this.props.allUsers[post.author_id].last_name}
+          </div>
+          <div>
+            {timeUtil(post.created_at)}
           </div>
         </div>
         <div className="pi-b">
