@@ -1388,37 +1388,34 @@ function (_React$Component) {
     _classCallCheck(this, PostDropdown);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PostDropdown).call(this, props));
+    _this.dropdownCont = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     _this.state = {
       showMenu: false
     };
     _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
     _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
     _this.handleDropdown = _this.handleDropdown.bind(_assertThisInitialized(_this));
-    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
+    _this.handleClickOutside = _this.handleClickOutside.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(PostDropdown, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.addEventListener("mousedown", this.handleClickOutside);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      document.removeEventListener("mousedown", this.handleClickOutside);
+    }
+  }, {
     key: "handleDropdown",
     value: function handleDropdown(e) {
-      e.currentTarget.children[1].classList.toggle("show");
-    } // window.onclick = event => {
-    //   if (!event.target.matches('.g-o-b')) {
-    //     let dropdowns = document.getElementsByClassName("post-dd-c");
-    //     var i;
-    //     for (i = 0; i < dropdowns.length; i++) {
-    //       var openDropdown = dropdowns[i];
-    //       if (openDropdown.classList.contains('show')) {
-    //         openDropdown.classList.remove('show');
-    //       }
-    //     }
-    //   }
-    // }
-
-  }, {
-    key: "handleBlur",
-    value: function handleBlur(e) {
-      console.log(e.currentTarget, e.target);
+      // e.currentTarget.children[1].classList.toggle("show");
+      this.setState({
+        showMenu: !this.state.showMenu
+      });
     }
   }, {
     key: "handleDelete",
@@ -1433,15 +1430,24 @@ function (_React$Component) {
       this.props.openModal("editPost", this.props.post.id);
     }
   }, {
+    key: "handleClickOutside",
+    value: function handleClickOutside(e) {
+      if (this.dropdownCont.current && !this.dropdownCont.current.contains(e.target)) {
+        this.setState({
+          showMenu: false
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd",
-        onBlur: this.handleBlur,
-        onClick: this.handleDropdown
+        onClick: this.handleDropdown,
+        ref: this.dropdownCont
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "g-o-b"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), this.state.showMenu && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd-i noselect",

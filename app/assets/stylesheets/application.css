@@ -52,7 +52,7 @@ img {
   position: relative;
 }
 .post-dd-c {
-  display: none;
+  /* display: none; */
   position: absolute;
   float: right;
   right: 0;
@@ -60,7 +60,7 @@ img {
   min-height: 50px;
   border: 1px solid #dddfe2;
   border-radius: 2px;
-  z-index: 1;
+  z-index: 2;
   background-color: white;
   box-shadow: 0 1px 1px 1px #ccd0d5;
 }
