@@ -2719,7 +2719,7 @@ var configureStore = function configureStore() {
 /*!****************************************!*\
   !*** ./frontend/util/post_api_util.js ***!
   \****************************************/
-/*! exports provided: fetchWallPosts, fetchFeedPosts, fetchPost, updatePost, deletePost, createPost */
+/*! exports provided: fetchWallPosts, fetchFeedPosts, fetchPost, createPost, updatePost, deletePost */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2727,24 +2727,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchWallPosts", function() { return fetchWallPosts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchFeedPosts", function() { return fetchFeedPosts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPost", function() { return fetchPost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPost", function() { return createPost; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updatePost", function() { return updatePost; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deletePost", function() { return deletePost; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPost", function() { return createPost; });
-var fetchWallPosts = function fetchWallPosts(user_id) {
+var fetchWallPosts = function fetchWallPosts(userId) {
   return $.ajax({
     method: 'GET',
     url: '/api/walls',
     data: {
-      user_id: user_id
+      userId: userId
     }
   });
 };
-var fetchFeedPosts = function fetchFeedPosts(user_id) {
+var fetchFeedPosts = function fetchFeedPosts(userId) {
   return $.ajax({
     method: 'GET',
     url: '/api/feeds',
     data: {
-      user_id: user_id
+      userId: userId
     }
   });
 };
@@ -2752,6 +2752,15 @@ var fetchPost = function fetchPost(postId) {
   return $.ajax({
     method: 'GET',
     url: "/api/posts/".concat(postId)
+  });
+};
+var createPost = function createPost(post) {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/posts',
+    data: {
+      post: post
+    }
   });
 };
 var updatePost = function updatePost(post) {
@@ -2767,15 +2776,6 @@ var deletePost = function deletePost(post) {
   return $.ajax({
     method: 'DELETE',
     url: "/api/posts/".concat(post.id),
-    data: {
-      post: post
-    }
-  });
-};
-var createPost = function createPost(post) {
-  return $.ajax({
-    method: 'POST',
-    url: '/api/posts',
     data: {
       post: post
     }

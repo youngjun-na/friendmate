@@ -1,26 +1,34 @@
-export const fetchWallPosts = (user_id) => {
+export const fetchWallPosts = userId => {
   return $.ajax({
     method: 'GET',
     url: '/api/walls',
-    data: { user_id },
+    data: { userId },
   })
 };
 
-export const fetchFeedPosts = (user_id) => (
+export const fetchFeedPosts = userId => (
   $.ajax({
     method: 'GET',
     url: '/api/feeds',
-    data: { user_id },
+    data: { userId },
   })
 );
-export const fetchPost = (postId) => (
+export const fetchPost = postId => (
   $.ajax({
     method: 'GET',
     url: `/api/posts/${postId}`,
   })
 );
 
-export const updatePost = (post) => (
+export const createPost = post => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/posts',
+    data: { post },
+  })
+)
+
+export const updatePost = post => (
   $.ajax({
     method: 'PATCH',
     url: `/api/posts/${post.id}`,
@@ -28,18 +36,10 @@ export const updatePost = (post) => (
   })
 );
 
-export const deletePost = (post) => (
+export const deletePost = post => (
   $.ajax({
     method: 'DELETE',
     url: `/api/posts/${post.id}`,
     data: { post },
   })
 );
-
-export const createPost = (post) => (
-  $.ajax({
-    method: 'POST',
-    url: '/api/posts',
-    data: { post },
-  })
-)

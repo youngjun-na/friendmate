@@ -8,6 +8,10 @@ class Post < ApplicationRecord
   belongs_to :host,
     foreign_key: :host_id,
     class_name: :User 
+
+  has_many :comments,
+    foreign_key: :post_id,
+    class_name: :Comment 
   
   def self.all_wall_posts(user_id)
     Post.where("host_id = ?", user_id) #.order("updated_at asc")
