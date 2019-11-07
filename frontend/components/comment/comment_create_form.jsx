@@ -1,4 +1,5 @@
 import React from 'react';
+import TextareaAutosize from 'react-autosize-textarea';
 
 export default class CommentCreateForm extends React.Component {
   constructor(props) {
@@ -8,12 +9,20 @@ export default class CommentCreateForm extends React.Component {
       author_id: 1,
       post_id: 1,
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit() {
+    e.preventDefault();
+    
   }
 
   render() {
     return(
       <div className="c-c">
-        <textarea className="c-ta" placeholder="Write a comment..."/>
+        <form onSubmit={this.handleSubmit}>
+          <TextareaAutosize className="c-ta" placeholder="Write a comment..." />
+        </form>
+
       </div>
     );
   }

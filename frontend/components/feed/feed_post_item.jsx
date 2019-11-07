@@ -3,6 +3,7 @@ import timeUtil from '../../util/time_util';
 import PostDropdown from '../post/post_dropdown';
 import { Link } from 'react-router-dom';
 import CommentCreateFormContainer from '../comment/comment_create_form';
+import CommentIndex from '../comment/comment_index';
 export default class FeedPostItem extends React.Component {
   constructor({props}) {
     super(props);
@@ -51,6 +52,9 @@ export default class FeedPostItem extends React.Component {
         <div className="pi-lc">
           <span>Like</span>
           <span>Comment</span>
+        </div>
+        <div>
+          <CommentIndex comments = {this.props.comments}/>
         </div>
         <div>
             <CommentCreateFormContainer />

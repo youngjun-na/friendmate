@@ -1,5 +1,12 @@
 import { connect } from 'react-redux';
 import CommentIndex from './comment_index';
 
+const mapStateToProps = (state={}) => ({
+  comments:
+});
 
-export default connect(null, null)(CommentIndex);
+const mapDispatchToProps = dispatch => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentIndex);
