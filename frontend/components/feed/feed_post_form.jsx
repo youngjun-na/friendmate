@@ -6,7 +6,7 @@ class FeedPostForm extends React.Component {
     super(props);
     this.state = {
       body: "",
-      hostId: this.props.currentUserId,
+      hostId: this.props.hostId ? this.props.hostId : this.props.currentUserId,
       authorId: this.props.currentUserId,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +22,8 @@ class FeedPostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.state)
-      .then(() => this.props.fetchFeedPosts(this.props.currentUserId))
+      .then(() =>  this.props.hostId ? this.props.fetchWallPosts(this.props.hostId) :
+      this.props.fetchFeedPosts(this.props.currentUserId))
       .then(()=> this.props.closeModal(), this.setState({body: ""}))
             
       

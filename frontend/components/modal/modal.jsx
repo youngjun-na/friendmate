@@ -11,7 +11,7 @@ function Modal({modal, closeModal}) {
   let component;
   switch (modal[0]) {
     case "post":
-      component = <FeedPostFormContainer />;
+      component = <FeedPostFormContainer hostId={modal[1]}/>;
       break;
     case "editPost":
       component = <PostEditFormContainer postId={modal[1]}/>;

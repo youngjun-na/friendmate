@@ -8,7 +8,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mapStateToProps = (state={}) => ({
   posts: Object.values(state.entities.posts).reverse(),
   currentUserId: state.session.id,
-  currentUser: state.entities.users[state.session.id]
+  currentUser: state.entities.users[state.session.id],
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
   updatePost: post => dispatch(updatePost(post)),
   deletePost: post => dispatch(deletePost(post)),
   fetchAllUsers: () => dispatch(fetchAllUsers()),
-  openModal: type => dispatch(openModal(type)),
+  openModal: (type, paramsId) => dispatch(openModal(type, paramsId)),
   closeModal: () => dispatch(closeModal()),
 });
 

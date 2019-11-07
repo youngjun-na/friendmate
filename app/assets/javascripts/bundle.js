@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/assets/images/black_options.png":
-/*!*********************************************!*\
-  !*** ./app/assets/images/black_options.png ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-
 /***/ "./app/assets/images/fb_sp_np.png":
 /*!****************************************!*\
   !*** ./app/assets/images/fb_sp_np.png ***!
@@ -127,17 +116,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACo
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzcwRTI0MTY0QTU1MTFFODkxNDhFOEQ4QjFDQUI2OTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzcwRTI0MTc0QTU1MTFFODkxNDhFOEQ4QjFDQUI2OTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozNzBFMjQxNDRBNTUxMUU4OTE0OEU4RDhCMUNBQjY5MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozNzBFMjQxNTRBNTUxMUU4OTE0OEU4RDhCMUNBQjY5MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmXVilwAAASJSURBVHja7FpbSFRRFL1jY2mGJQYFSfWRDpZRYaV9RBlRQRaBYqWVqVFZET2oEKMX9VESigVFlBWRmdZHkVFB2utD6V2mVD/RX/QaRXtYamvjHjkc77zyXufMMBsW555zZ87sdfc5e++z71i6urq0QJYQLcAl4Ala5QGLxaL7wau3X4eiiVBE77a0+RP/6N2Qt5yl14BAEKQi0WwFMoE4xYzzDigHikG2xWuCIGdDcwsYq/gq/AAsAMm3HhNky730A3IiyUlkSZmP1ckXtgnkaK0XAmWY4KsKbGCAaDS5wCEglHWlrbTfrZNhWS5cF4JYkUrm4gddBKLUPcLDmXoEQ5x4S9GhlCm8NEXd4lh3txaM0HlaRiyr6fy0BwMHMe91IyzJVhR1t/d7oIcSQ9AQoVnANKASY6MDKZNZD4wQ+oOAvQFBEJYKR7Nd51Y27o0LBAuuA0bydTNnICQDgN1+TZCtt0sYKpGW5gqzrWg1mBBZajyQAMQDUyXrEUHKG/fwfbLiTXzvEdoGoJEA7/hRGYJQjpQsBZYC0S4+WgLF7fwdCsgVPB7LEOdsQ1MNrMV3mn29RPOADW7IUSJcLPQrgbsuPk/xLAPYp8ISHSP1KTGgJfcGaOJl9wqW+CsEaMqI58JStJwnCEgGYoS5RqlAsIoT3XDuU6ZSChI1HmQijfwAqkA2gY9nolz0uReFki/QpAI/eYiIVkPhxV7s4yloagWLdQI5mPuaEmGCrZXCHpIkDLgCxTM8IJeE5h4wXDieZWLOc0rFQShUj2Y28IWHKLO/AALu6jjkTSP5+heQjrkuKxnoodhzXq4OGchwJeHCda4RpwyzMxmx2vUZCn/3oHjUUzFROpNhiReum6T9lsgx7iGHCkeMnMnXNn/IRW1SgCdiyQAF9ifAfeAZ+gt1HkK8v1nQCiLk6uWQMRm4gXv17EE1f7Vgjg65TuE6STpt2EA6RHWCztIrstQMTsmchQE66UepvkQfAEuEPi3DAjiVWmFsGSx1GO0BKaxQ2vZNdYKrgZ0AFZUqQKzaRcxcRA4I7RqAjkhFgndVkyCf3wq9+Hwdmrr+LFlQPtkhxK4YTVGRdOsQcmHnBPFEO7l84JDNmroi6tbAunu0RM9y/YRkBxduzwOfFCFGNdZsIF/S2eM9eAJYCSRyP1+aTDV5yjp7Fgdh6nZ233Wa+kI6prLOvcTdK2yqmGVp3a/TKAUb1gdFhuo4s/8NCXbOYS9RWQPkepyiV+/oDfZ4MpkoRxnRSJH5BP8nY4DlLMAmPRdvdGLtE4KQo8AxnXGqbp8y+8dN3YOwEL2beCwMtfNxKUwYmyMl4obuQWd/IznNZzkjLUxE5wFU4abCUoqBc5MXPY4HtcWtk+FXXnkmLF86WdiBVnbvRgqFs40e7UEoQBXqChO2QxqlfAAtz3QT5j/j1R7kgm1oH3+U/nBwR+i38h6MFIkDNX38nXYY5odPAj0e1Emt+zW2npRDsSx/D/SUpBdIpYgWDhOr/DpMSJak5R7LD/U9LPfbjN9xu0SDqVqQYJBgv8o/AQYA51ShdvLPcEEAAAAASUVORK5CYII="
-
-/***/ }),
-
-/***/ "./app/assets/images/gray_options.png":
-/*!********************************************!*\
-  !*** ./app/assets/images/gray_options.png ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
 
 /***/ }),
 
@@ -560,8 +538,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     fetchAllUsers: function fetchAllUsers() {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["fetchAllUsers"])());
     },
-    openModal: function openModal(type) {
-      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["openModal"])(type));
+    openModal: function openModal(type, paramsId) {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["openModal"])(type, paramsId));
     },
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["closeModal"])());
@@ -645,7 +623,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FeedPostForm).call(this, props));
     _this.state = {
       body: "",
-      hostId: _this.props.currentUserId,
+      hostId: _this.props.hostId ? _this.props.hostId : _this.props.currentUserId,
       authorId: _this.props.currentUserId
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -667,7 +645,7 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.createPost(this.state).then(function () {
-        return _this2.props.fetchFeedPosts(_this2.props.currentUserId);
+        return _this2.props.hostId ? _this2.props.fetchWallPosts(_this2.props.hostId) : _this2.props.fetchFeedPosts(_this2.props.currentUserId);
       }).then(function () {
         return _this2.props.closeModal();
       }, this.setState({
@@ -724,6 +702,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _feed_post_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feed_post_form */ "./frontend/components/feed/feed_post_form.jsx");
 /* harmony import */ var _actions_post_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/post_actions */ "./frontend/actions/post_actions.js");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -750,11 +730,14 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchFeedPosts: function fetchFeedPosts(userId) {
       return dispatch(Object(_actions_post_actions__WEBPACK_IMPORTED_MODULE_3__["fetchFeedPosts"])(userId));
+    },
+    fetchWallPosts: function fetchWallPosts(userId) {
+      return dispatch(Object(_actions_post_actions__WEBPACK_IMPORTED_MODULE_3__["fetchWallPosts"])(userId));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_feed_post_form__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_feed_post_form__WEBPACK_IMPORTED_MODULE_2__["default"])));
 
 /***/ }),
 
@@ -771,10 +754,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _util_time_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/time_util */ "./frontend/util/time_util.js");
-/* harmony import */ var _app_assets_images_gray_options_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/gray_options.png */ "./app/assets/images/gray_options.png");
-/* harmony import */ var _app_assets_images_gray_options_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_gray_options_png__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app/assets/images/black_options.png */ "./app/assets/images/black_options.png");
-/* harmony import */ var _app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _post_post_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_dropdown */ "./frontend/components/post/post_dropdown.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -785,9 +766,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -804,43 +785,49 @@ function (_React$Component) {
   _inherits(FeedPostItem, _React$Component);
 
   function FeedPostItem(_ref) {
-    var _this;
-
     var props = _ref.props;
 
     _classCallCheck(this, FeedPostItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(FeedPostItem).call(this, props));
-    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
-    _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(FeedPostItem).call(this, props));
   }
 
   _createClass(FeedPostItem, [{
-    key: "handleDelete",
-    value: function handleDelete(e) {
-      e.preventDefault();
-      this.props.deletePost(this.props.post);
-    }
-  }, {
-    key: "handleEdit",
-    value: function handleEdit(e) {
-      e.preventDefault();
-      this.props.openModal("editPost", this.props.post.id);
-    }
-  }, {
     key: "render",
     value: function render() {
+      var author = this.props.allUsers[this.props.post.authorId];
+      var host = this.props.allUsers[this.props.post.hostId];
       var post = this.props.post;
+      if (!host || !author) return null;
+      var nameHeader = post.authorId === post.hostId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-ntn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "pi-h-n",
+        to: "/profile/".concat(author.id)
+      }, author.firstName, " ", author.lastName)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-ntn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "pi-h-n",
+        to: "/profile/".concat(author.id)
+      }, author.firstName, " ", author.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tri-b"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "pi-h-n",
+        to: "/profile/".concat(author.id)
+      }, host.firstName, " ", host.lastName));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-c"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "g-o-b"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleDelete
-      }, "Delete Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleEdit
-      }, "Edit Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.allUsers[this.props.post.authorId].firstName, " ", this.props.allUsers[post.authorId].lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_1__["default"])(post.createdAt))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-h"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-hnd"
+      }, nameHeader, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-h-d"
+      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_1__["default"])(post.createdAt))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        post: post,
+        deletePost: this.props.deletePost,
+        openModal: this.props.openModal
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-b"
       }, post.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-lc"
@@ -1093,7 +1080,9 @@ function Modal(_ref) {
 
   switch (modal[0]) {
     case "post":
-      component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_feed_post_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_feed_post_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        hostId: modal[1]
+      });
       break;
 
     case "editPost":
@@ -1353,6 +1342,121 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(_navbar__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/post/post_dropdown.jsx":
+/*!****************************************************!*\
+  !*** ./frontend/components/post/post_dropdown.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostDropdown; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var PostDropdown =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(PostDropdown, _React$Component);
+
+  function PostDropdown(props) {
+    var _this;
+
+    _classCallCheck(this, PostDropdown);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PostDropdown).call(this, props));
+    _this.state = {
+      showMenu: false
+    };
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
+    _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
+    _this.handleDropdown = _this.handleDropdown.bind(_assertThisInitialized(_this));
+    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(PostDropdown, [{
+    key: "handleDropdown",
+    value: function handleDropdown(e) {
+      e.currentTarget.children[1].classList.toggle("show");
+    } // window.onclick = event => {
+    //   if (!event.target.matches('.g-o-b')) {
+    //     let dropdowns = document.getElementsByClassName("post-dd-c");
+    //     var i;
+    //     for (i = 0; i < dropdowns.length; i++) {
+    //       var openDropdown = dropdowns[i];
+    //       if (openDropdown.classList.contains('show')) {
+    //         openDropdown.classList.remove('show');
+    //       }
+    //     }
+    //   }
+    // }
+
+  }, {
+    key: "handleBlur",
+    value: function handleBlur(e) {
+      console.log(e.currentTarget, e.target);
+    }
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(e) {
+      e.preventDefault();
+      this.props.deletePost(this.props.post);
+    }
+  }, {
+    key: "handleEdit",
+    value: function handleEdit(e) {
+      e.preventDefault();
+      this.props.openModal("editPost", this.props.post.id);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-dd",
+        onBlur: this.handleBlur,
+        onClick: this.handleDropdown
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "g-o-b"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-dd-c"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-dd-i noselect",
+        onClick: this.handleDelete
+      }, "Delete Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-dd-i noselect",
+        onClick: this.handleEdit
+      }, "Edit Post")));
+    }
+  }]);
+
+  return PostDropdown;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -1745,7 +1849,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "li-err-d"
       }, this.props.errors[0]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "triangle"
+        className: "tri-r"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "li-l"
       }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1949,8 +2053,7 @@ function (_React$Component) {
     }
   }, {
     key: "handleFocus",
-    value: function handleFocus() {
-      console.log("Hello!"); // COME BACK TO FIX THIS //
+    value: function handleFocus() {// COME BACK TO FIX THIS //
       // return e => {
       //   if (e.currentTarget.classList.contains("red-bord")) {
       //     document.querySelector(type).classList.remove("invis")
@@ -2125,23 +2228,55 @@ function (_React$Component) {
   _inherits(Wall, _React$Component);
 
   function Wall(props) {
+    var _this;
+
     _classCallCheck(this, Wall);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Wall).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Wall).call(this, props));
+    _this.state = {
+      update: ""
+    };
+    return _this;
   }
 
   _createClass(Wall, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchWallPosts(parseInt(this.props.userId));
+      this.props.fetchWallPosts(this.props.userId);
       this.props.fetchAllUsers();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.userId !== this.props.userId) this.props.fetchWallPosts(this.props.userId);
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-c"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-st"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-c"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-h"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-h-t"
+      }, "Create Post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-b"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-t",
+        onClick: function onClick() {
+          return _this2.props.openModal("post", _this2.props.userId);
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-tx noselect"
+      }, "What's on your mind, ", this.props.currentUser.firstName, "?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
-      }));
+      }))));
     }
   }]);
 
@@ -2167,6 +2302,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wall__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./wall */ "./frontend/components/wall/wall.jsx");
 /* harmony import */ var _actions_post_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/post_actions */ "./frontend/actions/post_actions.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+
 
 
 
@@ -2178,7 +2315,8 @@ var mapStateToProps = function mapStateToProps() {
   var ownProps = arguments.length > 1 ? arguments[1] : undefined;
   return {
     posts: Object.values(state.entities.posts).reverse(),
-    userId: ownProps.match.params.userId
+    userId: ownProps.match.params.userId,
+    currentUser: state.entities.users[state.session.id]
   };
 };
 
@@ -2195,6 +2333,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchAllUsers: function fetchAllUsers() {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["fetchAllUsers"])());
+    },
+    openModal: function openModal(type, paramsId) {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["openModal"])(type, paramsId));
+    },
+    closeModal: function closeModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["closeModal"])());
     }
   };
 };

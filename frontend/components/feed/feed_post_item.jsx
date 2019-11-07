@@ -1,44 +1,48 @@
 import React from 'react';
 import timeUtil from '../../util/time_util';
-import grayOptions from '../../../app/assets/images/gray_options.png';
-import blackOptions from '../../../app/assets/images/black_options.png';
-
+import PostDropdown from '../post/post_dropdown';
+import { Link } from 'react-router-dom';
 export default class FeedPostItem extends React.Component {
   constructor({props}) {
     super(props);
-    this.handleDelete = this.handleDelete.bind(this);
-    this.handleEdit = this.handleEdit.bind(this);
-  }
-  handleDelete(e) {
-    e.preventDefault();
-    this.props.deletePost(this.props.post);
-  }
-  handleEdit(e) {
-    e.preventDefault();
-    this.props.openModal("editPost", this.props.post.id);
   }
 
   render() {
+    let author = this.props.allUsers[this.props.post.authorId];
+    let host = this.props.allUsers[this.props.post.hostId];
     const { post } = this.props;
+    if (!host || !author) return null;
+    let nameHeader = (post.authorId === post.hostId) ? (
+      <div className="pi-ntn">
+        <Link className="pi-h-n" to={`/profile/${author.id}`}>
+          {author.firstName} {author.lastName}
+        </Link>
+      </div>) : (
+      <div className="pi-ntn">
+        <Link className="pi-h-n" to={`/profile/${author.id}`}>
+          {author.firstName} {author.lastName}
+        </Link>
+        <div className="tri-b"></div>
+        <Link className="pi-h-n" to={`/profile/${author.id}`}>
+          {host.firstName} {host.lastName}
+        </Link>
+      </div>
+      )
     return(
       <div className="pi-c">
-        <div>
-          <div className="g-o-b">
-            {/* <Image
-              style={{ width: 40, height: 40 }}
-              source={yourImage}
-              tintColor='red'
-            />src={grayOptions}/> */}
-            {/* <img src={grayOptions}/> */}
-          </div>
-          <button onClick={this.handleDelete}>Delete Post</button>
-          <button onClick={this.handleEdit}>Edit Post</button>
-          <div>
-            {this.props.allUsers[this.props.post.authorId].firstName} {this.props.allUsers[post.authorId].lastName}
-          </div>
-          <div>
-            {timeUtil(post.createdAt)}
-          </div>
+        <div className="pi-h">
+          <div className="pi-hnd">
+            {nameHeader}
+            {/* <div>
+              <Link className="pi-h-n" to={`/profile/${author.id}`}>
+                {author.firstName} {author.lastName}
+              </Link>
+            </div> */}
+            <div className="pi-h-d">
+              {timeUtil(post.createdAt)}
+            </div>
+          </div> 
+          <PostDropdown post={post} deletePost={this.props.deletePost} openModal={this.props.openModal} />
         </div>
         <div className="pi-b">
           {post.body}

@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
   }
 
   handleFocus() {
-    console.log("Hello!")
+
     // COME BACK TO FIX THIS //
     // return e => {
     //   if (e.currentTarget.classList.contains("red-bord")) {

@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
         <form className="li-f">
           <div className="li-err invis">
             <div className="li-err-d">{this.props.errors[0]}</div>
-            <div className="triangle"></div>
+            <div className="tri-r"></div>
           </div>
           <div>
             <div className="li-l">Email</div>

@@ -42,8 +42,37 @@ img {
 .g-o-b {
   height: 15px;
   width: 15px;
-  background: url("");
+  background-size: 100% 100%;
+  background-image: url('/gray_options.png');
 }
-.g-o-b:hover {
-  background: url('app/assets/images/black_options.png');
+.g-o-b:hover, .g-o-p:focus {
+  background-image: url('/black_options.png');
+}
+.post-dd {
+  position: relative;
+}
+.post-dd-c {
+  display: none;
+  position: absolute;
+  float: right;
+  right: 0;
+  min-width: 150px;
+  min-height: 50px;
+  border: 1px solid #dddfe2;
+  border-radius: 2px;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 1px 1px 1px #ccd0d5;
+}
+.post-dd-i {
+  background: white;
+  padding: 8px;
+  font-size: 12px;
+}
+.post-dd-i:hover {
+  background-color: #4267b2;
+  color: white;
+}
+.show {
+  display: block;
 }

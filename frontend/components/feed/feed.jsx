@@ -12,13 +12,6 @@ export default class Feed extends React.Component {
   render() {
     return(
       <div className="f-c">
-        {/* <div>
-          <PostEditFormContainer 
-          createPost={this.props.createPost} 
-          currentUserId={this.props.currentUserId}
-          fetchFeedPosts={this.props.fetchFeedPosts}/>
-        </div> */}
-      
         <div></div>
         <div className="f-st">
           <div className="f-php-c">
