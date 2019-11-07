@@ -1,5 +1,4 @@
 import React from 'react';
-import PostEditFormContainer from './post_edit_form_container';
 import FeedIndex from './feed_index';
 export default class Feed extends React.Component {
   constructor(props) {
@@ -19,7 +18,7 @@ export default class Feed extends React.Component {
               <div className="f-php-h-t">Create Post</div>
             </div>
             <div className="f-php-b">
-              <div className="f-php-t" onClick={() => this.props.openModal("post")}>
+              <div className="f-php-t" onClick={() => this.props.openModal("postCreate")}>
                 <div className="f-php-tx noselect">
                   What's on your mind, {this.props.currentUser.firstName}?
                 </div>

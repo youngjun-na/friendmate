@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class PostEditForm extends React.Component {
+export default class PostEditForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.posts[this.props.postId];
@@ -42,4 +42,3 @@ class PostEditForm extends React.Component {
     )
   }
 }
-export default PostEditForm;

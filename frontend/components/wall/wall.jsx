@@ -26,7 +26,7 @@ export default class Wall extends React.Component {
               <div className="f-php-h-t">Create Post</div>
             </div>
             <div className="f-php-b">
-              <div className="f-php-t" onClick={() => this.props.openModal("post",this.props.userId)}>
+              <div className="f-php-t" onClick={() => this.props.openModal("postCreate",this.props.userId)}>
                 <div className="f-php-tx noselect">
                   What's on your mind, {this.props.currentUser.firstName}?
                 </div>

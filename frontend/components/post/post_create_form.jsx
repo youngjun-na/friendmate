@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class FeedPostForm extends React.Component {
+export default class PostCreateForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,8 +25,6 @@ class FeedPostForm extends React.Component {
       .then(() =>  this.props.hostId ? this.props.fetchWallPosts(this.props.hostId) :
       this.props.fetchFeedPosts(this.props.currentUserId))
       .then(()=> this.props.closeModal(), this.setState({body: ""}))
-            
-      
   }
 
   render() {
@@ -47,4 +45,3 @@ class FeedPostForm extends React.Component {
     )
   }
 }
-export default FeedPostForm;

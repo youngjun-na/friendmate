@@ -30,7 +30,7 @@ export default class PostDropdown extends React.Component {
   }
   handleEdit(e) {
     e.preventDefault();
-    this.props.openModal("editPost", this.props.post.id);
+    this.props.openModal("postEdit", this.props.post.id);
   }
   handleClickOutside(e) {
     if (this.dropdownCont.current && !this.dropdownCont.current.contains(e.target)) {

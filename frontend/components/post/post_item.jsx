@@ -1,6 +1,6 @@
 import React from 'react';
 import timeUtil from '../../util/time_util';
-import PostDropdown from '../post/post_dropdown';
+import PostDropdown from './post_dropdown';
 import { Link } from 'react-router-dom';
 import CommentCreateFormContainer from '../comment/comment_create_form';
 import CommentIndex from '../comment/comment_index';
@@ -8,7 +8,9 @@ export default class FeedPostItem extends React.Component {
   constructor({props}) {
     super(props);
   }
-
+  componentDidMount() {
+    this.props.fetchAllComments(this.props.post.id);
+  }
   render() {
     let author = this.props.allUsers[this.props.post.authorId];
     let host = this.props.allUsers[this.props.post.hostId];
