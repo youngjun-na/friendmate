@@ -4,9 +4,9 @@ export const RECEIVE_ALL_POSTS = "RECEIEVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 
-const receiveAllPosts = posts => ({
+const receiveAllPosts = payload => ({
   type: RECEIVE_ALL_POSTS,
-  posts,
+  payload
 });
 
 // export const receiveFeedPosts = posts => ({

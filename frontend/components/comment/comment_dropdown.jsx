@@ -1,9 +1,10 @@
 import React from 'react';
-import blackBackground from '../../../public/black_options.png'
-export default class PostDropdown extends React.Component {
+import blackBackground from '../../public/black_options.png'
+
+export default class CommentDropdown extends React.Component {
   constructor(props) {
     super(props);
-    this.postDropdownCont = React.createRef();
+    this.commentDropdownCont = React.createRef();
     this.state = {
       showMenu: false,
     }
@@ -26,31 +27,31 @@ export default class PostDropdown extends React.Component {
   }
   handleDelete(e) {
     e.preventDefault();
-    this.props.deletePost(this.props.post);
+    this.props.deleteComment(this.props.post);
   }
   handleEdit(e) {
     e.preventDefault();
     this.props.openModal("postEdit", this.props.post.id);
   }
   handleClickOutside(e) {
-    if (this.postDropdownCont.current && !this.postDropdownCont.current.contains(e.target)) {
+    if (this.commentDropdownCont.current && !this.commentDropdownCont.current.contains(e.target)) {
       this.setState({
         showMenu: false,
       });
     }
   }
   render() {
-    return(
-      <div className="post-dd" onClick={this.handleDropdown} ref={this.postDropdownCont}>
-        <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})`} : {}} >
-        {this.state.showMenu && (<div className="post-dd-c">
-          <div className="post-dd-i noselect" onClick={this.handleDelete}>
-            Delete Post
+    return (
+      <div className="post-dd" onClick={this.handleDropdown} ref={this.commentDropdownCont}>
+        <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})` } : {}} >
+          {this.state.showMenu && (<div className="post-dd-c">
+            <div className="post-dd-i noselect" onClick={this.handleDelete}>
+              Delete Post
           </div>
-          <div className="post-dd-i noselect" onClick={this.handleEdit}>
-            Edit Post
+            <div className="post-dd-i noselect" onClick={this.handleEdit}>
+              Edit Post
           </div>
-        </div>)}
+          </div>)}
         </div>
       </div>
     )

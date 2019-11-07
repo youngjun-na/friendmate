@@ -1,13 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CommentCreateForm from './comment_create_form';
-import { createPost, fetchFeedPosts, fetchWallPosts } from '../../actions/post_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
-import { withRouter } from 'react-router-dom';
+import { createComment } from '../../actions/comment_actions';
 
-// const mapStateToProps = (state={}) => ({
-//   currentUserId: state.entities.id,
+const mapStateToProps = (state={}, ownProps) => {
+  debugger;
+  return{
+  currentUserId: state.session.id,
+  postId: ownProps.postId,
+}};
 
-// });
+const mapDispatchToProps = dispatch => ({
+  createComment: comment => dispatch(createComment(comment)),
+});
 
-export default connect(null, null)(CommentCreateForm)
+export default connect(mapStateToProps, mapDispatchToProps)(CommentCreateForm);

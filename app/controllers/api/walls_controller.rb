@@ -1,7 +1,7 @@
 class Api::WallsController < Api::PostsController
   before_action :underscore_params!
   def index
-    @posts = Post.all_wall_posts(params[:user_id])
+    @posts = Post.all_wall_posts(params[:user_id]).includes(:comments)
     render :index
   end
 

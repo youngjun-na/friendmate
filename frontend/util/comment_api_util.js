@@ -1,10 +1,10 @@
-export const fetchAllComments = postId => (
-  $.ajax({
+export const fetchAllComments = postId => {
+  return $.ajax({
     method: 'GET',
     url: '/api/comments',
     data: { postId }
   })
-);
+};
 
 export const fetchComment = commentId => (
   $.ajax({

@@ -10,6 +10,7 @@ class Comment < ApplicationRecord
     class_name: :Post 
   
   belongs_to :parent_comment,
+    optional: true,
     foreign_key: :parent_comment_id,
     class_name: :Comment 
 
