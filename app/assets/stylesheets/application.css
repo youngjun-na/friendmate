@@ -45,8 +45,11 @@ img {
   background-size: 100% 100%;
   background-image: url('/gray_options.png');
 }
-.g-o-b:hover, .g-o-p:focus {
+.g-o-b:hover{
   background-image: url('/black_options.png');
+}
+.g-o-p:active{
+   background-image: url('/black_options.png');
 }
 .post-dd {
   position: relative;
@@ -54,8 +57,9 @@ img {
 .post-dd-c {
   /* display: none; */
   position: absolute;
-  float: right;
+  /* float: right; */
   right: 0;
+  top: 18px;
   min-width: 150px;
   min-height: 50px;
   border: 1px solid #dddfe2;

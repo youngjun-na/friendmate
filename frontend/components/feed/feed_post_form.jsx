@@ -8,7 +8,7 @@ class FeedPostForm extends React.Component {
       body: "",
       hostId: this.props.hostId ? this.props.hostId : this.props.currentUserId,
       authorId: this.props.currentUserId,
-    }
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }

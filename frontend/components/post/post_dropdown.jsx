@@ -1,5 +1,5 @@
 import React from 'react';
-
+import blackBackground from '../../../public/black_options.png'
 export default class PostDropdown extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +42,7 @@ export default class PostDropdown extends React.Component {
   render() {
     return(
       <div className="post-dd" onClick={this.handleDropdown} ref={this.dropdownCont}>
-        <div className="g-o-b" ></div>
+        <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})`} : {}} >
         {this.state.showMenu && (<div className="post-dd-c">
           <div className="post-dd-i noselect" onClick={this.handleDelete}>
             Delete Post
@@ -51,6 +51,7 @@ export default class PostDropdown extends React.Component {
             Edit Post
           </div>
         </div>)}
+        </div>
       </div>
     )
   }

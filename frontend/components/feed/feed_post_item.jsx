@@ -2,6 +2,7 @@ import React from 'react';
 import timeUtil from '../../util/time_util';
 import PostDropdown from '../post/post_dropdown';
 import { Link } from 'react-router-dom';
+import CommentCreateFormContainer from '../comment/comment_create_form';
 export default class FeedPostItem extends React.Component {
   constructor({props}) {
     super(props);
@@ -23,7 +24,7 @@ export default class FeedPostItem extends React.Component {
           {author.firstName} {author.lastName}
         </Link>
         <div className="tri-b"></div>
-        <Link className="pi-h-n" to={`/profile/${author.id}`}>
+        <Link className="pi-h-n" to={`/profile/${host.id}`}>
           {host.firstName} {host.lastName}
         </Link>
       </div>
@@ -52,8 +53,7 @@ export default class FeedPostItem extends React.Component {
           <span>Comment</span>
         </div>
         <div>
-          <div className="c-c">
-          </div>
+            <CommentCreateFormContainer />
         </div>
       </div>
     )

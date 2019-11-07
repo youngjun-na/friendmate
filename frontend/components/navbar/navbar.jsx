@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Feed extends React.Component {
   constructor(props) {
@@ -14,9 +15,16 @@ export default class Feed extends React.Component {
     return (
       <div className="nb-c">
         <div className="nb-s">
-          <input type="text"/>
+          <input className="nb-sb" type="text"/>
         </div>
-        
+        <div className="nb-tc">
+          <Link className="nb-tc-n" to="/feed">
+            {this.props.currentUser.firstName}
+          </Link>
+          <Link className="nb-tc-n" to={`/profile/${this.props.currentUser.id}`}>
+            Home
+          </Link>
+        </div>
         <button className="li-b lo" onClick={this.handleClick}>Log Out</button>
       </div>
     );
