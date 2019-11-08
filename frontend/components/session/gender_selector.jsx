@@ -30,7 +30,6 @@ class GenderSelector extends React.Component {
   }
 
   handleFocus(e) {
-    console.log("WOW");
   }
   render() {
     let gender = this.props.gender;

@@ -4,7 +4,6 @@ import CommentCreateForm from './comment_create_form';
 import { createComment } from '../../actions/comment_actions';
 
 const mapStateToProps = (state={}, ownProps) => {
-  debugger;
   return{
   currentUserId: state.session.id,
   postId: ownProps.postId,

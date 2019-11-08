@@ -19,7 +19,6 @@ export default class CommentCreateForm extends React.Component {
       .then(this.setState({body: ""}));
   }
   handleInput(e) {
-    console.log(e.target.value)
     this.setState({
       body: e.target.value,
     })
