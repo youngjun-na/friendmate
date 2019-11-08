@@ -31,8 +31,8 @@ export default class CommentDropdown extends React.Component {
     this.props.deleteComment(this.props.comment);
   }
   handleEdit(e) {
-    // e.preventDefault();
-    // this.props.openModal("postEdit", this.props.post.id);
+    e.preventDefault();
+    this.props.handleEdit();
   }
   handleClickOutside(e) {
     if (this.commentDropdownCont.current && !this.commentDropdownCont.current.contains(e.target)) {

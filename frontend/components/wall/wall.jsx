@@ -9,22 +9,27 @@ export default class Wall extends React.Component {
     }
   }
   componentDidMount() {
-    this.props.fetchWallPosts(this.props.userId);
+    // debugger;
+    // this.props.fetchWallPosts(this.props.wallUser.id);
     this.props.fetchAllUsers().then(
-      this.props.fetchUser(this.props.userId)
+      () => this.props.fetchWallPosts(this.props.wallUser.id),
+      () => this.props.fetchUser(this.props.wallUser.id)
     );
   }
   componentDidUpdate(prevProps) {
-    if (prevProps.userId !== this.props.userId) this.props.fetchWallPosts(this.props.userId);
+    if (prevProps.wallUser && prevProps.wallUser.id !== parseInt(this.props.match.params.userId)) {
+      this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
+    }
   }
 
   render() {
+    if (!this.props.wallUser) return null;
     return(
       <div className= "prof-cont">
         <div className= "wall-header">
           <div className= "wall-cover-p">
             <div className="wall-name">
-              {this.props.currentUser.firstName}  {this.props.currentUser.lastName} 
+              {this.props.wallUser.firstName}  {this.props.wallUser.lastName} 
             </div>
           </div>
           <div className= "wall-header-bar">

@@ -5,11 +5,12 @@ import { fetchWallPosts, updatePost, deletePost } from '../../actions/post_actio
 import { fetchAllUsers, fetchUser } from '../../actions/user_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mapStateToProps = (state = {}, ownProps) => ({
+const mapStateToProps = (state = {}, ownProps) => {
+  return {
   posts: Object.values(state.entities.posts).reverse(),
-  userId: ownProps.match.params.userId,
+  wallUser: state.entities.users[ownProps.match.params.userId],
   currentUser: state.entities.users[state.session.id]
-});
+}};
 
 const mapDispatchToProps = dispatch => ({
   fetchWallPosts: userId => dispatch(fetchWallPosts(userId)),

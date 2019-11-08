@@ -726,8 +726,9 @@ function (_React$Component) {
     }
   }, {
     key: "handleEdit",
-    value: function handleEdit(e) {// e.preventDefault();
-      // this.props.openModal("postEdit", this.props.post.id);
+    value: function handleEdit(e) {
+      e.preventDefault();
+      this.props.handleEdit();
     }
   }, {
     key: "handleClickOutside",
@@ -898,7 +899,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _comment_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comment_dropdown */ "./frontend/components/comment/comment_dropdown.jsx");
+/* harmony import */ var _util_time_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/time_util */ "./frontend/util/time_util.js");
+/* harmony import */ var _comment_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./comment_dropdown */ "./frontend/components/comment/comment_dropdown.jsx");
+/* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-autosize-textarea */ "./node_modules/react-autosize-textarea/lib/index.js");
+/* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -909,13 +913,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -927,17 +933,60 @@ function (_React$Component) {
   _inherits(CommentItem, _React$Component);
 
   function CommentItem(props) {
+    var _this;
+
     _classCallCheck(this, CommentItem);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CommentItem).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CommentItem).call(this, props));
+    _this.state = {
+      show: false,
+      edit: false,
+      id: _this.props.comment.id,
+      body: _this.props.comment.body
+    };
+    _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
+    _this.handleHover = _this.handleHover.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
+    _this.handleKeyDown = _this.handleKeyDown.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(CommentItem, [{
+    key: "handleEdit",
+    value: function handleEdit() {
+      this.setState({
+        edit: !this.state.edit
+      });
+    }
+  }, {
     key: "handleHover",
     value: function handleHover(e) {
       Array.from(e.target.children).forEach(function (el) {
         if (el.classList.contains("com-dd")) el.classList.toggle("invis");
       });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      this.props.updateComment(this.state).then(this.setState({
+        edit: false
+      }));
+    }
+  }, {
+    key: "handleInput",
+    value: function handleInput(e) {
+      this.setState({
+        body: e.target.value
+      });
+    }
+  }, {
+    key: "handleKeyDown",
+    value: function handleKeyDown(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        if (this.state.body) this.handleSubmit(e);else e.preventDefault();
+      }
     }
   }, {
     key: "render",
@@ -953,17 +1002,37 @@ function (_React$Component) {
         className: "ci-nl",
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var editForm = this.state.edit ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-edit-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "c-c comment-edit",
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        className: "c-ta",
+        onChange: this.handleInput,
+        value: this.state.body,
+        onKeyDown: this.handleKeyDown
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-cancel",
+        onClick: this.handleEdit
+      }, "Cancel")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-cont",
         onMouseEnter: this.handleHover,
-        onMouseLeave: this.handleHover,
-        className: "ci-i-c"
+        onMouseLeave: this.handleHover
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-b"
-      }, nameLink, comment.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        comment: this.props.comment,
-        deleteComment: this.props.deleteComment,
-        updateComment: this.props.updateComment
+      }, nameLink, this.state.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        comment: comment,
+        deleteComment: deleteComment,
+        handleEdit: this.handleEdit
       }));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ci-i-c"
+      }, editForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-like-reply"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-h-d"
+      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt))));
     }
   }]);
 
@@ -2897,19 +2966,29 @@ function (_React$Component) {
   _createClass(Wall, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchWallPosts(this.props.userId);
-      this.props.fetchAllUsers().then(this.props.fetchUser(this.props.userId));
+      var _this2 = this;
+
+      // debugger;
+      // this.props.fetchWallPosts(this.props.wallUser.id);
+      this.props.fetchAllUsers().then(function () {
+        return _this2.props.fetchWallPosts(_this2.props.wallUser.id);
+      }, function () {
+        return _this2.props.fetchUser(_this2.props.wallUser.id);
+      });
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      if (prevProps.userId !== this.props.userId) this.props.fetchWallPosts(this.props.userId);
+      if (prevProps.wallUser && prevProps.wallUser.id !== parseInt(this.props.match.params.userId)) {
+        this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
+      }
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
+      if (!this.props.wallUser) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "prof-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2918,7 +2997,7 @@ function (_React$Component) {
         className: "wall-cover-p"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-name"
-      }, this.props.currentUser.firstName, "  ", this.props.currentUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.wallUser.firstName, "  ", this.props.wallUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-main"
@@ -2939,7 +3018,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-t",
         onClick: function onClick() {
-          return _this2.props.openModal("postCreate", _this2.props.userId);
+          return _this3.props.openModal("postCreate", _this3.props.userId);
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-tx noselect"
@@ -2984,7 +3063,7 @@ var mapStateToProps = function mapStateToProps() {
   var ownProps = arguments.length > 1 ? arguments[1] : undefined;
   return {
     posts: Object.values(state.entities.posts).reverse(),
-    userId: ownProps.match.params.userId,
+    wallUser: state.entities.users[ownProps.match.params.userId],
     currentUser: state.entities.users[state.session.id]
   };
 };

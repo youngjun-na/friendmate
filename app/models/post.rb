@@ -13,6 +13,8 @@ class Post < ApplicationRecord
     foreign_key: :post_id,
     class_name: :Comment 
   
+  has_one_attached :photo
+  
   def self.all_wall_posts(user_id)
     Post.where("host_id = ?", user_id) #.order("updated_at asc")
   end
