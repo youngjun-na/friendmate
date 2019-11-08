@@ -1,6 +1,7 @@
 import React from 'react';
-import blackBackground from '../../public/black_options.png'
-
+import blackBackground from '../../../app/assets/images/black_options.png';
+import pencil from '../../../app/assets/images/pencil.png';
+import trash from '../../../app/assets/images/trash.png';
 export default class CommentDropdown extends React.Component {
   constructor(props) {
     super(props);
@@ -27,11 +28,11 @@ export default class CommentDropdown extends React.Component {
   }
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteComment(this.props.post);
+    this.props.deleteComment(this.props.comment);
   }
   handleEdit(e) {
-    e.preventDefault();
-    this.props.openModal("postEdit", this.props.post.id);
+    // e.preventDefault();
+    // this.props.openModal("postEdit", this.props.post.id);
   }
   handleClickOutside(e) {
     if (this.commentDropdownCont.current && !this.commentDropdownCont.current.contains(e.target)) {
@@ -42,14 +43,14 @@ export default class CommentDropdown extends React.Component {
   }
   render() {
     return (
-      <div className="post-dd" onClick={this.handleDropdown} ref={this.commentDropdownCont}>
+      <div className="com-dd invis" onClick={this.handleDropdown} ref={this.commentDropdownCont}>
         <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})` } : {}} >
-          {this.state.showMenu && (<div className="post-dd-c">
-            <div className="post-dd-i noselect" onClick={this.handleDelete}>
-              Delete Post
+          {this.state.showMenu && (<div className="com-dd-c">
+            <div className="com-dd-i noselect" onClick={this.handleDelete}>
+              <img src={trash} className="com-dd-p"/> Delete...
           </div>
-            <div className="post-dd-i noselect" onClick={this.handleEdit}>
-              Edit Post
+            <div className="com-dd-i noselect" onClick={this.handleEdit}>
+              <img src={pencil} className="com-dd-p"/> Edit...
           </div>
           </div>)}
         </div>

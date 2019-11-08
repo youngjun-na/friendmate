@@ -1,3 +1,56 @@
 // Place all the styles related to the api/walls controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.prof-cont {
+  background-color: #eaebef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wall-header {
+  height: 353px;
+  width: 850px;
+  background: white;
+}
+.wall-main {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 850px;
+}
+.wall-sidebar {
+  width: 320px;
+  height: 320px;
+  background: white;
+  border: 1px solid #dddfe2;
+  border-radius: 2px; 
+}
+
+.wall-cont{
+  background-color: #eaebef;
+  min-height: 100vh;
+  display: flex;
+}
+.wall-cover-p {
+  width: 850px;
+  height: 310px;
+  background-color: lightblue;
+  position: relative;
+}
+.wall-header-bar {
+  width: 850px;
+  height: 43px;
+  border: 1px solid #dddfe2;
+  border-radius: 0 0 2px 2px; 
+  background: white;
+}
+.wall-name {
+  position:absolute;
+  width:150px;
+  bottom: 20px;
+  left: 20%;
+  text-align:center;
+  font-size: 20px;
+  color: white;
+}

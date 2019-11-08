@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/black_options.png":
+/*!*********************************************!*\
+  !*** ./app/assets/images/black_options.png ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
 /***/ "./app/assets/images/fb_sp_np.png":
 /*!****************************************!*\
   !*** ./app/assets/images/fb_sp_np.png ***!
@@ -116,6 +127,28 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACo
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzcwRTI0MTY0QTU1MTFFODkxNDhFOEQ4QjFDQUI2OTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzcwRTI0MTc0QTU1MTFFODkxNDhFOEQ4QjFDQUI2OTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozNzBFMjQxNDRBNTUxMUU4OTE0OEU4RDhCMUNBQjY5MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozNzBFMjQxNTRBNTUxMUU4OTE0OEU4RDhCMUNBQjY5MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmXVilwAAASJSURBVHja7FpbSFRRFL1jY2mGJQYFSfWRDpZRYaV9RBlRQRaBYqWVqVFZET2oEKMX9VESigVFlBWRmdZHkVFB2utD6V2mVD/RX/QaRXtYamvjHjkc77zyXufMMBsW555zZ87sdfc5e++z71i6urq0QJYQLcAl4Ala5QGLxaL7wau3X4eiiVBE77a0+RP/6N2Qt5yl14BAEKQi0WwFMoE4xYzzDigHikG2xWuCIGdDcwsYq/gq/AAsAMm3HhNky730A3IiyUlkSZmP1ckXtgnkaK0XAmWY4KsKbGCAaDS5wCEglHWlrbTfrZNhWS5cF4JYkUrm4gddBKLUPcLDmXoEQ5x4S9GhlCm8NEXd4lh3txaM0HlaRiyr6fy0BwMHMe91IyzJVhR1t/d7oIcSQ9AQoVnANKASY6MDKZNZD4wQ+oOAvQFBEJYKR7Nd51Y27o0LBAuuA0bydTNnICQDgN1+TZCtt0sYKpGW5gqzrWg1mBBZajyQAMQDUyXrEUHKG/fwfbLiTXzvEdoGoJEA7/hRGYJQjpQsBZYC0S4+WgLF7fwdCsgVPB7LEOdsQ1MNrMV3mn29RPOADW7IUSJcLPQrgbsuPk/xLAPYp8ISHSP1KTGgJfcGaOJl9wqW+CsEaMqI58JStJwnCEgGYoS5RqlAsIoT3XDuU6ZSChI1HmQijfwAqkA2gY9nolz0uReFki/QpAI/eYiIVkPhxV7s4yloagWLdQI5mPuaEmGCrZXCHpIkDLgCxTM8IJeE5h4wXDieZWLOc0rFQShUj2Y28IWHKLO/AALu6jjkTSP5+heQjrkuKxnoodhzXq4OGchwJeHCda4RpwyzMxmx2vUZCn/3oHjUUzFROpNhiReum6T9lsgx7iGHCkeMnMnXNn/IRW1SgCdiyQAF9ifAfeAZ+gt1HkK8v1nQCiLk6uWQMRm4gXv17EE1f7Vgjg65TuE6STpt2EA6RHWCztIrstQMTsmchQE66UepvkQfAEuEPi3DAjiVWmFsGSx1GO0BKaxQ2vZNdYKrgZ0AFZUqQKzaRcxcRA4I7RqAjkhFgndVkyCf3wq9+Hwdmrr+LFlQPtkhxK4YTVGRdOsQcmHnBPFEO7l84JDNmroi6tbAunu0RM9y/YRkBxduzwOfFCFGNdZsIF/S2eM9eAJYCSRyP1+aTDV5yjp7Fgdh6nZ233Wa+kI6prLOvcTdK2yqmGVp3a/TKAUb1gdFhuo4s/8NCXbOYS9RWQPkepyiV+/oDfZ4MpkoRxnRSJH5BP8nY4DlLMAmPRdvdGLtE4KQo8AxnXGqbp8y+8dN3YOwEL2beCwMtfNxKUwYmyMl4obuQWd/IznNZzkjLUxE5wFU4abCUoqBc5MXPY4HtcWtk+FXXnkmLF86WdiBVnbvRgqFs40e7UEoQBXqChO2QxqlfAAtz3QT5j/j1R7kgm1oH3+U/nBwR+i38h6MFIkDNX38nXYY5odPAj0e1Emt+zW2npRDsSx/D/SUpBdIpYgWDhOr/DpMSJak5R7LD/U9LPfbjN9xu0SDqVqQYJBgv8o/AQYA51ShdvLPcEEAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/pencil.png":
+/*!**************************************!*\
+  !*** ./app/assets/images/pencil.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjCwgBIhxcEaoqAAAAAW9yTlQBz6J3mgAAAI9JREFUOMvN0r0RwjAMQOEXX5gGxiGzqCSU2oVxwjYcSgEEOziS6eLGZ9/3Cv/ADoaa2nfVxfw1y1umwJ/WoR90TDKUiROo6ZOe2yeRMTyqmho9cFbj4h46vxc58ODI3QlyDiCJZSc18BHvHSr8Wl7cX3wVxLwIWngWtPElaOUbX2ObVwOPVwKf/wQR3+WYAQhfOmYVJgDSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTExLTA4VDAxOjM0OjE3KzAwOjAwURYYsAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0xMS0wOFQwMTozNDoxNyswMDowMCBLoAwAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/trash.png":
+/*!*************************************!*\
+  !*** ./app/assets/images/trash.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH4wsIASQDh0MAWQAAAAFvck5UAc+id5oAAAB1SURBVEjHY2AYaMCIVZS98weqQDk7wy8SDOj8jylWjt0qBhZcTiu3ZjgGZVp3HsHtBSacMsfgrKNEhQE2Z+N0HZJ3mIjXRsAFxLoCPTApdgFWA8oZIfag00QbQLELRg0YNWAEGjBIywOyDShnJ+gBgipGIgAAtawTiYv83wcAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMTEtMDhUMDE6MzU6NTcrMDA6MDA6nn10AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTExLTA4VDAxOjM1OjU3KzAwOjAwS8PFyAAAAABJRU5ErkJggg=="
 
 /***/ }),
 
@@ -403,16 +436,19 @@ var logout = function logout() {
 /*!******************************************!*\
   !*** ./frontend/actions/user_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_ALL_USERS, fetchAllUsers */
+/*! exports provided: RECEIVE_ALL_USERS, RECEIVE_USER, fetchAllUsers, fetchUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_USERS", function() { return RECEIVE_ALL_USERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USER", function() { return RECEIVE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 /* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/user_api_util */ "./frontend/util/user_api_util.js");
 
 var RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
+var RECEIVE_USER = "RECEIVE_USER";
 
 var receiveAllUsers = function receiveAllUsers(users) {
   return {
@@ -421,10 +457,24 @@ var receiveAllUsers = function receiveAllUsers(users) {
   };
 };
 
+var receiveUser = function receiveUser(user) {
+  return {
+    type: RECEIVE_USER,
+    user: user
+  };
+};
+
 var fetchAllUsers = function fetchAllUsers() {
   return function (dispatch) {
     return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAllUsers"]().then(function (users) {
       return dispatch(receiveAllUsers(users));
+    });
+  };
+};
+var fetchUser = function fetchUser(userId) {
+  return function (dispatch) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUser"](userId).then(function (user) {
+      return dispatch(receiveUser(user));
     });
   };
 };
@@ -587,6 +637,144 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./frontend/components/comment/comment_dropdown.jsx":
+/*!**********************************************************!*\
+  !*** ./frontend/components/comment/comment_dropdown.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CommentDropdown; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../app/assets/images/black_options.png */ "./app/assets/images/black_options.png");
+/* harmony import */ var _app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_assets_images_pencil_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/pencil.png */ "./app/assets/images/pencil.png");
+/* harmony import */ var _app_assets_images_pencil_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_pencil_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _app_assets_images_trash_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app/assets/images/trash.png */ "./app/assets/images/trash.png");
+/* harmony import */ var _app_assets_images_trash_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_trash_png__WEBPACK_IMPORTED_MODULE_3__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var CommentDropdown =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(CommentDropdown, _React$Component);
+
+  function CommentDropdown(props) {
+    var _this;
+
+    _classCallCheck(this, CommentDropdown);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CommentDropdown).call(this, props));
+    _this.commentDropdownCont = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    _this.state = {
+      showMenu: false
+    };
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
+    _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
+    _this.handleDropdown = _this.handleDropdown.bind(_assertThisInitialized(_this));
+    _this.handleClickOutside = _this.handleClickOutside.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(CommentDropdown, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.addEventListener("mousedown", this.handleClickOutside);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      document.removeEventListener("mousedown", this.handleClickOutside);
+    }
+  }, {
+    key: "handleDropdown",
+    value: function handleDropdown(e) {
+      // e.currentTarget.children[1].classList.toggle("show");
+      this.setState({
+        showMenu: !this.state.showMenu
+      });
+    }
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(e) {
+      e.preventDefault();
+      this.props.deleteComment(this.props.comment);
+    }
+  }, {
+    key: "handleEdit",
+    value: function handleEdit(e) {// e.preventDefault();
+      // this.props.openModal("postEdit", this.props.post.id);
+    }
+  }, {
+    key: "handleClickOutside",
+    value: function handleClickOutside(e) {
+      if (this.commentDropdownCont.current && !this.commentDropdownCont.current.contains(e.target)) {
+        this.setState({
+          showMenu: false
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "com-dd invis",
+        onClick: this.handleDropdown,
+        ref: this.commentDropdownCont
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "g-o-b",
+        style: this.state.showMenu ? {
+          backgroundImage: "url(".concat(_app_assets_images_black_options_png__WEBPACK_IMPORTED_MODULE_1___default.a, ")")
+        } : {}
+      }, this.state.showMenu && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "com-dd-c"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "com-dd-i noselect",
+        onClick: this.handleDelete
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _app_assets_images_trash_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+        className: "com-dd-p"
+      }), " Delete..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "com-dd-i noselect",
+        onClick: this.handleEdit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _app_assets_images_pencil_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+        className: "com-dd-p"
+      }), " Edit..."))));
+    }
+  }]);
+
+  return CommentDropdown;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./frontend/components/comment/comment_index.jsx":
 /*!*******************************************************!*\
   !*** ./frontend/components/comment/comment_index.jsx ***!
@@ -710,6 +898,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _comment_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comment_dropdown */ "./frontend/components/comment/comment_dropdown.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -731,6 +920,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CommentItem =
 /*#__PURE__*/
 function (_React$Component) {
@@ -743,6 +933,13 @@ function (_React$Component) {
   }
 
   _createClass(CommentItem, [{
+    key: "handleHover",
+    value: function handleHover(e) {
+      Array.from(e.target.children).forEach(function (el) {
+        if (el.classList.contains("com-dd")) el.classList.toggle("invis");
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -757,10 +954,16 @@ function (_React$Component) {
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        onMouseEnter: this.handleHover,
+        onMouseLeave: this.handleHover,
         className: "ci-i-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-b"
-      }, nameLink, comment.body));
+      }, nameLink, comment.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        comment: this.props.comment,
+        deleteComment: this.props.deleteComment,
+        updateComment: this.props.updateComment
+      }));
     }
   }]);
 
@@ -1369,12 +1572,12 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.createPost(this.state).then(function () {
-        return _this2.props.hostId ? _this2.props.fetchWallPosts(_this2.props.hostId) : _this2.props.fetchFeedPosts(_this2.props.currentUserId);
-      }).then(function () {
         return _this2.props.closeModal();
       }, this.setState({
         body: ""
-      }));
+      })).then(function () {
+        return _this2.props.hostId ? _this2.props.fetchWallPosts(_this2.props.hostId) : _this2.props.fetchFeedPosts(_this2.props.currentUserId);
+      });
     }
   }, {
     key: "render",
@@ -2695,7 +2898,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchWallPosts(this.props.userId);
-      this.props.fetchAllUsers();
+      this.props.fetchAllUsers().then(this.props.fetchUser(this.props.userId));
     }
   }, {
     key: "componentDidUpdate",
@@ -2708,8 +2911,22 @@ function (_React$Component) {
       var _this2 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-c"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "prof-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-cover-p"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-name"
+      }, this.props.currentUser.firstName, "  ", this.props.currentUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-header-bar"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-sidebar"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-c"
@@ -2728,7 +2945,7 @@ function (_React$Component) {
         className: "f-php-tx noselect"
       }, "What's on your mind, ", this.props.currentUser.firstName, "?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
-      }))));
+      }))))));
     }
   }]);
 
@@ -2785,6 +3002,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchAllUsers: function fetchAllUsers() {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["fetchAllUsers"])());
+    },
+    fetchUser: function fetchUser(userId) {
+      return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["fetchUser"])(userId));
     },
     openModal: function openModal(type, paramsId) {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["openModal"])(type, paramsId));
@@ -3161,6 +3381,7 @@ __webpack_require__.r(__webpack_exports__);
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_USER"]:
       newState[action.user.id] = action.user;
       return newState;
 
@@ -3471,7 +3692,14 @@ __webpack_require__.r(__webpack_exports__);
   } else if (dayDiff === 1) {
     return "Yesterday at " + hm;
   } else {
-    return "Today at " + hm;
+    var msTime = currTime.getTime() - oldTime.getTime();
+    var msTimehr = msTime / (1000 * 60 * 60);
+
+    if (msTimehr >= 1) {
+      return Math.floor(msTimehr).toString() + (msTimehr === 1 ? " hr" : " hrs");
+    } else {
+      return Math.floor(msTime / (1000 * 60)).toString() + "m";
+    }
   }
 });
 
@@ -3481,16 +3709,23 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./frontend/util/user_api_util.js ***!
   \****************************************/
-/*! exports provided: fetchAllUsers */
+/*! exports provided: fetchAllUsers, fetchUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 var fetchAllUsers = function fetchAllUsers() {
   return $.ajax({
     method: 'GET',
     url: '/api/users'
+  });
+};
+var fetchUser = function fetchUser(userId) {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/users/".concat(userId)
   });
 };
 
@@ -36455,7 +36690,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

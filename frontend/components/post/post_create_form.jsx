@@ -22,9 +22,11 @@ export default class PostCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.state)
+      .then(() => this.props.closeModal(), this.setState({ body: "" }))
       .then(() =>  this.props.hostId ? this.props.fetchWallPosts(this.props.hostId) :
       this.props.fetchFeedPosts(this.props.currentUserId))
-      .then(()=> this.props.closeModal(), this.setState({body: ""}))
+      
+     
   }
 
   render() {

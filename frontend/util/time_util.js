@@ -23,6 +23,14 @@ export default (timeString) => {
     return ("Yesterday at "+ hm);
   }
   else {
-    return ("Today at "+ hm);
+    let msTime = currTime.getTime() - oldTime.getTime();
+    let msTimehr = msTime / (1000 * 60 * 60);
+    if (msTimehr >= 1 ) { 
+      return Math.floor(msTimehr).toString()+ (msTimehr === 1 ? " hr" : " hrs");
+    }
+    else {
+      return Math.floor(msTime/(1000*60)).toString()+ "m"
+    }
   }
 }
+
