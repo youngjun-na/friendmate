@@ -19,6 +19,7 @@ export default class PostEditForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     this.props.updatePost(this.state)
       // .then(() => this.props.fetchFeedPosts(this.state.hostId))
       .then(() => this.props.closeModal())

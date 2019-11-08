@@ -17,4 +17,6 @@ class Comment < ApplicationRecord
   has_many :replies,
     foreign_key: :parent_comment_id,
     class_name: :Comment
+
+  has_one_attached :photo
 end

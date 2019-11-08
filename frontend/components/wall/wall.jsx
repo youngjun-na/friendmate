@@ -28,6 +28,9 @@ export default class Wall extends React.Component {
       <div className= "prof-cont">
         <div className= "wall-header">
           <div className= "wall-cover-p">
+            <div>
+              <img src={this.props.wallUser.photoUrl} />
+            </div>
             <div className="wall-name">
               {this.props.wallUser.firstName}  {this.props.wallUser.lastName} 
             </div>

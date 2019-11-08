@@ -1620,10 +1620,13 @@ function (_React$Component) {
     _this.state = {
       body: "",
       hostId: _this.props.hostId ? _this.props.hostId : _this.props.currentUserId,
-      authorId: _this.props.currentUserId
+      authorId: _this.props.currentUserId,
+      photoFile: null,
+      photoUrl: null
     };
-    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
+    _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1635,22 +1638,47 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "handleSubmit",
-    value: function handleSubmit(e) {
+    key: "handleFile",
+    value: function handleFile(e) {
       var _this2 = this;
 
+      var file = e.currentTarget.files[0];
+      var fileReader = new FileReader();
+
+      fileReader.onloadend = function () {
+        _this2.setState({
+          photoFile: file,
+          photoUrl: fileReader.result
+        });
+      };
+
+      if (file) fileReader.readAsDataURL(file);
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
-      this.props.createPost(this.state).then(function () {
-        return _this2.props.closeModal();
+      var formData = new FormData();
+      formData.append('post[body]', this.state.body);
+      formData.append('post[photo]', this.state.photoFile);
+      formData.append('post[hostId]', this.state.hostId);
+      formData.append('post[authorId]', this.state.authorId);
+      this.props.createPost(formData).then(function () {
+        return _this3.props.closeModal();
       }, this.setState({
         body: ""
       })).then(function () {
-        return _this2.props.hostId ? _this2.props.fetchWallPosts(_this2.props.hostId) : _this2.props.fetchFeedPosts(_this2.props.currentUserId);
+        return _this3.props.hostId ? _this3.props.fetchWallPosts(_this3.props.hostId) : _this3.props.fetchFeedPosts(_this3.props.currentUserId);
       });
     }
   }, {
     key: "render",
     value: function render() {
+      var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.state.photoUrl
+      }) : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "f-php-c",
         onSubmit: this.handleSubmit
@@ -1668,6 +1696,12 @@ function (_React$Component) {
         placeholder: "What's on your mind, ".concat(this.props.allUsers[this.props.currentUserId].firstName, "?"),
         onChange: this.handleInput,
         value: this.state.body
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "file-submit-overlay"
+      }, " Photo/Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        className: "file-submit-button",
+        onChange: this.handleFile
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-bot"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2098,6 +2132,9 @@ function (_React$Component) {
         className: "pi-h-nl",
         to: "/profile/".concat(host.id)
       }, host.firstName, " ", host.lastName));
+      var photoDiv = post.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: post.photoUrl
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2112,7 +2149,7 @@ function (_React$Component) {
         openModal: this.props.openModal
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-b"
-      }, post.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, photoDiv, post.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-lc"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Like"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Comment")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
         postId: post.id
@@ -2995,7 +3032,9 @@ function (_React$Component) {
         className: "wall-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cover-p"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.props.wallUser.photoUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-name"
       }, this.props.wallUser.firstName, "  ", this.props.wallUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar"
@@ -3604,9 +3643,9 @@ var createPost = function createPost(post) {
   return $.ajax({
     method: 'POST',
     url: '/api/posts',
-    data: {
-      post: post
-    }
+    data: post,
+    contentType: false,
+    processData: false
   });
 };
 var updatePost = function updatePost(post) {

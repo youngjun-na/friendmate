@@ -29,6 +29,13 @@ export default class FeedPostItem extends React.Component {
         </Link>
       </div>
       )
+    let photoDiv = post.photoUrl ? (
+      <div>
+        <img src={post.photoUrl} />
+      </div>
+    ) : (
+      <div></div>
+    )
     return(
       <div className="pi-c">
         <div className="pi-h">
@@ -41,6 +48,7 @@ export default class FeedPostItem extends React.Component {
           <PostDropdown post={post} deletePost={this.props.deletePost} openModal={this.props.openModal} />
         </div>
         <div className="pi-b">
+          {photoDiv}
           {post.body}
         </div>
         <div className="pi-lc">

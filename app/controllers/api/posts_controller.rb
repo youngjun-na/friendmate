@@ -36,7 +36,7 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:body, :author_id, :host_id)
+    params.require(:post).permit(:body, :author_id, :host_id, :photo)
   end
 
   def underscore_params!(val = params)
