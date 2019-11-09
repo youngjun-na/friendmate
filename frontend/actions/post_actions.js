@@ -6,7 +6,7 @@ export const REMOVE_POST = "REMOVE_POST";
 
 const receiveAllPosts = payload => ({
   type: RECEIVE_ALL_POSTS,
-  payload
+  payload,
 });
 
 // export const receiveFeedPosts = posts => ({

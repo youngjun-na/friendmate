@@ -1,5 +1,6 @@
 import React from 'react';
 import FeedIndex from './feed_index';
+import PostCreateFormContainer from '../post/post_create_form_container';
 export default class Feed extends React.Component {
   constructor(props) {
     super(props)
@@ -13,7 +14,7 @@ export default class Feed extends React.Component {
       <div className="f-c">
         <div></div>
         <div className="f-st">
-          <div className="f-php-c">
+          {/* <div className="f-php-c">
             <div className="f-php-h">
               <div className="f-php-h-t">Create Post</div>
             </div>
@@ -24,8 +25,8 @@ export default class Feed extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-         
+          </div> */}
+          <PostCreateFormContainer />
           <div>
             <FeedIndex posts={this.props.posts} />
           </div>

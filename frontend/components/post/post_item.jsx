@@ -34,8 +34,8 @@ export default class FeedPostItem extends React.Component {
         <img src={post.photoUrl} />
       </div>
     ) : (
-      <div></div>
-    )
+      null
+    );
     return(
       <div className="pi-c">
         <div className="pi-h">

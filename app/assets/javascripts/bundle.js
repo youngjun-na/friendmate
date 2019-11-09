@@ -1096,6 +1096,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _feed_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./feed_index */ "./frontend/components/feed/feed_index.jsx");
+/* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1113,6 +1114,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1137,28 +1139,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this = this;
-
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-c"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-h"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-h-t"
-      }, "Create Post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-b"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-t",
-        onClick: function onClick() {
-          return _this.props.openModal("postCreate");
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-tx noselect"
-      }, "What's on your mind, ", this.props.currentUser.firstName, "?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
       }))));
     }
@@ -1291,10 +1276,10 @@ function Modal(_ref) {
 
   switch (modal[0]) {
     case "postCreate":
-      component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        hostId: modal[1]
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-b",
+        onClick: closeModal
       });
-      break;
 
     case "postEdit":
       component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_edit_form_container__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1307,7 +1292,7 @@ function Modal(_ref) {
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-b",
+    className: "modal-d",
     onClick: closeModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "modal-c",
@@ -1519,10 +1504,10 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-n",
         to: "/feed"
-      }, this.props.currentUser.firstName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-n",
         to: "/profile/".concat(this.props.currentUser.id)
-      }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, this.props.currentUser.firstName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "li-b lo",
         onClick: this.handleClick
       }, "Log Out"));
@@ -1586,6 +1571,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostCreateForm; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-autosize-textarea */ "./node_modules/react-autosize-textarea/lib/index.js");
+/* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1606,6 +1593,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var PostCreateForm =
 /*#__PURE__*/
 function (_React$Component) {
@@ -1619,11 +1607,13 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PostCreateForm).call(this, props));
     _this.state = {
       body: "",
-      hostId: _this.props.hostId ? _this.props.hostId : _this.props.currentUserId,
+      hostId: parseInt(_this.props.match.params.userId) || _this.props.currentUserId,
       authorId: _this.props.currentUserId,
       photoFile: null,
       photoUrl: null
     };
+    _this.deletePic = _this.deletePic.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
     _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1631,10 +1621,20 @@ function (_React$Component) {
   }
 
   _createClass(PostCreateForm, [{
-    key: "handleInput",
-    value: function handleInput(e) {
+    key: "deletePic",
+    value: function deletePic() {
       this.setState({
-        body: e.target.value
+        photoFile: null,
+        photoUrl: null
+      });
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(e) {
+      e.stopPropagation();
+      this.props.openModal("postCreate");
+      this.setState({
+        focus: true
       });
     }
   }, {
@@ -1645,7 +1645,7 @@ function (_React$Component) {
       var file = e.currentTarget.files[0];
       var fileReader = new FileReader();
 
-      fileReader.onloadend = function () {
+      fileReader.onload = function () {
         _this2.setState({
           photoFile: file,
           photoUrl: fileReader.result
@@ -1655,6 +1655,13 @@ function (_React$Component) {
       if (file) fileReader.readAsDataURL(file);
     }
   }, {
+    key: "handleInput",
+    value: function handleInput(e) {
+      this.setState({
+        body: e.target.value
+      });
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       var _this3 = this;
@@ -1662,26 +1669,48 @@ function (_React$Component) {
       e.preventDefault();
       var formData = new FormData();
       formData.append('post[body]', this.state.body);
-      formData.append('post[photo]', this.state.photoFile);
+      if (this.state.photoFile) formData.append('post[photo]', this.state.photoFile);
       formData.append('post[hostId]', this.state.hostId);
       formData.append('post[authorId]', this.state.authorId);
       this.props.createPost(formData).then(function () {
         return _this3.props.closeModal();
       }, this.setState({
-        body: ""
+        body: "",
+        photoFile: null,
+        photoUrl: null
       })).then(function () {
-        return _this3.props.hostId ? _this3.props.fetchWallPosts(_this3.props.hostId) : _this3.props.fetchFeedPosts(_this3.props.currentUserId);
+        return _this3.state.hostId ? _this3.props.fetchWallPosts(_this3.state.hostId) : _this3.props.fetchFeedPosts(_this3.props.currentUserId);
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      var buttonOp = !this.state.body && !this.state.postFile ? "but-p opacity" : "but-p";
+      var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "photo-preview-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "photo-preview-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        onClick: this.deletePic,
+        className: "photo-x-cancel"
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "photo-preview",
         src: this.state.photoUrl
-      }) : null;
+      }))) : null;
+      var bottomPost = this.props.modal && this.props.modal[0] === "postCreate" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-bot"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: buttonOp,
+        disabled: !this.state.body && !this.state.photoFile
+      }, "Post"))) : null;
+      var textareaStyle = {
+        "fontSize": this.props.modal && this.props.modal[0] === "postCreate" && this.state.body.length < 85 ? "22px" : "16px"
+      };
+      var placeholderText = this.state.hostId === this.props.currentUserId ? "What's on your mind, ".concat(this.props.allUsers[this.props.currentUserId].firstName, "?") : "Write something to ".concat(this.props.allUsers[this.state.hostId].firstName, "...");
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "f-php-c",
-        onSubmit: this.handleSubmit
+        className: "post-form-cont",
+        onSubmit: this.handleSubmit,
+        onClick: this.handleClick
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-h"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1690,23 +1719,19 @@ function (_React$Component) {
         className: "f-php-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-t"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "f-php-ta",
-        autoFocus: true,
-        placeholder: "What's on your mind, ".concat(this.props.allUsers[this.props.currentUserId].firstName, "?"),
+        placeholder: placeholderText,
         onChange: this.handleInput,
-        value: this.state.body
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        value: this.state.body,
+        style: textareaStyle
+      }), preview), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "file-submit-overlay"
       }, " Photo/Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-bot"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "but-p"
-      }, "Post")));
+      })), bottomPost));
     }
   }]);
 
@@ -1743,7 +1768,8 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state) {
   return {
     currentUserId: state.session.id,
-    allUsers: state.entities.users
+    allUsers: state.entities.users,
+    modal: state.ui.modal
   };
 };
 
@@ -1910,6 +1936,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostEditForm; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-autosize-textarea/lib */ "./node_modules/react-autosize-textarea/lib/index.js");
+/* harmony import */ var react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1930,6 +1958,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var PostEditForm =
 /*#__PURE__*/
 function (_React$Component) {
@@ -1942,8 +1971,12 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PostEditForm).call(this, props));
     _this.state = _this.props.posts[_this.props.postId];
-    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.state[photoFile] = null;
+    _this.state[photoUrl] = null;
+    _this.deletePic = _this.deletePic.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
+    _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1951,6 +1984,31 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchPost(this.props.postId);
+    }
+  }, {
+    key: "deletePic",
+    value: function deletePic() {
+      this.setState({
+        photoFile: null,
+        photoUrl: null
+      });
+    }
+  }, {
+    key: "handleFile",
+    value: function handleFile(e) {
+      var _this2 = this;
+
+      var file = e.currentTarget.files[0];
+      var fileReader = new FileReader();
+
+      fileReader.onloadend = function () {
+        _this2.setState({
+          photoFile: file,
+          photoUrl: fileReader.result
+        });
+      };
+
+      if (file) fileReader.readAsDataURL(file);
     }
   }, {
     key: "handleInput",
@@ -1962,19 +2020,35 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this2 = this;
+      var _this3 = this;
 
       e.preventDefault();
-      this.props.updatePost(this.state) // .then(() => this.props.fetchFeedPosts(this.state.hostId))
+      var formData = new FormData();
+      formData.append('post[body]', this.state.body);
+      if (this.state.photoFile) formData.append('post[photo]', this.state.photoFile);
+      formData.append('post[hostId]', this.state.hostId);
+      formData.append('post[authorId]', this.state.authorId);
+      this.props.updatePost(formData) // .then(() => this.props.fetchFeedPosts(this.state.hostId))
       .then(function () {
-        return _this2.props.closeModal();
+        return _this3.props.closeModal();
       });
     }
   }, {
     key: "render",
     value: function render() {
+      var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "photo-preview-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "photo-preview-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        onClick: this.deletePic,
+        className: "photo-x-cancel"
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "photo-preview",
+        src: this.state.photoUrl
+      }))) : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "f-php-c",
+        className: "post-form-cont",
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-h"
@@ -1984,12 +2058,18 @@ function (_React$Component) {
         className: "f-php-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-t"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "f-php-ta",
         autoFocus: true,
         onChange: this.handleInput,
         value: this.state.body
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), preview)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "file-submit-overlay"
+      }, " Photo/Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        className: "file-submit-button",
+        onChange: this.handleFile
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-bot"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "but-p"
@@ -2134,7 +2214,7 @@ function (_React$Component) {
       }, host.firstName, " ", host.lastName));
       var photoDiv = post.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: post.photoUrl
-      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
+      })) : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2962,6 +3042,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wall_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wall_index */ "./frontend/components/wall/wall_index.jsx");
+/* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2979,6 +3060,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -3023,8 +3105,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
-
       if (!this.props.wallUser) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "prof-cont"
@@ -3046,22 +3126,7 @@ function (_React$Component) {
         className: "wall-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-c"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-h"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-h-t"
-      }, "Create Post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-b"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-t",
-        onClick: function onClick() {
-          return _this3.props.openModal("postCreate", _this3.props.userId);
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-tx noselect"
-      }, "What's on your mind, ", this.props.currentUser.firstName, "?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
       }))))));
     }
@@ -3340,15 +3405,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/post_actions */ "./frontend/actions/post_actions.js");
 
+var _nullState = {};
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _nullState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
   var newState = Object.assign({}, state);
 
   switch (action.type) {
     case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_POSTS"]:
-      return action.payload.posts;
+      return action.payload.posts || state;
 
     case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_POST"]:
       newState[action.post.id] = action.post;
@@ -3652,9 +3718,9 @@ var updatePost = function updatePost(post) {
   return $.ajax({
     method: 'PATCH',
     url: "/api/posts/".concat(post.id),
-    data: {
-      post: post
-    }
+    data: post,
+    contentType: false,
+    processData: false
   });
 };
 var deletePost = function deletePost(post) {

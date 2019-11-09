@@ -47,7 +47,7 @@
 .f-php-t {
   border-bottom: 1px solid #dddfe2;
   width: 450px;
-  height: 80px;
+  min-height: 80px;
   padding: 10px;
   margin-left: 15px;
   cursor: text;
@@ -137,6 +137,10 @@
   padding: 5px, 5px;
   border-radius: 2px;
 }
+.opacity {
+  opacity: 0.2;
+}
+
 
 .tri-b {
   width: 0;

@@ -2,7 +2,7 @@ export const fetchWallPosts = userId => {
   return $.ajax({
     method: 'GET',
     url: '/api/walls',
-    data: { userId },
+    data: {userId},
   })
 };
 
@@ -10,7 +10,7 @@ export const fetchFeedPosts = userId => (
   $.ajax({
     method: 'GET',
     url: '/api/feeds',
-    data: { userId },
+    data: {userId},
   })
 );
 export const fetchPost = postId => (
@@ -34,7 +34,9 @@ export const updatePost = post => (
   $.ajax({
     method: 'PATCH',
     url: `/api/posts/${post.id}`,
-    data: { post },
+    data: post,
+    contentType: false,
+    processData: false,
   })
 );
 

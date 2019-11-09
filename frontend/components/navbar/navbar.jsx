@@ -19,10 +19,10 @@ export default class Feed extends React.Component {
         </div>
         <div className="nb-tc">
           <Link className="nb-tc-n" to="/feed">
-            {this.props.currentUser.firstName}
+            Home
           </Link>
           <Link className="nb-tc-n" to={`/profile/${this.props.currentUser.id}`}>
-            Home
+            {this.props.currentUser.firstName}
           </Link>
         </div>
         <button className="li-b lo" onClick={this.handleClick}>Log Out</button>

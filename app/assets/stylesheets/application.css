@@ -35,6 +35,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.modal-d {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(66, 66, 66, 0.7);
+  z-index: 14;
+}
 img {
   max-width: 100%;
   max-height: 100%;

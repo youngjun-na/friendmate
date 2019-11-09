@@ -1,5 +1,6 @@
 import React from 'react';
 import WallIndex from'./wall_index';
+import PostCreateFormContainer from '../post/post_create_form_container';
 
 export default class Wall extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ export default class Wall extends React.Component {
           </div>
           <div className="wall-cont">
             <div className="f-st">
-              <div className="f-php-c">
+              {/* <div className="f-php-c">
                 <div className="f-php-h">
                   <div className="f-php-h-t">Create Post</div>
                 </div>
@@ -56,8 +57,8 @@ export default class Wall extends React.Component {
                   </div>
                   </div>
                 </div>
-              </div>
-
+              </div> */}
+              <PostCreateFormContainer />
               <div>WE WALL NOW BOYS
               <WallIndex posts={this.props.posts} />
               </div>

@@ -11,8 +11,7 @@ function Modal({modal, closeModal}) {
   let component;
   switch (modal[0]) {
     case "postCreate":
-      component = <PostCreateFormContainer hostId={modal[1]}/>;
-      break;
+      return <div className="modal-b" onClick={closeModal}></div>
     case "postEdit":
       component = <PostEditFormContainer postId={modal[1]}/>;
       break;
@@ -20,7 +19,7 @@ function Modal({modal, closeModal}) {
       return null;
   }
   return(
-    <div className="modal-b" onClick={closeModal}>
+    <div className="modal-d" onClick={closeModal}>
       <div className="modal-c" onClick={e=>e.stopPropagation()}>
         {component}
       </div>

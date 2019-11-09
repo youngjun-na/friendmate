@@ -9,6 +9,7 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = state => ({
   currentUserId: state.session.id,
   allUsers: state.entities.users,
+  modal: state.ui.modal,
 });
 
 const mapDispatchToProps = dispatch => ({
