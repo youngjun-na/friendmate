@@ -1971,8 +1971,6 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PostEditForm).call(this, props));
     _this.state = _this.props.posts[_this.props.postId];
-    _this.state[photoFile] = null;
-    _this.state[photoUrl] = null;
     _this.deletePic = _this.deletePic.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
     _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
@@ -2028,6 +2026,7 @@ function (_React$Component) {
       if (this.state.photoFile) formData.append('post[photo]', this.state.photoFile);
       formData.append('post[hostId]', this.state.hostId);
       formData.append('post[authorId]', this.state.authorId);
+      formData.append('post[id]', this.state.id);
       this.props.updatePost(formData) // .then(() => this.props.fetchFeedPosts(this.state.hostId))
       .then(function () {
         return _this3.props.closeModal();
@@ -3717,7 +3716,7 @@ var createPost = function createPost(post) {
 var updatePost = function updatePost(post) {
   return $.ajax({
     method: 'PATCH',
-    url: "/api/posts/".concat(post.id),
+    url: "/api/posts/".concat(post.get('post[id]')),
     data: post,
     contentType: false,
     processData: false

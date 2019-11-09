@@ -20,25 +20,25 @@ export const fetchPost = postId => (
   })
 );
 
-export const createPost = post => (
-  $.ajax({
+export const createPost = post => {
+  return $.ajax({
     method: 'POST',
     url: '/api/posts',
     data: post,
     contentType: false,
     processData: false,
-  })
-)
+  })}
 
-export const updatePost = post => (
-  $.ajax({
+
+export const updatePost = post => {
+  return $.ajax({
     method: 'PATCH',
-    url: `/api/posts/${post.id}`,
+    url: `/api/posts/${post.get('post[id]')}`,
     data: post,
     contentType: false,
     processData: false,
-  })
-);
+  })}
+;
 
 export const deletePost = post => (
   $.ajax({

@@ -6,8 +6,6 @@ export default class PostEditForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.posts[this.props.postId];
-    this.state[photoFile] = null;
-    this.state[photoUrl] = null;
     this.deletePic = this.deletePic.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.handleFile = this.handleFile.bind(this);
@@ -39,6 +37,7 @@ export default class PostEditForm extends React.Component {
     if (this.state.photoFile) formData.append('post[photo]', this.state.photoFile);
     formData.append('post[hostId]', this.state.hostId);
     formData.append('post[authorId]', this.state.authorId);
+    formData.append('post[id]', this.state.id);
     this.props.updatePost(formData)
       // .then(() => this.props.fetchFeedPosts(this.state.hostId))
       .then(() => this.props.closeModal())
