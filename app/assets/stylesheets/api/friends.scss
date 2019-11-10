@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .friend-box-cont {
-  display: flex;
-  flex-wrap: wrap;
   width: 320px;;
   padding: 10px;
 }
@@ -12,6 +10,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 7px;
+}
+.friend-box-item-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 .friend-box-item {
   width: 100px;
@@ -31,6 +33,7 @@
   max-height: 80px;
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .friend-pic-name {

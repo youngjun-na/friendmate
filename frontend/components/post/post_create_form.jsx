@@ -11,7 +11,7 @@ export default class PostCreateForm extends React.Component {
       photoFile: null,
       photoUrl: null,
     };
-    this.deletePic= this.deletePic.bind(this);
+    this.deletePic = this.deletePic.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.handleFile = this.handleFile.bind(this);

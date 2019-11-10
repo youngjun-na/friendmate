@@ -14,18 +14,12 @@ export default class PostItem extends React.Component {
     const { post } = this.props;
     if (!host || !author) return null;
     let nameHeader = (post.authorId === post.hostId) ? (
-      <div className="pi-ntn">
-        <div className="post-prof-image">
-          <img className="profile-pic" src={host.profPicUrl} />
-        </div>
-        <Link className="pi-h-nl" to={`/profile/${author.id}`}>
-          {author.firstName} {author.lastName}
+      <div className="post-header-name">
+        <Link className="pi-h-nl" to={`/profile/${host.id}`}>
+          {host.firstName} {host.lastName}
         </Link>
       </div>) : (
-      <div className="pi-ntn">
-        <div className="post-prof-image">
-          <img className="profile-pic" src={author.profPicUrl} />
-        </div>
+      <div className="post-header-name">
         <Link className="pi-h-nl" to={`/profile/${author.id}`}>
           {author.firstName} {author.lastName}
         </Link>
@@ -33,8 +27,7 @@ export default class PostItem extends React.Component {
         <Link className="pi-h-nl" to={`/profile/${host.id}`}>
           {host.firstName} {host.lastName}
         </Link>
-      </div>
-      )
+      </div>)
     let photoDiv = post.photoUrl ? (
       <div>
         <img src={post.photoUrl} />
@@ -46,9 +39,16 @@ export default class PostItem extends React.Component {
       <div className="pi-c">
         <div className="pi-h">
           <div className="pi-hnd">
-            {nameHeader}
-            <div className="pi-h-d">
-              {timeUtil(post.createdAt)}
+            <div className="pi-ntn">
+              <div className="post-prof-image">
+                <img className="profile-pic" src={author.profPicUrl} />
+              </div>
+              <div className="post-header-name-date">
+                {nameHeader}
+                <div className="pi-h-d">
+                  {timeUtil(post.createdAt)}
+                </div>
+              </div>
             </div>
           </div> 
           <PostDropdown post={post} deletePost={this.props.deletePost} openModal={this.props.openModal} />

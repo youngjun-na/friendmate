@@ -11,24 +11,27 @@ export default class FriendBox extends React.Component {
     // debugger;
     return(
       <div className="friend-box-cont">
-        {this.props.wallUser.friends.map(friendId=> {
-          let friend = this.props.allUsers[friendId]
-          if (!friend) return null;
-          return (
-          <div className="friend-box-item">
-            <div className="friend-box-header">
-              <img className="friend-icon" src={friendIcon} />
-              <div className="friend-box-title">Friends</div> ·
-            </div>
-            <div className="friend-pic-wrap">
-              <img className="profile-pic" src={friend.profPicUrl}/>
-            </div>
-              <Link key={friend.id} className="friend-pic-name" to={`/profile/${friend.id}`}>
-                {friend.firstName} {friend.lastName}
-              </Link>
-          </div>)
-          ;
-        })}
+        <div className="friend-box-header">
+          <img className="friend-icon" src={friendIcon} />
+          <div className="friend-box-title">Friends</div> ·
+        </div>
+        <div>
+          {this.props.wallUser.friends.map(friendId => {
+            let friend = this.props.allUsers[friendId]
+            if (!friend) return null;
+            return (
+              <div key={friend.id} className="friend-box-item">
+                <Link className="friend-pic-name" to={`/profile/${friend.id}`}>
+                  <div className="friend-pic-wrap">
+                    <img className="profile-pic" src={friend.profPicUrl} />
+                  </div>
+                  <div>
+                    {friend.firstName} {friend.lastName}
+                  </div>
+                </Link>
+              </div>);
+            })}
+        </div>
       </div>
     );
   }

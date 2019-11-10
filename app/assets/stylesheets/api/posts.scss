@@ -6,6 +6,7 @@
   background-color: #eaebef;
   min-height: 100vh;
   display: flex;
+  justify-content: center;
 }
 .f-php-b{
   min-height: 120px;
@@ -150,4 +151,15 @@
 	border-left: 6px solid #616770;
   border-bottom: 6px solid transparent;
   margin: 0 5px;
+}
+.post-header-name-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;;
+  padding: 2px;
+}
+.post-header-name{
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
 }

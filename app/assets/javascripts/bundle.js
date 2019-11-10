@@ -1389,33 +1389,97 @@ function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-cont"
-      }, this.props.wallUser.friends.map(function (friendId) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-box-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "friend-icon",
+        src: _app_assets_images_friends_png__WEBPACK_IMPORTED_MODULE_2___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-box-title"
+      }, "Friends"), " \xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.wallUser.friends.map(function (friendId) {
         var friend = _this.props.allUsers[friendId];
         if (!friend) return null;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: friend.id,
           className: "friend-box-item"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "friend-pic-name",
+          to: "/profile/".concat(friend.id)
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-box-header"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          className: "friend-icon",
-          src: _app_assets_images_friends_png__WEBPACK_IMPORTED_MODULE_2___default.a
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-box-title"
-        }, "Friends"), " \xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-pic-wrap"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "profile-pic",
           src: friend.profPicUrl
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          key: friend.id,
-          className: "friend-pic-name",
-          to: "/profile/".concat(friend.id)
-        }, friend.firstName, " ", friend.lastName));
-      }));
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, friend.firstName, " ", friend.lastName)));
+      })));
     }
   }]);
 
   return FriendBox;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./frontend/components/friend/friend_button.jsx":
+/*!******************************************************!*\
+  !*** ./frontend/components/friend/friend_button.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FriendButton; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var FriendButton =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FriendButton, _React$Component);
+
+  function FriendButton(props) {
+    _classCallCheck(this, FriendButton);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(FriendButton).call(this, props));
+  }
+
+  _createClass(FriendButton, [{
+    key: "render",
+    value: function render() {
+      if (!currentUser || !wallUser) return null;
+      var _this$props = this.props,
+          wallUser = _this$props.wallUser,
+          currentUser = _this$props.currentUser;
+      var buttonContent = currentUser.friends.includes(wallUser.id) ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Friend") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add Friend");
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-button"
+      }, buttonContent);
+    }
+  }]);
+
+  return FriendButton;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
@@ -2393,23 +2457,13 @@ function (_React$Component) {
       var post = this.props.post;
       if (!host || !author) return null;
       var nameHeader = post.authorId === post.hostId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pi-ntn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-prof-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "profile-pic",
-        src: host.profPicUrl
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "post-header-name"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
-        to: "/profile/".concat(author.id)
-      }, author.firstName, " ", author.lastName)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pi-ntn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-prof-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "profile-pic",
-        src: author.profPicUrl
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/profile/".concat(host.id)
+      }, host.firstName, " ", host.lastName)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-header-name"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2427,9 +2481,18 @@ function (_React$Component) {
         className: "pi-h"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-hnd"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pi-ntn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: author.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-header-name-date"
       }, nameHeader, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-h-d"
-      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_1__["default"])(post.createdAt))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_1__["default"])(post.createdAt))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
         post: post,
         deletePost: this.props.deletePost,
         openModal: this.props.openModal
@@ -3250,6 +3313,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wall_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wall_index */ "./frontend/components/wall/wall_index.jsx");
 /* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
 /* harmony import */ var _friend_friend_box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../friend/friend_box */ "./frontend/components/friend/friend_box.jsx");
+/* harmony import */ var _friend_friend_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../friend/friend_button */ "./frontend/components/friend/friend_button.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3267,6 +3331,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -3311,7 +3376,10 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (!this.props.wallUser) return null;
+      var _this$props = this.props,
+          currentUser = _this$props.currentUser,
+          wallUser = _this$props.wallUser;
+      if (!wallUser) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "prof-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3320,32 +3388,35 @@ function (_React$Component) {
         className: "wall-cover-p"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "wall-cover-pic",
-        src: this.props.wallUser.coverPicUrl
+        src: wallUser.coverPicUrl
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-pic-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-circle"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "profile-pic",
-        src: this.props.wallUser.profPicUrl
+        src: wallUser.profPicUrl
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-name"
-      }, this.props.wallUser.firstName, "  ", this.props.wallUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, wallUser.firstName, "  ", wallUser.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_friend_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        currentUser: currentUser,
+        wallUser: wallUser
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-sidebar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_friend_box__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        wallUser: this.props.wallUser,
+        wallUser: wallUser,
         allUsers: this.props.allUsers
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        wallUser: this.props.wallUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        wallUser: wallUser
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
       }))))));
     }
