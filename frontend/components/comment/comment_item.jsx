@@ -12,6 +12,7 @@ export default class CommentItem extends React.Component {
       edit: false,
       id: this.props.comment.id,
       body: this.props.comment.body,
+      
     }
     this.handleEdit = this.handleEdit.bind(this);
     this.handleHover = this.handleHover.bind(this);
@@ -54,6 +55,12 @@ export default class CommentItem extends React.Component {
       {author.firstName} {author.lastName}
     </Link>) : (<span></span>)
 
+    let photoDiv = comment.photoUrl ? (
+      <div>
+        <img src={comment.photoUrl} />
+      </div>
+    ) : null;
+
     let editForm = this.state.edit ? (
       <div className="comment-edit-cont">
         <form className="c-c comment-edit" onSubmit={this.handleSubmit}>
@@ -68,10 +75,12 @@ export default class CommentItem extends React.Component {
         <div className="comment-cont" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} >
           <div className="ci-i-b">
             <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
+            {photoDiv}
           </div>
           <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
         </div>
     )
+    debugger;
     return(
       <div className="ci-i-c">
         {editForm}

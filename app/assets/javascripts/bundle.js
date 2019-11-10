@@ -601,6 +601,8 @@ function (_React$Component) {
       photoFile: null,
       photoUrl: null
     };
+    _this.deletePic = _this.deletePic.bind(_assertThisInitialized(_this));
+    _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
     _this.handleKeyDown = _this.handleKeyDown.bind(_assertThisInitialized(_this));
@@ -608,6 +610,14 @@ function (_React$Component) {
   }
 
   _createClass(CommentCreateForm, [{
+    key: "deletePic",
+    value: function deletePic() {
+      this.setState({
+        photoFile: null,
+        photoUrl: null
+      });
+    }
+  }, {
     key: "handleFile",
     value: function handleFile(e) {
       var _this2 = this;
@@ -650,13 +660,24 @@ function (_React$Component) {
     key: "handleKeyDown",
     value: function handleKeyDown(e) {
       if (e.key === 'Enter' && !e.shiftKey) {
-        if (this.state.body) this.handleSubmit(e);else e.preventDefault();
+        if (this.state.body || this.state.photoUrl) this.handleSubmit(e);else e.preventDefault();
       }
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-photo-preview-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-photo-preview-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        onClick: this.deletePic,
+        className: "comment-photo-x-cancel"
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "comment-photo-preview",
+        src: this.state.photoUrl
+      }))) : null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "c-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "comment-form",
@@ -677,7 +698,7 @@ function (_React$Component) {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile
-      })));
+      }))), preview);
     }
   }]);
 
@@ -1053,6 +1074,9 @@ function (_React$Component) {
         className: "ci-nl",
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null);
+      var photoDiv = comment.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: comment.photoUrl
+      })) : null;
       var editForm = this.state.edit ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-edit-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -1074,11 +1098,12 @@ function (_React$Component) {
         className: "ci-i-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "comment-body"
-      }, this.state.body, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.state.body, " "), photoDiv), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
       }));
+      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-c"
       }, editForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2309,7 +2334,7 @@ function (_React$Component) {
         openModal: this.props.openModal
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-b"
-      }, photoDiv, post.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, post.body, photoDiv), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-lc"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Like"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Comment")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
         postId: post.id
@@ -3727,6 +3752,7 @@ var fetchComment = function fetchComment(commentId) {
   });
 };
 var createComment = function createComment(comment) {
+  debugger;
   return $.ajax({
     method: 'POST',
     url: 'api/comments',

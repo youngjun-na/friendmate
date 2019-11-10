@@ -54,8 +54,8 @@ export default class PostItem extends React.Component {
           <PostDropdown post={post} deletePost={this.props.deletePost} openModal={this.props.openModal} />
         </div>
         <div className="pi-b">
-          {photoDiv}
           {post.body}
+          {photoDiv}
         </div>
         <div className="pi-lc">
           <span>Like</span>

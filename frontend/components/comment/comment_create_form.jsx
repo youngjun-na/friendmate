@@ -11,9 +11,14 @@ export default class CommentCreateForm extends React.Component {
       photoFile: null,
       photoUrl: null,
     };
+    this.deletePic = this.deletePic.bind(this);
+    this.handleFile = this.handleFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+  deletePic() {
+    this.setState({ photoFile: null, photoUrl: null });
   }
   handleFile(e) {
     const file = e.currentTarget.files[0];
@@ -40,27 +45,36 @@ export default class CommentCreateForm extends React.Component {
   }
   handleKeyDown(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
-      if (this.state.body) this.handleSubmit(e);
+      if (this.state.body || this.state.photoUrl) this.handleSubmit(e);
       else e.preventDefault();
     }
   }
   render() {
+    let preview = this.state.photoUrl ? (
+      <div className="comment-photo-preview-cont">
+        <div className="comment-photo-preview-wrap">
+          <span onClick={this.deletePic} className="comment-photo-x-cancel">&times;</span>
+          <img className="comment-photo-preview" src={this.state.photoUrl} />
+        </div>
+      </div>) : null;
     return(
-      <div className="c-c">
-        <form className="comment-form" onSubmit={this.handleSubmit}>
-          <TextareaAutosize className="c-ta" 
-          placeholder="Write a comment..." 
-          onChange={this.handleInput}
-          value={this.state.body}
-          onKeyDown={this.handleKeyDown}/>
-          {/* <input type="submit" style={{ "display": "none" }}/> */}
-        </form>
-        <label className="comment-file-submit-overlay">
-          <div className = "comment-button">
-            <img src={camera} />
-          </div>
-          <input type="file" className="file-submit-button" onChange={this.handleFile} />
-        </label>
+      <div>
+        <div className="c-c">
+          <form className="comment-form" onSubmit={this.handleSubmit}>
+            <TextareaAutosize className="c-ta"
+              placeholder="Write a comment..."
+              onChange={this.handleInput}
+              value={this.state.body}
+              onKeyDown={this.handleKeyDown} />
+          </form>
+          <label className="comment-file-submit-overlay">
+            <div className="comment-button">
+              <img src={camera} />
+            </div>
+            <input type="file" className="file-submit-button" onChange={this.handleFile} />
+          </label>
+        </div>
+        {preview}
       </div>
     );
   }
