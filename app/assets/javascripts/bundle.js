@@ -739,6 +739,7 @@ function (_React$Component) {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "c-ta",
+        id: "comment-focus-".concat(this.state.postId),
         placeholder: "Write a comment...",
         onChange: this.handleInput,
         value: this.state.body,
@@ -1171,7 +1172,7 @@ function (_React$Component) {
         className: "comment-like-reply"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-h-d"
-      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt))));
+      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt, "comment"))));
     }
   }]);
 
@@ -1293,6 +1294,8 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-cont-c"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feed-sidebar-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sidebar-profile"
@@ -1325,7 +1328,7 @@ function (_React$Component) {
         src: _app_assets_images_linkedin_png__WEBPACK_IMPORTED_MODULE_6___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sidebar-item-link"
-      }, "Linkedin"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Linkedin")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
@@ -2532,9 +2535,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -2553,14 +2556,23 @@ function (_React$Component) {
   _inherits(PostItem, _React$Component);
 
   function PostItem(_ref) {
+    var _this;
+
     var props = _ref.props;
 
     _classCallCheck(this, PostItem);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(PostItem).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PostItem).call(this, props));
+    _this.handleComment = _this.handleComment.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(PostItem, [{
+    key: "handleComment",
+    value: function handleComment() {
+      document.getElementById("comment-focus-".concat(this.props.post.id)).focus();
+    }
+  }, {
     key: "render",
     value: function render() {
       var author = this.props.allUsers[this.props.post.authorId];
@@ -2611,7 +2623,12 @@ function (_React$Component) {
         className: "pi-b"
       }, post.body, photoDiv), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-lc"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Like"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Comment")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-like-comment"
+      }, "Like"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-like-comment",
+        onClick: this.handleComment
+      }, "Comment")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
         postId: post.id
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_create_form__WEBPACK_IMPORTED_MODULE_4__["default"], {
         postId: post.id,
@@ -4256,7 +4273,7 @@ var logout = function logout() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (function (timeString) {
+/* harmony default export */ __webpack_exports__["default"] = (function (timeString, type) {
   var oldTime = new Date(timeString);
   var currTime = new Date();
   var hm = oldTime.toLocaleTimeString(navigator.language, {
@@ -4264,6 +4281,11 @@ __webpack_require__.r(__webpack_exports__);
     minute: '2-digit'
   });
   var dayDiff = currTime.getDate() - oldTime.getDate();
+
+  if (type === "comment") {
+    var msTime = currTime.getTime() - oldTime.getTime();
+    if (msTime / (1000 * 60 * 60 * 24 * 7 * 52) >= 1) return Math.floor(msTime / (1000 * 60 * 60 * 24 * 7 * 52)).toString() + "y";else if (msTime / (1000 * 60 * 60 * 24 * 7) >= 1) return Math.floor(msTime / (1000 * 60 * 60 * 24 * 7)).toString() + "w";else if (msTime / (1000 * 60 * 60 * 24) >= 1) return Math.floor(msTime / (1000 * 60 * 60 * 24)).toString() + "d";else if (msTime / (1000 * 60 * 60) >= 1) return Math.floor(msTime / (1000 * 60 * 60)).toString() + "h";else return Math.floor(msTime / (1000 * 60)).toString() + "m";
+  }
 
   if (dayDiff >= 2 || dayDiff < 0) {
     var options = currTime.getFullYear === oldTime.getFullYear ? {
@@ -4278,13 +4300,14 @@ __webpack_require__.r(__webpack_exports__);
   } else if (dayDiff === 1) {
     return "Yesterday at " + hm;
   } else {
-    var msTime = currTime.getTime() - oldTime.getTime();
-    var msTimehr = msTime / (1000 * 60 * 60);
+    var _msTime = currTime.getTime() - oldTime.getTime();
+
+    var msTimehr = _msTime / (1000 * 60 * 60);
 
     if (msTimehr >= 1) {
       return Math.floor(msTimehr).toString() + (msTimehr === 1 ? " hr" : " hrs");
     } else {
-      return Math.floor(msTime / (1000 * 60)).toString() + "m";
+      return Math.floor(_msTime / (1000 * 60)).toString() + "m";
     }
   }
 });

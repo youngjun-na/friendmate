@@ -92,7 +92,7 @@ export default class CommentItem extends React.Component {
         {editForm}
         <div className="comment-like-reply">
           <div className="pi-h-d">
-            {timeUtil(comment.createdAt)}
+            {timeUtil(comment.createdAt, "comment")}
           </div>
         </div>
       </div>

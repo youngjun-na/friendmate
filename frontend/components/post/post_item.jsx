@@ -7,6 +7,10 @@ import CommentIndexContainer from '../comment/comment_index_container';
 export default class PostItem extends React.Component {
   constructor({props}) {
     super(props);
+    this.handleComment = this.handleComment.bind(this);
+  }
+  handleComment() {
+    document.getElementById(`comment-focus-${this.props.post.id}`).focus();
   }
   render() {
     let author = this.props.allUsers[this.props.post.authorId];
@@ -58,8 +62,8 @@ export default class PostItem extends React.Component {
           {photoDiv}
         </div>
         <div className="pi-lc">
-          <span>Like</span>
-          <span>Comment</span>
+          <div className="post-like-comment" >Like</div>
+          <div className="post-like-comment" onClick={this.handleComment}>Comment</div>
         </div>
         <div>
           <CommentIndexContainer postId={post.id}/>

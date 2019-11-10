@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .feed-sidebar-cont {
+  // display: block;
   width: 180px;
+  margin-right: 20px;
   position: fixed;
-  left: 23%;
+  left: 0;
   top: 6%;
 }
 .sidebar-profile {
@@ -56,4 +58,7 @@
 }
 .sidebar-item-link {
   font-size: 13px;
+}
+.sidebar-cont-c {
+  width: 200px;
 }

@@ -62,6 +62,7 @@ export default class CommentCreateForm extends React.Component {
         <div className="c-c">
           <form className="comment-form" onSubmit={this.handleSubmit}>
             <TextareaAutosize className="c-ta"
+              id={`comment-focus-${this.state.postId}`}
               placeholder="Write a comment..."
               onChange={this.handleInput}
               value={this.state.body}

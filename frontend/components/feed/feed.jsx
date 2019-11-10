@@ -18,26 +18,28 @@ export default class Feed extends React.Component {
     const {currentUser} = this.props;
     return(
       <div className="f-c">
-        <div className="feed-sidebar-cont">
-          <div className="sidebar-profile">
-            <div className="sidebar-prof-image">
-              <img className="profile-pic" src={currentUser.profPicUrl} />
+        <div className="sidebar-cont-c">
+          <div className="feed-sidebar-cont">
+            <div className="sidebar-profile">
+              <div className="sidebar-prof-image">
+                <img className="profile-pic" src={currentUser.profPicUrl} />
+              </div>
+              <Link className="sidebar-name-link " to={`/profile/${currentUser.id}`}>
+                {currentUser.firstName} {currentUser.lastName}
+              </Link>
             </div>
-            <Link className="sidebar-name-link " to={`/profile/${currentUser.id}`}>
-              {currentUser.firstName} {currentUser.lastName}
-            </Link>
-          </div>
-          <div className="sidebar-item">
-            <img className="sidebar-pic" src={newsfeed} />
-            <div className="sidebar-item-link">News Feed</div>
-          </div>
-          <div className="sidebar-item">
-            <img className="sidebar-pic" src={github} />
-            <div className="sidebar-item-link">Github</div>
-          </div>
-          <div className="sidebar-item">
-            <img className="sidebar-pic" src={linkedin}/>
-            <div className="sidebar-item-link">Linkedin</div>
+            <div className="sidebar-item">
+              <img className="sidebar-pic" src={newsfeed} />
+              <div className="sidebar-item-link">News Feed</div>
+            </div>
+            <div className="sidebar-item">
+              <img className="sidebar-pic" src={github} />
+              <div className="sidebar-item-link">Github</div>
+            </div>
+            <div className="sidebar-item">
+              <img className="sidebar-pic" src={linkedin} />
+              <div className="sidebar-item-link">Linkedin</div>
+            </div>
           </div>
         </div>
         <div className="f-st">

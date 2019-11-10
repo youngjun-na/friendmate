@@ -7,7 +7,6 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 .f-php-b{
   min-height: 120px;
@@ -83,9 +82,9 @@
 .pi-b{
   word-wrap: break-word;
   margin: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border-bottom: 1px solid #dddfe2;
-  width: 450px;
+  width: 470px;
   min-height: 60px;
 }
 .pi-c {
@@ -105,6 +104,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  padding-left: 5px;
 }
 .pi-h-d {
   color: #c4c5ccd8;
@@ -120,11 +120,14 @@
   text-decoration: underline #4267b2;
 }
 .pi-hnd {
-  padding-left: 15px;
 }
 .pi-lc {
   border-bottom: 1px solid #dddfe2;
   width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
 }
 .pi-ntn {
   display: flex;
@@ -158,7 +161,7 @@
 .post-header-name-date {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;;
+  justify-content: space-between;
   padding: 2px;
 }
 .post-header-name{
@@ -169,4 +172,18 @@
 .post-create-button-div {
   border-top: 1px solid #dddfe2;
   width: 460px;
+}
+.post-like-comment{
+  color: #63666b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 235px;
+  height: 26px;
+  font-size: 13px;
+}
+.post-like-comment:hover{
+  background-color: #f2f2f2;
+  border-radius: 2px;
+  cursor: pointer;
 }
