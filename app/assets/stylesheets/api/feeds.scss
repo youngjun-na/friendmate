@@ -1,3 +1,59 @@
 // Place all the styles related to the api/feeds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.feed-sidebar-cont {
+  width: 180px;
+  position: fixed;
+  left: 23%;
+  top: 6%;
+}
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 5px;
+  border: 1px #eaebef solid;
+  border-radius: 2px;
+}
+.sidebar-profile:hover {
+  border: 1px #dddfe2 solid;
+  border-radius: 2px;
+  background: #f5f6f7;
+  cursor: pointer;
+}
+.sidebar-prof-image {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  overflow: hidden;
+  left: 10px;
+  top: 15px;
+  margin-right: 4px;
+}
+.sidebar-name-link {
+  text-decoration: none;
+  color: black;
+  font-size: 13x;
+  font-weight: 500;
+}
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px #eaebef solid;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.sidebar-item:hover {
+  border: 1px #dddfe2 solid;
+  border-radius: 2px;
+  background: #f5f6f7;
+}
+.sidebar-pic {
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+.sidebar-item-link {
+  font-size: 13px;
+}

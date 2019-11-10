@@ -1,6 +1,6 @@
 import React from 'react';
 import TextareaAutosize from 'react-autosize-textarea';
-
+import postpicture from '../../../app/assets/images/postpicture.png';
 export default class PostCreateForm extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +21,9 @@ export default class PostCreateForm extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState && nextProps.wallUser && nextProps.wallUser.id !== this.hostId) {
       nextState.hostId = nextProps.wallUser.id 
+      return true;
+    }
+    else if (nextState && nextProps) {
       return true;
     }
     return false;
@@ -85,7 +88,7 @@ export default class PostCreateForm extends React.Component {
     let placeholderText = (this.state.hostId === this.props.currentUser.id) ? 
     `What's on your mind, ${author.firstName}?` : 
     `Write something to ${host.firstName}...`;
-   
+    if (this.props.modal && this.props.modal[0] === "postCreate") console.log("the fuck")
     return(
       <form className="post-form-cont" onSubmit={this.handleSubmit} onClick={this.handleClick}>
         <div className="f-php-h">
@@ -103,9 +106,13 @@ export default class PostCreateForm extends React.Component {
             style={textareaStyle}/>  
             {preview}
           </div>
-          <label className="file-submit-overlay"> Photo/Video
+          <div className="post-create-button-div">
+            <label className="file-submit-overlay">
+              <img className="file-submit-pic" src={postpicture} />
+              <div>Photo/Video</div>
               <input type="file" className="file-submit-button" onChange={this.handleFile} />
-          </label>
+            </label>
+          </div>
           {bottomPost}
         </div>
        

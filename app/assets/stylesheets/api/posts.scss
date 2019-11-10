@@ -7,6 +7,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .f-php-b{
   min-height: 120px;
@@ -14,6 +15,9 @@
   border-top: 0;
   background-color: white;
   border-radius: 0 0 2px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .f-php-bot{
   height: 40px;
@@ -46,10 +50,9 @@
   font-weight: bold;
 }
 .f-php-t {
-  border-bottom: 1px solid #dddfe2;
-  width: 460px;
+  width: 480px;
   min-height: 80px;
-  padding: 10px;
+  padding: 10px 0;
   cursor: text;
   display: flex;
 }
@@ -162,4 +165,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 3px;
+}
+.post-create-button-div {
+  border-top: 1px solid #dddfe2;
+  width: 460px;
 }

@@ -73,11 +73,18 @@ export default class CommentItem extends React.Component {
       </div>
     ) : ( 
         <div className="comment-cont" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} >
-          <div className="ci-i-b">
-            <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
-            {photoDiv}
+          <div className="comment-prof-image">
+            <img className="profile-pic" src={author.profPicUrl} />
           </div>
-          <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
+          <div className="comment-body-dropdown">
+            <div className="ci-i-b">
+              <div>
+                <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
+                {photoDiv}
+              </div>
+            </div>
+            <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
+          </div>
         </div>
     )
     return(

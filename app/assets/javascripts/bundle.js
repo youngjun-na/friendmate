@@ -141,6 +141,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACo
 
 /***/ }),
 
+/***/ "./app/assets/images/feed.png":
+/*!************************************!*\
+  !*** ./app/assets/images/feed.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEtUlEQVRIS7WVW2xUVRiF19pnZjptSrmk3HwgSEWj1ARQLLcoSjsQJfhELIQYxHKm6otvhBDTNAFCMIQYEmSmIRgTmEGMlxCETk0QiRUTo5GAgoCBhNBaau1NbDtz9tJzptMKIcXEOC/nP3vO3t9e69//v4n/+cex1l/WcCpUcutWedZ4pvBdaGA0vtfcXNSxhfGsdXrHBKxw029aqpGiAWEAAbhjSgAWBILBwvI/8d8ZvH83JqA6nk5QckGcJ9g/vFBhwWCjhbF8PIqXMB/E7QAQq39/ChCqBEyJKEPPGEMZD4gTiAF8ZmjalNZ/m65xbf2RQd6+BKmMK+oPPSU5RyDMHFF/x1YC3Usc43TnoPmgDREmb43VSG4KcBq0j//NZHom6SqkCaxxU2dILJT0IclKAJUQMyLOAlgNaS6FJTB8R9KT5Jiu5m2zZh6NjskHxOLp3wH0ju8ys3smeasBHrVW2z5vWvtWLJ5OQHB9BaKaCPPYaI7vljkKtgaLjMejQh7QQ6C9OVH7SKw+vQrCMQg7M8naLX6SDeAGEyz2AFh4vzz42BDMHA9qhmyZD+ijcLM5WQD40rirJVm7udpNJQi4slwURu6GdUylrAnBAeANo4ZjGf9Y5gCYjgldzrkgB1AZY266j8RNX0FN/MjzhI5T2NXsA3wFgktjqhZOvfDt6eszI+Mi5UFi+4Y67RfvvTLgx2vWfBAZmFgcCsanlw5N/vGW6Zmoq6APiKf7ILRnkrWzC4C7LSJNlbXeiwRX5fed95/EbmvNOcJLgIyCMrLozFJrInS+DxTUuKk+ggFgRfzwSsGcgOzOTHLdlmo3nSDlGjpVnrWvEvQV5o8maSnt9hycNR4OAYgGaNpuhFmDrPmGUGleAdCRSdRW1LjpGIFmQTtakmu31rjpJhJ1vgJkccUazACyAMLwn1GW/exbEmlre0gKRf0xG0LvpM7wjcCiewKIZpE7Wva/tLWmPt0EqzpjbJW1ZjOJVQCH+w+ssdieA1sd6mMQ0XwbYpeT//6MqNK8RWSgYPmmI9WOUUuhDnwFoOoALKCwGMQLvvf5/mOsjH3Xwp4PeaE9ogKLAHU4Ee+N3GD4AqmSQpI7F03/qeKrtjmLDexp0W5rSaxriLmpAyA3UngiJ/SHHM6VJxMcUykHZr8sshP7B80fz8FDKR1ak8u2/pnLdkYiJZdJRRmLp3oAdg9Nm1qB692l4cjA64Q+yiTXXax2UwcIbISceaC3F8DSu1rFPhk1w+JTFkqcOlxkSzcNov8yaEKMuanrJEvEoTmZ/S93FCq1oaHBtLY9eorE04Z60MrMkOzSkaYW9H/7ydBQcXu4aHAjpKh/J0jmpIgu0v5AoYvDxVQnKhmKeJtP7F3fu2zDwWg4UryexF7B/rJ42qXHGxsbR26qsdrFsg0HJxRFi9+W4OduH5e/dmiW4zmnBM0AeIXURQs+YIC5ft1LuALiXKG+hm+qOxiCNflbj1HAPgxwFoBrhno2aIEr61MzrcV2gTES5f4pCWpp+MT8Mw7GFFyJeeZInJ8jsZvQZ8Zg68n9a6+N9Fjf869/rSg3CJfcr2OO9b8xzsCCyRc6Cpbe//b4L7S/5/4FXTZUPJHyIkMAAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ "./app/assets/images/friends.png":
 /*!***************************************!*\
   !*** ./app/assets/images/friends.png ***!
@@ -152,6 +163,28 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADg
 
 /***/ }),
 
+/***/ "./app/assets/images/github.png":
+/*!**************************************!*\
+  !*** ./app/assets/images/github.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADa0lEQVRIiY2WT2gcdRTHP99hKWGJVUIJS9AatIdQgkIoSj2qGUW0R52ApHjZRS/SUykiHjz0UGg9OlsK/oHsHNSDSimzFw/F5qQXKT2UIqEUCUsIJQQJy349/GZ2Z7sbyRtm98383u/7e+/73u/9RvyPxK3spCEWvAUsg+dBEaaHuAt0gVvg+3m6NhVDE6DNDETD5nOJ921OSGCDnrQ2ALuGnwVfIP7O02TMJJrmOOaOxCcQwGEKeOmeeEZiHXHHdjLNpErJhzbXgZmpgIBthHDh/pguHQCXMFfzdjJaIG52QHrd5heJuhmC9IVq05eCwq5vXNPQV/dB5202uu2koEhqGK4D9UpYA6EPgI+Av4B94CFmC9gDbwldAN4D7RZBQHDomsQpGOXgkuCFES0C2LfZzNPkG+Bl4Kk8TZ7L28nzwNPAi3mafAXcFvwTaDK2sT0PfBm3MmpxM1vAJJP1RCRRA8jTZFAdKJ4HISccCPdKioYw9jtIS5HFm4j5wOmYZJiHh/FfSredHFi6MkRWees4cC4SvOHKWEW+z9vjnh8mgl9t71QootBXI8NpeXKS7d5RwCFQJulRKNpwFWGcjmTmS9er60iaO+oChcyW4TDanMcjxHCjAPuYP4DbwKm4mR0JOW51GsAWsGl4UOLZJsL05KICzAxiCfMK5hriXNzKprWTEXizMwe6AbyGeUnwrILXSHpcK7riSmEfAXXEAbAN7oB+iFtZB9jM02S3BF5tZnMS72I+tb0SKFEtJBgkgbkbEVpuCEllHnzM8BvwE5AAHWBhREkG4qLxt4iVKu9jOu4qbmULwJ/APC4Gw/+e7TWhfaCG+B18DKjbRJLOAD8O5zCcVz7sgV6N8jR5ZLMxRmwwmpV0A3EeOIM5YVgALUpaAga2QYxqv6rDTfC9KPDFZeBBhaLwG3rKOmLNcq0ohjLpg6m0BL0H+ixP1wZRAGIb8zHwryrJKBKFTV9oEXnG9jLQAGrDaik3V9D7RZe9T2XdkLxmZx0pBWbGKLP3kPrgx6AGsGNTl5gFokrl9IGLwNXy6Jw8k1vZ20AKnLQdoqA4ySQqh1EBUL5jG+sCYqN6Lk9uInML+yzwtdBO0eaHdI3REqjclfWdrbNPgk+NoBIJwKJxLLSKWS6+NpDo2dyT6Nq+KXHoZ8t/XbiHxvbKIWYAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/linkedin.png":
+/*!****************************************!*\
+  !*** ./app/assets/images/linkedin.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACzElEQVRIiZWWv2sUQRTHP99hCUcIQUQkSP4CsbBQLAXhDv8DTxvF4g5BkDRaiEgqCWpheSIoUcjVFhZnpygSrIOllVikiiASwn4tdmb2bi+504HbfTv75s2bz/uxp05/uAjcA7qYJfACUgDSD5uAKgGpEgGZMj6UQIkogQNgD3iN/aQAHgB3IRqpLlDbQ0py/W5CtZ5OYwVYNyIY38yeNrTG7E3I/ziC4HohtJiNOx59hjHbCOHozmyZ5WCniXgRH4DzwAXD5+YGkkDVfZ4MLkLiaoygFNwZDbpfR4PutmCtiW2C4xxZUlHYledKkTIHY6oHTVrREZyMzJBBoQCQ80xAftzuba1JBGCjdikuyfcxbEfIGApwjmplRpclLtlGYmFq2WGpOUMuqKId4wvAC+CTELYvSrqB+Wa8oYrlCtC3/RTxTlBinQbWLZ+r+Vc7NBEBfBwNupsA7d4wADcQP7FejZ53afe2TiG9FdoZDbppzfdOf2tb1nvg7BxER5w2Prx/fvUH8IPGGA2u7nZ6W8+QXk4ikmJmTFeXNZkZAJ3eEMRt44egn4Iro0F3J3rxZaLQbIIAOWZGI+ll8gHz9uIk5r7QCcEZ7FtjS/4IlUJxnQhusmicAFXtwalM7CVg0XaaX876uARK29lmbHKuDR46NFadFDnlBLJCrRV7Ue0MhZJlTWVTRqb0ASC38JBj1uCqHLgKUTGre9ZBrjMt96468qG5Bjvr/TeibDBXpsKkrscplIchOtbuD1ereY5XXtMyXu30hxivyMpdGLHY6Q1Xo/GVcUSIA7X7w1+CpbQ5Yh8ooxyABaAE9hMaSa38HZFK4/1qL2HcSvzBuwXw23hJKCFaUEx+1yyD7ZbGC6LGEIBWk2gU9gJmU1YJFaKMLHmRiy3OUd/nyKXtN4XEekRwDbFM+osy5Q256BRPFxHVGSUhXGLtWWwKPfoLo4lAMhHkOoYAAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ "./app/assets/images/pencil.png":
 /*!**************************************!*\
   !*** ./app/assets/images/pencil.png ***!
@@ -160,6 +193,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADg
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjCwgBIhxcEaoqAAAAAW9yTlQBz6J3mgAAAI9JREFUOMvN0r0RwjAMQOEXX5gGxiGzqCSU2oVxwjYcSgEEOziS6eLGZ9/3Cv/ADoaa2nfVxfw1y1umwJ/WoR90TDKUiROo6ZOe2yeRMTyqmho9cFbj4h46vxc58ODI3QlyDiCJZSc18BHvHSr8Wl7cX3wVxLwIWngWtPElaOUbX2ObVwOPVwKf/wQR3+WYAQhfOmYVJgDSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTExLTA4VDAxOjM0OjE3KzAwOjAwURYYsAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0xMS0wOFQwMTozNDoxNyswMDowMCBLoAwAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/postpicture.png":
+/*!*******************************************!*\
+  !*** ./app/assets/images/postpicture.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAWJAAAFiQFtaJ36AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAASlQTFRF////ar+Ad7uIcsGEcMWGccSGcMKGcMSGYGl9cMKFcMOHX2l8csOGZW6CccOGcMOGccSGYWt+Z2+CccOGYmt+ccOGa6GDa5eDVmB0EaCFEp+FFqKFGJmDHJWCHKSFHpOCIJGBIo+AJot/JoyAJrmZJ7iYKKiFKLSXK4Z+LqKPLqOPMqKPM358NJyNNJ2NN5iLPI2HQoGCR3d+SWl2TGZ1TWx5TraGT2N0UGJ0UmBzUmB0UqyeU19zU2B0VF5zXWVyYK+UZL6GZb+Ga8GGbMGGccOGcr+Qc3VueMaMg8uWhru2i5yljM6dkpqmldKkm5NoodevqZ1mq9i5rb7Ct+DBt+HCusDHv65iw+HOxufOz9XZ0OvX0rxf2+Dj4ubp5+vs6PXr7PDx89VaLjWsGAAAABl0Uk5TAAwPHTk9VHSFhqGjpqu83N/j7O7w8fT1+v5zZmYAAADsSURBVCjPY2DABbh5sQEOBgaRKGxAkIFBKDEuFh3EJ4IlfO3QQRhMwj0mxh2rRHhSUjhWicCkpECsEvb+/vYQIWMdFAk4MJGR1LBBkzC1tbMzl5WUlFSyRJEwUteztVKQBAFFCyQJQ1UVFV1lSQiQD4ZLGKiAgJYUUFTOzNHZLQIiYauvogKTUXNxBQExkIS3tgoMaEo7ubp6hgJl2IASXtYI4AAU84kEEnxACWQQ5OoXGZ0QGeIqzCAhhAzEXT18AqJ9PF350eKTBWYUF3pM87i6evi5uooyo0sw8YBcK8CKJXWwsHOyMTLgBgCTEWSVh6YIbwAAAABJRU5ErkJggg=="
 
 /***/ }),
 
@@ -1106,14 +1150,21 @@ function (_React$Component) {
         onMouseEnter: this.handleHover,
         onMouseLeave: this.handleHover
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: author.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-body-dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-b"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "comment-body"
-      }, this.state.body, " "), photoDiv), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.state.body, " "), photoDiv)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
-      }));
+      })));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-c"
       }, editForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1185,6 +1236,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _feed_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./feed_index */ "./frontend/components/feed/feed_index.jsx");
 /* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _app_assets_images_feed_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../app/assets/images/feed.png */ "./app/assets/images/feed.png");
+/* harmony import */ var _app_assets_images_feed_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_feed_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _app_assets_images_github_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../app/assets/images/github.png */ "./app/assets/images/github.png");
+/* harmony import */ var _app_assets_images_github_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_github_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _app_assets_images_linkedin_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../app/assets/images/linkedin.png */ "./app/assets/images/linkedin.png");
+/* harmony import */ var _app_assets_images_linkedin_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_linkedin_png__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1202,6 +1260,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
 
 
 
@@ -1227,13 +1289,47 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var currentUser = this.props.currentUser;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-c"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feed-sidebar-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-profile"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: currentUser.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "sidebar-name-link ",
+        to: "/profile/".concat(currentUser.id)
+      }, currentUser.firstName, " ", currentUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "sidebar-pic",
+        src: _app_assets_images_feed_png__WEBPACK_IMPORTED_MODULE_4___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-item-link"
+      }, "News Feed")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "sidebar-pic",
+        src: _app_assets_images_github_png__WEBPACK_IMPORTED_MODULE_5___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-item-link"
+      }, "Github")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "sidebar-pic",
+        src: _app_assets_images_linkedin_png__WEBPACK_IMPORTED_MODULE_6___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-item-link"
+      }, "Linkedin"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_feed_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
-      }))));
+      })));
     }
   }]);
 
@@ -1816,6 +1912,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-autosize-textarea */ "./node_modules/react-autosize-textarea/lib/index.js");
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/postpicture.png */ "./app/assets/images/postpicture.png");
+/* harmony import */ var _app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1833,6 +1931,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1868,6 +1967,8 @@ function (_React$Component) {
     value: function shouldComponentUpdate(nextProps, nextState) {
       if (nextState && nextProps.wallUser && nextProps.wallUser.id !== this.hostId) {
         nextState.hostId = nextProps.wallUser.id;
+        return true;
+      } else if (nextState && nextProps) {
         return true;
       }
 
@@ -1962,6 +2063,7 @@ function (_React$Component) {
         "fontSize": this.props.modal && this.props.modal[0] === "postCreate" && this.state.body.length < 85 ? "22px" : "16px"
       };
       var placeholderText = this.state.hostId === this.props.currentUser.id ? "What's on your mind, ".concat(author.firstName, "?") : "Write something to ".concat(host.firstName, "...");
+      if (this.props.modal && this.props.modal[0] === "postCreate") console.log("the fuck");
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "post-form-cont",
         onSubmit: this.handleSubmit,
@@ -1985,13 +2087,18 @@ function (_React$Component) {
         onChange: this.handleInput,
         value: this.state.body,
         style: textareaStyle
-      }), preview), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }), preview), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-create-button-div"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "file-submit-overlay"
-      }, " Photo/Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "file-submit-pic",
+        src: _app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Photo/Video"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile
-      })), bottomPost));
+      }))), bottomPost));
     }
   }]);
 
@@ -2199,6 +2306,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-autosize-textarea/lib */ "./node_modules/react-autosize-textarea/lib/index.js");
 /* harmony import */ var react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/postpicture.png */ "./app/assets/images/postpicture.png");
+/* harmony import */ var _app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2216,6 +2325,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -2315,17 +2425,18 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-h-t"
       }, "Edit Post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-php-b"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-t"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "f-php-ta",
         autoFocus: true,
         onChange: this.handleInput,
         value: this.state.body
-      }), preview)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }), preview), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "file-submit-overlay"
-      }, " Photo/Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "file-submit-pic",
+        src: _app_assets_images_postpicture_png__WEBPACK_IMPORTED_MODULE_2___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Photo/Video"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile

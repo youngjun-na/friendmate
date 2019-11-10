@@ -92,10 +92,10 @@
 
 .comment-cont {
   display: flex;
-  align-items: center;
+  // align-items: center;
   width: 460px;
   margin: 10px;
-  padding: 0 10px;
+
 }
 .comment-cancel {
   margin-left: 20px;
@@ -174,4 +174,17 @@
   color: white;
   background-color: #77A7FF;
   cursor: pointer;
+}
+.comment-prof-image {
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  overflow: hidden;
+  left: 10px;
+  top: 15px;
+}
+.comment-body-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

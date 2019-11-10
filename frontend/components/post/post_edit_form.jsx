@@ -1,6 +1,6 @@
 import React from 'react';
 import TextareaAutosize from 'react-autosize-textarea/lib';
-
+import postpicture from '../../../app/assets/images/postpicture.png';
 
 export default class PostEditForm extends React.Component {
   constructor(props) {
@@ -56,14 +56,16 @@ export default class PostEditForm extends React.Component {
         <div className="f-php-h">
           <div className="f-php-h-t">Edit Post</div>
         </div>
-        <div className="f-php-b">
+        {/* <div className="f-php-b"> */}
           <div className="f-php-t">
             <TextareaAutosize className="f-php-ta" autoFocus onChange={this.handleInput} value={this.state.body} />
             {preview}
           </div>
-        </div>
-        <label className="file-submit-overlay"> Photo/Video
-              <input type="file" className="file-submit-button" onChange={this.handleFile} />
+        {/* </div> */}
+        <label className="file-submit-overlay">
+          <img className="file-submit-pic" src={postpicture} />
+          <div>Photo/Video</div>
+          <input type="file" className="file-submit-button" onChange={this.handleFile} />
         </label>
         <div className="f-php-bot">
           <button className="but-p">Post</button>
