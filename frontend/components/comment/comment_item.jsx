@@ -80,7 +80,6 @@ export default class CommentItem extends React.Component {
           <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
         </div>
     )
-    debugger;
     return(
       <div className="ci-i-c">
         {editForm}

@@ -1,0 +1,45 @@
+// Place all the styles related to the api/friends controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.friend-box-cont {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;;
+  padding: 10px;
+}
+.friend-box-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.friend-box-item {
+  width: 100px;
+  margin: 3px;
+}
+.friend-box-title{
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.friend-icon {
+  margin-right: 7px;
+}
+.friend-pic-wrap {
+  position: relative;
+  max-width: 80px;
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.friend-pic-name {
+  text-decoration: none;
+  color: #4267b2;
+  font-size: 12px;
+  font-weight: 500;
+  // margin-right: 4px;
+}
+.friend-pic-name:hover {
+  text-decoration: underline #4267b2;
+}

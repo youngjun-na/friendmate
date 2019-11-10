@@ -1,17 +1,15 @@
 import React from 'react';
 import WallIndex from'./wall_index';
 import PostCreateFormContainer from '../post/post_create_form_container';
-
+import FriendBox from '../friend/friend_box';
 export default class Wall extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      update: ""
+      update: "",
     }
   }
   componentDidMount() {
-    // debugger;
-    // this.props.fetchWallPosts(this.props.wallUser.id);
     this.props.fetchAllUsers()
     .then(() => this.props.fetchWallPosts(this.props.wallUser.id))
     .then(() => this.props.fetchUser(this.props.wallUser.id));
@@ -44,22 +42,10 @@ export default class Wall extends React.Component {
         </div>
         <div className="wall-main">
           <div className="wall-sidebar">
-
+            <FriendBox wallUser={this.props.wallUser} allUsers={this.props.allUsers}/>
           </div>
           <div className="wall-cont">
             <div className="f-st">
-              {/* <div className="f-php-c">
-                <div className="f-php-h">
-                  <div className="f-php-h-t">Create Post</div>
-                </div>
-                <div className="f-php-b">
-                  <div className="f-php-t" onClick={() => this.props.openModal("postCreate", this.props.userId)}>
-                    <div className="f-php-tx noselect">
-                      What's on your mind, {this.props.currentUser.firstName}?
-                  </div>
-                  </div>
-                </div>
-              </div> */}
               <PostCreateFormContainer wallUser={this.props.wallUser}/>
               <div>WE WALL NOW BOYS
               <WallIndex posts={this.props.posts} />

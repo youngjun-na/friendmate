@@ -9,7 +9,8 @@ const mapStateToProps = (state = {}, ownProps) => {
   return {
   posts: Object.values(state.entities.posts).reverse(),
   wallUser: state.entities.users[ownProps.match.params.userId],
-  currentUser: state.entities.users[state.session.id]
+  currentUser: state.entities.users[state.session.id],
+  allUsers: state.entities.users,
 }};
 
 const mapDispatchToProps = dispatch => ({

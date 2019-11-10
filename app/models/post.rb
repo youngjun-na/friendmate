@@ -16,7 +16,7 @@ class Post < ApplicationRecord
   has_one_attached :photo
   
   def self.all_wall_posts(user_id)
-    Post.where("host_id = ?", user_id).order("updated_at asc")
+    Post.where("host_id = ?", user_id).order("updated_at desc")
   end
 
   def self.all_related_posts(user_id)
