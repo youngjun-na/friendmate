@@ -46,11 +46,11 @@
 }
 .f-php-t {
   border-bottom: 1px solid #dddfe2;
-  width: 450px;
+  width: 460px;
   min-height: 80px;
   padding: 10px;
-  margin-left: 15px;
   cursor: text;
+  display: flex;
 }
 .f-php-ta {
   padding: 10px;
@@ -77,6 +77,7 @@
   align-items: center;
 }
 .pi-b{
+  word-wrap: break-word;
   margin: 5px;
   margin-bottom: 20px;
   border-bottom: 1px solid #dddfe2;

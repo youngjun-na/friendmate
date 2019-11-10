@@ -11,9 +11,10 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  position: relative;
 }
 .ci-i-b {
-  display: inline-block;
+  word-wrap: break-word;
   background-color: #f2f3f5;
   min-width: 100px;
   max-width: 400px;
@@ -22,6 +23,7 @@
   padding: 8px 10px;
   margin-right: 10px;
   font-size: 13px;
+  font-weight: 300;
 }
 .ci-i-c {
   display: flex;
@@ -34,6 +36,8 @@
   background: white;
 }
 .ci-nl {
+  // display: inline-block;
+  max-width: 200px;
   text-decoration: none;
   color: #4267b2;
   font-size: 13px;
@@ -46,7 +50,6 @@
 .c-ta {
   width: 380px;
   height: 20px;
-  margin: 0 auto;
   font-size: 14px;
   background: transparent;
   border: none;
@@ -111,4 +114,31 @@
   // flex-direction: column;
   // justify-content: left;
   margin-left: 10px;
+}
+
+.comment-button {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  margin-left: 15px;
+}
+.comment-form {
+  display: inline-block;
+}
+.comment-body {
+  word-wrap: break-word;
+}
+.file-submit-button {
+  display: none;
+}
+.comment-file-submit-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
 }

@@ -19,6 +19,7 @@ class User < ApplicationRecord
     class_name: :Comment
 
   has_one_attached :profile_pic
+  has_one_attached :cover_pic
 
   def self.find_by_credentials(email, password) 
     user = User.find_by(email: email)

@@ -4,7 +4,7 @@ import PostDropdown from './post_dropdown';
 import { Link } from 'react-router-dom';
 import CommentCreateForm from '../comment/comment_create_form';
 import CommentIndexContainer from '../comment/comment_index_container';
-export default class FeedPostItem extends React.Component {
+export default class PostItem extends React.Component {
   constructor({props}) {
     super(props);
   }
@@ -15,11 +15,17 @@ export default class FeedPostItem extends React.Component {
     if (!host || !author) return null;
     let nameHeader = (post.authorId === post.hostId) ? (
       <div className="pi-ntn">
+        <div className="post-prof-image">
+          <img className="profile-pic" src={host.profPicUrl} />
+        </div>
         <Link className="pi-h-nl" to={`/profile/${author.id}`}>
           {author.firstName} {author.lastName}
         </Link>
       </div>) : (
       <div className="pi-ntn">
+        <div className="post-prof-image">
+          <img className="profile-pic" src={author.profPicUrl} />
+        </div>
         <Link className="pi-h-nl" to={`/profile/${author.id}`}>
           {author.firstName} {author.lastName}
         </Link>

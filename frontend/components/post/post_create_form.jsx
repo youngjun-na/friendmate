@@ -6,8 +6,8 @@ export default class PostCreateForm extends React.Component {
     super(props);
     this.state = {
       body: "",
-      hostId: parseInt(this.props.match.params.userId) || this.props.currentUserId,
-      authorId: this.props.currentUserId,
+      hostId: this.props.wallUser ? this.props.wallUser.id : this.props.currentUser.id,
+      authorId: this.props.currentUser.id,
       photoFile: null,
       photoUrl: null,
     };
@@ -16,6 +16,14 @@ export default class PostCreateForm extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.handleFile = this.handleFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+ 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState && nextProps.wallUser && nextProps.wallUser.id !== this.hostId) {
+      nextState.hostId = nextProps.wallUser.id 
+      return true;
+    }
+    return false;
   }
   deletePic() {
     this.setState({photoFile: null, photoUrl: null});
@@ -31,7 +39,6 @@ export default class PostCreateForm extends React.Component {
     fileReader.onload = () => {
       this.setState({ photoFile: file, photoUrl: fileReader.result });
     };
-  
     if (file) fileReader.readAsDataURL(file);
   }
   handleInput(e) {
@@ -48,13 +55,13 @@ export default class PostCreateForm extends React.Component {
     this.props.createPost(formData)
       .then(() => this.props.closeModal(), this.setState({ body: "", photoFile: null, photoUrl: null }))
       .then(() =>  this.state.hostId ? this.props.fetchWallPosts(this.state.hostId) :
-      this.props.fetchFeedPosts(this.props.currentUserId))
-      
-     
+      this.props.fetchFeedPosts(this.props.currentUser.id))
   }
 
   render() {
     let buttonOp = (!this.state.body && !this.state.postFile) ? "but-p opacity" : "but-p";
+    let author = this.props.allUsers[this.props.currentUser.id];
+    let host= this.props.allUsers[this.state.hostId];
 
     let preview = this.state.photoUrl ? (
     <div className="photo-preview-cont">
@@ -75,9 +82,9 @@ export default class PostCreateForm extends React.Component {
       "fontSize": (this.props.modal && this.props.modal[0] === "postCreate") && (this.state.body.length < 85) ? "22px" : "16px",
     };
 
-    let placeholderText = (this.state.hostId === this.props.currentUserId) ? 
-    `What's on your mind, ${this.props.allUsers[this.props.currentUserId].firstName}?` : 
-    `Write something to ${this.props.allUsers[this.state.hostId].firstName}...`;
+    let placeholderText = (this.state.hostId === this.props.currentUser.id) ? 
+    `What's on your mind, ${author.firstName}?` : 
+    `Write something to ${host.firstName}...`;
    
     return(
       <form className="post-form-cont" onSubmit={this.handleSubmit} onClick={this.handleClick}>
@@ -86,6 +93,9 @@ export default class PostCreateForm extends React.Component {
         </div>
         <div className="f-php-b">
           <div className="f-php-t">
+            <div className="post-prof-image">
+              <img className="profile-pic" src={author.profPicUrl} />
+            </div>
             <TextareaAutosize className="f-php-ta" 
             placeholder={placeholderText} 
             onChange={this.handleInput} 

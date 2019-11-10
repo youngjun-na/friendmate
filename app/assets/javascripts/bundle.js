@@ -97,6 +97,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAQAAABe
 
 /***/ }),
 
+/***/ "./app/assets/images/camera.png":
+/*!**************************************!*\
+  !*** ./app/assets/images/camera.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP4A/gD+6xjUggAAAAlwSFlzAAAASAAAAEgARslrPgAAAAl2cEFnAAAAIAAAACAAh/qcnQAAAShJREFUWMPtlT1uAjEQhT9F0VKgRaFNuAHHCD0JJ6CHcCbOQpQECrRp+D0G0EMxg2Qli+01mMpPslzM8/OzPeOBhIQEf+TABjg6xgKoxzAw9tj8PMahm7iED0Dbsr6tHJdOsIG+xyH6tzAQC//0HwJEasAHMEWu+wDMgJHGTHwCX1c5/IMXoODy1f4CLYM/URO++lZCZmy+Bt6Q0syBLrAyTNQC9J2EocY2QLMk/mSYGMUw8KOxd8v6rnJmMQzsNNawrM+Vs/fVr1IFUcqzioGFzh0L51XnZagh2xMMNLalPAmbSHUckX+iqr6TkAFzw0QPyYcGkpjnTlkQqQwBng0TZaNAPqtQfa9ekCHP8Y1k+x4p0aHGrtK/ezN6tBDvgpBumJCQcFOcAATPoO0rRfeKAAAAJXRFWHRjcmVhdGUtZGF0ZQAyMDE5LTExLTEwVDAwOjU2OjQ2KzAwOjAwGdmRUgAAACV0RVh0bW9kaWZ5LWRhdGUAMjAxOS0xMS0xMFQwMDo1Njo0NiswMDowMEZo52YAAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ "./app/assets/images/fb_sp_np.png":
 /*!****************************************!*\
   !*** ./app/assets/images/fb_sp_np.png ***!
@@ -548,6 +559,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-autosize-textarea */ "./node_modules/react-autosize-textarea/lib/index.js");
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/camera.png */ "./app/assets/images/camera.png");
+/* harmony import */ var _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -569,6 +582,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CommentCreateForm =
 /*#__PURE__*/
 function (_React$Component) {
@@ -583,7 +597,9 @@ function (_React$Component) {
     _this.state = {
       body: "",
       authorId: _this.props.currentUserId,
-      postId: _this.props.postId
+      postId: _this.props.postId,
+      photoFile: null,
+      photoUrl: null
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
@@ -592,11 +608,35 @@ function (_React$Component) {
   }
 
   _createClass(CommentCreateForm, [{
+    key: "handleFile",
+    value: function handleFile(e) {
+      var _this2 = this;
+
+      var file = e.currentTarget.files[0];
+      var fileReader = new FileReader();
+
+      fileReader.onload = function () {
+        _this2.setState({
+          photoFile: file,
+          photoUrl: fileReader.result
+        });
+      };
+
+      if (file) fileReader.readAsDataURL(file);
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      this.props.createComment(this.state).then(this.setState({
-        body: ""
+      var formData = new FormData();
+      formData.append('comment[body]', this.state.body);
+      if (this.state.photoFile) formData.append('comment[photo]', this.state.photoFile);
+      formData.append('comment[authorId]', this.state.authorId);
+      formData.append('comment[postId]', this.state.postId);
+      this.props.createComment(formData).then(this.setState({
+        body: "",
+        photoFile: null,
+        photoUrl: null
       }));
     }
   }, {
@@ -619,6 +659,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "c-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "comment-form",
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "c-ta",
@@ -626,6 +667,16 @@ function (_React$Component) {
         onChange: this.handleInput,
         value: this.state.body,
         onKeyDown: this.handleKeyDown
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "comment-file-submit-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_2___default.a
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        className: "file-submit-button",
+        onChange: this.handleFile
       })));
     }
   }]);
@@ -1021,7 +1072,9 @@ function (_React$Component) {
         onMouseLeave: this.handleHover
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-b"
-      }, nameLink, this.state.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "comment-body"
+      }, this.state.body, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
@@ -1607,8 +1660,8 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PostCreateForm).call(this, props));
     _this.state = {
       body: "",
-      hostId: parseInt(_this.props.match.params.userId) || _this.props.currentUserId,
-      authorId: _this.props.currentUserId,
+      hostId: _this.props.wallUser ? _this.props.wallUser.id : _this.props.currentUser.id,
+      authorId: _this.props.currentUser.id,
       photoFile: null,
       photoUrl: null
     };
@@ -1621,6 +1674,16 @@ function (_React$Component) {
   }
 
   _createClass(PostCreateForm, [{
+    key: "shouldComponentUpdate",
+    value: function shouldComponentUpdate(nextProps, nextState) {
+      if (nextState && nextProps.wallUser && nextProps.wallUser.id !== this.hostId) {
+        nextState.hostId = nextProps.wallUser.id;
+        return true;
+      }
+
+      return false;
+    }
+  }, {
     key: "deletePic",
     value: function deletePic() {
       this.setState({
@@ -1679,13 +1742,15 @@ function (_React$Component) {
         photoFile: null,
         photoUrl: null
       })).then(function () {
-        return _this3.state.hostId ? _this3.props.fetchWallPosts(_this3.state.hostId) : _this3.props.fetchFeedPosts(_this3.props.currentUserId);
+        return _this3.state.hostId ? _this3.props.fetchWallPosts(_this3.state.hostId) : _this3.props.fetchFeedPosts(_this3.props.currentUser.id);
       });
     }
   }, {
     key: "render",
     value: function render() {
       var buttonOp = !this.state.body && !this.state.postFile ? "but-p opacity" : "but-p";
+      var author = this.props.allUsers[this.props.currentUser.id];
+      var host = this.props.allUsers[this.state.hostId];
       var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "photo-preview-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1706,7 +1771,7 @@ function (_React$Component) {
       var textareaStyle = {
         "fontSize": this.props.modal && this.props.modal[0] === "postCreate" && this.state.body.length < 85 ? "22px" : "16px"
       };
-      var placeholderText = this.state.hostId === this.props.currentUserId ? "What's on your mind, ".concat(this.props.allUsers[this.props.currentUserId].firstName, "?") : "Write something to ".concat(this.props.allUsers[this.state.hostId].firstName, "...");
+      var placeholderText = this.state.hostId === this.props.currentUser.id ? "What's on your mind, ".concat(author.firstName, "?") : "Write something to ".concat(host.firstName, "...");
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "post-form-cont",
         onSubmit: this.handleSubmit,
@@ -1719,7 +1784,12 @@ function (_React$Component) {
         className: "f-php-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-t"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: author.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "f-php-ta",
         placeholder: placeholderText,
         onChange: this.handleInput,
@@ -1765,9 +1835,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    currentUserId: state.session.id,
+    currentUser: state.entities.users[state.session.id],
+    host: state.entities.users[ownProps.match.params.userId],
     allUsers: state.entities.users,
     modal: state.ui.modal
   };
@@ -2142,7 +2213,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FeedPostItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostItem; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _util_time_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/time_util */ "./frontend/util/time_util.js");
@@ -2175,20 +2246,20 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var FeedPostItem =
+var PostItem =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(FeedPostItem, _React$Component);
+  _inherits(PostItem, _React$Component);
 
-  function FeedPostItem(_ref) {
+  function PostItem(_ref) {
     var props = _ref.props;
 
-    _classCallCheck(this, FeedPostItem);
+    _classCallCheck(this, PostItem);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(FeedPostItem).call(this, props));
+    return _possibleConstructorReturn(this, _getPrototypeOf(PostItem).call(this, props));
   }
 
-  _createClass(FeedPostItem, [{
+  _createClass(PostItem, [{
     key: "render",
     value: function render() {
       var author = this.props.allUsers[this.props.post.authorId];
@@ -2197,12 +2268,22 @@ function (_React$Component) {
       if (!host || !author) return null;
       var nameHeader = post.authorId === post.hostId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-ntn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: host.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-ntn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: author.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2240,7 +2321,7 @@ function (_React$Component) {
     }
   }]);
 
-  return FeedPostItem;
+  return PostItem;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
@@ -3090,7 +3171,7 @@ function (_React$Component) {
       // this.props.fetchWallPosts(this.props.wallUser.id);
       this.props.fetchAllUsers().then(function () {
         return _this2.props.fetchWallPosts(_this2.props.wallUser.id);
-      }, function () {
+      }).then(function () {
         return _this2.props.fetchUser(_this2.props.wallUser.id);
       });
     }
@@ -3111,9 +3192,17 @@ function (_React$Component) {
         className: "wall-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cover-p"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: this.props.wallUser.photoUrl
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "wall-cover-pic",
+        src: this.props.wallUser.coverPicUrl
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profile-pic-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profile-circle"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: this.props.wallUser.profPicUrl
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-name"
       }, this.props.wallUser.firstName, "  ", this.props.wallUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar"
@@ -3125,7 +3214,9 @@ function (_React$Component) {
         className: "wall-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-st"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        wallUser: this.props.wallUser
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WE WALL NOW BOYS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
         posts: this.props.posts
       }))))));
     }
@@ -3639,9 +3730,9 @@ var createComment = function createComment(comment) {
   return $.ajax({
     method: 'POST',
     url: 'api/comments',
-    data: {
-      comment: comment
-    }
+    data: comment,
+    contentType: false,
+    processData: false
   });
 };
 var updateComment = function updateComment(comment) {

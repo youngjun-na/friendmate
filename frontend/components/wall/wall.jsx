@@ -12,10 +12,9 @@ export default class Wall extends React.Component {
   componentDidMount() {
     // debugger;
     // this.props.fetchWallPosts(this.props.wallUser.id);
-    this.props.fetchAllUsers().then(
-      () => this.props.fetchWallPosts(this.props.wallUser.id),
-      () => this.props.fetchUser(this.props.wallUser.id)
-    );
+    this.props.fetchAllUsers()
+    .then(() => this.props.fetchWallPosts(this.props.wallUser.id))
+    .then(() => this.props.fetchUser(this.props.wallUser.id));
   }
   componentDidUpdate(prevProps) {
     if (prevProps.wallUser && prevProps.wallUser.id !== parseInt(this.props.match.params.userId)) {
@@ -28,9 +27,12 @@ export default class Wall extends React.Component {
     return(
       <div className= "prof-cont">
         <div className= "wall-header">
-          <div className= "wall-cover-p">
-            <div>
-              <img src={this.props.wallUser.photoUrl} />
+          <div className= "wall-cover-p" >
+            <img className="wall-cover-pic" src={this.props.wallUser.coverPicUrl} />
+            <div className="profile-pic-cont">
+              <div className="profile-circle">
+                <img className="profile-pic" src={this.props.wallUser.profPicUrl} />
+              </div>
             </div>
             <div className="wall-name">
               {this.props.wallUser.firstName}  {this.props.wallUser.lastName} 
@@ -58,7 +60,7 @@ export default class Wall extends React.Component {
                   </div>
                 </div>
               </div> */}
-              <PostCreateFormContainer />
+              <PostCreateFormContainer wallUser={this.props.wallUser}/>
               <div>WE WALL NOW BOYS
               <WallIndex posts={this.props.posts} />
               </div>

@@ -30,7 +30,8 @@ module.exports = {
         use: [{
           loader: 'url-loader',
         }]
-      }
+      },
+    
     ]
   },
   // allows us to drop .js or .jsx when importing files

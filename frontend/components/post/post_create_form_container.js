@@ -6,11 +6,13 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
 
-const mapStateToProps = state => ({
-  currentUserId: state.session.id,
+const mapStateToProps = (state, ownProps) => {
+  return {
+  currentUser: state.entities.users[state.session.id],
+  host: state.entities.users[ownProps.match.params.userId],
   allUsers: state.entities.users,
   modal: state.ui.modal,
-});
+}};
 
 const mapDispatchToProps = dispatch => ({
   createPost: post => dispatch(createPost(post)),
