@@ -1,8 +1,23 @@
-export const createLike = like => (
+export const createPostLike = postId => (
   $.ajax({
     method: 'POST',
     url: '/api/likes',
-    data: { like },
+    data: { 
+      like: {
+      likableId: postId,
+      likableType: "Post",
+    } },
+  })
+);
+export const createCommentLike = commentId => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/likes',
+    data: {
+      like: {
+      likableId: commentId,
+      likableType: "Comment",
+      } },
   })
 );
 export const fetchLike = like => (
@@ -16,4 +31,4 @@ export const deleteLike = likeId => (
     method: 'DELETE',
     url: `/api/likes/${likeId}`,
   })
-)
+);

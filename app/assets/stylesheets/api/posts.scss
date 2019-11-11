@@ -86,7 +86,10 @@
   margin-bottom: 0;
   border-bottom: 1px solid #dddfe2;
   width: 470px;
-  min-height: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .pi-c {
   background: white;
@@ -174,7 +177,7 @@
   border-top: 1px solid #dddfe2;
   width: 460px;
 }
-.post-like-comment{
+.post-comment-button, .post-like-button{
   color: #63666b;
   display: flex;
   justify-content: center;
@@ -183,8 +186,52 @@
   height: 26px;
   font-size: 13px;
 }
-.post-like-comment:hover{
+.post-like-button-liked {
+  color: #4267b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 235px;
+  height: 26px;
+  font-size: 13px;
+}
+.post-comment-button:hover, 
+.post-like-button-liked:hover, 
+.post-like-button:hover {
   background-color: #f2f2f2;
   border-radius: 2px;
   cursor: pointer;
+}
+.post-like-cont {
+  color: #63666b;
+  font-size: 12px;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  position: relative;
+}
+.post-like-dropdown {
+  background: #282828;
+  color: white;
+  padding: 7px;
+  border-radius: 2px;
+}
+.post-like-dropdown-cont {
+   position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+.post-like-bold {
+  font-weight: bold;
+  margin: 3px 0;
+}
+.post-like-item {
+  margin: 3px 0;
+}
+.d-tri-g {
+  width: 0;
+	height: 0;
+	border-top: 6px solid #282828;
+	border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  margin: 0 15px;
 }

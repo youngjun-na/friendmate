@@ -88,7 +88,6 @@ export default class PostCreateForm extends React.Component {
     let placeholderText = (this.state.hostId === this.props.currentUser.id) ? 
     `What's on your mind, ${author.firstName}?` : 
     `Write something to ${host.firstName}...`;
-    if (this.props.modal && this.props.modal[0] === "postCreate") console.log("the fuck")
     return(
       <form className="post-form-cont" onSubmit={this.handleSubmit} onClick={this.handleClick}>
         <div className="f-php-h">

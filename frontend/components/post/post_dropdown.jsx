@@ -19,7 +19,6 @@ export default class PostDropdown extends React.Component {
     document.removeEventListener("mousedown", this.handleClickOutside);
   }
   handleDropdown(e) {
-    // e.currentTarget.children[1].classList.toggle("show");
     this.setState({
       showMenu: !this.state.showMenu,
     });
@@ -34,9 +33,7 @@ export default class PostDropdown extends React.Component {
   }
   handleClickOutside(e) {
     if (this.postDropdownCont.current && !this.postDropdownCont.current.contains(e.target)) {
-      this.setState({
-        showMenu: false,
-      });
+      this.setState({showMenu: false});
     }
   }
   render() {

@@ -4,6 +4,7 @@ import PostItem from './post_item';
 import { updatePost, deletePost, receivePost } from '../../actions/post_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { createComment } from '../../actions/comment_actions';
+import { createPostLike, deletePostLike } from '../../actions/like_actions';
 
 const mapStateToProps = state => ({
   allUsers: state.entities.users,
@@ -16,6 +17,8 @@ const mapDispatchToProps = dispatch => ({
   receivePost: post => dispatch(receivePost(post)),
   openModal: (type, paramId) => dispatch(openModal(type, paramId)),
   createComment: comment => dispatch(createComment(comment)),
+  createPostLike: like => dispatch(createPostLike(like)),
+  deletePostLike: likeId => dispatch(deletePostLike(likeId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostItem);

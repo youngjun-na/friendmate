@@ -4,18 +4,45 @@ import PostDropdown from './post_dropdown';
 import { Link } from 'react-router-dom';
 import CommentCreateForm from '../comment/comment_create_form';
 import CommentIndexContainer from '../comment/comment_index_container';
+import PostLikers from './post_likers';
+
 export default class PostItem extends React.Component {
   constructor({props}) {
     super(props);
     this.handleComment = this.handleComment.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
   handleComment() {
     document.getElementById(`comment-focus-${this.props.post.id}`).focus();
   }
+  handleLike() {
+    let likeId;
+    this.props.post.likes.forEach((like)=>{
+      if (like.author_id === this.props.currentUserId) likeId = like.id
+    });
+    if (likeId) {
+      this.props.deletePostLike(likeId);
+    }
+    else {
+      this.props.createPostLike(this.props.post.id);
+    }
+  }
   render() {
+    let currentUser = this.props.allUsers[this.props.currentUserId]
     let author = this.props.allUsers[this.props.post.authorId];
     let host = this.props.allUsers[this.props.post.hostId];
     const { post } = this.props;
+    let postLikeButton = "post-like-button";
+    if (post.likes.map((like)=> like.author_id).includes(currentUser.id)) {
+      postLikeButton += "-liked"
+    };
+    let likers;
+    if (this.props.allUsers) {
+      likers = post.likes.map((like)=> {
+        return this.props.allUsers[like.author_id];
+      })
+    }
+
     if (!host || !author) return null;
     let nameHeader = (post.authorId === post.hostId) ? (
       <div className="post-header-name">
@@ -60,16 +87,17 @@ export default class PostItem extends React.Component {
         <div className="pi-b">
           {post.body}
           {photoDiv}
+          <PostLikers likers={likers} currentUserId={this.props.currentUserId}/>
         </div>
         <div className="pi-lc">
-          <div className="post-like-comment" >Like</div>
-          <div className="post-like-comment" onClick={this.handleComment}>Comment</div>
+          <div className={postLikeButton} onClick={this.handleLike}>Like</div>
+          <div className="post-comment-button" onClick={this.handleComment}>Comment</div>
         </div>
         <div>
           <CommentIndexContainer postId={post.id}/>
         </div>
         <div>
-            <CommentCreateForm postId={post.id} currentUserId={this.props.currentUserId} createComment={this.props.createComment} />
+          <CommentCreateForm postId={post.id} currentUserId={this.props.currentUserId} createComment={this.props.createComment} />
         </div>
       </div>
     )
