@@ -17,6 +17,6 @@ export const createCommentLike = commentId => dispatch => (
 );
 
 export const deleteCommentLike = likeId => dispatch => (
-  LikeAPIUtil.deleteCommentLike(likeId)
+  LikeAPIUtil.deleteLike(likeId)
     .then(comment => dispatch(receiveComment(comment)))
 );

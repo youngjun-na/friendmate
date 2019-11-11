@@ -55,7 +55,7 @@ export default class PostLikers extends React.Component {
             return <li className="post-like-item" key={idx}>{name}</li>
           }) : null}
         </ul>
-        <div className="d-tri-g"></div>
+        <div className="d-tri-g-p"></div>
         </div>) : null}
         {nameString}
       </div>

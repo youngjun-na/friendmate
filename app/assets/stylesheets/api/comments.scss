@@ -24,6 +24,7 @@
   margin-right: 10px;
   font-size: 13px;
   font-weight: 300;
+  position: relative;
 }
 .ci-i-c {
   display: flex;
@@ -110,9 +111,9 @@
   margin-bottom: 0;
 }
 .comment-edit-cont {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: left;
+  display: flex;
+  align-items: center;
+  width: 500px;
   margin-left: 10px;
 }
 
@@ -186,4 +187,34 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.comment-like-button {
+  font-size: 12px;
+  color: #4267b2
+}
+.comment-like-button-liked {
+  font-size: 12px;
+  font-weight: bold;
+  color: #77A7FF;
+}
+.comment-like-button:hover,
+.comment-like-button-liked:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.comment-like-cont {
+  color: #63666b;
+  font-size: 12px;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  position: relative;
+}
+.d-tri-g-c {
+  width: 0;
+	height: 0;
+	border-top: 6px solid #282828;
+	border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  margin: 0 40px;
 }

@@ -343,7 +343,7 @@ var createCommentLike = function createCommentLike(commentId) {
 };
 var deleteCommentLike = function deleteCommentLike(likeId) {
   return function (dispatch) {
-    return _util_like_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteCommentLike"](likeId).then(function (comment) {
+    return _util_like_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteLike"](likeId).then(function (comment) {
       return dispatch(Object(_actions_comment_actions__WEBPACK_IMPORTED_MODULE_2__["receiveComment"])(comment));
     });
   };
@@ -1082,6 +1082,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comment_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./comment_dropdown */ "./frontend/components/comment/comment_dropdown.jsx");
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-autosize-textarea */ "./node_modules/react-autosize-textarea/lib/index.js");
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _comment_likers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./comment_likers */ "./frontend/components/comment/comment_likers.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1099,6 +1100,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1128,6 +1130,7 @@ function (_React$Component) {
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
     _this.handleKeyDown = _this.handleKeyDown.bind(_assertThisInitialized(_this));
+    _this.handleLike = _this.handleLike.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1168,25 +1171,67 @@ function (_React$Component) {
       }
     }
   }, {
+    key: "handleLike",
+    value: function handleLike() {
+      var _this2 = this;
+
+      var likeId;
+      this.props.comment.likes.forEach(function (like) {
+        if (like.author_id === _this2.props.currentUser.id) likeId = like.id;
+      });
+
+      if (likeId) {
+        this.props.deleteCommentLike(likeId);
+      } else {
+        this.props.createCommentLike(this.props.comment.id);
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var _this$props = this.props,
           comment = _this$props.comment,
           allUsers = _this$props.allUsers,
           updateComment = _this$props.updateComment,
-          deleteComment = _this$props.deleteComment;
+          deleteComment = _this$props.deleteComment,
+          currentUser = _this$props.currentUser;
       var author = allUsers[comment.authorId];
       if (!author) return null;
       var nameLink = author.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "ci-nl",
         to: "/profile/".concat(author.id)
       }, author.firstName, " ", author.lastName) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null);
+      var commentLikeButton = "comment-like-button";
+
+      if (comment.likes.map(function (like) {
+        return like.author_id;
+      }).includes(currentUser.id)) {
+        commentLikeButton += "-liked";
+      }
+
+      ;
+      var likers;
+
+      if (this.props.allUsers) {
+        likers = comment.likes.map(function (like) {
+          return _this3.props.allUsers[like.author_id];
+        });
+      }
+
+      ;
       var photoDiv = comment.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: comment.photoUrl
       })) : null;
       var editForm = this.state.edit ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-edit-cont"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: author.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "c-c comment-edit",
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1197,7 +1242,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cancel",
         onClick: this.handleEdit
-      }, "Cancel")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Cancel"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cont",
         onMouseEnter: this.handleHover,
         onMouseLeave: this.handleHover
@@ -1212,7 +1257,10 @@ function (_React$Component) {
         className: "ci-i-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "comment-body"
-      }, this.state.body, " "), photoDiv)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.state.body, " "), photoDiv), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        likers: likers,
+        currentUserId: this.props.currentUser.id
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
@@ -1223,7 +1271,10 @@ function (_React$Component) {
         className: "comment-like-reply"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-h-d"
-      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt, "comment"))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: commentLikeButton,
+        onClick: this.handleLike
+      }, "Like"), Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt, "comment"))));
     }
   }]);
 
@@ -1248,6 +1299,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _comment_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comment_item */ "./frontend/components/comment/comment_item.jsx");
 /* harmony import */ var _actions_comment_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/comment_actions */ "./frontend/actions/comment_actions.js");
+/* harmony import */ var _actions_like_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/like_actions */ "./frontend/actions/like_actions.js");
+
 
 
 
@@ -1255,7 +1308,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    allUsers: state.entities.users
+    allUsers: state.entities.users,
+    currentUser: state.entities.users[state.session.id]
   };
 };
 
@@ -1266,11 +1320,120 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     deleteComment: function deleteComment(comment) {
       return dispatch(Object(_actions_comment_actions__WEBPACK_IMPORTED_MODULE_3__["deleteComment"])(comment));
+    },
+    createCommentLike: function createCommentLike(like) {
+      return dispatch(Object(_actions_like_actions__WEBPACK_IMPORTED_MODULE_4__["createCommentLike"])(like));
+    },
+    deleteCommentLike: function deleteCommentLike(likeId) {
+      return dispatch(Object(_actions_like_actions__WEBPACK_IMPORTED_MODULE_4__["deleteCommentLike"])(likeId));
     }
   };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_comment_item__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/comment/comment_likers.jsx":
+/*!********************************************************!*\
+  !*** ./frontend/components/comment/comment_likers.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CommentLikers; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var CommentLikers =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(CommentLikers, _React$Component);
+
+  function CommentLikers(props) {
+    var _this;
+
+    _classCallCheck(this, CommentLikers);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CommentLikers).call(this, props));
+    _this.toggleDropdown = _this.toggleDropdown.bind(_assertThisInitialized(_this));
+    _this.state = {
+      dropDown: false
+    };
+    return _this;
+  }
+
+  _createClass(CommentLikers, [{
+    key: "toggleDropdown",
+    value: function toggleDropdown() {
+      this.setState({
+        dropDown: !this.state.dropDown
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var currentUserName; // debugger;
+
+      var likerNames = this.props.likers.map(function (liker) {
+        if (liker && liker.id !== _this2.props.currentUserId) {
+          return liker["firstName"] + " " + liker["lastName"];
+        } else if (liker && liker.id === _this2.props.currentUserId) {
+          currentUserName = liker["firstName"] + " " + liker["lastName"];
+        }
+      });
+      likerNames = likerNames.filter(function (name) {
+        return typeof name === "string";
+      });
+      likerNames.unshift(currentUserName);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-like-cont",
+        onMouseOver: this.toggleDropdown,
+        onMouseOut: this.toggleDropdown
+      }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "like-dropdown-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "like-dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "like-bold"
+      }, "Likes"), likerNames ? likerNames.map(function (name, idx) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "like-item",
+          key: idx
+        }, name);
+      }) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "d-tri-g-c"
+      })) : null, " HELLOasdfasfadsfa");
+    }
+  }]);
+
+  return CommentLikers;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -2906,7 +3069,7 @@ function (_React$Component) {
           key: idx
         }, name);
       }) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "d-tri-g"
+        className: "d-tri-g-p"
       })) : null, nameString);
     }
   }]);
