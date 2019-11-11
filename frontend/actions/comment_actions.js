@@ -9,7 +9,7 @@ const receiveAllComments = comments => ({
   comments,
 });
 
-const receiveComment = comment => ({
+export const receiveComment = comment => ({
   type: RECEIVE_COMMENT,
   comment,
 });

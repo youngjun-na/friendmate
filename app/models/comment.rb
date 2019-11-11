@@ -18,5 +18,7 @@ class Comment < ApplicationRecord
     foreign_key: :parent_comment_id,
     class_name: :Comment
 
+  has_many :likes, as: :likable
+
   has_one_attached :photo
 end
