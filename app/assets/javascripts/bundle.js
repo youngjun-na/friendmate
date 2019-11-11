@@ -119,6 +119,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 
 /***/ }),
 
+/***/ "./app/assets/images/check.png":
+/*!*************************************!*\
+  !*** ./app/assets/images/check.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AYht+mSkUrDlYo4pChdbIgKuKoVShChVArtOpgcukfNGlIWlwcBdeCgz+LVQcXZ10dXAVB8AfExdVJ0UVK/C4ptIjxjuMe3vvel7vvAKFRZprVNQ5oetVMJeJiJrsqBl7RR3MIYURlZhlzkpSE5/i6h4/vdzGe5V335+hXcxYDfCLxLDPMKvEG8fRm1eC8TxxiRVklPiceM+mCxI9cV1x+41xwWOCZITOdmicOEYuFDlY6mBVNjXiKOKJqOuULGZdVzluctXKNte7JXxjM6SvLXKc1ggQWsQQJIhTUUEIZVcRo10mxkKLzuId/2PFL5FLIVQIjxwIq0CA7fvA/+N1bKz854SYF40D3i21/RIHALtCs2/b3sW03TwD/M3Clt/2VBjDzSXq9rUWOgIFt4OK6rSl7wOUOEH4yZFN2JD8tIZ8H3s/om7LA4C3Qu+b2rXWO0wcgTb1K3gAHh8BogbLXPd7d09m3f2ta/fsBa35ypEjfOIAAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfjCwsVJC+8Acj4AAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAJFJREFUKM/V0jEOgkAQheF/OQcV8SJ0NNNMMy1GEsMNvIFHoOAENDQ0dl7EWHkNWJqN0WgWJbHw1fPlJS/jptGzJgkr81soapWolV9BUTsALbD7GAZ0BG7A9gWKWilqVQTlQ99d3jXugTYcLyIAN40eUdsAZyAFTkARQ3cYWh5xFD3BgDOgBpqh766x4dz/vNwMEx86cJ+WzzcAAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ "./app/assets/images/circlelike.png":
 /*!******************************************!*\
   !*** ./app/assets/images/circlelike.png ***!
@@ -182,6 +193,28 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACo
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEtUlEQVRIS7WVW2xUVRiF19pnZjptSrmk3HwgSEWj1ARQLLcoSjsQJfhELIQYxHKm6otvhBDTNAFCMIQYEmSmIRgTmEGMlxCETk0QiRUTo5GAgoCBhNBaau1NbDtz9tJzptMKIcXEOC/nP3vO3t9e69//v4n/+cex1l/WcCpUcutWedZ4pvBdaGA0vtfcXNSxhfGsdXrHBKxw029aqpGiAWEAAbhjSgAWBILBwvI/8d8ZvH83JqA6nk5QckGcJ9g/vFBhwWCjhbF8PIqXMB/E7QAQq39/ChCqBEyJKEPPGEMZD4gTiAF8ZmjalNZ/m65xbf2RQd6+BKmMK+oPPSU5RyDMHFF/x1YC3Usc43TnoPmgDREmb43VSG4KcBq0j//NZHom6SqkCaxxU2dILJT0IclKAJUQMyLOAlgNaS6FJTB8R9KT5Jiu5m2zZh6NjskHxOLp3wH0ju8ys3smeasBHrVW2z5vWvtWLJ5OQHB9BaKaCPPYaI7vljkKtgaLjMejQh7QQ6C9OVH7SKw+vQrCMQg7M8naLX6SDeAGEyz2AFh4vzz42BDMHA9qhmyZD+ijcLM5WQD40rirJVm7udpNJQi4slwURu6GdUylrAnBAeANo4ZjGf9Y5gCYjgldzrkgB1AZY266j8RNX0FN/MjzhI5T2NXsA3wFgktjqhZOvfDt6eszI+Mi5UFi+4Y67RfvvTLgx2vWfBAZmFgcCsanlw5N/vGW6Zmoq6APiKf7ILRnkrWzC4C7LSJNlbXeiwRX5fed95/EbmvNOcJLgIyCMrLozFJrInS+DxTUuKk+ggFgRfzwSsGcgOzOTHLdlmo3nSDlGjpVnrWvEvQV5o8maSnt9hycNR4OAYgGaNpuhFmDrPmGUGleAdCRSdRW1LjpGIFmQTtakmu31rjpJhJ1vgJkccUazACyAMLwn1GW/exbEmlre0gKRf0xG0LvpM7wjcCiewKIZpE7Wva/tLWmPt0EqzpjbJW1ZjOJVQCH+w+ssdieA1sd6mMQ0XwbYpeT//6MqNK8RWSgYPmmI9WOUUuhDnwFoOoALKCwGMQLvvf5/mOsjH3Xwp4PeaE9ogKLAHU4Ee+N3GD4AqmSQpI7F03/qeKrtjmLDexp0W5rSaxriLmpAyA3UngiJ/SHHM6VJxMcUykHZr8sshP7B80fz8FDKR1ak8u2/pnLdkYiJZdJRRmLp3oAdg9Nm1qB692l4cjA64Q+yiTXXax2UwcIbISceaC3F8DSu1rFPhk1w+JTFkqcOlxkSzcNov8yaEKMuanrJEvEoTmZ/S93FCq1oaHBtLY9eorE04Z60MrMkOzSkaYW9H/7ydBQcXu4aHAjpKh/J0jmpIgu0v5AoYvDxVQnKhmKeJtP7F3fu2zDwWg4UryexF7B/rJ42qXHGxsbR26qsdrFsg0HJxRFi9+W4OduH5e/dmiW4zmnBM0AeIXURQs+YIC5ft1LuALiXKG+hm+qOxiCNflbj1HAPgxwFoBrhno2aIEr61MzrcV2gTES5f4pCWpp+MT8Mw7GFFyJeeZInJ8jsZvQZ8Zg68n9a6+N9Fjf869/rSg3CJfcr2OO9b8xzsCCyRc6Cpbe//b4L7S/5/4FXTZUPJHyIkMAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/friendadd.png":
+/*!*****************************************!*\
+  !*** ./app/assets/images/friendadd.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AYht+mSkUrDlYo4pChdbIgKuKoVShChVArtOpgcukfNGlIWlwcBdeCgz+LVQcXZ10dXAVB8AfExdVJ0UVK/C4ptIjxjuMe3vvel7vvAKFRZprVNQ5oetVMJeJiJrsqBl7RR3MIYURlZhlzkpSE5/i6h4/vdzGe5V335+hXcxYDfCLxLDPMKvEG8fRm1eC8TxxiRVklPiceM+mCxI9cV1x+41xwWOCZITOdmicOEYuFDlY6mBVNjXiKOKJqOuULGZdVzluctXKNte7JXxjM6SvLXKc1ggQWsQQJIhTUUEIZVcRo10mxkKLzuId/2PFL5FLIVQIjxwIq0CA7fvA/+N1bKz854SYF40D3i21/RIHALtCs2/b3sW03TwD/M3Clt/2VBjDzSXq9rUWOgIFt4OK6rSl7wOUOEH4yZFN2JD8tIZ8H3s/om7LA4C3Qu+b2rXWO0wcgTb1K3gAHh8BogbLXPd7d09m3f2ta/fsBa35ypEjfOIAAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfjCwsVIhxViw5oAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAOVJREFUKM+tkqGOAjEQhr/dIC6EkIA+ecGQIJHIqpqe5MTJews2rEPyACgMqJoK0mCw6HsAPCEhpy6b7C6mJE2zC8mGuunM1/n/mUZFXtLktPxASNUFDsAH0AF61uhrFRgH8RkYOagAtt6js0dg7N3FwNjLzf3CyPcopLoA/eCxJIASa3TaCor2wKfzXgAna3QKpEKq0hod1Un9Bv6BP+AIDIPO1VIbrUNINQGWwAB4c51/naddCEZFXiKkmgLrCuk4r1/W6E3VOhY10L1mVfcB3p9YateBP8DJTTNz8jLg6uV5yVRvPuRBijLpeqEAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/friendremove.png":
+/*!********************************************!*\
+  !*** ./app/assets/images/friendremove.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AYht+mSkUrDlYo4pChdbIgKuKoVShChVArtOpgcukfNGlIWlwcBdeCgz+LVQcXZ10dXAVB8AfExdVJ0UVK/C4ptIjxjuMe3vvel7vvAKFRZprVNQ5oetVMJeJiJrsqBl7RR3MIYURlZhlzkpSE5/i6h4/vdzGe5V335+hXcxYDfCLxLDPMKvEG8fRm1eC8TxxiRVklPiceM+mCxI9cV1x+41xwWOCZITOdmicOEYuFDlY6mBVNjXiKOKJqOuULGZdVzluctXKNte7JXxjM6SvLXKc1ggQWsQQJIhTUUEIZVcRo10mxkKLzuId/2PFL5FLIVQIjxwIq0CA7fvA/+N1bKz854SYF40D3i21/RIHALtCs2/b3sW03TwD/M3Clt/2VBjDzSXq9rUWOgIFt4OK6rSl7wOUOEH4yZFN2JD8tIZ8H3s/om7LA4C3Qu+b2rXWO0wcgTb1K3gAHh8BogbLXPd7d09m3f2ta/fsBa35ypEjfOIAAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfjCwsVIyEU+HM4AAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAMJJREFUKM+dkjEOgkAQRR+EA3gCKmJpYqOVhQlZQ7IFexnu4BGk4wQ0NFJpa2etlZWVJ5BdG0gILgr8ZJrJvsyfP+voyjBFXrchpFoAZ2AGbMsiP9lA19K71hDAoW+i+8fRfAz47HsspEqEVL51R2AD3IAXsKyBdoJ7wEFXZnCFUZyEUezryuA05xBSrYAMCFpO3sAD2JVFfm/bcnRlEFIFtb1fWpdFfumGcxxw88yWqj8ADGygN/aXNWA6AEy/wpmiDxXCT2aQlUrUAAAAAElFTkSuQmCC"
 
 /***/ }),
 
@@ -1848,6 +1881,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FriendButton; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../app/assets/images/check.png */ "./app/assets/images/check.png");
+/* harmony import */ var _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/friendadd.png */ "./app/assets/images/friendadd.png");
+/* harmony import */ var _app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _app_assets_images_friendremove_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app/assets/images/friendremove.png */ "./app/assets/images/friendremove.png");
+/* harmony import */ var _app_assets_images_friendremove_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_friendremove_png__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1858,13 +1897,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
 
 
 
@@ -1874,12 +1916,26 @@ function (_React$Component) {
   _inherits(FriendButton, _React$Component);
 
   function FriendButton(props) {
+    var _this;
+
     _classCallCheck(this, FriendButton);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(FriendButton).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FriendButton).call(this, props));
+    _this.state = {
+      dropDown: false
+    };
+    _this.toggleDropdown = _this.toggleDropdown.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(FriendButton, [{
+    key: "toggleDropdown",
+    value: function toggleDropdown() {
+      this.setState({
+        dropDown: !this.state.dropDown
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       // if (!currentUser || !wallUser ) return null;
@@ -1889,18 +1945,58 @@ function (_React$Component) {
       var buttonContent;
 
       if (currentUser.friends.includes(wallUser.id)) {
-        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Friend");
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-text"
+        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-dropdown-cont"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "friend-dropdown"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "friend-item"
+        }, "Remove Friend"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_1___default.a
+        }), "Friend");
       } else if (currentUser.pending.includes(wallUser.id)) {
-        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Friend Request Sent");
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-text"
+        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-dropdown-cont"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "friend-dropdown"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "friend-item"
+        }, "Cancel Request"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_friendremove_png__WEBPACK_IMPORTED_MODULE_3___default.a
+        }), "Friend Request Sent");
       } else if (wallUser.pending.includes(currentUser.id)) {
-        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Respond to Friend Request");
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-text"
+        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-dropdown-cont"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "friend-dropdown"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "friend-item"
+        }, "Accept Request"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "friend-item"
+        }, "Remove Request"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2___default.a
+        }), "Respond to Friend Request");
       } else {
-        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add Friend");
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-text"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2___default.a
+        }), "Add Friend");
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-button-wrap",
+        onMouseOver: this.toggleDropdown,
+        onMouseOut: this.toggleDropdown
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-button"
-      }, buttonContent);
+      }, buttonContent));
     }
   }]);
 
