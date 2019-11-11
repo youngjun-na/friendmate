@@ -97,6 +97,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAQAAABe
 
 /***/ }),
 
+/***/ "./app/assets/images/bluelike.png":
+/*!****************************************!*\
+  !*** ./app/assets/images/bluelike.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACy0lEQVRoge2Zv2sUURDHP7O5S4hG0DQWWllZaRBMNCgKERQUwUJQGxH7SAqLxEQOSdIIaVL4PwhaCRYm1RnFaBAEC4nCpUkhh4I/gprLjoXZc29vz2xuZ7Mu3Ld6P2Zn5sO7ffPeHrTUUiKSpBz3jrtzQP969xdQVFduvLwtb5OI5yThdF39vnY7MCCOFnvv6MEkgiUJEqZdOPrwwF3dbu14q0EA9nX8ZMjaaRogCDp0dEo7LX2mAgJ0V1Y4b+kwLRAE96ylv9RAQPosvSUCcvG+tkUw22MZMxGQpUXORDCrWMZM5qelej2CVckypDlI34TuBs5tZCfovGVccxBVrgL5De1w5izjmoMIei2CmeYrPLGMawpyeFJPKOzfyE7h9VxBli1jm4KI60Z5yRHVx5ZxwXcf6R13i8CxTT7/dH7UOQ7QU9Cd7TldBkzPUCH6Csy4KsOvxuSdN+hfkZ4mnFbB8zmukDwEwA7ggiP6rK+ge71BP0gpnv9ItcNS3ZrTKa9jBiJwKM7zTeq01/CBaCmFROKqesypggjOUjq5xNKs1/i7Imp79tkCfW5rkxGvUwVRyRaIqFx6PizvvX4VZK2SLRAXt+YoVAVZKEiZP8UmExKRAX8/eETJ0gtfcwsNgpS2Lo/YmvV3AiCZqSU1OxYEQLJSS4I7FgRXJCO1JLhjQQAkK7UkuGNBACRrtcSvGpD1WvItpVwiS1Vng2NhV91S8qnE0kcXZzQ4GBlEREZ+dEgXyC3rzKJKYGZNpX9hTD4E50JAwmtJ5yrTb27K93yeafMMI8pVLYdBQAhIo1qykmPwZEG7VisMWicYVSJyqtFcrm5EKYX/16sTKzkmUMPMNq+GXzDrVuR/riUKM43m6kBi1JJHTT4XVZ8cleFGk3UgCwUpKxG/yypFr7mtIpcRvQeUm8nyH/qi8EBUjrwYk0Vj3y211FLW9BunjcH/QT0I4wAAAABJRU5ErkJggg=="
+
+/***/ }),
+
 /***/ "./app/assets/images/camera.png":
 /*!**************************************!*\
   !*** ./app/assets/images/camera.png ***!
@@ -105,6 +116,28 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAQAAABe
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP4A/gD+6xjUggAAAAlwSFlzAAAASAAAAEgARslrPgAAAAl2cEFnAAAAIAAAACAAh/qcnQAAAShJREFUWMPtlT1uAjEQhT9F0VKgRaFNuAHHCD0JJ6CHcCbOQpQECrRp+D0G0EMxg2Qli+01mMpPslzM8/OzPeOBhIQEf+TABjg6xgKoxzAw9tj8PMahm7iED0Dbsr6tHJdOsIG+xyH6tzAQC//0HwJEasAHMEWu+wDMgJHGTHwCX1c5/IMXoODy1f4CLYM/URO++lZCZmy+Bt6Q0syBLrAyTNQC9J2EocY2QLMk/mSYGMUw8KOxd8v6rnJmMQzsNNawrM+Vs/fVr1IFUcqzioGFzh0L51XnZagh2xMMNLalPAmbSHUckX+iqr6TkAFzw0QPyYcGkpjnTlkQqQwBng0TZaNAPqtQfa9ekCHP8Y1k+x4p0aHGrtK/ezN6tBDvgpBumJCQcFOcAATPoO0rRfeKAAAAJXRFWHRjcmVhdGUtZGF0ZQAyMDE5LTExLTEwVDAwOjU2OjQ2KzAwOjAwGdmRUgAAACV0RVh0bW9kaWZ5LWRhdGUAMjAxOS0xMS0xMFQwMDo1Njo0NiswMDowMEZo52YAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/circlelike.png":
+/*!******************************************!*\
+  !*** ./app/assets/images/circlelike.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./app/assets/images/comment.png":
+/*!***************************************!*\
+  !*** ./app/assets/images/comment.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACxElEQVRoge2ZzUtUURiHn/eOjpFFyyBp4X9Q9OEyCKxIaV9gyAyj5jgLXbQJ7SoVFSRUOjZTM9jHorZJUoEF7bJCaNuqrFH6WIRR+XXfFs6Vq+bMGI5zg/Oszn3PuZffc+89Z3EOGAyGXMjyQiQSrZ+3aBelBqgsQaZc/FBhVNTpTSUHHnk7At6LcFPrORUZEKgGghsasTCCC9nkxO49NYGxN6PP3Y7FLxKJROsdYQiYAenUOe6l032ZksRdhVCobYeUawNKDxAUoe5Won8YoMwd5AgdAAhdqUTf5dJEzU32xV4KN0dBuahKBzAMYHnG7QMI6OydEmRcE/MBvZ1t7ndrXpEtAMlkcmIjQ/0Lg/H4ZLa51a1Zq4z97zAifsOI+A0j4jeMiN8wIn7DiPgNI+I3jIjfMCJ+w4j4DSPiN7wiU7CwLVmiLAVzsqWlKtv87tYWRVR4BSDl2rDBudZM0LHcjK/d2uLer6jTC9ZBlJ5wcxSdlbt+3cRWpRtAVa64fUvOR0JNbT2CduZ6mApP0on+I8vrtm1bHzNfnyl6YL2C50ToSSX6z7qXSyZ7OtnXJUIdMEJ2zqy4Xznc2Ni4aXl9fOJz3QZITAEjqnLUKwGeX8sle94w/LenhJuiH4CdgUDlduC9p0tQObPQ0mOpRHxovZIXyhqXX/0NIOJs81ZDzW0hoAZ4WQoJWIOIbdsWSBWA4wS+uvVIpHWXqF4FprGsU0XIWBAFi4xPftsLbAYy7moWbontd0SeApUCp1M3ro8VKWdeVpzq/g3btq3xT18eI9QKXLCYPe8QbNeFFa5CUTudjHcXOWtOVkz25cRisYoPmS8DItQCc45KtUp5BnQb8BMlnL4ZTxc/am7yivyc1ocCh9zxInoccEAfzEtZ52Dy2rviRiyMvCIqOmMpvxS+obzF4gVz3E+l4u/z3WswGPzDH8vt4WJ0YQilAAAAAElFTkSuQmCC"
 
 /***/ }),
 
@@ -215,6 +248,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADX
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH4wsIASQDh0MAWQAAAAFvck5UAc+id5oAAAB1SURBVEjHY2AYaMCIVZS98weqQDk7wy8SDOj8jylWjt0qBhZcTiu3ZjgGZVp3HsHtBSacMsfgrKNEhQE2Z+N0HZJ3mIjXRsAFxLoCPTApdgFWA8oZIfag00QbQLELRg0YNWAEGjBIywOyDShnJ+gBgipGIgAAtawTiYv83wcAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMTEtMDhUMDE6MzU6NTcrMDA6MDA6nn10AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTExLTA4VDAxOjM1OjU3KzAwOjAwS8PFyAAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ "./app/assets/images/whitelike.png":
+/*!*****************************************!*\
+  !*** ./app/assets/images/whitelike.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAEHklEQVRoge2ZT4gbdRTHP2822bLq6irWg+1qhLInoXpSylqsCiKi4GHFg0J3E7KwIdRFeqjrIQcrHqTIttnSSbIU6knx7MFVkG09eFEPomIrqdYe2sWCrt0QN/M8ZJKdnWTyb38TFsznkt9vfj/ee9+8mffym8CAAaEgYRmeSaYuCRxyp2Vg1VKO5XLZH8LwZ4VhFMAjAmAYeNYRVmdm0wfD8BeakBoFOyvljZG7gE+Ae0Wdj6fm50dM+wldCMCFCx/8U94YmVb4CZi4+3b5LdM++iIEqmIsR1IAKPOms9I3IQD5/Jkvge+B++65/e/LJm33VQgAqnb1Q180abbvQizkK3f4hFm7IZDJZCJBa6XSSNEd7jPpMxQhv/1x43V3+LN/bXi4sscdbpr0aVxIJpOJiMgCgKq+718XKU24w6JJv8aFuNk4AFx5aN8DH/nXnSGr2vFFvjHp16gQXzbezWQyDbePOBymuuGSSd9GhbTLRjqd3oPwDKC6KZ+b9G1MyNTU1JCInIDgbJRK+jQwKvDt8vKZ66Z8g0Eho2N73wAmCMgGQEX0JQBFPzPlt0b9PBJPplaByR5sXBx/cO+R36/f/BE4oKrTy7ml8802xpOpX4FHeop0i79FWHEs58Ty2bP18u7NyGM9Gp70PBuXg7IBgOi1Hn14GVXlFalYXycS6f21i54OLEXQRy3Vx3O5pe86sRhPphTAU6lONns2ahTOLR3uMfg6iUR6v1oVG+QFtZxTwKvgyYiKFgEcsWI92G+fDUPk86evORFm3enztet1IaJSBFA01q1xgQ2Q462yERJ1f1u3lnIVAQse7tZa3s7eYSiwtkzPzY1bm2K70y9q1+tCxHKKqtJTRvpB/a3MVs5vUdG3a5P6reVgFasjifUptq4QRb1zRV8rFJYu1+Z1IREtF91hrC+RdUkhl50UxxrHbaaCTHvX60Js214D1oGxo0ffHOtvmJ3hq1hHvGu+nyjVyhWNlmN9iGunRL2TbUJ22EtCJ6hiwbbOXusluusqV7uKBf5bS7nqXuy6l4RJu4oFPiFiOUV3Yyzs4LqhXcUCn5Dd3EtaVSzwCdntvcRDw4Fw24Xd3EtaVSzwVa0q1XOJ20s6OpeExbZ/vdyKpXAjgvWOf29DioJ6SXw29V48mVpPJFMnjUccgL9aCboSwTpk26ev+Pc2CAk8lyhp4E6FtMlgW+GvVoqsNRMBzd6iBPQSgUVgHXTRfMjB+KrVc0H7Gp6RoHNJ3s4uAAvNjNTO7sDFgp19qreQOyIatNCQkR32ksmZ5Fwvr5QC8VWrlaB9Df+zJ5PJ+ytEb3bjrGBnJT479yEqx7qMsxv+rMjQk+fPLf7SbLEhI7Ztr6F0/l5WdBVgSDePo5wCuvoSOuAv4NNWIgYMGPA/4j/66pO4w46Y3gAAAABJRU5ErkJggg=="
 
 /***/ }),
 
@@ -738,7 +782,7 @@ function (_React$Component) {
         });
       };
 
-      if (file) fileReader.readAsDataURL(file);
+      if (file) fileReader.readAsDataURL(file); // document.querySelector("file-submit-button").value = "";
     }
   }, {
     key: "handleSubmit",
@@ -774,16 +818,25 @@ function (_React$Component) {
     value: function render() {
       var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-photo-preview-cont"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "comment-photo-preview-wrap"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         onClick: this.deletePic,
         className: "comment-photo-x-cancel"
-      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-photo-preview-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "comment-photo-preview",
         src: this.state.photoUrl
       }))) : null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-create-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-create-main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: this.props.currentUser.profPicUrl
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "c-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "comment-form",
@@ -805,7 +858,7 @@ function (_React$Component) {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile
-      }))), preview);
+      })))), preview);
     }
   }]);
 
@@ -1083,6 +1136,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-autosize-textarea */ "./node_modules/react-autosize-textarea/lib/index.js");
 /* harmony import */ var react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _comment_likers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./comment_likers */ "./frontend/components/comment/comment_likers.jsx");
+/* harmony import */ var _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../app/assets/images/camera.png */ "./app/assets/images/camera.png");
+/* harmony import */ var _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../app/assets/images/circlelike.png */ "./app/assets/images/circlelike.png");
+/* harmony import */ var _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1108,6 +1165,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var CommentItem =
 /*#__PURE__*/
 function (_React$Component) {
@@ -1123,7 +1182,9 @@ function (_React$Component) {
       show: false,
       edit: false,
       id: _this.props.comment.id,
-      body: _this.props.comment.body
+      body: _this.props.comment.body,
+      photoFile: null,
+      photoUrl: null
     };
     _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
     _this.handleHover = _this.handleHover.bind(_assertThisInitialized(_this));
@@ -1221,9 +1282,22 @@ function (_React$Component) {
       }
 
       ;
-      var photoDiv = comment.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      var photoDiv = comment.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-photo-div"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: comment.photoUrl
       })) : null;
+      var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-photo-preview-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-photo-preview-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        onClick: this.deletePic,
+        className: "comment-photo-x-cancel"
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "comment-photo-preview",
+        src: this.state.photoUrl
+      }))) : null;
       var editForm = this.state.edit ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-edit-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1231,7 +1305,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "profile-pic",
         src: author.profPicUrl
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-edit-ta-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "c-c comment-edit",
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1242,7 +1318,17 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cancel",
         onClick: this.handleEdit
-      }, "Cancel"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "comment-file-submit-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_6___default.a
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        className: "file-submit-button",
+        onChange: this.handleFile
+      }))), preview) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cont",
         onMouseEnter: this.handleHover,
         onMouseLeave: this.handleHover
@@ -1252,29 +1338,33 @@ function (_React$Component) {
         className: "profile-pic",
         src: author.profPicUrl
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-body-image-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-body-dropdown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "comment-body"
-      }, this.state.body, " "), photoDiv), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        likers: likers,
-        currentUserId: this.props.currentUser.id
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.state.body, " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
-      })));
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "ci-i-c"
-      }, editForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), photoDiv, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        likers: likers,
+        currentUserId: this.props.currentUser.id
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-like-reply"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pi-h-d"
+        className: "comment-footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: commentLikeButton,
         onClick: this.handleLike
-      }, "Like"), Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt, "comment"))));
+      }, "Like"), " \xB7", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-footer-time"
+      }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_2__["default"])(comment.createdAt, "comment"))))));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ci-i-c"
+      }, editForm);
     }
   }]);
 
@@ -1346,6 +1436,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CommentLikers; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../app/assets/images/circlelike.png */ "./app/assets/images/circlelike.png");
+/* harmony import */ var _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1363,6 +1455,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1396,8 +1489,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var currentUserName; // debugger;
-
+      var currentUserName;
       var likerNames = this.props.likers.map(function (liker) {
         if (liker && liker.id !== _this2.props.currentUserId) {
           return liker["firstName"] + " " + liker["lastName"];
@@ -1408,13 +1500,20 @@ function (_React$Component) {
       likerNames = likerNames.filter(function (name) {
         return typeof name === "string";
       });
-      likerNames.unshift(currentUserName);
+      if (currentUserName) likerNames.unshift(currentUserName);
+      var count = likerNames.slice().length;
+      var commentCounter = count ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-like-counter"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "comment-like-image",
+        src: _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1___default.a
+      }), count) : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-like-cont",
         onMouseOver: this.toggleDropdown,
         onMouseOut: this.toggleDropdown
       }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "like-dropdown-cont"
+        className: "comment-like-dropdown-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "like-dropdown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1426,7 +1525,7 @@ function (_React$Component) {
         }, name);
       }) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-tri-g-c"
-      })) : null, " HELLOasdfasfadsfa");
+      })) : null, commentCounter);
     }
   }]);
 
@@ -1522,7 +1621,7 @@ function (_React$Component) {
         className: "sidebar-name-link ",
         to: "/profile/".concat(currentUser.id)
       }, currentUser.firstName, " ", currentUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sidebar-item"
+        className: "sidebar-item-selected"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "sidebar-pic",
         src: _app_assets_images_feed_png__WEBPACK_IMPORTED_MODULE_4___default.a
@@ -1709,7 +1808,9 @@ function (_React$Component) {
         src: _app_assets_images_friends_png__WEBPACK_IMPORTED_MODULE_2___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-title"
-      }, "Friends"), " \xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.wallUser.friends.map(function (friendId) {
+      }, "Friends"), " \xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-box-index-cont"
+      }, this.props.wallUser.friends.map(function (friendId) {
         var friend = _this.props.allUsers[friendId];
         if (!friend) return null;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1781,11 +1882,22 @@ function (_React$Component) {
   _createClass(FriendButton, [{
     key: "render",
     value: function render() {
-      if (!currentUser || !wallUser) return null;
+      // if (!currentUser || !wallUser ) return null;
       var _this$props = this.props,
           wallUser = _this$props.wallUser,
           currentUser = _this$props.currentUser;
-      var buttonContent = currentUser.friends.includes(wallUser.id) ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Friend") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add Friend");
+      var buttonContent;
+
+      if (currentUser.friends.includes(wallUser.id)) {
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Friend");
+      } else if (currentUser.pending.includes(wallUser.id)) {
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Friend Request Sent");
+      } else if (wallUser.pending.includes(currentUser.id)) {
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Respond to Friend Request");
+      } else {
+        buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add Friend");
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-button"
       }, buttonContent);
@@ -2640,13 +2752,15 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-h-t"
       }, "Edit Post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "f-php-b"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "f-php-t"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea_lib__WEBPACK_IMPORTED_MODULE_1___default.a, {
         className: "f-php-ta",
         autoFocus: true,
         onChange: this.handleInput,
         value: this.state.body
-      }), preview), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }), preview)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "file-submit-overlay"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "file-submit-pic",
@@ -2738,6 +2852,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comment_comment_create_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../comment/comment_create_form */ "./frontend/components/comment/comment_create_form.jsx");
 /* harmony import */ var _comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../comment/comment_index_container */ "./frontend/components/comment/comment_index_container.js");
 /* harmony import */ var _post_likers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./post_likers */ "./frontend/components/post/post_likers.jsx");
+/* harmony import */ var _app_assets_images_whitelike_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../app/assets/images/whitelike.png */ "./app/assets/images/whitelike.png");
+/* harmony import */ var _app_assets_images_whitelike_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_whitelike_png__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _app_assets_images_bluelike_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../app/assets/images/bluelike.png */ "./app/assets/images/bluelike.png");
+/* harmony import */ var _app_assets_images_bluelike_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_bluelike_png__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _app_assets_images_comment_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../app/assets/images/comment.png */ "./app/assets/images/comment.png");
+/* harmony import */ var _app_assets_images_comment_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_comment_png__WEBPACK_IMPORTED_MODULE_9__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2755,6 +2875,9 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
 
 
 
@@ -2813,11 +2936,13 @@ function (_React$Component) {
       var host = this.props.allUsers[this.props.post.hostId];
       var post = this.props.post;
       var postLikeButton = "post-like-button";
+      var imageLike = _app_assets_images_whitelike_png__WEBPACK_IMPORTED_MODULE_7___default.a;
 
       if (post.likes.map(function (like) {
         return like.author_id;
       }).includes(currentUser.id)) {
         postLikeButton += "-liked";
+        imageLike = _app_assets_images_bluelike_png__WEBPACK_IMPORTED_MODULE_8___default.a;
       }
 
       ;
@@ -2880,15 +3005,22 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: postLikeButton,
         onClick: this.handleLike
-      }, "Like"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "post-image-icon",
+        src: imageLike
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Like")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-comment-button",
         onClick: this.handleComment
-      }, "Comment")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "post-image-icon",
+        src: _app_assets_images_comment_png__WEBPACK_IMPORTED_MODULE_9___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Comment"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
         postId: post.id
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_create_form__WEBPACK_IMPORTED_MODULE_4__["default"], {
         postId: post.id,
         currentUserId: this.props.currentUserId,
-        createComment: this.props.createComment
+        createComment: this.props.createComment,
+        currentUser: currentUser
       })));
     }
   }]);
@@ -2975,6 +3107,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostLikers; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../app/assets/images/circlelike.png */ "./app/assets/images/circlelike.png");
+/* harmony import */ var _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2992,6 +3126,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -3053,24 +3188,30 @@ function (_React$Component) {
         nameString = likerNames[0] + ", " + likerNames[1] + ", " + likerNames[2] + ", and " + (likerNames.length - 3).toString() + " others";
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-like-cont",
+      var likerNamelist = nameString ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-like-namelist"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "post-like-button-icon",
+        src: _app_assets_images_circlelike_png__WEBPACK_IMPORTED_MODULE_1___default.a,
         onMouseOver: this.toggleDropdown,
         onMouseOut: this.toggleDropdown
+      }), nameString) : null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-like-cont"
       }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-like-dropdown-cont"
+        className: "like-dropdown-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "post-like-dropdown"
+        className: "like-dropdown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "post-like-bold"
+        className: "like-bold"
       }, "Likes"), dropdownNames ? dropdownNames.map(function (name, idx) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "post-like-item",
+          className: "like-item",
           key: idx
         }, name);
       }) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-tri-g-p"
-      })) : null, nameString);
+      })) : null, likerNamelist);
     }
   }]);
 

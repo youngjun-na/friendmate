@@ -1,4 +1,5 @@
 import React from 'react';
+import circleLike from '../../../app/assets/images/circlelike.png';
 
 export default class PostLikers extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class PostLikers extends React.Component {
     });
 
     likerNames = likerNames.filter(name => typeof name === "string");
-  
+
     let dropdownNames = likerNames.slice();
     dropdownNames.unshift(currentUserName)
 
@@ -45,19 +46,24 @@ export default class PostLikers extends React.Component {
     else if (likerNames.length > 4) {
       nameString = likerNames[0] + ", " + likerNames[1] + ", " + likerNames[2] + ", and " + (likerNames.length-3).toString() + " others";
     }
+    let likerNamelist = nameString ? (<div className="post-like-namelist">
+      <img className="post-like-button-icon" src={circleLike}
+        onMouseOver={this.toggleDropdown} onMouseOut={this.toggleDropdown} />
+      {nameString}
+    </div>) : null;
     return(
-      <div className="post-like-cont" onMouseOver={this.toggleDropdown} onMouseOut={this.toggleDropdown}>
+      <div className="post-like-cont" >
        { this.state.dropDown ? 
-        (<div className="post-like-dropdown-cont">
-        <ul className="post-like-dropdown">
-          <li className="post-like-bold">Likes</li>
+        (<div className="like-dropdown-cont">
+        <ul className="like-dropdown">
+          <li className="like-bold">Likes</li>
           {dropdownNames ? dropdownNames.map((name, idx)=>{
-            return <li className="post-like-item" key={idx}>{name}</li>
+            return <li className="like-item" key={idx}>{name}</li>
           }) : null}
         </ul>
         <div className="d-tri-g-p"></div>
         </div>) : null}
-        {nameString}
+        {likerNamelist}
       </div>
 
     )

@@ -1,4 +1,5 @@
 import React from 'react';
+import circleLike from '../../../app/assets/images/circlelike.png';
 
 export default class CommentLikers extends React.Component {
   constructor(props) {
@@ -13,7 +14,6 @@ export default class CommentLikers extends React.Component {
   }
   render() {
     let currentUserName;
-    // debugger;
     let likerNames = this.props.likers.map((liker) => {
       if (liker && liker.id !== this.props.currentUserId) {
         return liker["firstName"] + " " + liker["lastName"];
@@ -24,11 +24,17 @@ export default class CommentLikers extends React.Component {
     });
 
     likerNames = likerNames.filter(name => typeof name === "string");
-    likerNames.unshift(currentUserName);
+    if (currentUserName) likerNames.unshift(currentUserName);
+    let count = likerNames.slice().length;
+    let commentCounter = count ? <div className="comment-like-counter">
+      <img className="comment-like-image" src={circleLike}></img>
+      {count}
+    </div> : null;
+  
     return(
       <div className="comment-like-cont" onMouseOver={this.toggleDropdown} onMouseOut={this.toggleDropdown}>
         {this.state.dropDown ?
-          (<div className="like-dropdown-cont">
+          (<div className="comment-like-dropdown-cont">
             <ul className="like-dropdown">
               <li className="like-bold">Likes</li>
               {likerNames ? likerNames.map((name, idx) => {
@@ -36,7 +42,8 @@ export default class CommentLikers extends React.Component {
               }) : null}
             </ul>
             <div className="d-tri-g-c"></div>
-          </div>) : null} HELLOasdfasfadsfa
+          </div>) : null} 
+        {commentCounter}
       </div>
     );
   }

@@ -4,6 +4,8 @@ import timeUtil from '../../util/time_util';
 import CommentDropdown from './comment_dropdown';
 import TextareaAutosize from 'react-autosize-textarea';
 import CommentLikers from './comment_likers';
+import camera from '../../../app/assets/images/camera.png';
+import circleLike from '../../../app/assets/images/circlelike.png';
 
 export default class CommentItem extends React.Component {
   constructor(props) {
@@ -13,6 +15,8 @@ export default class CommentItem extends React.Component {
       edit: false,
       id: this.props.comment.id,
       body: this.props.comment.body,
+      photoFile: null,
+      photoUrl: null,
       
     }
     this.handleEdit = this.handleEdit.bind(this);
@@ -82,17 +86,25 @@ export default class CommentItem extends React.Component {
     };
 
     let photoDiv = comment.photoUrl ? (
-      <div>
+      <div className="comment-photo-div">
         <img src={comment.photoUrl} />
       </div>
     ) : null;
+    
+    let preview = this.state.photoUrl ? (
+      <div className="comment-photo-preview-cont">
+        <div className="comment-photo-preview-wrap">
+          <span onClick={this.deletePic} className="comment-photo-x-cancel">&times;</span>
+          <img className="comment-photo-preview" src={this.state.photoUrl} />
+        </div>
+      </div>) : null;
 
     let editForm = this.state.edit ? (
       <div className="comment-edit-cont">
         <div className="comment-prof-image">
           <img className="profile-pic" src={author.profPicUrl} />
         </div>
-        <div>
+        <div className="comment-edit-ta-cont">
           <form className="c-c comment-edit" onSubmit={this.handleSubmit}>
             <TextareaAutosize className="c-ta"
               onChange={this.handleInput}
@@ -100,22 +112,41 @@ export default class CommentItem extends React.Component {
               onKeyDown={this.handleKeyDown} />
           </form>
           <div className="comment-cancel" onClick={this.handleEdit}>Cancel</div>
+        <label className="comment-file-submit-overlay">
+          <div className="comment-button">
+            <img src={camera} />
+          </div>
+          <input type="file" className="file-submit-button" onChange={this.handleFile} />
+        </label>
         </div>
+        { preview }
       </div>
     ) : ( 
         <div className="comment-cont" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} >
           <div className="comment-prof-image">
             <img className="profile-pic" src={author.profPicUrl} />
           </div>
-          <div className="comment-body-dropdown">
-            <div className="ci-i-b">
-              <div>
-                <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
-                {photoDiv}
+          <div className="comment-body-image-cont">
+            <div className="comment-body-dropdown">
+              <div className="ci-i-b">
+                <div>
+                  <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
+                </div>
               </div>
-              <CommentLikers likers={likers} currentUserId={this.props.currentUser.id} />
+              <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
             </div>
-            <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
+            {photoDiv}
+            <CommentLikers likers={likers} currentUserId={this.props.currentUser.id} />
+            <div className="comment-like-reply">
+              <div className="comment-footer">
+                <div className={commentLikeButton} onClick={this.handleLike}>
+                  Like 
+                </div> ·
+                <div className="comment-footer-time">
+                  {timeUtil(comment.createdAt, "comment")}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     );
@@ -123,12 +154,6 @@ export default class CommentItem extends React.Component {
     return(
       <div className="ci-i-c">
         {editForm}
-        <div className="comment-like-reply">
-          <div className="pi-h-d">
-            <div className={commentLikeButton} onClick={this.handleLike}>Like</div>
-            {timeUtil(comment.createdAt, "comment")}
-          </div>
-        </div>
       </div>
     );
   }

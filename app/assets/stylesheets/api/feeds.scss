@@ -46,7 +46,16 @@
   border-radius: 2px;
   cursor: pointer;
 }
-.sidebar-item:hover {
+.sidebar-item-selected {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px #dddfe2 solid;
+  border-radius: 2px;
+  background: #f5f6f7;
+  cursor: pointer;
+}
+.sidebar-item:hover{
   border: 1px #dddfe2 solid;
   border-radius: 2px;
   background: #f5f6f7;

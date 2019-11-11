@@ -28,7 +28,7 @@ export default class Feed extends React.Component {
                 {currentUser.firstName} {currentUser.lastName}
               </Link>
             </div>
-            <div className="sidebar-item">
+            <div className="sidebar-item-selected" >
               <img className="sidebar-pic" src={newsfeed} />
               <div className="sidebar-item-link">News Feed</div>
             </div>

@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import CommentCreateForm from '../comment/comment_create_form';
 import CommentIndexContainer from '../comment/comment_index_container';
 import PostLikers from './post_likers';
+import whiteLike from '../../../app/assets/images/whitelike.png';
+import blueLike from '../../../app/assets/images/bluelike.png';
+import comment from '../../../app/assets/images/comment.png';
 
 export default class PostItem extends React.Component {
   constructor({props}) {
@@ -33,8 +36,10 @@ export default class PostItem extends React.Component {
     let host = this.props.allUsers[this.props.post.hostId];
     const { post } = this.props;
     let postLikeButton = "post-like-button";
+    let imageLike= whiteLike;
     if (post.likes.map((like)=> like.author_id).includes(currentUser.id)) {
-      postLikeButton += "-liked"
+      postLikeButton += "-liked";
+      imageLike = blueLike;
     };
     let likers;
     if (this.props.allUsers) {
@@ -90,14 +95,23 @@ export default class PostItem extends React.Component {
           <PostLikers likers={likers} currentUserId={this.props.currentUserId}/>
         </div>
         <div className="pi-lc">
-          <div className={postLikeButton} onClick={this.handleLike}>Like</div>
-          <div className="post-comment-button" onClick={this.handleComment}>Comment</div>
+          <div className={postLikeButton} onClick={this.handleLike}>
+            <img className="post-image-icon" src={imageLike} />
+            <div>Like</div>
+          </div>
+          <div className="post-comment-button" onClick={this.handleComment}>
+            <img className="post-image-icon" src={comment} />
+            <div>Comment</div>
+          </div>
         </div>
         <div>
           <CommentIndexContainer postId={post.id}/>
         </div>
         <div>
-          <CommentCreateForm postId={post.id} currentUserId={this.props.currentUserId} createComment={this.props.createComment} />
+          <CommentCreateForm postId={post.id} 
+          currentUserId={this.props.currentUserId} 
+          createComment={this.props.createComment} 
+          currentUser ={currentUser}/>
         </div>
       </div>
     )

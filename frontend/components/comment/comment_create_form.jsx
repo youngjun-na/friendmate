@@ -27,6 +27,7 @@ export default class CommentCreateForm extends React.Component {
       this.setState({ photoFile: file, photoUrl: fileReader.result });
     };
     if (file) fileReader.readAsDataURL(file);
+    // document.querySelector("file-submit-button").value = "";
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -50,30 +51,36 @@ export default class CommentCreateForm extends React.Component {
     }
   }
   render() {
+
     let preview = this.state.photoUrl ? (
       <div className="comment-photo-preview-cont">
+        <span onClick={this.deletePic} className="comment-photo-x-cancel">&times;</span>
         <div className="comment-photo-preview-wrap">
-          <span onClick={this.deletePic} className="comment-photo-x-cancel">&times;</span>
           <img className="comment-photo-preview" src={this.state.photoUrl} />
         </div>
       </div>) : null;
     return(
-      <div>
-        <div className="c-c">
-          <form className="comment-form" onSubmit={this.handleSubmit}>
-            <TextareaAutosize className="c-ta"
-              id={`comment-focus-${this.state.postId}`}
-              placeholder="Write a comment..."
-              onChange={this.handleInput}
-              value={this.state.body}
-              onKeyDown={this.handleKeyDown} />
-          </form>
-          <label className="comment-file-submit-overlay">
-            <div className="comment-button">
-              <img src={camera} />
-            </div>
-            <input type="file" className="file-submit-button" onChange={this.handleFile} />
-          </label>
+      <div className="comment-create-cont">
+        <div className="comment-create-main">
+          <div className="comment-prof-image">
+            <img className="profile-pic" src={this.props.currentUser.profPicUrl} />
+          </div>
+          <div className="c-c">
+            <form className="comment-form" onSubmit={this.handleSubmit}>
+              <TextareaAutosize className="c-ta"
+                id={`comment-focus-${this.state.postId}`}
+                placeholder="Write a comment..."
+                onChange={this.handleInput}
+                value={this.state.body}
+                onKeyDown={this.handleKeyDown} />
+            </form>
+            <label className="comment-file-submit-overlay">
+              <div className="comment-button">
+                <img src={camera} />
+              </div>
+              <input type="file" className="file-submit-button" onChange={this.handleFile} />
+            </label>
+          </div>
         </div>
         {preview}
       </div>

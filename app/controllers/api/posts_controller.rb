@@ -20,7 +20,9 @@ class Api::PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(post_params)
+    @post.update(post_params)
+    @post.photo.purge if !post_params[:photo] 
+    if @post.save
       render :show
     else
       render json: @post.errors.full_messages, status: 422

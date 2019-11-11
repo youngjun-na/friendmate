@@ -15,7 +15,7 @@ export default class FriendBox extends React.Component {
           <img className="friend-icon" src={friendIcon} />
           <div className="friend-box-title">Friends</div> ·
         </div>
-        <div>
+        <div className="friend-box-index-cont">
           {this.props.wallUser.friends.map(friendId => {
             let friend = this.props.allUsers[friendId]
             if (!friend) return null;

@@ -36,7 +36,7 @@ class User < ApplicationRecord
   end
 
   def pending
-    pending = Friend.where("receive_id = ? AND pending = true", self.id).pluck(:receive_id).flatten
+    pending = Friend.where("request_id = ? AND pending = true", self.id).pluck(:request_id).flatten
     pending
   end
 

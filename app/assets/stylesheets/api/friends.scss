@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .friend-box-cont {
-  width: 320px;;
+  width: 320px;
   padding: 10px;
 }
 .friend-box-header {
@@ -29,8 +29,8 @@
 }
 .friend-pic-wrap {
   position: relative;
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
@@ -45,4 +45,8 @@
 }
 .friend-pic-name:hover {
   text-decoration: underline #4267b2;
+}
+.friend-box-index-cont {
+  display: flex;
+  flex-wrap: wrap;
 }

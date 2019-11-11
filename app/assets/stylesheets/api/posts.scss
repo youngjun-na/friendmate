@@ -165,7 +165,7 @@
 .post-header-name-date {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:  space-between;
   padding: 2px;
 }
 .post-header-name{
@@ -216,9 +216,9 @@
   border-radius: 2px;
 }
 .like-dropdown-cont {
-   position: absolute;
-  left: 0;
-  bottom: 15px;
+  position: absolute;
+  left: -12px;
+  bottom: 20px;
 }
 .like-bold {
   font-weight: bold;
@@ -234,4 +234,19 @@
 	border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   margin: 0 15px;
+}
+.post-like-button-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.post-like-namelist {
+  display: flex;
+  align-items: center;
+}
+
+.post-image-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
