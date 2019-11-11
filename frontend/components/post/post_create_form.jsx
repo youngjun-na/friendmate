@@ -103,9 +103,9 @@ export default class PostCreateForm extends React.Component {
             placeholder={placeholderText} 
             onChange={this.handleInput} 
             value={this.state.body} 
-            style={textareaStyle}/>  
-            {preview}
+            style={textareaStyle}/> 
           </div>
+          {preview}
           <div className="post-create-button-div">
             <label className="file-submit-overlay">
               <img className="file-submit-pic" src={postpicture} />

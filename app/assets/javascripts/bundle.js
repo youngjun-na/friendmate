@@ -2090,7 +2090,7 @@ function (_React$Component) {
         onChange: this.handleInput,
         value: this.state.body,
         style: textareaStyle
-      }), preview), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), preview, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-create-button-div"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "file-submit-overlay"
