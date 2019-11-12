@@ -1884,7 +1884,7 @@ function (_React$Component) {
       var _this = this;
 
       if (Object.values(this.props.allUsers) < 2) return null;
-      if (!this.props.wallUser.friends) return null; // debugger;
+      if (!this.props.wallUser.friendslist) return null; // debugger;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-cont"
@@ -1897,7 +1897,7 @@ function (_React$Component) {
         className: "friend-box-title"
       }, "Friends"), " \xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-index-cont"
-      }, this.props.wallUser.friends.map(function (friendId) {
+      }, this.props.wallUser.friendslist.map(function (friendId) {
         var friend = _this.props.allUsers[friendId];
         if (!friend) return null;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2055,7 +2055,7 @@ function (_React$Component) {
       if (currentUser.id === wallUser.id) return null;
       var buttonContent;
 
-      if (currentUser.friends.includes(wallUser.id)) {
+      if (currentUser.friendslist.includes(wallUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-text"
         }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

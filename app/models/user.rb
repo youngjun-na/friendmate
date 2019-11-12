@@ -29,7 +29,7 @@ class User < ApplicationRecord
   has_one_attached :profile_pic
   has_one_attached :cover_pic
 
-  def friends 
+  def friendslist
     friends = Friend.where("(request_id = ? OR receive_id = ?) AND pending = false", self.id, self.id).pluck(:receive_id, :request_id).flatten
     friends.delete(self.id)
     friends

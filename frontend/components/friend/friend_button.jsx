@@ -51,7 +51,7 @@ export default class FriendButton extends React.Component {
     const { wallUser, currentUser } = this.props;
     if (currentUser.id === wallUser.id) return null;
     let buttonContent;
-    if (currentUser.friends.includes(wallUser.id)) {
+    if (currentUser.friendslist.includes(wallUser.id)) {
       buttonContent = 
       <div className="friend-text">
         {this.state.dropDown ? (
