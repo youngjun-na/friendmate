@@ -1,23 +1,21 @@
 import * as FriendAPIUtil from '../util/friend_api_util';
 
-import { receiveUser } from './user_actions';
+import { receiveUsers } from './user_actions';
 
 
 
 export const addFriend = (currentUserId, wallUserId) => dispatch => (
   FriendAPIUtil.addFriend(currentUserId, wallUserId)
-    .then( user => {
-      debugger;
-      return dispatch(receiveUser(user))})
+    .then( users => {
+      return dispatch(receiveUsers(users))})
 );
 
 export const deleteFriend = (currentUserId, wallUserId) => dispatch => {
   return FriendAPIUtil.findFriend(currentUserId, wallUserId)
     .then( friendId => {
       return FriendAPIUtil.deleteFriend(friendId)
-      .then( user => {
-        debugger;
-        dispatch(receiveUser(user))
+      .then( users => {
+        dispatch(receiveUsers(users))
       }
       )})
 };
@@ -25,5 +23,5 @@ export const deleteFriend = (currentUserId, wallUserId) => dispatch => {
 export const acceptFriend = (currentUserId, wallUserId) => dispatch => (
   FriendAPIUtil.findFriend(currentUserId, wallUserId)
     .then(friendId => FriendAPIUtil.acceptFriend(friendId)
-      .then(user => dispatch(receiveUser(user))))
+      .then(users => dispatch(receiveUsers(users))))
 );

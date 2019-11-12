@@ -396,18 +396,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var addFriend = function addFriend(currentUserId, wallUserId) {
   return function (dispatch) {
-    return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["addFriend"](currentUserId, wallUserId).then(function (user) {
-      debugger;
-      return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+    return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["addFriend"](currentUserId, wallUserId).then(function (users) {
+      return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUsers"])(users));
     });
   };
 };
 var deleteFriend = function deleteFriend(currentUserId, wallUserId) {
   return function (dispatch) {
     return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["findFriend"](currentUserId, wallUserId).then(function (friendId) {
-      return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteFriend"](friendId).then(function (user) {
-        debugger;
-        dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+      return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteFriend"](friendId).then(function (users) {
+        dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUsers"])(users));
       });
     });
   };
@@ -415,8 +413,8 @@ var deleteFriend = function deleteFriend(currentUserId, wallUserId) {
 var acceptFriend = function acceptFriend(currentUserId, wallUserId) {
   return function (dispatch) {
     return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["findFriend"](currentUserId, wallUserId).then(function (friendId) {
-      return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["acceptFriend"](friendId).then(function (user) {
-        return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+      return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["acceptFriend"](friendId).then(function (users) {
+        return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUsers"])(users));
       });
     });
   };
@@ -676,28 +674,27 @@ var logout = function logout() {
 /*!******************************************!*\
   !*** ./frontend/actions/user_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_ALL_USERS, RECEIVE_USER, receiveUser, fetchAllUsers, fetchUser */
+/*! exports provided: RECEIVE_USERS, RECEIVE_USER, receiveUsers, receiveUser, fetchAllUsers, fetchUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_USERS", function() { return RECEIVE_ALL_USERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USERS", function() { return RECEIVE_USERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USER", function() { return RECEIVE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUsers", function() { return receiveUsers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUser", function() { return receiveUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 /* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/user_api_util */ "./frontend/util/user_api_util.js");
 
-var RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
+var RECEIVE_USERS = "RECEIVE_USERS";
 var RECEIVE_USER = "RECEIVE_USER";
-
-var receiveAllUsers = function receiveAllUsers(users) {
+var receiveUsers = function receiveUsers(users) {
   return {
-    type: RECEIVE_ALL_USERS,
+    type: RECEIVE_USERS,
     users: users
   };
 };
-
 var receiveUser = function receiveUser(user) {
   return {
     type: RECEIVE_USER,
@@ -707,7 +704,7 @@ var receiveUser = function receiveUser(user) {
 var fetchAllUsers = function fetchAllUsers() {
   return function (dispatch) {
     return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAllUsers"]().then(function (users) {
-      return dispatch(receiveAllUsers(users));
+      return dispatch(receiveUsers(users));
     });
   };
 };
@@ -4761,8 +4758,8 @@ __webpack_require__.r(__webpack_exports__);
       newState[action.user.id] = action.user;
       return newState;
 
-    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_ALL_USERS"]:
-      return action.users;
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_USERS"]:
+      return Object.assign({}, newState, action.users);
 
     default:
       return state;
