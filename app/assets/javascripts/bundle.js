@@ -378,6 +378,50 @@ var deleteComment = function deleteComment(comment) {
 
 /***/ }),
 
+/***/ "./frontend/actions/friend_actions.js":
+/*!********************************************!*\
+  !*** ./frontend/actions/friend_actions.js ***!
+  \********************************************/
+/*! exports provided: addFriend, deleteFriend, acceptFriend */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addFriend", function() { return addFriend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteFriend", function() { return deleteFriend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "acceptFriend", function() { return acceptFriend; });
+/* harmony import */ var _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/friend_api_util */ "./frontend/util/friend_api_util.js");
+/* harmony import */ var _user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user_actions */ "./frontend/actions/user_actions.js");
+
+
+var addFriend = function addFriend(currentUserId, wallUserId) {
+  return function (dispatch) {
+    return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["addFriend"](currentUserId, wallUserId).then(function (user) {
+      return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+    });
+  };
+};
+var deleteFriend = function deleteFriend(currentUserId, wallUserId) {
+  return function (dispatch) {
+    return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["findFriend"](currentUserId, wallUserId).then(function (friendId) {
+      return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteFriend"](friendId).then(function (user) {
+        return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+      });
+    });
+  };
+};
+var acceptFriend = function acceptFriend(currentUserId, wallUserId) {
+  return function (dispatch) {
+    return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["findFriend"](currentUserId, wallUserId).then(function (friendId) {
+      return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["acceptFriend"](friendId).then(function (user) {
+        return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+      });
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/like_actions.js":
 /*!******************************************!*\
   !*** ./frontend/actions/like_actions.js ***!
@@ -1922,17 +1966,73 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FriendButton).call(this, props));
     _this.state = {
-      dropDown: false
+      dropDown: false,
+      button: true
     };
-    _this.toggleDropdown = _this.toggleDropdown.bind(_assertThisInitialized(_this));
+    _this.showDropdown = _this.showDropdown.bind(_assertThisInitialized(_this));
+    _this.hideDropdown = _this.hideDropdown.bind(_assertThisInitialized(_this));
+    _this.handleAdd = _this.handleAdd.bind(_assertThisInitialized(_this));
+    _this.handleAccept = _this.handleAccept.bind(_assertThisInitialized(_this));
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
+    window.dropdownTimer = null;
     return _this;
   }
 
   _createClass(FriendButton, [{
-    key: "toggleDropdown",
-    value: function toggleDropdown() {
-      this.setState({
-        dropDown: !this.state.dropDown
+    key: "showDropdown",
+    value: function showDropdown() {
+      var _this2 = this;
+
+      clearTimeout(dropdownTimer);
+      dropdownTimer = setTimeout(function () {
+        _this2.setState({
+          dropDown: true
+        });
+      }, 500);
+    }
+  }, {
+    key: "hideDropdown",
+    value: function hideDropdown() {
+      var _this3 = this;
+
+      clearTimeout(dropdownTimer);
+      dropdownTimer = setTimeout(function () {
+        _this3.setState({
+          dropDown: false
+        });
+      }, 500);
+    }
+  }, {
+    key: "handleAdd",
+    value: function handleAdd() {
+      var _this4 = this;
+
+      this.props.addFriend(this.props.currentUser.id, this.props.wallUser.id).then(function () {
+        return _this4.setState({
+          button: !_this4.state.button
+        });
+      });
+    }
+  }, {
+    key: "handleDelete",
+    value: function handleDelete() {
+      var _this5 = this;
+
+      this.props.deleteFriend(this.props.currentUser.id, this.props.wallUser.id).then(function () {
+        return _this5.setState({
+          button: !_this5.state.button
+        });
+      });
+    }
+  }, {
+    key: "handleAccept",
+    value: function handleAccept() {
+      var _this6 = this;
+
+      this.props.accetFriend(this.props.currentUser.id, this.props.wallUser.id).then(function () {
+        return _this6.setState({
+          button: !_this6.state.button
+        });
       });
     }
   }, {
@@ -1942,61 +2042,76 @@ function (_React$Component) {
       var _this$props = this.props,
           wallUser = _this$props.wallUser,
           currentUser = _this$props.currentUser;
+      if (currentUser.id === wallUser.id) return null;
       var buttonContent;
 
       if (currentUser.friends.includes(wallUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-text"
         }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-dropdown-cont"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "friend-dropdown-cont",
+          onMouseEnter: this.showDropdown,
+          onMouseLeave: this.hideDropdown
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "d-tri-w-f"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "friend-dropdown"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "friend-item"
-        }, "Remove Friend"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "friend-item",
+          onClick: this.handleDelete
+        }, "Unfriend"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_1___default.a
-        }), "Friend");
+        }), "Friends");
       } else if (currentUser.pending.includes(wallUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-text"
-        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-dropdown-cont"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-dropdown-cont",
+          onMouseEnter: this.showDropdown,
+          onMouseLeave: this.hideDropdown
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "d-tri-w-f"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "friend-dropdown"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "friend-item"
-        }, "Cancel Request"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "friend-item",
+          onClick: this.handleDelete
+        }, "Cancel")))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _app_assets_images_friendremove_png__WEBPACK_IMPORTED_MODULE_3___default.a
         }), "Friend Request Sent");
       } else if (wallUser.pending.includes(currentUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-text"
-        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-dropdown-cont"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-dropdown-cont",
+          onMouseEnter: this.showDropdown,
+          onMouseLeave: this.hideDropdown
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "d-tri-w-f"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "friend-dropdown"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "friend-item"
-        }, "Accept Request"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "friend-item"
-        }, "Remove Request"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "friend-item",
+          onClick: this.handleAccept
+        }, "Confirm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "friend-item",
+          onClick: this.handleDelete
+        }, "Delete Request")))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2___default.a
         }), "Respond to Friend Request");
       } else {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-text"
+          className: "friend-text",
+          onClick: this.handleAdd
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _app_assets_images_friendadd_png__WEBPACK_IMPORTED_MODULE_2___default.a
         }), "Add Friend");
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "friend-button-wrap",
-        onMouseOver: this.toggleDropdown,
-        onMouseOut: this.toggleDropdown
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "friend-button"
-      }, buttonContent));
+        className: "friend-button",
+        onMouseEnter: this.showDropdown
+      }, buttonContent);
     }
   }]);
 
@@ -2004,6 +2119,43 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+
+/***/ }),
+
+/***/ "./frontend/components/friend/friend_button_container.js":
+/*!***************************************************************!*\
+  !*** ./frontend/components/friend/friend_button_container.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _friend_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./friend_button */ "./frontend/components/friend/friend_button.jsx");
+/* harmony import */ var _actions_friend_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/friend_actions */ "./frontend/actions/friend_actions.js");
+
+
+
+
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    addFriend: function addFriend(currentUserId, wallUserId) {
+      return dispatch(Object(_actions_friend_actions__WEBPACK_IMPORTED_MODULE_3__["addFriend"])(currentUserId, wallUserId));
+    },
+    deleteFriend: function deleteFriend(currentUserId, wallUserId) {
+      return dispatch(Object(_actions_friend_actions__WEBPACK_IMPORTED_MODULE_3__["deleteFriend"])(currentUserId, wallUserId));
+    },
+    acceptFriend: function acceptFriend(currentUserId, wallUserId) {
+      return dispatch(Object(_actions_friend_actions__WEBPACK_IMPORTED_MODULE_3__["acceptFriend"])(currentUserId, wallUserId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(_friend_button__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
@@ -4059,7 +4211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wall_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wall_index */ "./frontend/components/wall/wall_index.jsx");
 /* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
 /* harmony import */ var _friend_friend_box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../friend/friend_box */ "./frontend/components/friend/friend_box.jsx");
-/* harmony import */ var _friend_friend_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../friend/friend_button */ "./frontend/components/friend/friend_button.jsx");
+/* harmony import */ var _friend_friend_button_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../friend/friend_button_container */ "./frontend/components/friend/friend_button_container.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4144,7 +4296,7 @@ function (_React$Component) {
         src: wallUser.profPicUrl
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-name"
-      }, wallUser.firstName, "  ", wallUser.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_friend_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, wallUser.firstName, "  ", wallUser.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_friend_button_container__WEBPACK_IMPORTED_MODULE_4__["default"], {
         currentUser: currentUser,
         wallUser: wallUser
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4697,6 +4849,62 @@ var deleteComment = function deleteComment(comment) {
     url: "/api/comments/".concat(comment.id),
     data: {
       comment: comment
+    }
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/friend_api_util.js":
+/*!******************************************!*\
+  !*** ./frontend/util/friend_api_util.js ***!
+  \******************************************/
+/*! exports provided: addFriend, acceptFriend, deleteFriend, findFriend */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addFriend", function() { return addFriend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "acceptFriend", function() { return acceptFriend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteFriend", function() { return deleteFriend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findFriend", function() { return findFriend; });
+var addFriend = function addFriend(requestId, receiveId) {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/friends',
+    data: {
+      friend: {
+        requestId: requestId,
+        receiveId: receiveId,
+        pending: true
+      }
+    }
+  });
+};
+var acceptFriend = function acceptFriend(friendId) {
+  return $.ajax({
+    method: 'PATCH',
+    url: "/api/friends/".concat(friendId),
+    data: {
+      friend: {
+        pending: false
+      }
+    }
+  });
+};
+var deleteFriend = function deleteFriend(friendId) {
+  return $.ajax({
+    method: 'DELETE',
+    url: "/api/friends/".concat(friendId)
+  });
+};
+var findFriend = function findFriend(requestId, receiveId) {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/friends/find',
+    data: {
+      requestId: requestId,
+      receiveId: receiveId
     }
   });
 };

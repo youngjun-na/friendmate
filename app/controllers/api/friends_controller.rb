@@ -8,6 +8,15 @@ class Api::FriendsController < ApplicationController
     end
   end
 
+  def find 
+    @friend = Friend.where("(request_id = ? AND receive_Id = ?) OR (receive_id = ? AND request_Id = ?)", 
+    params[:request_id], params[:receive_id],
+    params[:receive_id], params[:request_id])
+    if @friend
+      render json: @friend.ids.shift
+    end
+  end
+
   def update
     @friend = Friend.find(params[:id])
     if @friend.update_attributes(friend_params)
@@ -18,7 +27,7 @@ class Api::FriendsController < ApplicationController
   def destroy
     @friend = Friend.find(params[:id])
     @friend.destroy
-    redner :show
+    render :show
   end
 
   private

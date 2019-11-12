@@ -30,3 +30,14 @@ export const deleteFriend = friendId => (
     url: `/api/friends/${friendId}`,
   })
 );
+
+export const findFriend = (requestId, receiveId) => (
+  $.ajax({
+    method: 'GET',
+    url:'/api/friends/find',
+    data: {
+        requestId,
+        receiveId
+    }
+  })
+);

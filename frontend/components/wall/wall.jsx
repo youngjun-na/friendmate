@@ -2,7 +2,7 @@ import React from 'react';
 import WallIndex from'./wall_index';
 import PostCreateFormContainer from '../post/post_create_form_container';
 import FriendBox from '../friend/friend_box';
-import FriendButton from '../friend/friend_button';
+import FriendButtonContainer from '../friend/friend_button_container';
 export default class Wall extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +37,7 @@ export default class Wall extends React.Component {
             <div className="wall-name">
               {wallUser.firstName}  {wallUser.lastName} 
             </div>
-            <FriendButton currentUser={currentUser} wallUser={wallUser}/>
+            <FriendButtonContainer currentUser={currentUser} wallUser={wallUser}/>
           </div>
           <div className= "wall-header-bar">
 
