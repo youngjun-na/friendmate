@@ -152,6 +152,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAe
 
 /***/ }),
 
+/***/ "./app/assets/images/covercamera.png":
+/*!*******************************************!*\
+  !*** ./app/assets/images/covercamera.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AYht+mSkUrDlYo4pChdbIgKuKoVShChVArtOpgcukfNGlIWlwcBdeCgz+LVQcXZ10dXAVB8AfExdVJ0UVK/C4ptIjxjuMe3vvel7vvAKFRZprVNQ5oetVMJeJiJrsqBl7RR3MIYURlZhlzkpSE5/i6h4/vdzGe5V335+hXcxYDfCLxLDPMKvEG8fRm1eC8TxxiRVklPiceM+mCxI9cV1x+41xwWOCZITOdmicOEYuFDlY6mBVNjXiKOKJqOuULGZdVzluctXKNte7JXxjM6SvLXKc1ggQWsQQJIhTUUEIZVcRo10mxkKLzuId/2PFL5FLIVQIjxwIq0CA7fvA/+N1bKz854SYF40D3i21/RIHALtCs2/b3sW03TwD/M3Clt/2VBjDzSXq9rUWOgIFt4OK6rSl7wOUOEH4yZFN2JD8tIZ8H3s/om7LA4C3Qu+b2rXWO0wcgTb1K3gAHh8BogbLXPd7d09m3f2ta/fsBa35ypEjfOIAAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfjCwwWOx/IE3AqAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAsdJREFUSMe1Vs1LG0EU/80aOrNLyEHWROJSxEoIPYlHoZciPUR66B/QFNKKIAQJggiF3gp+HEIOUkraQug5eCgFKaWXghZqF+Khh2BBahATs6aERXeWZKeXDfRjd6O0PniwO/PjffJ+b4ArFuJ0xdU66HMvuRokjquXdhCyLCtDKX0AgPlgLM55iTH2CkDHL0Kvs1C1Wp2ilM4FGAcARimdq1arUwBCXvZ6GYTq9frNcDg82u12pfPzcykajd4HcP2Cpf7eaDRey7LsDAwMOKZpHsRisa8AOsQtxSNK6ez/bC7nvMgYe0EAhIUQbwGE/cBCiKP9/f2Puq7XAGByclIbHx+/RQiJ/4kjhERcWyYhZEZya+xr3DCM98lkcjWRSGxVKpWDSqVykEgktpLJ5Gqr1Xr3C/TH4ODgeqFQKLj/4V7/okKIL17KOS8pijJRLpenhRCbv9xtlsvlaUVRJjjnJffs887OTtowjCc9HIAoATDslugvWVlZeVyv1xv5fD7vkaWZy+VysVgsury8/NRzBgiZCXJgUkrnarXa7aGhoYdeBk5OTl5qmvaBc/7cq8y9HniPp+Mc27bdkWV5xA8jy/KIbdsdx3GOg6jA+0KSNFVVpVardeiHaTabh/F4XJIkSbu0AwCsVCqNpdPpTwC8IjzOZDLbxWJxLGjaA4kslUrNnp6enmWz2XXLsnYB2ABsy7J2s9nsumEYViqVmu3HlkEyquv6oqIopizLG6qqLqiquiDL8oaiKKau64sARvvR9bAQ4k0fZ6ZlWdvNZvMbAKiqeoMxNhU0oAAcQsjdEIAO53yPUjoRAA4zxu5omnYZLtoD0AkB6MzPzz9bW1u7F4lE4kII30wIIY7LOYGYdrt9tLS0tNljUwYg4qoSUCrngv1zAJwBaANok96CAXDNb2lcUhx3u9m9DLwikv7B+G/fV/6q+AlTOUZ6RDFsvgAAAABJRU5ErkJggg=="
+
+/***/ }),
+
 /***/ "./app/assets/images/fb_sp_np.png":
 /*!****************************************!*\
   !*** ./app/assets/images/fb_sp_np.png ***!
@@ -269,7 +280,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABK
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAWJAAAFiQFtaJ36AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAASlQTFRF////ar+Ad7uIcsGEcMWGccSGcMKGcMSGYGl9cMKFcMOHX2l8csOGZW6CccOGcMOGccSGYWt+Z2+CccOGYmt+ccOGa6GDa5eDVmB0EaCFEp+FFqKFGJmDHJWCHKSFHpOCIJGBIo+AJot/JoyAJrmZJ7iYKKiFKLSXK4Z+LqKPLqOPMqKPM358NJyNNJ2NN5iLPI2HQoGCR3d+SWl2TGZ1TWx5TraGT2N0UGJ0UmBzUmB0UqyeU19zU2B0VF5zXWVyYK+UZL6GZb+Ga8GGbMGGccOGcr+Qc3VueMaMg8uWhru2i5yljM6dkpqmldKkm5NoodevqZ1mq9i5rb7Ct+DBt+HCusDHv65iw+HOxufOz9XZ0OvX0rxf2+Dj4ubp5+vs6PXr7PDx89VaLjWsGAAAABl0Uk5TAAwPHTk9VHSFhqGjpqu83N/j7O7w8fT1+v5zZmYAAADsSURBVCjPY2DABbh5sQEOBgaRKGxAkIFBKDEuFh3EJ4IlfO3QQRhMwj0mxh2rRHhSUjhWicCkpECsEvb+/vYQIWMdFAk4MJGR1LBBkzC1tbMzl5WUlFSyRJEwUteztVKQBAFFCyQJQ1UVFV1lSQiQD4ZLGKiAgJYUUFTOzNHZLQIiYauvogKTUXNxBQExkIS3tgoMaEo7ubp6hgJl2IASXtYI4AAU84kEEnxACWQQ5OoXGZ0QGeIqzCAhhAzEXT18AqJ9PF350eKTBWYUF3pM87i6evi5uooyo0sw8YBcK8CKJXWwsHOyMTLgBgCTEWSVh6YIbwAAAABJRU5ErkJggg=="
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AYht+mSkUrDlYo4pChdbIgKuKoVShChVArtOpgcukfNGlIWlwcBdeCgz+LVQcXZ10dXAVB8AfExdVJ0UVK/C4ptIjxjuMe3vvel7vvAKFRZprVNQ5oetVMJeJiJrsqBl7RR3MIYURlZhlzkpSE5/i6h4/vdzGe5V335+hXcxYDfCLxLDPMKvEG8fRm1eC8TxxiRVklPiceM+mCxI9cV1x+41xwWOCZITOdmicOEYuFDlY6mBVNjXiKOKJqOuULGZdVzluctXKNte7JXxjM6SvLXKc1ggQWsQQJIhTUUEIZVcRo10mxkKLzuId/2PFL5FLIVQIjxwIq0CA7fvA/+N1bKz854SYF40D3i21/RIHALtCs2/b3sW03TwD/M3Clt/2VBjDzSXq9rUWOgIFt4OK6rSl7wOUOEH4yZFN2JD8tIZ8H3s/om7LA4C3Qu+b2rXWO0wcgTb1K3gAHh8BogbLXPd7d09m3f2ta/fsBa35ypEjfOIAAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfjCwwXASRdcy1AAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAtdJREFUOMu1lE1slFUUhp9755tOi4O0NJV22o7EtF1AWtKIRGkwUSnWEoKdmrKAFOgUTGhIhBg2btiwILogJCyaNF3ozjqZRKMlxkTTnyho0UCYEGpA+zN0Ah06dErr993vXhcto9MfmIW+q7u457nvyXnvgf9Y4skh2PLJbuHxdrtKBTHGyq1aKCk9SSnY90fkg6sZ4ObWCzuUUleqmvfjLw0gpMyJZ7RmLjHF6NdRpKRxLPrhdxJAG76q3tvC+kBFzjAAISX+sgBVzfsRHm83gAWgtd743KZSAJT9FxP9ER7efwhAbXsnVp7vqWB/aQBXuUEAueTdeuLsxqc9vBGMM3ruHqGX55noj+TkFKOtf4DLdD40g9cynA/NZJzmqhXAopIizkQKcZTgTKRwlUEoJr8/QmLwOEarZwMr3mkleq2A6o/K+GE8QG17ZxYsNXKabUEP5YVJpgbCaCedVb8ib1aej/rOrlWdPRo5RYU/xdFQE9Ppcfq+/Y3bw11sari0tsPFYhvncWIFrNyf4njbHgDW5W2gcVeAmkqbxHAXQjqrA7WdYuLyu/x5+T1mx74BY7JgnqU0WJ58ABp3BaivMWwsvk5DR4M/q2U1nyD54wn2vr6V8gpB7+cXKRZ3V8AAjHEz553bSxj66SpDvT+nMzfs2TEeDIZperWatxvqqSwp41CoitFfv2DLS5VZMG0M03OTa8dGinkeDB2jbc923nqtDoDn15VQXOgnfLCW/sERBn6JLXbh2sRTt3hsp1YFWgBFL/TTEdpNbc2L/1pDkvUFxSjt8P7hOnxWAfGZ31lwUpjlQzQGKYVq62uTFoCr3YUCny9/+WuOay+16DLvJNf8HVOJOaQQj2IxLLkYC/fAx71R7oxPoY1BG8V0epz0QvLp68sYJuJpPovEMIgDN8/22ZkFuyX8ypt5Xk9UOdrvap3TDpNSKK9Xxm3FyVjPlS/5P/Q3ayEmhLR3irQAAAAASUVORK5CYII="
 
 /***/ }),
 
@@ -4211,6 +4222,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
 /* harmony import */ var _friend_friend_box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../friend/friend_box */ "./frontend/components/friend/friend_box.jsx");
 /* harmony import */ var _friend_friend_button_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../friend/friend_button_container */ "./frontend/components/friend/friend_button_container.js");
+/* harmony import */ var _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../app/assets/images/covercamera.png */ "./app/assets/images/covercamera.png");
+/* harmony import */ var _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4228,6 +4241,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -4277,16 +4291,21 @@ function (_React$Component) {
           currentUser = _this$props.currentUser,
           wallUser = _this$props.wallUser;
       if (!wallUser) return null;
+      var coverPicStyle = wallUser.coverPicUrl ? {
+        backgroundImage: 'url(' + wallUser.coverPicUrl + ')'
+      } : {
+        background: 'linear-gradient(white, #dddfe2, rgba(0, 0, 0, .53))'
+      };
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "prof-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "wall-cover-p"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "wall-cover-pic",
-        src: wallUser.coverPicUrl
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-cover-p",
+        style: coverPicStyle
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Update Cover Photo")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-pic-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-circle"
