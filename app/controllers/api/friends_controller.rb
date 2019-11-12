@@ -9,11 +9,11 @@ class Api::FriendsController < ApplicationController
   end
 
   def find 
-    @friend = Friend.where("(request_id = ? AND receive_Id = ?) OR (receive_id = ? AND request_Id = ?)", 
+    @friend = Friend.where("(request_id = ? AND receive_id = ?) OR (receive_id = ? AND request_id = ?)", 
     params[:request_id], params[:receive_id],
-    params[:receive_id], params[:request_id])
+     params[:request_id], params[:receive_id])
     if @friend
-      render json: @friend.ids.shift
+      render json: @friend.ids
     end
   end
 

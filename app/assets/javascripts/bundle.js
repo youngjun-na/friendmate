@@ -397,6 +397,7 @@ __webpack_require__.r(__webpack_exports__);
 var addFriend = function addFriend(currentUserId, wallUserId) {
   return function (dispatch) {
     return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["addFriend"](currentUserId, wallUserId).then(function (user) {
+      debugger;
       return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
     });
   };
@@ -405,7 +406,8 @@ var deleteFriend = function deleteFriend(currentUserId, wallUserId) {
   return function (dispatch) {
     return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["findFriend"](currentUserId, wallUserId).then(function (friendId) {
       return _util_friend_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteFriend"](friendId).then(function (user) {
-        return dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
+        debugger;
+        dispatch(Object(_user_actions__WEBPACK_IMPORTED_MODULE_1__["receiveUser"])(user));
       });
     });
   };
@@ -674,13 +676,14 @@ var logout = function logout() {
 /*!******************************************!*\
   !*** ./frontend/actions/user_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_ALL_USERS, RECEIVE_USER, fetchAllUsers, fetchUser */
+/*! exports provided: RECEIVE_ALL_USERS, RECEIVE_USER, receiveUser, fetchAllUsers, fetchUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_USERS", function() { return RECEIVE_ALL_USERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USER", function() { return RECEIVE_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUser", function() { return receiveUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 /* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/user_api_util */ "./frontend/util/user_api_util.js");
@@ -701,7 +704,6 @@ var receiveUser = function receiveUser(user) {
     user: user
   };
 };
-
 var fetchAllUsers = function fetchAllUsers() {
   return function (dispatch) {
     return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAllUsers"]().then(function (users) {
@@ -1967,7 +1969,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FriendButton).call(this, props));
     _this.state = {
       dropDown: false,
-      button: true
+      button: false
     };
     _this.showDropdown = _this.showDropdown.bind(_assertThisInitialized(_this));
     _this.hideDropdown = _this.hideDropdown.bind(_assertThisInitialized(_this));
@@ -2029,7 +2031,7 @@ function (_React$Component) {
     value: function handleAccept() {
       var _this6 = this;
 
-      this.props.accetFriend(this.props.currentUser.id, this.props.wallUser.id).then(function () {
+      this.props.acceptFriend(this.props.currentUser.id, this.props.wallUser.id).then(function () {
         return _this6.setState({
           button: !_this6.state.button
         });
@@ -4660,17 +4662,18 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 
+var _nullState = [];
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _nullState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
-      return [];
+      return _nullState;
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ERRORS"]:
-      return action.errors;
+      return action.errors || _nullState;
 
     default:
       return state;

@@ -7,7 +7,7 @@ export default class FriendButton extends React.Component {
     super(props);
     this.state = {
       dropDown: false,
-      button: true,
+      button: false,
     }
     this.showDropdown = this.showDropdown.bind(this);
     this.hideDropdown = this.hideDropdown.bind(this);
@@ -42,7 +42,7 @@ export default class FriendButton extends React.Component {
   }
 
   handleAccept() {
-    this.props.accetFriend(this.props.currentUser.id, this.props.wallUser.id)
+    this.props.acceptFriend(this.props.currentUser.id, this.props.wallUser.id)
       .then(() => this.setState({ button: !this.state.button }))
   }
   
