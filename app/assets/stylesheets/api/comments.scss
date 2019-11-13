@@ -24,6 +24,7 @@
   font-size: 13px;
   font-weight: 300;
   position: relative;
+  margin-right: 5px;
 }
 .ci-i-c {
   display: flex;
@@ -271,7 +272,7 @@
 }
 .comment-like-dropdown-cont {
   position: absolute;
-  right: -25px;
+  right: 0;
   bottom: 25px;
 }
 .comment-footer {
@@ -286,4 +287,7 @@
   height: 18px;
   width: 18px;
   margin-right: 3px;
+}
+.comment-body-cont {
+  margin-right: 5px;
 }

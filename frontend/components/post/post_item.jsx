@@ -87,7 +87,12 @@ export default class PostItem extends React.Component {
               </div>
             </div>
           </div> 
-          <PostDropdown post={post} deletePost={this.props.deletePost} openModal={this.props.openModal} />
+          <PostDropdown post={post} 
+          deletePost={this.props.deletePost} 
+          openModal={this.props.openModal} 
+          currentUserId={currentUser.id} 
+          hostId={host.id}
+          authorId={author.id}/>
         </div>
         <div className="pi-b">
           {post.body}

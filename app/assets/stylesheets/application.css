@@ -70,7 +70,7 @@ img {
   right: 0;
   top: 18px;
   min-width: 150px;
-  min-height: 50px;
+  /* min-height: 50px; */
   border: 1px solid #dddfe2;
   border-radius: 2px;
   z-index: 2;

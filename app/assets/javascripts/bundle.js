@@ -295,6 +295,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZ
 
 /***/ }),
 
+/***/ "./app/assets/images/whitefmlogo.png":
+/*!*******************************************!*\
+  !*** ./app/assets/images/whitefmlogo.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
 /***/ "./app/assets/images/whitelike.png":
 /*!*****************************************!*\
   !*** ./app/assets/images/whitelike.png ***!
@@ -1062,7 +1073,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "com-dd invis",
+        className: "com-dd",
         onClick: this.handleDropdown,
         ref: this.commentDropdownCont
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1292,8 +1303,11 @@ function (_React$Component) {
   }, {
     key: "handleHover",
     value: function handleHover(e) {
-      Array.from(e.target.children).forEach(function (el) {
-        if (el.classList.contains("com-dd")) el.classList.toggle("invis");
+      // Array.from(e.target.children).forEach((el)=>{
+      //   if (el.classList.contains("com-dd")) el.classList.toggle("invis")}
+      // )
+      this.setState({
+        show: !this.state.show
       });
     }
   }, {
@@ -1432,11 +1446,11 @@ function (_React$Component) {
         className: "ci-i-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "comment-body"
-      }, this.state.body, " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.state.body, " "))), this.state.show ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
-      })), photoDiv, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }) : null), photoDiv, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
         likers: likers,
         currentUserId: this.props.currentUser.id
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1705,7 +1719,7 @@ function (_React$Component) {
         className: "profile-pic",
         src: currentUser.profPicUrl
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "sidebar-name-link ",
+        className: "sidebar-name-link",
         to: "/profile/".concat(currentUser.id)
       }, currentUser.firstName, " ", currentUser.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sidebar-item-selected"
@@ -2373,6 +2387,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/whitefmlogo.png */ "./app/assets/images/whitefmlogo.png");
+/* harmony import */ var _app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2390,6 +2406,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -2418,22 +2435,34 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var currentUser = this.props.currentUser;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nb-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nb-s"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/feed"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "nb-fmlogo",
+        src: _app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2___default.a
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "nb-sb",
-        type: "text"
+        type: "text",
+        placeholder: "Search"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nb-tc"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-n",
+        to: "/profile/".concat(currentUser.id)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sidebar-prof-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "profile-pic",
+        src: currentUser.profPicUrl
+      })), currentUser.firstName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nb-tc-h",
         to: "/feed"
-      }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        className: "nb-tc-n",
-        to: "/profile/".concat(this.props.currentUser.id)
-      }, this.props.currentUser.firstName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "li-b lo",
         onClick: this.handleClick
       }, "Log Out"));
@@ -2849,6 +2878,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this$props = this.props,
+          currentUserId = _this$props.currentUserId,
+          authorId = _this$props.authorId,
+          hostId = _this$props.hostId;
+      if (currentUserId !== authorId && currentUserId !== hostId) return null;
+      var editPost = currentUserId === authorId ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-dd-i noselect",
+        onClick: this.handleEdit
+      }, "Edit Post") : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd",
         onClick: this.handleDropdown,
@@ -2863,10 +2901,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd-i noselect",
         onClick: this.handleDelete
-      }, "Delete Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-dd-i noselect",
-        onClick: this.handleEdit
-      }, "Edit Post"))));
+      }, "Delete Post"), editPost)));
     }
   }]);
 
@@ -3252,7 +3287,10 @@ function (_React$Component) {
       }, Object(_util_time_util__WEBPACK_IMPORTED_MODULE_1__["default"])(post.createdAt))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
         post: post,
         deletePost: this.props.deletePost,
-        openModal: this.props.openModal
+        openModal: this.props.openModal,
+        currentUserId: currentUser.id,
+        hostId: host.id,
+        authorId: author.id
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pi-b"
       }, post.body, photoDiv, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_likers__WEBPACK_IMPORTED_MODULE_6__["default"], {

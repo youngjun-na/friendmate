@@ -37,6 +37,12 @@ export default class PostDropdown extends React.Component {
     }
   }
   render() {
+    const { currentUserId, authorId, hostId } = this.props;
+    if (currentUserId !== authorId && currentUserId !== hostId) return null;
+    let editPost = currentUserId === authorId ? (
+      <div className="post-dd-i noselect" onClick={this.handleEdit}>
+        Edit Post
+      </div>) : null;
     return(
       <div className="post-dd" onClick={this.handleDropdown} ref={this.postDropdownCont}>
         <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})`} : {}} >
@@ -44,9 +50,7 @@ export default class PostDropdown extends React.Component {
           <div className="post-dd-i noselect" onClick={this.handleDelete}>
             Delete Post
           </div>
-          <div className="post-dd-i noselect" onClick={this.handleEdit}>
-            Edit Post
-          </div>
+          {editPost}
         </div>)}
         </div>
       </div>

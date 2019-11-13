@@ -32,9 +32,10 @@ export default class CommentItem extends React.Component {
     })
   }
   handleHover(e) {
-    Array.from(e.target.children).forEach((el)=>{
-      if (el.classList.contains("com-dd")) el.classList.toggle("invis")}
-    )
+    // Array.from(e.target.children).forEach((el)=>{
+    //   if (el.classList.contains("com-dd")) el.classList.toggle("invis")}
+    // )
+    this.setState({show: !this.state.show});
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -133,7 +134,7 @@ export default class CommentItem extends React.Component {
                   <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
                 </div>
               </div>
-              <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>
+              {this.state.show ?  <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/> : null}
             </div>
             {photoDiv}
             <CommentLikers likers={likers} currentUserId={this.props.currentUser.id} />

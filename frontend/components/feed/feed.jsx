@@ -24,7 +24,7 @@ export default class Feed extends React.Component {
               <div className="sidebar-prof-image">
                 <img className="profile-pic" src={currentUser.profPicUrl} />
               </div>
-              <Link className="sidebar-name-link " to={`/profile/${currentUser.id}`}>
+              <Link className="sidebar-name-link" to={`/profile/${currentUser.id}`}>
                 {currentUser.firstName} {currentUser.lastName}
               </Link>
             </div>
