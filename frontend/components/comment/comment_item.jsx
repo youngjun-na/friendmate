@@ -19,6 +19,7 @@ export default class CommentItem extends React.Component {
       photoUrl: null,
       
     }
+    this.handleCancel = this.handleCancel.bind(this)
     this.handleEdit = this.handleEdit.bind(this);
     this.handleHover = this.handleHover.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,15 +27,15 @@ export default class CommentItem extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleLike = this.handleLike.bind(this);
   }
+  handleCancel() {
+    this.setState({body:this.props.comment.body}, this.handleEdit);
+  }
   handleEdit() {
     this.setState({
       edit: !this.state.edit,
     })
   }
-  handleHover(e) {
-    // Array.from(e.target.children).forEach((el)=>{
-    //   if (el.classList.contains("com-dd")) el.classList.toggle("invis")}
-    // )
+  handleHover() {
     this.setState({show: !this.state.show});
   }
   handleSubmit(e) {
@@ -66,7 +67,7 @@ export default class CommentItem extends React.Component {
     }
   }
   render() {
-    const { comment, allUsers, updateComment, deleteComment, currentUser } = this.props;
+    const { comment, allUsers, deleteComment, currentUser } = this.props;
     let author = allUsers[comment.authorId];
     if (!author) return null;
 
@@ -112,7 +113,7 @@ export default class CommentItem extends React.Component {
               value={this.state.body}
               onKeyDown={this.handleKeyDown} />
           </form>
-          <div className="comment-cancel" onClick={this.handleEdit}>Cancel</div>
+          <div className="comment-cancel" onClick={this.handleCancel}>Cancel</div>
         <label className="comment-file-submit-overlay">
           <div className="comment-button">
             <img src={camera} />
@@ -137,7 +138,8 @@ export default class CommentItem extends React.Component {
                 </div>
               {photoDiv}
               </div>
-              {this.state.show ?  <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/> : null}
+              {(this.state.show && author.id === currentUser.id) ?  (
+              <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/>) : null}
               <CommentLikers likers={likers} currentUserId={this.props.currentUser.id} />
             </div>
             <div className="comment-like-reply">

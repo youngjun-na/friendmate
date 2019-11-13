@@ -12,6 +12,15 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    @user.profile_pic.purge if !user_params[:profile_pic] 
+    if @user.save
+      render :show
+    end
+  end
+
   def show
     @user = User.find(params[:id])
     render :show
@@ -22,9 +31,11 @@ class Api::UsersController < ApplicationController
     render :index
   end
   private
-
+  def search
+  
+  end
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :password, :email, :birthday, :gender)
+    params.require(:user).permit(:first_name, :last_name, :password, :email, :birthday, :gender, :profile_pic, :cover_pic)
   end
 
   def underscore_params!(val = params)

@@ -11,7 +11,8 @@ export const receiveUsers = users => ({
 export const receiveUser = user => ({
   type: RECEIVE_USER,
   user
-})
+});
+
 export const fetchAllUsers = () => dispatch => (
   UserAPIUtil.fetchAllUsers()
     .then(users=> dispatch(receiveUsers(users)))
@@ -20,4 +21,9 @@ export const fetchAllUsers = () => dispatch => (
 export const fetchUser = userId => dispatch => (
   UserAPIUtil.fetchUser(userId)
     .then(user=> dispatch(receiveUser(user)))
+);
+
+export const updateUser = user => dispatch => (
+  UserAPIUtil.updateUser(user)
+    .then(user => dispatch(receiveUser(user)))
 );

@@ -8,9 +8,13 @@ export default class Wall extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
+      coverPicUrl: this.props.wallUser.coverPicUrl,
+      profPicUrl: this.props.wallUser.profPicUrl,
       coverUpdate: false,
+      profileUpdate: false,
     }
-    this.handleHover = this.handleHover.bind(this);
+    this.handleCover = this.handleCover.bind(this);
+    this.handleProf = this.handleProf.bind(this);
   }
   componentDidMount() {
     this.props.fetchAllUsers()
@@ -22,34 +26,58 @@ export default class Wall extends React.Component {
       this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
     }
   }
-  handleCoverPic() {
-    
+  handleCoverPic(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ coverFile: file, coverPicUrl: fileReader.result });
+    };
+    if (file) fileReader.readAsDataURL(file);
   }
-  handleHover() {
+  handleProfilePic(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ profileFile: file, profPicUrl: fileReader.result });
+    };
+    if (file) fileReader.readAsDataURL(file);
+  }
+  handleCover() {
     this.setState({coverUpdate: !this.state.coverUpdate})
+  }
+  handleProf() {
+    this.setState({profileUpdate: !this.state.profileUpdate})
   }
   render() {
     const { currentUser, wallUser } = this.props;
     if (!wallUser) return null;
     let coverPicStyle =  wallUser.coverPicUrl ? 
-    {backgroundImage: 'url(' + wallUser.coverPicUrl + ')'} : {background: 'linear-gradient(white, #dddfe2, rgba(0, 0, 0, .53))'}
+    {backgroundImage: 'url(' + this.state.coverPicUrl + ')'} : {background: 'linear-gradient(white, #dddfe2, rgba(0, 0, 0, .53))'}
     return(
       <div className= "prof-cont">
         <div className= "wall-header">
           <div className="wall-cover-p" style={coverPicStyle}>
-            <div className="wall-cover-p-update" 
-            onMouseEnter={this.handleHover} 
-            onMouseLeave={this.handleHover}
-            onClick={this.handleCoverPic}>
-              <img src={covercamera}/>
-              {this.state.coverUpdate ? 
-              (<div className="wall-cover-p-text">
-                Update Cover Photo
+            <label className="wall-cover-p-update"
+              onMouseEnter={this.handleCover}
+              onMouseLeave={this.handleCover}
+              onClick={this.handleCoverPic}>
+              <img src={covercamera} />
+              {this.state.coverUpdate ?
+                (<div className="wall-cover-p-text">
+                  Update Cover Photo
               </div>) : null}
-            </div>
+              <input type="file" className="file-submit-button" onChange={this.handlePic} />
+            </label>
             <div className="profile-pic-cont">
-              <div className="profile-circle">
+              <div className="profile-circle" 
+                onMouseEnter={this.handleProf}
+                onMouseLeave={this.handleProf}>
                 <img className="profile-pic" src={wallUser.profPicUrl} />
+                {this.state.profileUpdate ? (
+                  <div className="profile-p-update" onClick={() => this.props.openModal("profileEdit", currentUser.id)}>
+                  <img className="prof-p-camera" src={covercamera} />
+                  <div className="prof-p-text"> Update </div>
+                </div>) : null}
               </div>
             </div>
             <div className="wall-name">

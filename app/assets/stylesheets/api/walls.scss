@@ -99,10 +99,29 @@
   width: 156px;
   border-radius: 100%;
   overflow: hidden;
+  position: relative;
 }
 .profile-pic {
   width: 100%;
   height: 100%;
+}
+.profile-p-update {
+  width: 156px;
+  height: 100px;
+  background: black;
+  position: absolute;
+  left: 0px;
+  bottom: -20px;
+  z-index: 4;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.profile-p-update:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 .friend-button {
   border: 1px solid black;
@@ -111,4 +130,100 @@
   right: 20%;
   height: 20px;
   background: #f5f6f8;
+}
+.prof-p-camera {
+  margin-top: 30px;
+  height: 20px;
+  width: 20px;
+}
+.prof-p-text {
+  color: white;
+  font-size: 12px;
+}
+.prof-pic-edit-cont {
+
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.prof-pic-edit-h {
+  width: 380px;
+  background: #f5f6f8;
+  border: 1px solid #dddfe2;
+  border-radius: 3px 3px 0 0;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prof-pic-edit-b {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  border: 1px solid #dddfe2;
+  border-top: none;
+}
+.prof-pic-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #4c4f54;
+}
+.prof-pic-button:hover {
+  background: #f5f6f8;
+}
+.prof-pic-edit-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #f5f6f8;
+  border: 1px solid #dddfe2;
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+  width: 400px;
+  height: 30px;
+}
+.prof-pic-button-cont {
+  display: flex;
+}
+.prof-pic-cancel {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #4B4F56;
+  background: #F5F6F7;
+  padding: 0 8px;
+  height: 22px;
+  border: 1px solid #dddfe2;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.prof-pic-submit {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  background: #4368b3;
+  padding: 0 8px;
+  height: 22px;
+  margin: 0 10px 0 4px;
+  border: 1px solid #4b67a1;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.x-cancel {
+  color: #90949d;
+  font-size: 14px;
+  cursor: pointer;
 }

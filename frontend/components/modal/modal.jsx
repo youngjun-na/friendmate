@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PostCreateFormContainer from '../post/post_create_form_container';
 import PostEditFormContainer from '../post/post_edit_form_container';
+import ProfilePicEditContainer from '../wall/profile_pic_edit_container';
 import { closeModal } from '../../actions/modal_actions';
 
 function Modal({modal, closeModal}) {
@@ -14,6 +14,9 @@ function Modal({modal, closeModal}) {
       return <div className="modal-b" onClick={closeModal}></div>
     case "postEdit":
       component = <PostEditFormContainer postId={modal[1]}/>;
+      break;
+    case "profileEdit":
+      component = <ProfilePicEditContainer currentUserId={modal[1]}/>;
       break;
     default:
       return null;

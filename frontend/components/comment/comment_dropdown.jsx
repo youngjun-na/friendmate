@@ -49,10 +49,10 @@ export default class CommentDropdown extends React.Component {
           {this.state.showMenu && (<div className="com-dd-c">
             <div className="com-dd-i noselect" onClick={this.handleDelete}>
               <img src={trash} className="com-dd-p" /> Delete...
-        </div>
+            </div>
             <div className="com-dd-i noselect" onClick={this.handleEdit}>
               <img src={pencil} className="com-dd-p" /> Edit...
-        </div>
+            </div>
           </div>)}
         </div>
       </div>
