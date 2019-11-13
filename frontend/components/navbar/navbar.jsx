@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import whitefmlogo from '../../../app/assets/images/whitefmlogo.png'
+import SearchBar from './search_bar';
 export default class Feed extends React.Component {
   constructor(props) {
     super(props)
@@ -19,7 +20,8 @@ export default class Feed extends React.Component {
           <Link to="/feed">
             <img className="nb-fmlogo" src={whitefmlogo} />
           </Link>
-          <input className="nb-sb" type="text" placeholder="Search"/>
+          {/* <input className="nb-sb" type="text" placeholder="Search"/> */}
+          <SearchBar />
         </div>
         <div className="nb-tc">
           <Link className="nb-tc-n" to={`/profile/${currentUser.id}`}>

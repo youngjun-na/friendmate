@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   namespace :api, defaults: { format: :json } do
     get 'friends/find', to: 'friends#find'
+    resources :searches, only: [:index]
     resources :users
     resources :posts
     resources :comments
