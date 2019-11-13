@@ -1073,6 +1073,8 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-dropdown-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "com-dd",
         onClick: this.handleDropdown,
         ref: this.commentDropdownCont
@@ -1095,7 +1097,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _app_assets_images_pencil_png__WEBPACK_IMPORTED_MODULE_2___default.a,
         className: "com-dd-p"
-      }), " Edit..."))));
+      }), " Edit...")))));
     }
   }]);
 
@@ -1441,19 +1443,21 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-body-image-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-body-relative"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-body-dropdown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ci-i-b"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, nameLink), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "comment-body"
-      }, this.state.body, " "))), this.state.show ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.state.body, " "))), photoDiv), this.state.show ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
         comment: comment,
         deleteComment: deleteComment,
         handleEdit: this.handleEdit
-      }) : null), photoDiv, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_likers__WEBPACK_IMPORTED_MODULE_5__["default"], {
         likers: likers,
         currentUserId: this.props.currentUser.id
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-like-reply"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-footer"
@@ -4272,9 +4276,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -4299,8 +4303,9 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Wall).call(this, props));
     _this.state = {
-      update: ""
+      coverUpdate: false
     };
+    _this.handleHover = _this.handleHover.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -4323,6 +4328,16 @@ function (_React$Component) {
       }
     }
   }, {
+    key: "handleCoverPic",
+    value: function handleCoverPic() {}
+  }, {
+    key: "handleHover",
+    value: function handleHover() {
+      this.setState({
+        coverUpdate: !this.state.coverUpdate
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -4341,9 +4356,16 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cover-p",
         style: coverPicStyle
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-cover-p-update",
+        onMouseEnter: this.handleHover,
+        onMouseLeave: this.handleHover,
+        onClick: this.handleCoverPic
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default.a
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Update Cover Photo")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), this.state.coverUpdate ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-cover-p-text"
+      }, "Update Cover Photo") : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-pic-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-circle"

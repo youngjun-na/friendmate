@@ -43,18 +43,21 @@ export default class CommentDropdown extends React.Component {
   }
   render() {
     return (
+    <div className="comment-dropdown-container">
       <div className="com-dd" onClick={this.handleDropdown} ref={this.commentDropdownCont}>
         <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})` } : {}} >
           {this.state.showMenu && (<div className="com-dd-c">
             <div className="com-dd-i noselect" onClick={this.handleDelete}>
-              <img src={trash} className="com-dd-p"/> Delete...
-          </div>
+              <img src={trash} className="com-dd-p" /> Delete...
+        </div>
             <div className="com-dd-i noselect" onClick={this.handleEdit}>
-              <img src={pencil} className="com-dd-p"/> Edit...
-          </div>
+              <img src={pencil} className="com-dd-p" /> Edit...
+        </div>
           </div>)}
         </div>
       </div>
+    </div>
+      
     )
   }
 }

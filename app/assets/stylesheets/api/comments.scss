@@ -187,7 +187,7 @@
 }
 .comment-body-dropdown {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -290,4 +290,12 @@
 }
 .comment-body-cont {
   margin-right: 5px;
+}
+.comment-dropdown-container {
+  position: absolute;
+  top: 6px;
+  right: -15px;
+}
+.comment-body-relative {
+  position: relative;
 }

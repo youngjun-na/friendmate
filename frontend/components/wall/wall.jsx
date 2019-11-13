@@ -8,8 +8,9 @@ export default class Wall extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      update: "",
+      coverUpdate: false,
     }
+    this.handleHover = this.handleHover.bind(this);
   }
   componentDidMount() {
     this.props.fetchAllUsers()
@@ -21,7 +22,12 @@ export default class Wall extends React.Component {
       this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
     }
   }
-
+  handleCoverPic() {
+    
+  }
+  handleHover() {
+    this.setState({coverUpdate: !this.state.coverUpdate})
+  }
   render() {
     const { currentUser, wallUser } = this.props;
     if (!wallUser) return null;
@@ -31,12 +37,15 @@ export default class Wall extends React.Component {
       <div className= "prof-cont">
         <div className= "wall-header">
           <div className="wall-cover-p" style={coverPicStyle}>
-            {/* <img className="wall-cover-pic" src={wallUser.coverPicUrl} /> */}
-            <div>
+            <div className="wall-cover-p-update" 
+            onMouseEnter={this.handleHover} 
+            onMouseLeave={this.handleHover}
+            onClick={this.handleCoverPic}>
               <img src={covercamera}/>
-              <div>
+              {this.state.coverUpdate ? 
+              (<div className="wall-cover-p-text">
                 Update Cover Photo
-              </div>
+              </div>) : null}
             </div>
             <div className="profile-pic-cont">
               <div className="profile-circle">

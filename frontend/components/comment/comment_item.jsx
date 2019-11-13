@@ -128,16 +128,18 @@ export default class CommentItem extends React.Component {
             <img className="profile-pic" src={author.profPicUrl} />
           </div>
           <div className="comment-body-image-cont">
-            <div className="comment-body-dropdown">
-              <div className="ci-i-b">
-                <div>
-                  <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
+            <div className="comment-body-relative">
+              <div className="comment-body-dropdown">
+                <div className="ci-i-b">
+                  <div>
+                    <span>{nameLink}</span><span className="comment-body">{this.state.body} </span>
+                  </div>
                 </div>
+              {photoDiv}
               </div>
               {this.state.show ?  <CommentDropdown comment={comment} deleteComment={deleteComment} handleEdit={this.handleEdit}/> : null}
+              <CommentLikers likers={likers} currentUserId={this.props.currentUser.id} />
             </div>
-            {photoDiv}
-            <CommentLikers likers={likers} currentUserId={this.props.currentUser.id} />
             <div className="comment-like-reply">
               <div className="comment-footer">
                 <div className={commentLikeButton} onClick={this.handleLike}>
