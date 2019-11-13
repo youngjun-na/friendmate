@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'date',
+require 'date'
 # Boilerplate: User.create(first_name: "", last_name: "", password: "", email: "", birthday: Date.new(y,m,d), gender: "" )
 # User.create(first_name: "Youngjun", last_name: "Na", password: "password", email: "yjna4006@gmail.com", birthday: Date.new(1992,4,7), gender: "Male" )
 a = User.new(first_name: "Leslie", last_name: "Knope", password: "youngjun", email: "lknope@pawnee.gov", birthday: Date.new(1975,1,18), gender: "Female" )
