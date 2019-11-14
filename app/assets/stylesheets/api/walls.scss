@@ -40,8 +40,10 @@
   border: 1px solid #dddfe2;
   border-top: none;
   position: relative;
-  background-position-x: 50%;
-  background-position-y: 20%;
+  background-repeat: no-repeat;
+  background-size: 850px auto;
+  // background-position-x: 50%;
+  // background-position-y: 20%;
 }
 .wall-cover-p-update {
   display: flex;
