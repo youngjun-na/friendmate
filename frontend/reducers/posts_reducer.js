@@ -6,7 +6,7 @@ export default (state = _nullState, action) => {
 
   switch (action.type) {
     case RECEIVE_ALL_POSTS:
-      return action.payload.posts || state;
+      return action.payload.posts || {};
     case RECEIVE_POST:
       newState[action.post.id] = action.post
       return newState;

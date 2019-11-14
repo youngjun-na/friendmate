@@ -8,8 +8,8 @@ export default class Wall extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      id: this.props.wallUser.id,
-      coverPicUrl: this.props.wallUser? this.props.wallUser.coverPicUrl : "",
+      id: this.props.wallUser ? this.props.wallUser : null,
+      coverPicUrl: this.props.wallUser ? this.props.wallUser.coverPicUrl : "",
       profPicUrl: this.props.wallUser ? this.props.wallUser.profPicUrl : "",
       coverUpdate: false,
       profileUpdate: false,

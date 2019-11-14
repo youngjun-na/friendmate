@@ -9,7 +9,7 @@ export default class FriendBox extends React.Component {
     if (Object.values(this.props.allUsers) < 2) return null;
     if (!this.props.wallUser.friendslist) return null;
     let friendsList = this.props.wallUser.friendslist
-    // debugger;
+    let limitedList = friendsList.slice(0,9);
     return(
       <div className="friend-box-cont">
         <div className="friend-box-header">
@@ -19,7 +19,7 @@ export default class FriendBox extends React.Component {
           <div className="friend-box-count">{friendsList.length}</div>
         </div>
         <div className="friend-box-index-cont">
-          {friendsList.map(friendId => {
+          {limitedList.map(friendId => {
             let friend = this.props.allUsers[friendId]
             if (!friend) return null;
             return (
@@ -28,7 +28,7 @@ export default class FriendBox extends React.Component {
                   <div className="friend-pic-wrap">
                     <img className="profile-pic" src={friend.profPicUrl} />
                   </div>
-                  <div>
+                  <div className="friend-pic-name-div">
                     {friend.firstName} {friend.lastName}
                   </div>
                 </Link>

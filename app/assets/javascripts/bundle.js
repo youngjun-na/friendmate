@@ -1941,8 +1941,8 @@ function (_React$Component) {
 
       if (Object.values(this.props.allUsers) < 2) return null;
       if (!this.props.wallUser.friendslist) return null;
-      var friendsList = this.props.wallUser.friendslist; // debugger;
-
+      var friendsList = this.props.wallUser.friendslist;
+      var limitedList = friendsList.slice(0, 9);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1958,7 +1958,7 @@ function (_React$Component) {
         className: "friend-box-count"
       }, friendsList.length)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-index-cont"
-      }, friendsList.map(function (friendId) {
+      }, limitedList.map(function (friendId) {
         var friend = _this.props.allUsers[friendId];
         if (!friend) return null;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1972,7 +1972,9 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "profile-pic",
           src: friend.profPicUrl
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, friend.firstName, " ", friend.lastName)));
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-pic-name-div"
+        }, friend.firstName, " ", friend.lastName)));
       })));
     }
   }]);
@@ -4816,7 +4818,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Wall).call(this, props));
     _this.state = {
-      id: _this.props.wallUser.id,
+      id: _this.props.wallUser ? _this.props.wallUser : null,
       coverPicUrl: _this.props.wallUser ? _this.props.wallUser.coverPicUrl : "",
       profPicUrl: _this.props.wallUser ? _this.props.wallUser.profPicUrl : "",
       coverUpdate: false,
@@ -5003,7 +5005,7 @@ var mapStateToProps = function mapStateToProps() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var ownProps = arguments.length > 1 ? arguments[1] : undefined;
   return {
-    posts: Object.values(state.entities.posts).reverse(),
+    posts: Object.values(state.entities.posts).reverse() || [],
     wallUser: state.entities.users[ownProps.match.params.userId],
     currentUser: state.entities.users[state.session.id],
     allUsers: state.entities.users
@@ -5059,12 +5061,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var WallIndex = function WallIndex(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.posts.map(function (post) {
+  console.log(props.posts.length);
+  return props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.posts.map(function (post) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_item_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
       post: post,
       key: post.id
     });
-  }));
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No posts Here");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (WallIndex);
@@ -5255,7 +5258,7 @@ var _nullState = {};
 
   switch (action.type) {
     case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_POSTS"]:
-      return action.payload.posts || state;
+      return action.payload.posts || {};
 
     case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_POST"]:
       newState[action.post.id] = action.post;
