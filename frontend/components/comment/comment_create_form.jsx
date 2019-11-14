@@ -53,7 +53,7 @@ export default class CommentCreateForm extends React.Component {
   render() {
 
     let preview = this.state.photoUrl ? (
-      <div className="comment-photo-preview-cont">
+      <div className="comment-photo-preview-cont-c">
         <span onClick={this.deletePic} className="comment-photo-x-cancel">&times;</span>
         <div className="comment-photo-preview-wrap">
           <img className="comment-photo-preview" src={this.state.photoUrl} />

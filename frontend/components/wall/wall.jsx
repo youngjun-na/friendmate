@@ -83,9 +83,9 @@ export default class Wall extends React.Component {
                 <img className="profile-pic" src={wallUser.profPicUrl} />
                 {(this.state.profileUpdate && currentUser.id === wallUser.id) ? (
                   <div className="profile-p-update" onClick={() => this.props.openModal("profileEdit", currentUser.id)}>
-                  <img className="prof-p-camera" src={covercamera} />
-                  <div className="prof-p-text"> Update </div>
-                </div>) : null}
+                    <img className="prof-p-camera" src={covercamera} />
+                    <div className="prof-p-text"> Update </div>
+                  </div>) : null}
               </div>
             </div>
             <div className="wall-name">

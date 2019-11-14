@@ -10,11 +10,13 @@ export default class PostCreateForm extends React.Component {
       authorId: this.props.currentUser.id,
       photoFile: null,
       photoUrl: null,
+      hover: false,
     };
     this.deletePic = this.deletePic.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.handleFile = this.handleFile.bind(this);
+    this.handleHover = this.handleHover.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
  
@@ -35,6 +37,9 @@ export default class PostCreateForm extends React.Component {
     e.stopPropagation();
     this.props.openModal("postCreate");
     this.setState({focus: true});
+  }
+  handleHover() {
+    this.setState({ hover: !this.state.hover });
   }
   handleFile(e) {
     const file = e.currentTarget.files[0];
@@ -62,14 +67,19 @@ export default class PostCreateForm extends React.Component {
   }
 
   render() {
-    let buttonOp = (!this.state.body && !this.state.postFile) ? "but-p opacity" : "but-p";
+    let buttonOp = !(this.state.body || this.state.photoUrl) ? "but-p opacity" : "but-p";
     let author = this.props.allUsers[this.props.currentUser.id];
     let host= this.props.allUsers[this.state.hostId];
 
     let preview = this.state.photoUrl ? (
     <div className="photo-preview-cont">
-      <div className="photo-preview-wrap">
-        <span onClick={this.deletePic} className="photo-x-cancel">&times;</span>
+      <div className="photo-preview-wrap" 
+          onMouseEnter={this.handleHover}
+          onMouseLeave={this.handleHover}>
+        {this.state.hover ? 
+        <div className="photo-preview-gray">
+          <span onClick={this.deletePic} className="photo-x-cancel">&times;</span>
+        </div> : null}
         <img className="photo-preview" src={this.state.photoUrl} />
       </div>
     </div>) : null;
@@ -77,15 +87,16 @@ export default class PostCreateForm extends React.Component {
     let bottomPost = (this.props.modal && this.props.modal[0] === "postCreate") ? (
     <div>
       <div className="f-php-bot">
-          <button className={buttonOp} disabled={(!this.state.body && !this.state.photoFile)} >Post</button>
+          <button className={buttonOp} disabled={!(this.state.body || this.state.photoUrl)} >Post</button>
       </div>
     </div>) : null;
 
     let textareaStyle = {
-      "fontSize": (this.props.modal && this.props.modal[0] === "postCreate") && (this.state.body.length < 85) ? "22px" : "16px",
+      "fontSize": (this.props.modal && this.props.modal[0] === "postCreate") && (this.state.body.length < 85) && !this.state.photoUrl ? "22px" : "16px",
     };
 
-    let placeholderText = (this.state.hostId === this.props.currentUser.id) ? 
+    let placeholderText = this.state.photoUrl ? 
+    'Say something about this photo...' : (this.state.hostId === this.props.currentUser.id) ? 
     `What's on your mind, ${author.firstName}?` : 
     `Write something to ${host.firstName}...`;
     return(

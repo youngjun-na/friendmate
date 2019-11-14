@@ -79,6 +79,11 @@ class SessionForm extends React.Component {
     // }
   }
   render() {
+    console.log(this.props.errors)
+    const demoButton = this.props.errors.join("") ? (
+        <div className="signup-demo">
+          <button className="fb-dl fb-gb-su" onClick={this.handleDemo}>Demo Log In</button>
+        </div>) : null;
     return (
       <div>
         <header>
@@ -147,6 +152,7 @@ class SessionForm extends React.Component {
             <GenderSelector handleGender={this.handleGender} gender={this.state.gender} err={this.err} checkError={this.checkError}/>
 
             <button className="fb-gb fb-gb-su" onClick={this.handleSubmit}>Sign Up</button>
+            {demoButton}
           </form>
         </div>
       </div>

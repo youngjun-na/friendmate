@@ -138,8 +138,8 @@ export default class CommentItem extends React.Component {
             </label>
           </div>
         </div>
-        <div className="comment-cancel" onClick={this.handleCancel}>Cancel</div>
         { preview }
+        <div className="comment-cancel" onClick={this.handleCancel}>Cancel</div>
       </div>
     ) : ( 
         <div className="comment-cont" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} >

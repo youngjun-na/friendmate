@@ -959,7 +959,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "comment-photo-preview-cont"
+        className: "comment-photo-preview-cont-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         onClick: this.deletePic,
         className: "comment-photo-x-cancel"
@@ -1506,10 +1506,10 @@ function (_React$Component) {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })))), preview, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cancel",
         onClick: this.handleCancel
-      }, "Cancel"), preview) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Cancel")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cont",
         onMouseEnter: this.handleHover,
         onMouseLeave: this.handleHover
@@ -2936,12 +2936,14 @@ function (_React$Component) {
       hostId: _this.props.wallUser ? _this.props.wallUser.id : _this.props.currentUser.id,
       authorId: _this.props.currentUser.id,
       photoFile: null,
-      photoUrl: null
+      photoUrl: null,
+      hover: false
     };
     _this.deletePic = _this.deletePic.bind(_assertThisInitialized(_this));
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
     _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
+    _this.handleHover = _this.handleHover.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -2973,6 +2975,13 @@ function (_React$Component) {
       this.props.openModal("postCreate");
       this.setState({
         focus: true
+      });
+    }
+  }, {
+    key: "handleHover",
+    value: function handleHover() {
+      this.setState({
+        hover: !this.state.hover
       });
     }
   }, {
@@ -3023,17 +3032,21 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var buttonOp = !this.state.body && !this.state.postFile ? "but-p opacity" : "but-p";
+      var buttonOp = !(this.state.body || this.state.photoUrl) ? "but-p opacity" : "but-p";
       var author = this.props.allUsers[this.props.currentUser.id];
       var host = this.props.allUsers[this.state.hostId];
       var preview = this.state.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "photo-preview-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "photo-preview-wrap"
+        className: "photo-preview-wrap",
+        onMouseEnter: this.handleHover,
+        onMouseLeave: this.handleHover
+      }, this.state.hover ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "photo-preview-gray"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         onClick: this.deletePic,
         className: "photo-x-cancel"
-      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, "\xD7")) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "photo-preview",
         src: this.state.photoUrl
       }))) : null;
@@ -3041,12 +3054,12 @@ function (_React$Component) {
         className: "f-php-bot"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: buttonOp,
-        disabled: !this.state.body && !this.state.photoFile
+        disabled: !(this.state.body || this.state.photoUrl)
       }, "Post"))) : null;
       var textareaStyle = {
-        "fontSize": this.props.modal && this.props.modal[0] === "postCreate" && this.state.body.length < 85 ? "22px" : "16px"
+        "fontSize": this.props.modal && this.props.modal[0] === "postCreate" && this.state.body.length < 85 && !this.state.photoUrl ? "22px" : "16px"
       };
-      var placeholderText = this.state.hostId === this.props.currentUser.id ? "What's on your mind, ".concat(author.firstName, "?") : "Write something to ".concat(host.firstName, "...");
+      var placeholderText = this.state.photoUrl ? 'Say something about this photo...' : this.state.hostId === this.props.currentUser.id ? "What's on your mind, ".concat(author.firstName, "?") : "Write something to ".concat(host.firstName, "...");
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "post-form-cont",
         onSubmit: this.handleSubmit,
@@ -4573,6 +4586,13 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props.errors);
+      var demoButton = this.props.errors.join("") ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "signup-demo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "fb-dl fb-gb-su",
+        onClick: this.handleDemo
+      }, "Demo Log In")) : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_login_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4650,7 +4670,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "fb-gb fb-gb-su",
         onClick: this.handleSubmit
-      }, "Sign Up"))));
+      }, "Sign Up"), demoButton)));
     }
   }]);
 
