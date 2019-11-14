@@ -810,12 +810,16 @@ var App = function App() {
     path: "/feed",
     component: _feed_feed_container__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["ProtectedRoute"], {
+    exact: true,
     path: "/profile/:userId",
     component: _wall_wall_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["AuthRoute"], {
     exact: true,
     path: "/",
     component: _session_signup_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+    path: "*",
+    component: _feed_feed_container__WEBPACK_IMPORTED_MODULE_4__["default"]
   })));
 };
 
@@ -1936,7 +1940,8 @@ function (_React$Component) {
       var _this = this;
 
       if (Object.values(this.props.allUsers) < 2) return null;
-      if (!this.props.wallUser.friendslist) return null; // debugger;
+      if (!this.props.wallUser.friendslist) return null;
+      var friendsList = this.props.wallUser.friendslist; // debugger;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-cont"
@@ -1947,9 +1952,13 @@ function (_React$Component) {
         src: _app_assets_images_friends_png__WEBPACK_IMPORTED_MODULE_2___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-title"
-      }, "Friends"), " \xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Friends"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-box-count"
+      }, "\xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-box-count"
+      }, friendsList.length)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-index-cont"
-      }, this.props.wallUser.friendslist.map(function (friendId) {
+      }, friendsList.map(function (friendId) {
         var friend = _this.props.allUsers[friendId];
         if (!friend) return null;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2109,11 +2118,11 @@ function (_React$Component) {
 
       if (currentUser.friendslist.includes(wallUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-text"
-        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "friend-dropdown-cont",
+          className: "friend-text",
           onMouseEnter: this.showDropdown,
           onMouseLeave: this.hideDropdown
+        }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-dropdown-cont"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "d-tri-w-f"
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -2677,11 +2686,11 @@ function (_React$Component) {
         className: "nb-tc-n",
         to: "/profile/".concat(currentUser.id)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sidebar-prof-image"
+        className: "navbar-prof-image"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "profile-pic",
         src: currentUser.profPicUrl
-      })), currentUser.firstName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentUser.firstName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-h",
         to: "/feed"
       }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_request_dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -4635,7 +4644,7 @@ function (_React$Component) {
     key: "deletePic",
     value: function deletePic() {
       this.setState({
-        rofileFile: null,
+        profileFile: null,
         profilePhotoUrl: null
       });
     }
@@ -4686,7 +4695,6 @@ function (_React$Component) {
       }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "prof-pic-submit"
       }, "Save Changes")) : null;
-      console.log(this.state);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "prof-pic-edit-cont",
         onSubmit: this.handleSubmit
@@ -4808,6 +4816,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Wall).call(this, props));
     _this.state = {
+      id: _this.props.wallUser.id,
       coverPicUrl: _this.props.wallUser ? _this.props.wallUser.coverPicUrl : "",
       profPicUrl: _this.props.wallUser ? _this.props.wallUser.profPicUrl : "",
       coverUpdate: false,
@@ -4815,6 +4824,8 @@ function (_React$Component) {
     };
     _this.handleCover = _this.handleCover.bind(_assertThisInitialized(_this));
     _this.handleProf = _this.handleProf.bind(_assertThisInitialized(_this));
+    _this.handleCoverPic = _this.handleCoverPic.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -4835,18 +4846,10 @@ function (_React$Component) {
       if (prevProps.wallUser && prevProps.wallUser.id !== parseInt(this.props.match.params.userId)) {
         this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
       }
-    } // handleCoverPic(e) {
-    //   const file = e.currentTarget.files[0];
-    //   const fileReader = new FileReader();
-    //   fileReader.onloadend = () => {
-    //     this.setState({ coverFile: file, coverPicUrl: fileReader.result });
-    //   };
-    //   if (file) fileReader.readAsDataURL(file);
-    // }
-
+    }
   }, {
-    key: "handleProfilePic",
-    value: function handleProfilePic(e) {
+    key: "handleCoverPic",
+    value: function handleCoverPic(e) {
       var _this3 = this;
 
       var file = e.currentTarget.files[0];
@@ -4854,8 +4857,8 @@ function (_React$Component) {
 
       fileReader.onloadend = function () {
         _this3.setState({
-          profileFile: file,
-          profPicUrl: fileReader.result
+          coverFile: file,
+          coverPicUrl: fileReader.result
         });
       };
 
@@ -4874,6 +4877,15 @@ function (_React$Component) {
       this.setState({
         profileUpdate: !this.state.profileUpdate
       });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var formData = new FormData();
+      formData.append('user[coverPic]', this.state.coverFile);
+      formData.append('user[id]', this.state.id);
+      this.props.updateUser(formData);
     }
   }, {
     key: "render",
@@ -4896,6 +4908,8 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cover-p",
         style: coverPicStyle
+      }, currentUser.id === wallUser.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "wall-cover-p-update",
         onMouseEnter: this.handleCover,
@@ -4907,8 +4921,10 @@ function (_React$Component) {
       }, "Update Cover Photo") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         className: "file-submit-button",
-        onChange: this.handlePic
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        onChange: this.handleCoverPic
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "prof-pic-submit"
+      }, "Save Changes")) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-pic-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-circle",
@@ -4917,7 +4933,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "profile-pic",
         src: wallUser.profPicUrl
-      }), this.state.profileUpdate ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), this.state.profileUpdate && currentUser.id === wallUser.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-p-update",
         onClick: function onClick() {
           return _this4.props.openModal("profileEdit", currentUser.id);
@@ -5010,6 +5026,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchUser: function fetchUser(userId) {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["fetchUser"])(userId));
+    },
+    updateUser: function updateUser(user) {
+      return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["updateUser"])(user));
     },
     openModal: function openModal(type, paramsId) {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_5__["openModal"])(type, paramsId));

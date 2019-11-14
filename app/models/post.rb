@@ -22,6 +22,7 @@ class Post < ApplicationRecord
   end
 
   def self.all_related_posts(user_id)
-    Post.where("host_id = ?", user_id).or(Post.where("author_id=?", user_id)).order("updated_at desc")
+    friendslist = User.find(user_id).friendslist
+    Post.where(:host_id => friendslist).where(:author_id => friendslist).order("updated_at desc")
   end
 end

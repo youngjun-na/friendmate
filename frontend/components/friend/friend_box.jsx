@@ -8,15 +8,18 @@ export default class FriendBox extends React.Component {
   render() {
     if (Object.values(this.props.allUsers) < 2) return null;
     if (!this.props.wallUser.friendslist) return null;
+    let friendsList = this.props.wallUser.friendslist
     // debugger;
     return(
       <div className="friend-box-cont">
         <div className="friend-box-header">
           <img className="friend-icon" src={friendIcon} />
-          <div className="friend-box-title">Friends</div> ·
+          <div className="friend-box-title">Friends</div> 
+          <div className="friend-box-count">·</div>
+          <div className="friend-box-count">{friendsList.length}</div>
         </div>
         <div className="friend-box-index-cont">
-          {this.props.wallUser.friendslist.map(friendId => {
+          {friendsList.map(friendId => {
             let friend = this.props.allUsers[friendId]
             if (!friend) return null;
             return (

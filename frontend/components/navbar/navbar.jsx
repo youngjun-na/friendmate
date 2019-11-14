@@ -33,10 +33,12 @@ export default class Feed extends React.Component {
         </div>
         <div className="nb-tc">
           <Link className="nb-tc-n" to={`/profile/${currentUser.id}`}>
-            <div className="sidebar-prof-image">
+            <div className="navbar-prof-image">
               <img className="profile-pic" src={currentUser.profPicUrl} />
             </div>
-            {currentUser.firstName}
+            <div>
+              {currentUser.firstName}
+            </div>
           </Link>
           <Link className="nb-tc-h" to="/feed">
             Home

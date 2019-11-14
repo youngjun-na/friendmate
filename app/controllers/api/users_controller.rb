@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    @user.profile_pic.purge if !user_params[:profile_pic] 
+    # @user.profile_pic.purge if !user_params[:profile_pic] 
     if @user.save
       render :show
     end

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Wall from './wall';
 import { fetchWallPosts, updatePost, deletePost } from '../../actions/post_actions';
-import { fetchAllUsers, fetchUser } from '../../actions/user_actions';
+import { fetchAllUsers, fetchUser, updateUser } from '../../actions/user_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state = {}, ownProps) => {
@@ -19,6 +19,7 @@ const mapDispatchToProps = dispatch => ({
   deletePost: post => dispatch(deletePost(post)),
   fetchAllUsers: () => dispatch(fetchAllUsers()),
   fetchUser: userId => dispatch(fetchUser(userId)),
+  updateUser: user => dispatch(updateUser(user)),
   openModal: (type, paramsId) => dispatch(openModal(type, paramsId)),
   closeModal: () => dispatch(closeModal()),
 });

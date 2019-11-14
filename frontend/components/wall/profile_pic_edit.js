@@ -18,7 +18,7 @@ export default class ProfilePicEdit extends React.Component {
     if (file) fileReader.readAsDataURL(file);
   }
   deletePic() {
-    this.setState({ rofileFile: null, profilePhotoUrl: null });
+    this.setState({ profileFile: null, profilePhotoUrl: null });
   }
   handleModal() {
     this.props.closeModal();
@@ -57,7 +57,6 @@ export default class ProfilePicEdit extends React.Component {
           Save Changes
         </button>
       </div>) : null;
-      console.log(this.state)
     return(
       <form className="prof-pic-edit-cont" onSubmit={this.handleSubmit}>
         <div className="prof-pic-edit-h">

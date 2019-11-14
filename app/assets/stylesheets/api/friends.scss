@@ -22,10 +22,14 @@
 .friend-box-title{
   display: inline-block;
   font-size: 16px;
-  margin-right: 5px;
+  margin-right: 3px;
+}
+.friend-box-count{
+  font-size: 13px;
+  color: #444950;
 }
 .friend-icon {
-  margin-right: 7px;
+  margin-right: 5px;
 }
 .friend-pic-wrap {
   position: relative;
@@ -91,7 +95,7 @@
 .friend-dropdown-cont {
   position: absolute;
   left: 0;
-  bottom: -45px;
+  bottom: -40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,7 +108,8 @@
 	border-bottom: 6px solid white;
 	border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  margin: 0 15px;
+  margin-right: 50px;
+  margin-bottom: -1px;
   z-index: 4;
 }
 .friend-button-wrap {

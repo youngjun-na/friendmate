@@ -53,9 +53,9 @@ export default class FriendButton extends React.Component {
     let buttonContent;
     if (currentUser.friendslist.includes(wallUser.id)) {
       buttonContent = 
-      <div className="friend-text">
+        <div className="friend-text" onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
         {this.state.dropDown ? (
-          <div className="friend-dropdown-cont" onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
+          <div className="friend-dropdown-cont">
             <div className="d-tri-w-f"></div>
             <ul className="friend-dropdown">
               <li className="friend-item" onClick={this.handleDelete}>Unfriend</li>
