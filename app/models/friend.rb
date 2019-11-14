@@ -1,4 +1,4 @@
-class Friend < ApplicationRecord
+ class Friend < ApplicationRecord
   belongs_to :requested_user,
     foreign_key: :request_id,
     class_name: :User 
