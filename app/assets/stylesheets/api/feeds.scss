@@ -5,14 +5,12 @@
   // display: block;
   width: 180px;
   margin-right: 20px;
-  position: fixed;
-  left: 200px;
-  top: 6%;
+  
 }
 .sidebar-profile {
   display: flex;
   align-items: center;
-  margin: 15px 0;
+  margin-bottom: 15px;
   padding: 5px;
   border: 1px #eaebef solid;
   border-radius: 2px;
@@ -70,4 +68,7 @@
 }
 .sidebar-cont-c {
   width: 200px;
+  position: fixed;
+  left: 20%;
+  top: 6%;
 }

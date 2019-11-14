@@ -1318,8 +1318,9 @@ function (_React$Component) {
       id: _this.props.comment.id,
       body: _this.props.comment.body,
       photoFile: null,
-      photoUrl: null
+      photoUrl: _this.props.comment.photoUrl || null
     };
+    _this.deletePic = _this.deletePic.bind(_assertThisInitialized(_this));
     _this.handleCancel = _this.handleCancel.bind(_assertThisInitialized(_this));
     _this.handleEdit = _this.handleEdit.bind(_assertThisInitialized(_this));
     _this.handleHover = _this.handleHover.bind(_assertThisInitialized(_this));
@@ -1331,6 +1332,14 @@ function (_React$Component) {
   }
 
   _createClass(CommentItem, [{
+    key: "deletePic",
+    value: function deletePic() {
+      this.setState({
+        photoFile: null,
+        photoUrl: null
+      });
+    }
+  }, {
     key: "handleCancel",
     value: function handleCancel() {
       this.setState({
@@ -1343,6 +1352,23 @@ function (_React$Component) {
       this.setState({
         edit: !this.state.edit
       });
+    }
+  }, {
+    key: "handleFile",
+    value: function handleFile(e) {
+      var _this2 = this;
+
+      var file = e.currentTarget.files[0];
+      var fileReader = new FileReader();
+
+      fileReader.onload = function () {
+        _this2.setState({
+          photoFile: file,
+          photoUrl: fileReader.result
+        });
+      };
+
+      if (file) fileReader.readAsDataURL(file);
     }
   }, {
     key: "handleHover",
@@ -1376,11 +1402,11 @@ function (_React$Component) {
   }, {
     key: "handleLike",
     value: function handleLike() {
-      var _this2 = this;
+      var _this3 = this;
 
       var likeId;
       this.props.comment.likes.forEach(function (like) {
-        if (like.author_id === _this2.props.currentUser.id) likeId = like.id;
+        if (like.author_id === _this3.props.currentUser.id) likeId = like.id;
       });
 
       if (likeId) {
@@ -1392,7 +1418,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       var _this$props = this.props,
           comment = _this$props.comment,
@@ -1418,7 +1444,7 @@ function (_React$Component) {
 
       if (this.props.allUsers) {
         likers = comment.likes.map(function (like) {
-          return _this3.props.allUsers[like.author_id];
+          return _this4.props.allUsers[like.author_id];
         });
       }
 
@@ -1442,6 +1468,8 @@ function (_React$Component) {
       var editForm = this.state.edit ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-edit-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-edit-main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-prof-image"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "profile-pic",
@@ -1449,27 +1477,27 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-edit-ta-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "c-c comment-edit",
+        className: "comment-edit",
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autosize_textarea__WEBPACK_IMPORTED_MODULE_4___default.a, {
         className: "c-ta",
         onChange: this.handleInput,
         value: this.state.body,
         onKeyDown: this.handleKeyDown
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "comment-cancel",
-        onClick: this.handleCancel
-      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "comment-file-submit-overlay"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "comment-button"
+        className: "edit-comment-button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _app_assets_images_camera_png__WEBPACK_IMPORTED_MODULE_6___default.a
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleFile
-      }))), preview) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "comment-cancel",
+        onClick: this.handleCancel
+      }, "Cancel"), preview) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "comment-cont",
         onMouseEnter: this.handleHover,
         onMouseLeave: this.handleHover
@@ -3642,12 +3670,12 @@ function (_React$Component) {
         src: _app_assets_images_comment_png__WEBPACK_IMPORTED_MODULE_9___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Comment"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_index_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
         postId: post.id
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_create_form__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comment_comment_create_form__WEBPACK_IMPORTED_MODULE_4__["default"], {
         postId: post.id,
         currentUserId: this.props.currentUserId,
         createComment: this.props.createComment,
         currentUser: currentUser
-      })));
+      }));
     }
   }]);
 
@@ -4962,7 +4990,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "f-st"
+        className: "w-st"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
         wallUser: wallUser
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {

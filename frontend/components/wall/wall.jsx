@@ -102,7 +102,7 @@ export default class Wall extends React.Component {
             <FriendBox wallUser={wallUser} allUsers={this.props.allUsers}/>
           </div>
           <div className="wall-cont">
-            <div className="f-st">
+            <div className="w-st">
               <PostCreateFormContainer wallUser={wallUser}/>
               <div>
               <WallIndex posts={this.props.posts} />
@@ -110,7 +110,6 @@ export default class Wall extends React.Component {
             </div>
           </div>
         </div>
-        
       </div>
     )
   }

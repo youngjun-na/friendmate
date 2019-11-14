@@ -112,12 +112,11 @@ export default class PostItem extends React.Component {
         <div>
           <CommentIndexContainer postId={post.id}/>
         </div>
-        <div>
-          <CommentCreateForm postId={post.id} 
-          currentUserId={this.props.currentUserId} 
-          createComment={this.props.createComment} 
-          currentUser ={currentUser}/>
-        </div>
+        <CommentCreateForm postId={post.id} 
+        currentUserId={this.props.currentUserId} 
+        createComment={this.props.createComment} 
+        currentUser ={currentUser}/>
+
       </div>
     )
   }

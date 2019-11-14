@@ -16,9 +16,10 @@ export default class CommentItem extends React.Component {
       id: this.props.comment.id,
       body: this.props.comment.body,
       photoFile: null,
-      photoUrl: null,
+      photoUrl: this.props.comment.photoUrl || null,
       
     }
+    this.deletePic = this.deletePic.bind(this);
     this.handleCancel = this.handleCancel.bind(this)
     this.handleEdit = this.handleEdit.bind(this);
     this.handleHover = this.handleHover.bind(this);
@@ -27,6 +28,9 @@ export default class CommentItem extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleLike = this.handleLike.bind(this);
   }
+  deletePic() {
+    this.setState({ photoFile: null, photoUrl: null });
+  }
   handleCancel() {
     this.setState({body:this.props.comment.body}, this.handleEdit);
   }
@@ -34,6 +38,14 @@ export default class CommentItem extends React.Component {
     this.setState({
       edit: !this.state.edit,
     })
+  }
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) fileReader.readAsDataURL(file);
   }
   handleHover() {
     this.setState({show: !this.state.show});
@@ -103,24 +115,26 @@ export default class CommentItem extends React.Component {
 
     let editForm = this.state.edit ? (
       <div className="comment-edit-cont">
-        <div className="comment-prof-image">
-          <img className="profile-pic" src={author.profPicUrl} />
-        </div>
-        <div className="comment-edit-ta-cont">
-          <form className="c-c comment-edit" onSubmit={this.handleSubmit}>
-            <TextareaAutosize className="c-ta"
-              onChange={this.handleInput}
-              value={this.state.body}
-              onKeyDown={this.handleKeyDown} />
-          </form>
-          <div className="comment-cancel" onClick={this.handleCancel}>Cancel</div>
-        <label className="comment-file-submit-overlay">
-          <div className="comment-button">
-            <img src={camera} />
+        <div className="comment-edit-main">
+          <div className="comment-prof-image">
+            <img className="profile-pic" src={author.profPicUrl} />
           </div>
-          <input type="file" className="file-submit-button" onChange={this.handleFile} />
-        </label>
+          <div className="comment-edit-ta-cont">
+            <form className="comment-edit" onSubmit={this.handleSubmit}>
+              <TextareaAutosize className="c-ta"
+                onChange={this.handleInput}
+                value={this.state.body}
+                onKeyDown={this.handleKeyDown} />
+            </form>
+            <label className="comment-file-submit-overlay">
+              <div className="edit-comment-button">
+                <img src={camera} />
+              </div>
+              <input type="file" className="file-submit-button" onChange={this.handleFile} />
+            </label>
+          </div>
         </div>
+        <div className="comment-cancel" onClick={this.handleCancel}>Cancel</div>
         { preview }
       </div>
     ) : ( 
