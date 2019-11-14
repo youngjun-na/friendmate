@@ -9,7 +9,8 @@ class SessionForm extends React.Component {
       password: "",
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
   handleInput(type) {
     return e => {
@@ -19,13 +20,17 @@ class SessionForm extends React.Component {
   componentDidUpdate() {
     this.handleErrors();
   }
-  handleSubmit(e) {
-    e.preventDefault();
+  handleLogin() {
     const user = Object.assign({}, this.state);
     this.props.login(user)
       .then(() => this.props.history.push('/feed'),
             ()=> this.handleErrors());
-          }
+  }
+  handleDemo() {
+    this.props.demoLogin()
+      .then(() => this.props.history.push('/feed'),
+        () => this.handleErrors());
+  }
   handleErrors() {
     const errorDiv = document.querySelector(".li-err");
     this.props.errors.join("").includes("Login") ? errorDiv.classList.remove("invis") : errorDiv.classList.add("invis");
@@ -47,7 +52,8 @@ class SessionForm extends React.Component {
             <div className="li-l">Password</div>
             <input className="li-fi" type="password" value={this.state.password} onChange={this.handleInput("password")}/>  
           </div>
-          <button className="li-b" onClick={this.handleSubmit}>Log In</button>
+          <button className="li-b" onClick={this.handleLogin}>Log In</button>
+          <button className="li-bd" onClick={this.handleDemo}>Demo Log In</button>
         </form>
       </div>
 

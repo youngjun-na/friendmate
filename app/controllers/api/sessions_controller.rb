@@ -9,6 +9,12 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  def demo
+    @user = User.find(4)
+    login(@user)
+    render 'api/users/show'
+  end
+
   def destroy
     if !current_user
       render json: ["No user!"], status: 404

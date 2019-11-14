@@ -86,7 +86,7 @@ class SessionForm extends React.Component {
         </header>
         <div className="signup-cont">
           <div className="su-left">
-            <h3 className="su-h3">Connect with friends and the world around you on Facebook.</h3>
+            <h3 className="su-h3">Connect with friends and the world around you on Friendmate.</h3>
             <div className="su-l-d">
               <img src={newspaper} />
               <span className="su-l-bt">See photos and updates</span>
@@ -100,7 +100,7 @@ class SessionForm extends React.Component {
             <div className="su-l-d">
               <img src={share} />
               <span className="su-l-bt">Find more</span>
-              <span className="su-l-nt"> of what you're looking for with Facebook Search.</span>
+              <span className="su-l-nt"> of what you're looking for with Friendmate Search.</span>
             </div>
           </div>
           <form className="signup-form">

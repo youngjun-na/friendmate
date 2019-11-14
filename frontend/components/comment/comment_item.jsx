@@ -5,7 +5,6 @@ import CommentDropdown from './comment_dropdown';
 import TextareaAutosize from 'react-autosize-textarea';
 import CommentLikers from './comment_likers';
 import camera from '../../../app/assets/images/camera.png';
-import circleLike from '../../../app/assets/images/circlelike.png';
 
 export default class CommentItem extends React.Component {
   constructor(props) {
@@ -27,6 +26,7 @@ export default class CommentItem extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleLike = this.handleLike.bind(this);
+    this.handleFile = this.handleFile.bind(this);
   }
   deletePic() {
     this.setState({ photoFile: null, photoUrl: null });
@@ -52,7 +52,11 @@ export default class CommentItem extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateComment(this.state)
+    const formData = new FormData();
+    formData.append('comment[body]', this.state.body);
+    if (this.state.photoFile) formData.append('comment[photo]', this.state.photoFile);
+    formData.append('comment[id]', this.state.id);
+    this.props.updateComment(formData)
       .then(this.setState({ edit: false }));
   }
   handleInput(e) {

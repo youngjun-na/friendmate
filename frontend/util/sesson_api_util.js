@@ -14,7 +14,12 @@ export const login = user => (
     data: { user },
   })
 );
-
+export const demoLogin = () => (
+  $.ajax({
+    url: `/api/session/demo`,
+    method: 'POST',
+  })
+)
 export const logout = () => (
   $.ajax({
     url: `/api/session`,

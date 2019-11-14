@@ -21,9 +21,9 @@ class Api::CommentsController < ApplicationController
 
   def update 
     @comment = Comment.find(params[:id])
-    if @comment.update_attributes(comment_params)
-      render :show
-    end
+    @comment.update(comment_params)
+    @comment.photo.purge if !comment_params[:photo] 
+    render :show
   end
 
   def destroy

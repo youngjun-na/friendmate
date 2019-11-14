@@ -29,7 +29,11 @@ export const login = formUser => dispatch => (
     .then(user => dispatch(receiveCurrentUser(user)))
     .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
-
+export const demoLogin = () => dispatch => (
+  SessionAPIUtil.demoLogin()
+    .then(user => dispatch(receiveCurrentUser(user)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+);
 export const signup = formUser => dispatch => (
   SessionAPIUtil.signup(formUser)
     .then(user => dispatch(receiveCurrentUser(user)))

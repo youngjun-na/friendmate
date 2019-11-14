@@ -15,7 +15,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <div className="lnb-c">
-        <a className="link-clear" href='/'><h1 className="lnb-h1 noselect">facebook</h1></a>
+        <a className="link-clear" href='/'><h1 className="lnb-h1 noselect">friendmate</h1></a>
         <LoginFormContainer />
       </div>
     )
