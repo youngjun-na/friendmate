@@ -65,7 +65,7 @@ export default class FriendButton extends React.Component {
         Friends
       </div>
     } 
-    else if (currentUser.pending.includes(wallUser.id)) {
+    else if (wallUser.pending.includes(currentUser.id)) {
       buttonContent = 
       <div className="friend-text">
         {this.state.dropDown ? (
@@ -81,7 +81,7 @@ export default class FriendButton extends React.Component {
         Friend Request Sent
       </div>
     }
-    else if (wallUser.pending.includes(currentUser.id)) {
+    else if (currentUser.pending.includes(wallUser.id)) {
       buttonContent = 
       <div className="friend-text">
         {this.state.dropDown ? (

@@ -163,6 +163,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADg
 
 /***/ }),
 
+/***/ "./app/assets/images/darkfriends.png":
+/*!*******************************************!*\
+  !*** ./app/assets/images/darkfriends.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpaKtDnYQcchQnSz4hThqFYpQIdQKrTqYXPoFTRqSFBdHwbXg4Mdi1cHFWVcHV0EQ/ABxcXVSdJES/5cWWsR4cNyPd/ced+8AoVZimtUxBmi6bSbjMTGdWRUDr+hBL4BxhGRmGXOSlIDn+LqHj693UZ7lfe7PEVKzFgN8IvEsM0ybeIN4etM2OO8Th1lBVonPiUdNuiDxI9eVBr9xzrss8MywmUrOE4eJxXwbK23MCqZGPEUcUTWd8oV0g1XOW5y1UoU178lfGMzqK8tcpzmEOBaxBAkiFFRQRAk2orTqpFhI0n7Mwz/o+iVyKeQqgpFjAWVokF0/+B/87tbKTU40koIxoPPFcT6GgcAuUK86zvex49RPAP8zcKW3/OUaMPNJerWlRY6Avm3g4rqlKXvA5Q4w8GTIpuxKfppCLge8n9E3ZYD+W6B7rdFbcx+nD0CKukrcAAeHwEiestc93t3V3tu/Z5r9/QBBIXKTeatwmQAAAAZiS0dEAP8A+AD4O5YktQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+MLDgA0EG2WZj0AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAABBElEQVQ4y63RsUoDURAF0JMliGBIZZ1C8gOCZZBUWkgIRDDYaJkPCILWFgpiJX6AguA2W7i1naVo4wdI6lQiEiRGmycsS1gDceDx7p07c2d4rzT5+jZPlLOk1enWcIU1PGI/TeLBzAa4QDPgZuDtYL6IvaBdp0k8mmawXsBv0Al4E9sQ5RrGBXxjGs4b3BXwwTScN+gjwVu4+xmth9dwer/J0r98Y6vTreMMDSxn9CEecIAa7jHBC07SJL4tbbV36nhGpWDQO1ZxmXvM3ShMrvyxaSXUnefyR1FYe5Zo4CmXW4lQndGgmibxEB+Bj3BcxikOsVDQ/BnqpEm8lBXm/sbInPEDBd4/ieIl4OQAAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ "./app/assets/images/fb_sp_np.png":
 /*!****************************************!*\
   !*** ./app/assets/images/fb_sp_np.png ***!
@@ -248,6 +259,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADg
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADa0lEQVRIiY2WT2gcdRTHP99hKWGJVUIJS9AatIdQgkIoSj2qGUW0R52ApHjZRS/SUykiHjz0UGg9OlsK/oHsHNSDSimzFw/F5qQXKT2UIqEUCUsIJQQJy349/GZ2Z7sbyRtm98383u/7e+/73u/9RvyPxK3spCEWvAUsg+dBEaaHuAt0gVvg+3m6NhVDE6DNDETD5nOJ921OSGCDnrQ2ALuGnwVfIP7O02TMJJrmOOaOxCcQwGEKeOmeeEZiHXHHdjLNpErJhzbXgZmpgIBthHDh/pguHQCXMFfzdjJaIG52QHrd5heJuhmC9IVq05eCwq5vXNPQV/dB5202uu2koEhqGK4D9UpYA6EPgI+Av4B94CFmC9gDbwldAN4D7RZBQHDomsQpGOXgkuCFES0C2LfZzNPkG+Bl4Kk8TZ7L28nzwNPAi3mafAXcFvwTaDK2sT0PfBm3MmpxM1vAJJP1RCRRA8jTZFAdKJ4HISccCPdKioYw9jtIS5HFm4j5wOmYZJiHh/FfSredHFi6MkRWees4cC4SvOHKWEW+z9vjnh8mgl9t71QootBXI8NpeXKS7d5RwCFQJulRKNpwFWGcjmTmS9er60iaO+oChcyW4TDanMcjxHCjAPuYP4DbwKm4mR0JOW51GsAWsGl4UOLZJsL05KICzAxiCfMK5hriXNzKprWTEXizMwe6AbyGeUnwrILXSHpcK7riSmEfAXXEAbAN7oB+iFtZB9jM02S3BF5tZnMS72I+tb0SKFEtJBgkgbkbEVpuCEllHnzM8BvwE5AAHWBhREkG4qLxt4iVKu9jOu4qbmULwJ/APC4Gw/+e7TWhfaCG+B18DKjbRJLOAD8O5zCcVz7sgV6N8jR5ZLMxRmwwmpV0A3EeOIM5YVgALUpaAga2QYxqv6rDTfC9KPDFZeBBhaLwG3rKOmLNcq0ohjLpg6m0BL0H+ixP1wZRAGIb8zHwryrJKBKFTV9oEXnG9jLQAGrDaik3V9D7RZe9T2XdkLxmZx0pBWbGKLP3kPrgx6AGsGNTl5gFokrl9IGLwNXy6Jw8k1vZ20AKnLQdoqA4ySQqh1EBUL5jG+sCYqN6Lk9uInML+yzwtdBO0eaHdI3REqjclfWdrbNPgk+NoBIJwKJxLLSKWS6+NpDo2dyT6Nq+KXHoZ8t/XbiHxvbKIWYAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/lightfriends.png":
+/*!********************************************!*\
+  !*** ./app/assets/images/lightfriends.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpaKtDnYQcchQnSz4hThqFYpQIdQKrTqYXPoFTRqSFBdHwbXg4Mdi1cHFWVcHV0EQ/ABxcXVSdJES/5cWWsR4cNyPd/ced+8AoVZimtUxBmi6bSbjMTGdWRUDr+hBL4BxhGRmGXOSlIDn+LqHj693UZ7lfe7PEVKzFgN8IvEsM0ybeIN4etM2OO8Th1lBVonPiUdNuiDxI9eVBr9xzrss8MywmUrOE4eJxXwbK23MCqZGPEUcUTWd8oV0g1XOW5y1UoU178lfGMzqK8tcpzmEOBaxBAkiFFRQRAk2orTqpFhI0n7Mwz/o+iVyKeQqgpFjAWVokF0/+B/87tbKTU40koIxoPPFcT6GgcAuUK86zvex49RPAP8zcKW3/OUaMPNJerWlRY6Avm3g4rqlKXvA5Q4w8GTIpuxKfppCLge8n9E3ZYD+W6B7rdFbcx+nD0CKukrcAAeHwEiestc93t3V3tu/Z5r9/QBBIXKTeatwmQAAAAZiS0dEAP8A+AD4O5YktQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+MLDgA0NFGVguwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA10lEQVQ4y62RPQrCQBCFv1hosEphbZVjpLLwDJ7Aa4gHkqCdlWfwBILtFiJBMII+mwmsQ/yB+GDY3W+Wt7MzyeMuuiiRuhn03HkM7IDK1vFXB0lxrPWqdZRLJc0t0oZ7g5MzOEW5VcRX7wyCMwhRrop41XDfg82H87F17yrIrLyzrVmUKyQdLIqG/22MOVACAVAUwXgOTIzdgT0wa76Quwa1qbJ7W8dnSCr1m0pJU8f2baN7pyBp5CtLJNVA/4d+3YABcAGGwBVYIGkpqf7yem33/Ni7j/EJAeLw1nFu5O0AAAAASUVORK5CYII="
 
 /***/ }),
 
@@ -2102,7 +2124,7 @@ function (_React$Component) {
         }, "Unfriend"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_1___default.a
         }), "Friends");
-      } else if (currentUser.pending.includes(wallUser.id)) {
+      } else if (wallUser.pending.includes(currentUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-text"
         }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2119,7 +2141,7 @@ function (_React$Component) {
         }, "Cancel")))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: _app_assets_images_friendremove_png__WEBPACK_IMPORTED_MODULE_3___default.a
         }), "Friend Request Sent");
-      } else if (wallUser.pending.includes(currentUser.id)) {
+      } else if (currentUser.pending.includes(wallUser.id)) {
         buttonContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "friend-text"
         }, this.state.dropDown ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2282,6 +2304,171 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/navbar/friend_request_dropdown.jsx":
+/*!****************************************************************!*\
+  !*** ./frontend/components/navbar/friend_request_dropdown.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FriendRequestDropdown; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _app_assets_images_lightfriends_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../app/assets/images/lightfriends.png */ "./app/assets/images/lightfriends.png");
+/* harmony import */ var _app_assets_images_lightfriends_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_lightfriends_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_assets_images_darkfriends_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/darkfriends.png */ "./app/assets/images/darkfriends.png");
+/* harmony import */ var _app_assets_images_darkfriends_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_darkfriends_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var FriendRequestDropdown =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FriendRequestDropdown, _React$Component);
+
+  function FriendRequestDropdown(props) {
+    var _this;
+
+    _classCallCheck(this, FriendRequestDropdown);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FriendRequestDropdown).call(this, props));
+    _this.friendDropdownCont = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    _this.state = {
+      showMenu: false
+    };
+    _this.toggleFriend = _this.toggleFriend.bind(_assertThisInitialized(_this));
+    _this.handleClickOutside = _this.handleClickOutside.bind(_assertThisInitialized(_this));
+    _this.handleAccept = _this.handleAccept.bind(_assertThisInitialized(_this));
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(FriendRequestDropdown, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.addEventListener("mousedown", this.handleClickOutside);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      document.removeEventListener("mousedown", this.handleClickOutside);
+    }
+  }, {
+    key: "toggleFriend",
+    value: function toggleFriend() {
+      this.setState({
+        showMenu: !this.state.showMenu
+      });
+    }
+  }, {
+    key: "handleClickOutside",
+    value: function handleClickOutside(e) {
+      if (this.friendDropdownCont.current && !this.friendDropdownCont.current.contains(e.target)) {
+        this.setState({
+          showMenu: false
+        });
+      }
+    }
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(userId) {
+      this.props.deleteFriend(this.props.currentUser.id, userId);
+    }
+  }, {
+    key: "handleAccept",
+    value: function handleAccept(userId) {
+      this.props.acceptFriend(this.props.currentUser.id, userId);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          allUsers = _this$props.allUsers,
+          currentUser = _this$props.currentUser;
+      var pendingFriends = currentUser.pending.map(function (userId) {
+        return allUsers[userId];
+      });
+      var count = pendingFriends.length;
+      var friendStyle = {
+        backgroundImage: this.state.showMenu || count ? "url(".concat(_app_assets_images_lightfriends_png__WEBPACK_IMPORTED_MODULE_1___default.a, ")") : "url(".concat(_app_assets_images_darkfriends_png__WEBPACK_IMPORTED_MODULE_2___default.a, ")")
+      };
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-req-dd",
+        onClick: this.toggleFriend,
+        ref: this.friendDropdownCont
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nb-f-req",
+        style: friendStyle,
+        onClick: this.toggleFriend
+      }, count ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-req-notif"
+      }, count) : null, this.state.showMenu ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-req-dd-c"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-req-dd-h"
+      }, "Friend Requests"), pendingFriends.map(function (user, idx) {
+        return user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-req-dd-i",
+          key: idx
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-req-nl"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "post-prof-image"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "profile-pic",
+          src: user.profPicUrl
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+          className: "ci-nl",
+          to: "/profile/".concat(user.id)
+        }, user.firstName, " ", user.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-req-dd-but"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "prof-pic-submit",
+          onClick: function onClick() {
+            return _this2.handleAccept(user.id);
+          }
+        }, "Confirm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "prof-pic-cancel",
+          onClick: function onClick() {
+            return _this2.handleAccept(user.id);
+          }
+        }, "Delete"))) : null;
+      })) : null));
+    }
+  }]);
+
+  return FriendRequestDropdown;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./frontend/components/navbar/login_navbar.jsx":
 /*!*****************************************************!*\
   !*** ./frontend/components/navbar/login_navbar.jsx ***!
@@ -2411,7 +2598,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/whitefmlogo.png */ "./app/assets/images/whitefmlogo.png");
 /* harmony import */ var _app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _search_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./search_bar */ "./frontend/components/navbar/search_bar.js");
+/* harmony import */ var _search_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./search_bar */ "./frontend/components/navbar/search_bar.js");
+/* harmony import */ var _friend_request_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./friend_request_dropdown */ "./frontend/components/navbar/friend_request_dropdown.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2435,6 +2623,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Feed =
 /*#__PURE__*/
 function (_React$Component) {
@@ -2446,7 +2635,11 @@ function (_React$Component) {
     _classCallCheck(this, Feed);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Feed).call(this, props));
+    _this.state = {
+      friendButton: false
+    };
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    _this.toggleFriend = _this.toggleFriend.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -2457,9 +2650,18 @@ function (_React$Component) {
       this.props.logout().then(this.props.history.push('/'));
     }
   }, {
+    key: "toggleFriend",
+    value: function toggleFriend() {
+      this.setState({
+        friendButton: !this.state.friendButton
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var currentUser = this.props.currentUser;
+      var _this$props = this.props,
+          currentUser = _this$props.currentUser,
+          allUsers = _this$props.allUsers;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nb-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2469,7 +2671,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "nb-fmlogo",
         src: _app_assets_images_whitefmlogo_png__WEBPACK_IMPORTED_MODULE_2___default.a
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_bar__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_bar__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nb-tc"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-n",
@@ -2482,7 +2684,12 @@ function (_React$Component) {
       })), currentUser.firstName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-h",
         to: "/feed"
-      }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_request_dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        currentUser: currentUser,
+        allUsers: allUsers,
+        deleteFriend: this.props.deleteFriend,
+        acceptFriend: this.props.acceptFriend
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "li-b lo",
         onClick: this.handleClick
       }, "Log Out"));
@@ -2510,6 +2717,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar */ "./frontend/components/navbar/navbar.jsx");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_friend_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/friend_actions */ "./frontend/actions/friend_actions.js");
+
 
 
 
@@ -2527,6 +2736,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     logout: function logout() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["logout"])());
+    },
+    deleteFriend: function deleteFriend(currentUserId, wallUserId) {
+      return dispatch(Object(_actions_friend_actions__WEBPACK_IMPORTED_MODULE_4__["deleteFriend"])(currentUserId, wallUserId));
+    },
+    acceptFriend: function acceptFriend(currentUserId, wallUserId) {
+      return dispatch(Object(_actions_friend_actions__WEBPACK_IMPORTED_MODULE_4__["acceptFriend"])(currentUserId, wallUserId));
     }
   };
 };
@@ -2998,12 +3213,12 @@ function (_React$Component) {
         style: this.state.showMenu ? {
           backgroundImage: "url(".concat(_public_black_options_png__WEBPACK_IMPORTED_MODULE_1___default.a, ")")
         } : {}
-      }, this.state.showMenu && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.showMenu ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd-c"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-dd-i noselect",
         onClick: this.handleDelete
-      }, "Delete Post"), editPost)));
+      }, "Delete Post"), editPost) : null));
     }
   }]);
 
@@ -4593,8 +4808,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Wall).call(this, props));
     _this.state = {
-      coverPicUrl: _this.props.wallUser.coverPicUrl,
-      profPicUrl: _this.props.wallUser.profPicUrl,
+      coverPicUrl: _this.props.wallUser ? _this.props.wallUser.coverPicUrl : "",
+      profPicUrl: _this.props.wallUser ? _this.props.wallUser.profPicUrl : "",
       coverUpdate: false,
       profileUpdate: false
     };
@@ -4620,10 +4835,18 @@ function (_React$Component) {
       if (prevProps.wallUser && prevProps.wallUser.id !== parseInt(this.props.match.params.userId)) {
         this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
       }
-    }
+    } // handleCoverPic(e) {
+    //   const file = e.currentTarget.files[0];
+    //   const fileReader = new FileReader();
+    //   fileReader.onloadend = () => {
+    //     this.setState({ coverFile: file, coverPicUrl: fileReader.result });
+    //   };
+    //   if (file) fileReader.readAsDataURL(file);
+    // }
+
   }, {
-    key: "handleCoverPic",
-    value: function handleCoverPic(e) {
+    key: "handleProfilePic",
+    value: function handleProfilePic(e) {
       var _this3 = this;
 
       var file = e.currentTarget.files[0];
@@ -4631,23 +4854,6 @@ function (_React$Component) {
 
       fileReader.onloadend = function () {
         _this3.setState({
-          coverFile: file,
-          coverPicUrl: fileReader.result
-        });
-      };
-
-      if (file) fileReader.readAsDataURL(file);
-    }
-  }, {
-    key: "handleProfilePic",
-    value: function handleProfilePic(e) {
-      var _this4 = this;
-
-      var file = e.currentTarget.files[0];
-      var fileReader = new FileReader();
-
-      fileReader.onloadend = function () {
-        _this4.setState({
           profileFile: file,
           profPicUrl: fileReader.result
         });
@@ -4672,14 +4878,14 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this5 = this;
+      var _this4 = this;
 
       var _this$props = this.props,
           currentUser = _this$props.currentUser,
           wallUser = _this$props.wallUser;
       if (!wallUser) return null;
       var coverPicStyle = wallUser.coverPicUrl ? {
-        backgroundImage: 'url(' + this.state.coverPicUrl + ')'
+        backgroundImage: 'url(' + this.props.wallUser.coverPicUrl + ')'
       } : {
         background: 'linear-gradient(white, #dddfe2, rgba(0, 0, 0, .53))'
       };
@@ -4693,8 +4899,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "wall-cover-p-update",
         onMouseEnter: this.handleCover,
-        onMouseLeave: this.handleCover,
-        onClick: this.handleCoverPic
+        onMouseLeave: this.handleCover
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default.a
       }), this.state.coverUpdate ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4715,7 +4920,7 @@ function (_React$Component) {
       }), this.state.profileUpdate ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-p-update",
         onClick: function onClick() {
-          return _this5.props.openModal("profileEdit", currentUser.id);
+          return _this4.props.openModal("profileEdit", currentUser.id);
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "prof-p-camera",

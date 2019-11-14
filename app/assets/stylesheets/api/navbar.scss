@@ -41,3 +41,63 @@
   align-items: center;
   width: 400px;
 }
+.nb-f-req {
+  margin: 0 10px;
+  height: 20px;
+  width: 20px;
+  background-size:100% 100%;
+}
+.nb-f-req:hover {
+  cursor: pointer;
+}
+.friend-req-dd {
+  position: relative;
+}
+.friend-req-dd-c {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 400px;
+  z-index: 30;
+  background: white;
+  border: 1px solid #dddfe2;
+  border-radius: 2px 2px 0 0;
+}
+.friend-req-dd-i {
+  display: flex;
+  background: white;
+  width: 380px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #dddfe2;
+  padding: 0 10px;
+}
+.friend-req-dd-but {
+  display: flex;
+}
+.friend-req-dd-h {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  font-size: 12px;
+  height: 20px;
+  margin-left: 10px;
+}
+.friend-req-nl {
+  display: flex;
+  align-items: center;
+
+}
+.friend-req-notif {
+  position: absolute;
+  top: -5px;
+  right: 2px;
+  color: white;
+  font-size: 10px;
+  background: #fa3e3e;
+  padding: 2px 3px;
+  border-radius: 2px;
+}

@@ -1,19 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import whitefmlogo from '../../../app/assets/images/whitefmlogo.png'
+import whitefmlogo from '../../../app/assets/images/whitefmlogo.png';
 import SearchBar from './search_bar';
+import FriendRequestDropdown from './friend_request_dropdown';
 export default class Feed extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      friendButton: false,
+    }
     this.handleClick = this.handleClick.bind(this);
+    this.toggleFriend = this.toggleFriend.bind(this);
   }
   handleClick(e) {
     e.preventDefault();
     this.props.logout()
       .then(this.props.history.push('/'));
   }
+  toggleFriend() {
+    this.setState({friendButton: !this.state.friendButton})
+  }
   render() {
-    const { currentUser } = this.props;
+    const { currentUser, allUsers } = this.props;
     return (
       <div className="nb-c">
         <div className="nb-s">
@@ -33,6 +41,8 @@ export default class Feed extends React.Component {
           <Link className="nb-tc-h" to="/feed">
             Home
           </Link>
+          <FriendRequestDropdown currentUser={currentUser} allUsers={allUsers}
+          deleteFriend={this.props.deleteFriend} acceptFriend={this.props.acceptFriend}/>
         </div>
         <button className="li-b lo" onClick={this.handleClick}>Log Out</button>
       </div>

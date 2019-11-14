@@ -46,12 +46,13 @@ export default class PostDropdown extends React.Component {
     return(
       <div className="post-dd" onClick={this.handleDropdown} ref={this.postDropdownCont}>
         <div className="g-o-b" style={this.state.showMenu ? { backgroundImage: `url(${blackBackground})`} : {}} >
-        {this.state.showMenu && (<div className="post-dd-c">
+        {this.state.showMenu ? (
+        <div className="post-dd-c">
           <div className="post-dd-i noselect" onClick={this.handleDelete}>
             Delete Post
           </div>
           {editPost}
-        </div>)}
+        </div>) : null}
         </div>
       </div>
     )

@@ -8,8 +8,8 @@ export default class Wall extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      coverPicUrl: this.props.wallUser.coverPicUrl,
-      profPicUrl: this.props.wallUser.profPicUrl,
+      coverPicUrl: this.props.wallUser? this.props.wallUser.coverPicUrl : "",
+      profPicUrl: this.props.wallUser ? this.props.wallUser.profPicUrl : "",
       coverUpdate: false,
       profileUpdate: false,
     }
@@ -26,14 +26,14 @@ export default class Wall extends React.Component {
       this.props.fetchWallPosts(parseInt(this.props.match.params.userId));
     }
   }
-  handleCoverPic(e) {
-    const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = () => {
-      this.setState({ coverFile: file, coverPicUrl: fileReader.result });
-    };
-    if (file) fileReader.readAsDataURL(file);
-  }
+  // handleCoverPic(e) {
+  //   const file = e.currentTarget.files[0];
+  //   const fileReader = new FileReader();
+  //   fileReader.onloadend = () => {
+  //     this.setState({ coverFile: file, coverPicUrl: fileReader.result });
+  //   };
+  //   if (file) fileReader.readAsDataURL(file);
+  // }
   handleProfilePic(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
@@ -52,15 +52,14 @@ export default class Wall extends React.Component {
     const { currentUser, wallUser } = this.props;
     if (!wallUser) return null;
     let coverPicStyle =  wallUser.coverPicUrl ? 
-    {backgroundImage: 'url(' + this.state.coverPicUrl + ')'} : {background: 'linear-gradient(white, #dddfe2, rgba(0, 0, 0, .53))'}
+    {backgroundImage: 'url(' + this.props.wallUser.coverPicUrl + ')'} : {background: 'linear-gradient(white, #dddfe2, rgba(0, 0, 0, .53))'}
     return(
       <div className= "prof-cont">
         <div className= "wall-header">
           <div className="wall-cover-p" style={coverPicStyle}>
             <label className="wall-cover-p-update"
               onMouseEnter={this.handleCover}
-              onMouseLeave={this.handleCover}
-              onClick={this.handleCoverPic}>
+              onMouseLeave={this.handleCover}>
               <img src={covercamera} />
               {this.state.coverUpdate ?
                 (<div className="wall-cover-p-text">
