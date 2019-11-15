@@ -79,8 +79,7 @@ class SessionForm extends React.Component {
     // }
   }
   render() {
-    console.log(this.props.errors)
-    const demoButton = this.props.errors.join("") ? (
+    const demoButton = this.props.errors ? (
         <div className="signup-demo">
           <button className="fb-dl fb-gb-su" onClick={this.handleDemo}>Demo Log In</button>
         </div>) : null;

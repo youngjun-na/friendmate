@@ -4586,8 +4586,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.errors);
-      var demoButton = this.props.errors.join("") ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var demoButton = this.props.errors ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-demo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "fb-dl fb-gb-su",
