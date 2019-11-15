@@ -17,11 +17,13 @@ class SessionForm extends React.Component {
       password: "",
       birthday: currDate,
       gender: "",
+      button: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGender = this.handleGender.bind(this);
     this.handleBirthday = this.handleBirthday.bind(this);
-    // this.errors = this.props.errors;
+    this.handleDemo = this.handleDemo.bind(this);
+    this.handleErrors = this.handleErrors.bind(this);
   }
 
   handleInput(type) {
@@ -49,7 +51,8 @@ class SessionForm extends React.Component {
       ()=>this.handleErrors());
   }
   handleErrors() {
-    let err = this.props.errors.join("")
+    let err = this.props.errors.join("");
+    err ? this.setState({button: true}) : this.setState({button: false});
     this.checkError("First",".fi-fn", err);
     this.checkError("Last",".fi-ln", err);
     this.checkError("Email", ".fi-e", err)
@@ -58,7 +61,11 @@ class SessionForm extends React.Component {
     this.checkError("Gender", ".su-g-r-m", err)
     this.checkError("Gender", ".su-g-r-c", err)
   }
-
+  handleDemo() {
+    this.props.demoLogin()
+      .then(() => this.props.history.push('/feed'),
+        () => this.handleErrors());
+  }
   checkError(param, htmlClass, err) {
     if (err.includes(param)) {
       document.querySelector(htmlClass).classList.add("red-bord")
@@ -79,7 +86,7 @@ class SessionForm extends React.Component {
     // }
   }
   render() {
-    const demoButton = this.props.errors ? (
+    const demoButton = this.state.button ? (
         <div className="signup-demo">
           <button className="fb-dl fb-gb-su" onClick={this.handleDemo}>Demo Log In</button>
         </div>) : null;

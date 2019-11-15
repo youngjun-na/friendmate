@@ -4508,12 +4508,14 @@ function (_React$Component) {
       email: "",
       password: "",
       birthday: currDate,
-      gender: ""
+      gender: "",
+      button: false
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleGender = _this.handleGender.bind(_assertThisInitialized(_this));
-    _this.handleBirthday = _this.handleBirthday.bind(_assertThisInitialized(_this)); // this.errors = this.props.errors;
-
+    _this.handleBirthday = _this.handleBirthday.bind(_assertThisInitialized(_this));
+    _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
+    _this.handleErrors = _this.handleErrors.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -4557,6 +4559,11 @@ function (_React$Component) {
     key: "handleErrors",
     value: function handleErrors() {
       var err = this.props.errors.join("");
+      err ? this.setState({
+        button: true
+      }) : this.setState({
+        button: false
+      });
       this.checkError("First", ".fi-fn", err);
       this.checkError("Last", ".fi-ln", err);
       this.checkError("Email", ".fi-e", err);
@@ -4564,6 +4571,17 @@ function (_React$Component) {
       this.checkError("Gender", ".su-g-r-f", err);
       this.checkError("Gender", ".su-g-r-m", err);
       this.checkError("Gender", ".su-g-r-c", err);
+    }
+  }, {
+    key: "handleDemo",
+    value: function handleDemo() {
+      var _this4 = this;
+
+      this.props.demoLogin().then(function () {
+        return _this4.props.history.push('/feed');
+      }, function () {
+        return _this4.handleErrors();
+      });
     }
   }, {
     key: "checkError",
@@ -4586,7 +4604,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var demoButton = this.props.errors ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var demoButton = this.state.button ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-demo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "fb-dl fb-gb-su",
@@ -4709,6 +4727,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     signup: function signup(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["signup"])(user));
+    },
+    demoLogin: function demoLogin() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["demoLogin"])());
     }
   };
 };
