@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/bigfriend.png":
+/*!*****************************************!*\
+  !*** ./app/assets/images/bigfriend.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODhBNjE1NzI3RjUxMTFFMjkyRjE5MjBGQUQ1RDkyRkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODhBNjE1NzM3RjUxMTFFMjkyRjE5MjBGQUQ1RDkyRkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4OEE2MTU3MDdGNTExMUUyOTJGMTkyMEZBRDVEOTJGQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4OEE2MTU3MTdGNTExMUUyOTJGMTkyMEZBRDVEOTJGQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjkUGOwAAAL3SURBVHjatFXPa9RAFH4zk8wk2S2FQqGyUBBaCkKhUBAKYqUgeFooCj14qVfxDxAUDyJ48mhbq21BrVdP/gE9iaWC1EtBsSAUBEHwtLshM/F7s+0St+lWCzsQMnmTvO9978cXkec59XMFJx08XX1ZlVLeEVLUKadP1trbZwmmFGD5xetFrfWTUOshpRTZzM60Ws2PWZat/S+I6P5gZW3zvDbmSxRFKghCAgsAZNTAajYb4wA56HwshMJtCtcv+NkvA5DHKAXBRBzFypiI9x4gCEPSRsdgMwmn7Q+lnAjDcNdE0Y4x5hv2e1KKkVMB2KFEWo4cHUZKSgWkvJ3fEYQUPk6SyoVqtUrVgQFKKhUA6rt81rsGQvRIKJ8JBCDByMwieg/KS0lFzrk5NAPu2ckMEO2kKAFhG5+1WaoY6Rtith1HAApUMNr9rSyJc6tHU2x5IKIaOz/mTMpBIaXuCXDr5vXt3Lnv3Xa2Oeu2uevgpOZhuhlKbx09jQFlNlstti/v2WadPYr0Ulmt2D3SN1ssdCkABusrCtZ55j1s+w4F5EgBoHBvlBTqNxpAE50C4HI3T8UBxB62q8yELwA9xPCdA3BaCOLAWtisW+6ZomfrbybRenVR6BDew7aAyNFFOaVpSs1Ws4GWVEcpBKBuYtTTtEXF9HbmYOn5q2k4uYcJntehPjZosMXW2F1o0lvbZpDmuS9KG4TyYbDYgO0+AA7+YrCyvvkAjj9gGufjOPbS0A3ANj7jd6BTO+j7hdzlV+DM+knHoEUmWtQm2sOMPIJt0A/gyOj4jSiKl5Ikkaw/qksmiiBelyCAKlAc2Czq8k4IWWFdOkwj65fG82UkaQ5sNiSo1xERQUeobHjKQPhdTiNWHQV/72fD65VijQLThODzIvRrRoL6GAtZL8elQHAGsDHk/XNeaGmfTqiw0QaBhNfQtqpW1JR/XV51hRxB9D9cyU+Iz/FDmcI7YvjMP1whauien1QC4Gsi1bTo909fUp9X3wH+CDAA2WQdlPCcR4wAAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ "./app/assets/images/black_options.png":
 /*!*********************************************!*\
   !*** ./app/assets/images/black_options.png ***!
@@ -281,6 +292,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACzElEQVRIiZWWv2sUQRTHP99hCUcIQUQkSP4CsbBQLAXhDv8DTxvF4g5BkDRaiEgqCWpheSIoUcjVFhZnpygSrIOllVikiiASwn4tdmb2bi+504HbfTv75s2bz/uxp05/uAjcA7qYJfACUgDSD5uAKgGpEgGZMj6UQIkogQNgD3iN/aQAHgB3IRqpLlDbQ0py/W5CtZ5OYwVYNyIY38yeNrTG7E3I/ziC4HohtJiNOx59hjHbCOHozmyZ5WCniXgRH4DzwAXD5+YGkkDVfZ4MLkLiaoygFNwZDbpfR4PutmCtiW2C4xxZUlHYledKkTIHY6oHTVrREZyMzJBBoQCQ80xAftzuba1JBGCjdikuyfcxbEfIGApwjmplRpclLtlGYmFq2WGpOUMuqKId4wvAC+CTELYvSrqB+Wa8oYrlCtC3/RTxTlBinQbWLZ+r+Vc7NBEBfBwNupsA7d4wADcQP7FejZ53afe2TiG9FdoZDbppzfdOf2tb1nvg7BxER5w2Prx/fvUH8IPGGA2u7nZ6W8+QXk4ikmJmTFeXNZkZAJ3eEMRt44egn4Iro0F3J3rxZaLQbIIAOWZGI+ll8gHz9uIk5r7QCcEZ7FtjS/4IlUJxnQhusmicAFXtwalM7CVg0XaaX876uARK29lmbHKuDR46NFadFDnlBLJCrRV7Ue0MhZJlTWVTRqb0ASC38JBj1uCqHLgKUTGre9ZBrjMt96468qG5Bjvr/TeibDBXpsKkrscplIchOtbuD1ereY5XXtMyXu30hxivyMpdGLHY6Q1Xo/GVcUSIA7X7w1+CpbQ5Yh8ooxyABaAE9hMaSa38HZFK4/1qL2HcSvzBuwXw23hJKCFaUEx+1yyD7ZbGC6LGEIBWk2gU9gJmU1YJFaKMLHmRiy3OUd/nyKXtN4XEekRwDbFM+osy5Q256BRPFxHVGSUhXGLtWWwKPfoLo4lAMhHkOoYAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./app/assets/images/loading.gif":
+/*!***************************************!*\
+  !*** ./app/assets/images/loading.gif ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/gif;base64,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"
 
 /***/ }),
 
@@ -549,7 +571,7 @@ var closeModal = function closeModal() {
 /*!******************************************!*\
   !*** ./frontend/actions/post_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_ALL_POSTS, RECEIVE_POST, REMOVE_POST, RECEIVE_MORE_POSTS, RECEIVE_ERRORS, receiveAllPosts, receiveMorePosts, receiveErrors, receivePost, fetchWallPosts, fetchFeedPosts, fetchPost, createPost, updatePost, deletePost, fetchMoreWallPosts, fetchMoreFeedPosts */
+/*! exports provided: RECEIVE_ALL_POSTS, RECEIVE_POST, REMOVE_POST, RECEIVE_MORE_POSTS, RECEIVE_POST_ERRORS, receiveAllPosts, receiveMorePosts, receiveErrors, receivePost, fetchWallPosts, fetchFeedPosts, fetchPost, createPost, updatePost, deletePost, fetchMoreWallPosts, fetchMoreFeedPosts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -558,7 +580,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_POST", function() { return RECEIVE_POST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_POST", function() { return REMOVE_POST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MORE_POSTS", function() { return RECEIVE_MORE_POSTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ERRORS", function() { return RECEIVE_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_POST_ERRORS", function() { return RECEIVE_POST_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllPosts", function() { return receiveAllPosts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveMorePosts", function() { return receiveMorePosts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveErrors", function() { return receiveErrors; });
@@ -577,7 +599,7 @@ var RECEIVE_ALL_POSTS = "RECEIEVE_ALL_POSTS";
 var RECEIVE_POST = "RECEIVE_POST";
 var REMOVE_POST = "REMOVE_POST";
 var RECEIVE_MORE_POSTS = "RECEIVE_MORE_POSTS";
-var RECEIVE_ERRORS = "RECEIVE_ERRORS";
+var RECEIVE_POST_ERRORS = "RECEIVE_ERRORS";
 var receiveAllPosts = function receiveAllPosts(payload) {
   return {
     type: RECEIVE_ALL_POSTS,
@@ -592,7 +614,7 @@ var receiveMorePosts = function receiveMorePosts(payload) {
 };
 var receiveErrors = function receiveErrors(errors) {
   return {
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_POST_ERRORS,
     errors: errors
   };
 }; // export const receiveFeedPosts = posts => ({
@@ -657,16 +679,20 @@ var deletePost = function deletePost(post) {
   };
 };
 var fetchMoreWallPosts = function fetchMoreWallPosts(userId, offset) {
-  return _util_post_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMoreWallPosts"](userId, offset).then(function (posts) {
-    return dispatch(receiveMorePosts(posts));
-  });
+  return function (dispatch) {
+    return _util_post_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMoreWallPosts"](userId, offset).then(function (posts) {
+      return dispatch(receiveMorePosts(posts));
+    });
+  };
 };
 var fetchMoreFeedPosts = function fetchMoreFeedPosts(userId, offset) {
-  return _util_post_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMoreFeedPosts"](userId, offset).then(function (posts) {
-    return dispatch(receiveMorePosts(posts));
-  }).fail(function (errors) {
-    return dispatch(receiveErrors(errors.responseJSON));
-  });
+  return function (dispatch) {
+    return _util_post_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMoreFeedPosts"](userId, offset).then(function (posts) {
+      return dispatch(receiveMorePosts(posts));
+    }).fail(function (errors) {
+      return dispatch(receiveErrors(errors.responseJSON));
+    });
+  };
 };
 
 /***/ }),
@@ -853,6 +879,9 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["ProtectedRoute"], {
     exact: true,
     path: "/profile/:userId",
+    component: _wall_wall_container__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["ProtectedRoute"], {
+    path: "/profile/:userId/friends",
     component: _wall_wall_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["AuthRoute"], {
     exact: true,
@@ -1811,7 +1840,7 @@ function (_React$Component) {
   _createClass(Feed, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // this.props.fetchFeedPosts(this.props.currentUserId);
+      this.props.fetchFeedPosts(this.props.currentUserId);
       this.props.fetchAllUsers();
     }
   }, {
@@ -1841,8 +1870,9 @@ function (_React$Component) {
         src: _app_assets_images_feed_png__WEBPACK_IMPORTED_MODULE_4___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sidebar-item-link"
-      }, "News Feed")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sidebar-item"
+      }, "News Feed")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "sidebar-item",
+        href: "https://github.com/youngjun-na"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "sidebar-pic",
         src: _app_assets_images_github_png__WEBPACK_IMPORTED_MODULE_5___default.a
@@ -1951,6 +1981,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _post_post_item_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../post/post_item_container */ "./frontend/components/post/post_item_container.js");
 /* harmony import */ var react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-infinite-scroll-component */ "./node_modules/react-infinite-scroll-component/dist/index.es.js");
+/* harmony import */ var _app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app/assets/images/loading.gif */ "./app/assets/images/loading.gif");
+/* harmony import */ var _app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1968,6 +2000,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -2006,6 +2039,9 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {}
+  }, {
     key: "handleNextFetch",
     value: function handleNextFetch(length) {
       var _this2 = this;
@@ -2019,21 +2055,28 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var posts = this.props.posts.map(function (post) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_item_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
           post: post,
           key: post.id
         });
       });
-      console.log(this.props.errors);
-      console.log(this.state.hasMore);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      if (!this.props.posts) return null;
+      return this.props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__["default"], {
         dataLength: posts.length,
-        next: this.handleNextFetch(posts.length),
+        next: function next() {
+          return _this3.props.fetchMoreFeedPosts(_this3.props.currentUser.id, posts.length);
+        },
         hasMore: this.state.hasMore,
-        loader: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Loading ...."),
+        loader: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "fb-loading"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3___default.a
+        })),
         endMessage: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No more posts.")
-      }, posts));
+      }, posts)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No more posts.");
     }
   }]);
 
@@ -2087,19 +2130,35 @@ function (_React$Component) {
   _inherits(FriendBox, _React$Component);
 
   function FriendBox(props) {
+    var _this;
+
     _classCallCheck(this, FriendBox);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(FriendBox).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FriendBox).call(this, props));
+    _this.state = {
+      shuffled: true
+    };
+    return _this;
   }
 
   _createClass(FriendBox, [{
     key: "render",
     value: function render() {
-      var _this = this;
+      var _this2 = this;
 
       if (Object.values(this.props.allUsers) < 2) return null;
       if (!this.props.wallUser.friendslist) return null;
-      var friendsList = this.props.wallUser.friendslist;
+      var friendsList = this.props.wallUser.friendslist; // *** How to randomize
+      // if (this.state.shuffled ) {
+      //   for (let i = friendsList.length - 1; i > 0; i--) {
+      //     const j = Math.floor(Math.random() * i)
+      //     const temp = friendsList[i]
+      //     friendsList[i] = friendsList[j]
+      //     friendsList[j] = temp
+      //     this.setState({shuffled: false})
+      //   }
+      // }
+
       var limitedList = friendsList.slice(0, 9);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-cont"
@@ -2108,16 +2167,19 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "friend-icon",
         src: _app_assets_images_friends_png__WEBPACK_IMPORTED_MODULE_2___default.a
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "no-u",
+        to: "/profile/".concat(this.props.wallUser.id, "/friends")
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-title"
-      }, "Friends"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Friends")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-count"
       }, "\xB7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-count"
       }, friendsList.length)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "friend-box-index-cont"
       }, limitedList.map(function (friendId) {
-        var friend = _this.props.allUsers[friendId];
+        var friend = _this2.props.allUsers[friendId];
         if (!friend) return null;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: friend.id,
@@ -2387,6 +2449,122 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(_friend_button__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/friend/friend_index.jsx":
+/*!*****************************************************!*\
+  !*** ./frontend/components/friend/friend_index.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FriendIndex; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../app/assets/images/check.png */ "./app/assets/images/check.png");
+/* harmony import */ var _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _friend_button_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./friend_button_container */ "./frontend/components/friend/friend_button_container.js");
+/* harmony import */ var _app_assets_images_bigfriend_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../app/assets/images/bigfriend.png */ "./app/assets/images/bigfriend.png");
+/* harmony import */ var _app_assets_images_bigfriend_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_bigfriend_png__WEBPACK_IMPORTED_MODULE_4__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var FriendIndex =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FriendIndex, _React$Component);
+
+  function FriendIndex(props) {
+    _classCallCheck(this, FriendIndex);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(FriendIndex).call(this, props));
+  }
+
+  _createClass(FriendIndex, [{
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      // if (Object.values(this.props.allUsers) < 2) return null;
+      if (!this.props.wallUser) return null;
+      if (!this.props.wallUser.friendslist) return null;
+      var friendsList = this.props.wallUser.friendslist;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-cont"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-index-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-index-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _app_assets_images_bigfriend_png__WEBPACK_IMPORTED_MODULE_4___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-itt"
+      }, "Friends"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "friend-index-cont"
+      }, friendsList.map(function (friendId) {
+        var friend = _this.props.allUsers[friendId];
+        if (!friend) return null;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: friend.id,
+          className: "friend-index-item"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "friend-index-name",
+          to: "/profile/".concat(friend.id)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-index-wrap"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "profile-pic",
+          src: friend.profPicUrl
+        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-index-nf"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "friend-index-name",
+          to: "/profile/".concat(friend.id)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-index-name-div"
+        }, friend.firstName, " ", friend.lastName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-index-count"
+        }, friend.friendslist.length, " friends")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-button-fake",
+          onMouseEnter: _this.showDropdown
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "friend-text"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_check_png__WEBPACK_IMPORTED_MODULE_2___default.a
+        }), "Friends")));
+      })));
+    }
+  }]);
+
+  return FriendIndex;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -2844,7 +3022,8 @@ function (_React$Component) {
         className: "nb-tc"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-n",
-        to: "/profile/".concat(currentUser.id)
+        to: "/profile/".concat(currentUser.id),
+        replace: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navbar-prof-image"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2852,7 +3031,8 @@ function (_React$Component) {
         src: currentUser.profPicUrl
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentUser.firstName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "nb-tc-h",
-        to: "/feed"
+        to: "/feed",
+        replace: true
       }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_request_dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
         currentUser: currentUser,
         allUsers: allUsers,
@@ -3753,17 +3933,20 @@ function (_React$Component) {
         className: "post-header-name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
-        to: "/profile/".concat(host.id)
+        to: "/profile/".concat(host.id),
+        replace: true
       }, host.firstName, " ", host.lastName)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-header-name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
-        to: "/profile/".concat(author.id)
+        to: "/profile/".concat(author.id),
+        replace: true
       }, author.firstName, " ", author.lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tri-b"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "pi-h-nl",
-        to: "/profile/".concat(host.id)
+        to: "/profile/".concat(host.id),
+        replace: true
       }, host.firstName, " ", host.lastName));
       var photoDiv = post.photoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: post.photoUrl
@@ -5061,8 +5244,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_create_form_container */ "./frontend/components/post/post_create_form_container.js");
 /* harmony import */ var _friend_friend_box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../friend/friend_box */ "./frontend/components/friend/friend_box.jsx");
 /* harmony import */ var _friend_friend_button_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../friend/friend_button_container */ "./frontend/components/friend/friend_button_container.js");
-/* harmony import */ var _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../app/assets/images/covercamera.png */ "./app/assets/images/covercamera.png");
-/* harmony import */ var _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _friend_friend_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../friend/friend_index */ "./frontend/components/friend/friend_index.jsx");
+/* harmony import */ var _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../app/assets/images/covercamera.png */ "./app/assets/images/covercamera.png");
+/* harmony import */ var _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5080,6 +5265,8 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -5199,7 +5386,7 @@ function (_React$Component) {
         onMouseEnter: this.handleCover,
         onMouseLeave: this.handleCover
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default.a
+        src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_6___default.a
       }), this.state.coverUpdate ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-cover-p-text"
       }, "Update Cover Photo") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -5224,7 +5411,7 @@ function (_React$Component) {
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "prof-p-camera",
-        src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_5___default.a
+        src: _app_assets_images_covercamera_png__WEBPACK_IMPORTED_MODULE_6___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "prof-p-text"
       }, " Update ")) : null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5234,11 +5421,22 @@ function (_React$Component) {
         wallUser: wallUser
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        className: "no-u",
+        to: "/profile/".concat(wallUser.id)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar-timeline"
-      }, "Timeline"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Timeline")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        className: "no-u",
+        to: "/profile/".concat(wallUser.id, "/friends")
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar-friends"
-      }, "Friends"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Friends")))), this.props.location.pathname.includes("friends") ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_friend_friend_index__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        wallUser: wallUser,
+        allUsers: this.props.allUsers
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-sidebar"
@@ -5347,7 +5545,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var WallIndex = function WallIndex(props) {
-  console.log(props.posts.length);
   return props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.posts.map(function (post) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_item_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
       post: post,
@@ -5434,7 +5631,7 @@ __webpack_require__.r(__webpack_exports__);
       return action.payload.comments || state;
 
     case _actions_post_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_MORE_POSTS"]:
-      return Object.assign({}, newState, action.payload.comments) || state;
+      return Object.assign({}, newState, action.payload.comments);
 
     case _actions_comment_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_COMMENT"]:
       newState[action.comment.id] = action.comment;
@@ -5552,7 +5749,7 @@ var _nullState = [];
     case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_MORE_POSTS"]:
       return _nullState;
 
-    case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ERRORS"]:
+    case _actions_post_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_POST_ERRORS"]:
       return action.errors || _nullState;
 
     default:
@@ -5968,8 +6165,7 @@ var fetchWallPosts = function fetchWallPosts(userId) {
     method: 'GET',
     url: '/api/walls',
     data: {
-      userId: userId,
-      offset: 0
+      userId: userId
     }
   });
 };
@@ -5978,8 +6174,7 @@ var fetchFeedPosts = function fetchFeedPosts(userId) {
     method: 'GET',
     url: '/api/feeds',
     data: {
-      userId: userId,
-      offset: 0
+      userId: userId
     }
   });
 };

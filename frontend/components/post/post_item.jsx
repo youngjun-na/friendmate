@@ -51,16 +51,16 @@ export default class PostItem extends React.Component {
     if (!host || !author) return null;
     let nameHeader = (post.authorId === post.hostId) ? (
       <div className="post-header-name">
-        <Link className="pi-h-nl" to={`/profile/${host.id}`}>
+        <Link className="pi-h-nl" to={`/profile/${host.id}`} replace>
           {host.firstName} {host.lastName}
         </Link>
       </div>) : (
       <div className="post-header-name">
-        <Link className="pi-h-nl" to={`/profile/${author.id}`}>
+        <Link className="pi-h-nl" to={`/profile/${author.id}`} replace>
           {author.firstName} {author.lastName}
         </Link>
         <div className="tri-b"></div>
-        <Link className="pi-h-nl" to={`/profile/${host.id}`}>
+        <Link className="pi-h-nl" to={`/profile/${host.id}`} replace>
           {host.firstName} {host.lastName}
         </Link>
       </div>)

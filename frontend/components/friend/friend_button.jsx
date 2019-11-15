@@ -86,7 +86,6 @@ export default class FriendButton extends React.Component {
       <div className="friend-text">
         {this.state.dropDown ? (
           <div>
-          
             <div className="friend-dropdown-cont" onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
             <div className="d-tri-w-f"></div>
             <ul className="friend-dropdown">

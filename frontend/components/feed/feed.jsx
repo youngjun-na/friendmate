@@ -11,7 +11,7 @@ export default class Feed extends React.Component {
     super(props)
   }
   componentDidMount() {
-    // this.props.fetchFeedPosts(this.props.currentUserId);
+    this.props.fetchFeedPosts(this.props.currentUserId);
     this.props.fetchAllUsers();
   }
   render() {
@@ -32,10 +32,10 @@ export default class Feed extends React.Component {
               <img className="sidebar-pic" src={newsfeed} />
               <div className="sidebar-item-link">News Feed</div>
             </div>
-            <div className="sidebar-item">
+            <a className="sidebar-item" href="https://github.com/youngjun-na">
               <img className="sidebar-pic" src={github} />
-              <div className="sidebar-item-link">Github</div>
-            </div>
+              <div className="sidebar-item-link" >Github</div>
+            </a>
             <div className="sidebar-item">
               <img className="sidebar-pic" src={linkedin} />
               <div className="sidebar-item-link">Linkedin</div>

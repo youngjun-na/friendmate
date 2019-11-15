@@ -3,7 +3,10 @@ import WallIndex from'./wall_index';
 import PostCreateFormContainer from '../post/post_create_form_container';
 import FriendBox from '../friend/friend_box';
 import FriendButtonContainer from '../friend/friend_button_container';
+import FriendIndex from '../friend/friend_index';
 import covercamera from '../../../app/assets/images/covercamera.png';
+import { Link } from 'react-router-dom';
+
 export default class Wall extends React.Component {
   constructor(props) {
     super(props);
@@ -94,15 +97,23 @@ export default class Wall extends React.Component {
             <FriendButtonContainer currentUser={currentUser} wallUser={wallUser}/>
           </div>
           <div className="wall-header-bar">
-            <div className="wall-header-bar-timeline">
-              Timeline
-            </div>
+          <Link className="no-u" to={`/profile/${wallUser.id}`}>
+              <div className="wall-header-bar-timeline">
+                Timeline
+              </div>
+          </Link>
+          <Link className="no-u" to={`/profile/${wallUser.id}/friends`}>
             <div className="wall-header-bar-friends">
               Friends
             </div>
+          </Link>
           </div>
         </div>
-        <div className="wall-main">
+        {this.props.location.pathname.includes("friends") ?
+          (<div className="wall-main">
+            <FriendIndex wallUser={wallUser} allUsers={this.props.allUsers} />
+          </div>) :
+        (<div className="wall-main">
           <div className="wall-sidebar">
             <FriendBox wallUser={wallUser} allUsers={this.props.allUsers}/>
           </div>
@@ -110,11 +121,11 @@ export default class Wall extends React.Component {
             <div className="w-st">
               <PostCreateFormContainer wallUser={wallUser}/>
               <div>
-              <WallIndex posts={this.props.posts} />
+                <WallIndex posts={this.props.posts} />
               </div>
             </div>
           </div>
-        </div>
+        </div>)}
       </div>
     )
   }

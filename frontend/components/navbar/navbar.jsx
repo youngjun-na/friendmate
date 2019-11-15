@@ -32,7 +32,7 @@ export default class Feed extends React.Component {
           <SearchBar />
         </div>
         <div className="nb-tc">
-          <Link className="nb-tc-n" to={`/profile/${currentUser.id}`}>
+          <Link className="nb-tc-n" to={`/profile/${currentUser.id}`} replace>
             <div className="navbar-prof-image">
               <img className="profile-pic" src={currentUser.profPicUrl} />
             </div>
@@ -40,7 +40,7 @@ export default class Feed extends React.Component {
               {currentUser.firstName}
             </div>
           </Link>
-          <Link className="nb-tc-h" to="/feed">
+          <Link className="nb-tc-h" to="/feed" replace>
             Home
           </Link>
           <FriendRequestDropdown currentUser={currentUser} allUsers={allUsers}

@@ -4,17 +4,35 @@ import friendIcon from '../../../app/assets/images/friends.png';
 export default class FriendBox extends React.Component {
   constructor(props) {
     super(props)
+    this.state={
+      shuffled: true,
+    }
   }
   render() {
     if (Object.values(this.props.allUsers) < 2) return null;
     if (!this.props.wallUser.friendslist) return null;
     let friendsList = this.props.wallUser.friendslist
+    // *** How to randomize
+    // if (this.state.shuffled ) {
+    //   for (let i = friendsList.length - 1; i > 0; i--) {
+    //     const j = Math.floor(Math.random() * i)
+    //     const temp = friendsList[i]
+    //     friendsList[i] = friendsList[j]
+    //     friendsList[j] = temp
+    //     this.setState({shuffled: false})
+    //   }
+    // }
+     
     let limitedList = friendsList.slice(0,9);
     return(
       <div className="friend-box-cont">
         <div className="friend-box-header">
           <img className="friend-icon" src={friendIcon} />
-          <div className="friend-box-title">Friends</div> 
+          <Link className="no-u" to={`/profile/${this.props.wallUser.id}/friends`}>
+            <div className="friend-box-title">
+              Friends
+            </div>
+          </Link>
           <div className="friend-box-count">·</div>
           <div className="friend-box-count">{friendsList.length}</div>
         </div>

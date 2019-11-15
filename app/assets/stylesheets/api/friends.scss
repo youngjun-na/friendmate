@@ -23,6 +23,7 @@
   display: inline-block;
   font-size: 16px;
   margin-right: 3px;
+  color: black;
 }
 .friend-box-count{
   font-size: 13px;
@@ -118,4 +119,82 @@
 .friend-button-wrap {
   background: transparent;
   height: 40px;
+}
+.friend-index-cont {
+  width: 850px;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border: 1px solid #dddfe2;
+}
+.friend-index-item {
+  width: 400px;
+  margin: 10px;
+  background: white;
+  border: 1px solid #dddfe2;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.friend-index-wrap {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border-right: 1px solid #dddfe2;
+}
+
+.friend-index-name {
+  text-decoration: none;
+  color: #4267b2;
+  font-size: 13px;
+  font-weight: 600;
+}
+.friend-index-count {
+  text-decoration: none;
+  color: #90949c;
+  font-size: 12px;
+}
+.friend-cont{
+  background-color: #eaebef;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.friend-button-fake {
+  height: 20px;
+  border: 1px solid #ccd0d5;
+  border-radius: 2px;
+  background-color: #f5f6f7;
+  padding: 3px 10px;
+  display: flex; 
+  align-items: center;
+  position: absolute;
+  right: 10px;
+}
+.friend-button-fake:hover {
+  cursor: pointer;
+}
+.friend-index-header {
+  height: 60px;
+  background: #f5f6f7;
+  padding: 10px;
+  border: 1px solid #dddfe2;
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
+  
+}
+.friend-index-title {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.friend-itt {
+  margin-left: 10px;
+  color: #4b4f56;
 }

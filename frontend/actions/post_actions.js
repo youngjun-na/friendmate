@@ -4,7 +4,7 @@ export const RECEIVE_ALL_POSTS = "RECEIEVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 export const RECEIVE_MORE_POSTS = "RECEIVE_MORE_POSTS";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_POST_ERRORS = "RECEIVE_ERRORS";
 
 export const receiveAllPosts = payload => ({
   type: RECEIVE_ALL_POSTS,
@@ -17,7 +17,7 @@ export const receiveMorePosts = payload => ({
 })
 
 export const receiveErrors = (errors) => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_POST_ERRORS,
   errors
 });
 // export const receiveFeedPosts = posts => ({
@@ -65,14 +65,14 @@ export const deletePost = post => dispatch => (
     .then(post => dispatch(removePost(post)))
 );
 
-export const fetchMoreWallPosts = (userId, offset) => (
+export const fetchMoreWallPosts = (userId, offset) => dispatch => (
   PostAPIUtil.fetchMoreWallPosts(userId, offset)
     .then(posts => dispatch(receiveMorePosts(posts)))
 );
 
-export const fetchMoreFeedPosts = (userId, offset) => {
-  return PostAPIUtil.fetchMoreFeedPosts(userId, offset)
+export const fetchMoreFeedPosts = (userId, offset) => dispatch => (
+  PostAPIUtil.fetchMoreFeedPosts(userId, offset)
     .then(posts => dispatch(receiveMorePosts(posts)))
     .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
-};
+);
 

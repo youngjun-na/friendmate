@@ -2,7 +2,6 @@ import React from 'react';
 import PostItemContainer from '../post/post_item_container';
 
 const WallIndex = props => {
-  console.log(props.posts.length);
   return (
     (props.posts.length) ? 
    ( <div>
