@@ -93,8 +93,13 @@ export default class Wall extends React.Component {
             </div>
             <FriendButtonContainer currentUser={currentUser} wallUser={wallUser}/>
           </div>
-          <div className= "wall-header-bar">
-
+          <div className="wall-header-bar">
+            <div className="wall-header-bar-timeline">
+              Timeline
+            </div>
+            <div className="wall-header-bar-friends">
+              Friends
+            </div>
           </div>
         </div>
         <div className="wall-main">

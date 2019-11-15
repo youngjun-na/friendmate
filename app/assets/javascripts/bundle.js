@@ -2285,7 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _post_post_edit_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../post/post_edit_form_container */ "./frontend/components/post/post_edit_form_container.js");
-/* harmony import */ var _wall_profile_pic_edit_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wall/profile_pic_edit_container */ "./frontend/components/wall/profile_pic_edit_container.jsx");
+/* harmony import */ var _wall_profile_pic_edit_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wall/profile_pic_edit_container */ "./frontend/components/wall/profile_pic_edit_container.js");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
 
 
@@ -4718,10 +4718,10 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./frontend/components/wall/profile_pic_edit.js":
-/*!******************************************************!*\
-  !*** ./frontend/components/wall/profile_pic_edit.js ***!
-  \******************************************************/
+/***/ "./frontend/components/wall/profile_pic_edit.jsx":
+/*!*******************************************************!*\
+  !*** ./frontend/components/wall/profile_pic_edit.jsx ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4817,14 +4817,14 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var preview = this.state.profilePhotoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "photo-preview-cont"
+        className: "profile-preview-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "photo-preview-wrap"
+        className: "profile-preview-wrap"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         onClick: this.deletePic,
         className: "photo-x-cancel"
       }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "photo-preview",
+        className: "profile-preview",
         src: this.state.profilePhotoUrl
       }))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "prof-pic-button"
@@ -4864,10 +4864,10 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./frontend/components/wall/profile_pic_edit_container.jsx":
-/*!*****************************************************************!*\
-  !*** ./frontend/components/wall/profile_pic_edit_container.jsx ***!
-  \*****************************************************************/
+/***/ "./frontend/components/wall/profile_pic_edit_container.js":
+/*!****************************************************************!*\
+  !*** ./frontend/components/wall/profile_pic_edit_container.js ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4876,7 +4876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _profile_pic_edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./profile_pic_edit */ "./frontend/components/wall/profile_pic_edit.js");
+/* harmony import */ var _profile_pic_edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./profile_pic_edit */ "./frontend/components/wall/profile_pic_edit.jsx");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 
@@ -5096,7 +5096,11 @@ function (_React$Component) {
         wallUser: wallUser
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-header-bar"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-header-bar-timeline"
+      }, "Timeline"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wall-header-bar-friends"
+      }, "Friends"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wall-sidebar"

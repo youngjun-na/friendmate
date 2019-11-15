@@ -34,10 +34,10 @@ export default class ProfilePicEdit extends React.Component {
   }
   render() {
     let preview = this.state.profilePhotoUrl ? (
-      <div className="photo-preview-cont">
-        <div className="photo-preview-wrap">
+      <div className="profile-preview-cont">
+        <div className="profile-preview-wrap">
           <div onClick={this.deletePic} className="photo-x-cancel">&times;</div>
-          <img className="photo-preview" src={this.state.profilePhotoUrl} />
+          <img className="profile-preview" src={this.state.profilePhotoUrl} />
         </div>
       </div>
     ): (
