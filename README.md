@@ -1,24 +1,47 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## friendmate
 
-Things you may want to cover:
+Friendmate is a Facebook clone that replicates many of its core features, allowing users to sign up, add friends, and post multimedia and text to each other and respond to them via comments and likes.
 
-* Ruby version
+### Technologies
 
-* System dependencies
+* PostgreSQL
+* Ruby on Rails
+* Javascript
+* React
+* Redux
+* HTML/CSS
+* AWS S3
 
-* Configuration
+### Features
 
-* Database creation
+#### User Creation and Sign Up
+Users are able to create an account or log in with their credentials. Individual errors are processed and visualized for the user to recognize.
 
-* Database initialization
+#### News Feed
+Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
 
-* How to run the test suite
+#### Profiles
+Each User has a personalized profile, which is customizable and serves as a platform for the user or their friends to communicate in a more intimate place.
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Posts
+Users are able to create posts, with a combination of text and multimedia content. Users are able to react to other posts by commenting on them by text, pictures, or a mix of both, or by liking them.
 
-* Deployment instructions
+#### Friends
+Users are able to find other users and friend them, connecting different users in a communal network where they can see and interact with each other's content.
 
-* ...
+### Future Features
+
+* Filters for post accessibility
+* Messenger
+* Events
+* Groups
+
+
+
+
+
+
+
+
