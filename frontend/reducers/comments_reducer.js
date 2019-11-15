@@ -1,5 +1,5 @@
 import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
-import { RECEIVE_ALL_POSTS } from '../actions/post_actions';
+import { RECEIVE_ALL_POSTS, RECEIVE_MORE_POSTS } from '../actions/post_actions';
 export default (state={}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
@@ -7,6 +7,8 @@ export default (state={}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_POSTS:
       return action.payload.comments || state;
+    case RECEIVE_MORE_POSTS:
+      return Object.assign({}, newState, action.payload.comments) || state;
     case RECEIVE_COMMENT:
       newState[action.comment.id] = action.comment;
       return newState;

@@ -2,7 +2,7 @@ export const fetchWallPosts = userId => {
   return $.ajax({
     method: 'GET',
     url: '/api/walls',
-    data: {userId},
+    data: { userId, offset: 0 },
   })
 };
 
@@ -10,7 +10,7 @@ export const fetchFeedPosts = userId => (
   $.ajax({
     method: 'GET',
     url: '/api/feeds',
-    data: {userId},
+    data: { userId, offset: 0},
   })
 );
 export const fetchPost = postId => (
@@ -47,3 +47,18 @@ export const deletePost = post => (
     data: { post },
   })
 );
+
+export const fetchMoreWallPosts = (userId, offset) => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/walls/',
+    data: { userId, offset }
+  })
+};
+export const fetchMoreFeedPosts = (userId, offset) => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/feeds/',
+    data: { userId, offset }
+  })
+};

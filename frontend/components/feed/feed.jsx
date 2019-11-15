@@ -11,7 +11,7 @@ export default class Feed extends React.Component {
     super(props)
   }
   componentDidMount() {
-    this.props.fetchFeedPosts(this.props.currentUserId);
+    // this.props.fetchFeedPosts(this.props.currentUserId);
     this.props.fetchAllUsers();
   }
   render() {
@@ -44,7 +44,12 @@ export default class Feed extends React.Component {
         </div>
         <div className="f-st">
           <PostCreateFormContainer />
-            <FeedIndex posts={this.props.posts} />
+          <FeedIndex 
+          posts={this.props.posts} 
+          fetchFeedPosts= {this.props.fetchFeedPosts}
+          fetchMoreFeedPosts={this.props.fetchMoreFeedPosts}
+          currentUser={currentUser}
+          errors={this.props.errors}/>
         </div>
       </div>
       
