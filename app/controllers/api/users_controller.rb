@@ -2,7 +2,6 @@ class Api::UsersController < ApplicationController
   before_action :underscore_params!
   def create
     @user = User.new(user_params)
-    @user.profile_pic.attach(io: File.open("/Users/youngjun.na/Downloads/defaultprofpic.png"), filename: "defaultprofpic.png")
     if @user.save
       login(@user)
       # @users = User.all
