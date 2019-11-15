@@ -682,6 +682,8 @@ var fetchMoreWallPosts = function fetchMoreWallPosts(userId, offset) {
   return function (dispatch) {
     return _util_post_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMoreWallPosts"](userId, offset).then(function (posts) {
       return dispatch(receiveMorePosts(posts));
+    }).fail(function (errors) {
+      return dispatch(receiveErrors(errors.responseJSON));
     });
   };
 };
@@ -2019,8 +2021,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FeedIndex).call(this, props));
     _this.state = {
       posts: _this.props.posts,
-      hasMore: true,
-      offset: 0
+      hasMore: true
     };
     _this.handleNextFetch = _this.handleNextFetch.bind(_assertThisInitialized(_this));
     return _this;
@@ -2038,9 +2039,6 @@ function (_React$Component) {
         hasMore: false
       });
     }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {}
   }, {
     key: "handleNextFetch",
     value: function handleNextFetch(length) {
@@ -2065,6 +2063,7 @@ function (_React$Component) {
       });
       if (!this.props.posts) return null;
       return this.props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        id: "feed-infinite",
         dataLength: posts.length,
         next: function next() {
           return _this3.props.fetchMoreFeedPosts(_this3.props.currentUser.id, posts.length);
@@ -5393,9 +5392,9 @@ function (_React$Component) {
         type: "file",
         className: "file-submit-button",
         onChange: this.handleCoverPic
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      })), this.state.coverFile ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "prof-pic-submit"
-      }, "Save Changes")) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Save Changes") : null) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-pic-cont"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile-circle",
@@ -5450,7 +5449,11 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_create_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
         wallUser: wallUser
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wall_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        posts: this.props.posts
+        posts: this.props.posts,
+        fetchWallPosts: this.props.fetchWallPosts,
+        fetchMoreWallPosts: this.props.fetchMoreWallPosts,
+        wallUser: wallUser,
+        errors: this.props.errors
       }))))));
     }
   }]);
@@ -5501,6 +5504,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     fetchWallPosts: function fetchWallPosts(userId) {
       return dispatch(Object(_actions_post_actions__WEBPACK_IMPORTED_MODULE_3__["fetchWallPosts"])(userId));
     },
+    fetchMoreWallPosts: function fetchMoreWallPosts(userId, offset) {
+      return dispatch(Object(_actions_post_actions__WEBPACK_IMPORTED_MODULE_3__["fetchMoreWallPosts"])(userId, offset));
+    },
     updatePost: function updatePost(post) {
       return dispatch(Object(_actions_post_actions__WEBPACK_IMPORTED_MODULE_3__["updatePost"])(post));
     },
@@ -5538,22 +5544,117 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return WallIndex; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _post_post_item_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../post/post_item_container */ "./frontend/components/post/post_item_container.js");
+/* harmony import */ var react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-infinite-scroll-component */ "./node_modules/react-infinite-scroll-component/dist/index.es.js");
+/* harmony import */ var _app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app/assets/images/loading.gif */ "./app/assets/images/loading.gif");
+/* harmony import */ var _app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
-var WallIndex = function WallIndex(props) {
-  return props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.posts.map(function (post) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_item_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      post: post,
-      key: post.id
-    });
-  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No posts Here");
-};
 
-/* harmony default export */ __webpack_exports__["default"] = (WallIndex);
+
+
+var WallIndex =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(WallIndex, _React$Component);
+
+  function WallIndex(props) {
+    var _this;
+
+    _classCallCheck(this, WallIndex);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(WallIndex).call(this, props));
+    _this.state = {
+      posts: _this.props.posts,
+      hasMore: true
+    };
+    _this.handleNextFetch = _this.handleNextFetch.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(WallIndex, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchWallPosts(this.props.wallUser.id);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      if (this.props.errors && this.props.errors.length && this.state.hasMore) this.setState({
+        hasMore: false
+      });
+    } // shouldComponentUpdate(nextProps, nextState) {
+    //   debugger;
+    //   if (this.state.posts && nextState.posts && this.state.posts.length === nextState.posts.length) {
+    //     nextState.hasMore = false;
+    //     return true;
+    //   }
+    //   return true;
+    // }
+
+  }, {
+    key: "handleNextFetch",
+    value: function handleNextFetch(length) {
+      var _this2 = this;
+
+      return function () {
+        _this2.props.fetchMoreWallPosts(_this2.props.wallUser.id, length);
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var posts = this.props.posts.map(function (post) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_post_post_item_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          post: post,
+          key: post.id
+        });
+      });
+      console.log(this.props);
+      if (!this.props.posts) return null;
+      return this.props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        dataLength: posts.length,
+        next: function next() {
+          return _this3.props.fetchMoreWallPosts(_this3.props.wallUser.id, posts.length);
+        },
+        hasMore: this.state.hasMore,
+        loader: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "fb-loading"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _app_assets_images_loading_gif__WEBPACK_IMPORTED_MODULE_3___default.a
+        })),
+        endMessage: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No more posts.")
+      }, posts)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No more posts.");
+    }
+  }]);
+
+  return WallIndex;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 

@@ -68,6 +68,7 @@ export const deletePost = post => dispatch => (
 export const fetchMoreWallPosts = (userId, offset) => dispatch => (
   PostAPIUtil.fetchMoreWallPosts(userId, offset)
     .then(posts => dispatch(receiveMorePosts(posts)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const fetchMoreFeedPosts = (userId, offset) => dispatch => (

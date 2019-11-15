@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Wall from './wall';
-import { fetchWallPosts, updatePost, deletePost } from '../../actions/post_actions';
+import { fetchWallPosts, fetchMoreWallPosts, updatePost, deletePost } from '../../actions/post_actions';
 import { fetchAllUsers, fetchUser, updateUser } from '../../actions/user_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
@@ -15,6 +15,7 @@ const mapStateToProps = (state = {}, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchWallPosts: userId => dispatch(fetchWallPosts(userId)),
+  fetchMoreWallPosts: (userId, offset) => dispatch(fetchMoreWallPosts(userId, offset)),
   updatePost: post => dispatch(updatePost(post)),
   deletePost: post => dispatch(deletePost(post)),
   fetchAllUsers: () => dispatch(fetchAllUsers()),

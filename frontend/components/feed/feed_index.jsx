@@ -8,7 +8,6 @@ export default class FeedIndex extends React.Component {
     this.state = {
       posts: this.props.posts,
       hasMore: true,
-      offset: 0,
     }
     this.handleNextFetch = this.handleNextFetch.bind(this);
   }
@@ -17,9 +16,6 @@ export default class FeedIndex extends React.Component {
   }
   componentDidUpdate() {
      if (this.props.errors && this.props.errors.length && this.state.hasMore) this.setState({ hasMore: false })
-  }
-  componentWillUnmount() {
-    
   }
   handleNextFetch(length) {
     return () => {
@@ -39,6 +35,7 @@ export default class FeedIndex extends React.Component {
       this.props.posts.length ? 
         <div>
           <InfiniteScroll
+            id="feed-infinite"
             dataLength={posts.length}
             next={()=>this.props.fetchMoreFeedPosts(this.props.currentUser.id, posts.length)}
             hasMore={this.state.hasMore}

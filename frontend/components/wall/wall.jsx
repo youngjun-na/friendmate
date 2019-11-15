@@ -74,9 +74,9 @@ export default class Wall extends React.Component {
                   </div>) : null}
                 <input type="file" className="file-submit-button" onChange={this.handleCoverPic} />
               </label>
-                <button className="prof-pic-submit">
+                {this.state.coverFile ? <button className="prof-pic-submit">
                   Save Changes
-                </button>
+                </button> : null}
             </form>
             ) : null}
             <div className="profile-pic-cont">
@@ -121,7 +121,12 @@ export default class Wall extends React.Component {
             <div className="w-st">
               <PostCreateFormContainer wallUser={wallUser}/>
               <div>
-                <WallIndex posts={this.props.posts} />
+                <WallIndex 
+                  posts={this.props.posts}
+                  fetchWallPosts={this.props.fetchWallPosts}
+                  fetchMoreWallPosts={this.props.fetchMoreWallPosts}
+                  wallUser={wallUser}
+                  errors={this.props.errors} />
               </div>
             </div>
           </div>
