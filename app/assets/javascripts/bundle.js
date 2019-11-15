@@ -2801,7 +2801,7 @@ function (_React$Component) {
         }, "Confirm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "prof-pic-cancel",
           onClick: function onClick() {
-            return _this2.handleAccept(user.id);
+            return _this2.handleDelete(user.id);
           }
         }, "Delete"))) : null;
       })) : null));

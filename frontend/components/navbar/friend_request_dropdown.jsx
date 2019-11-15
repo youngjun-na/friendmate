@@ -64,7 +64,7 @@ export default class FriendRequestDropdown extends React.Component {
                 </div>
                 <div className="friend-req-dd-but">
                   <button className="prof-pic-submit" onClick={()=>this.handleAccept(user.id)}>Confirm</button>
-                  <button className="prof-pic-cancel" onClick={() => this.handleAccept(user.id)}>Delete</button>
+                  <button className="prof-pic-cancel" onClick={() => this.handleDelete(user.id)}>Delete</button>
                 </div>
               </div> : null)}
           </div>) : null}
