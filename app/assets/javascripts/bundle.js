@@ -3863,7 +3863,7 @@ function (_React$Component) {
         nameString = likerNames[0] + " and " + likerNames[1];
       } else if (likerNames.length === 3) {
         nameString = likerNames[0] + ", " + likerNames[1] + ", and " + likerNames[2];
-      } else if (likerNames.length > 4) {
+      } else if (likerNames.length >= 4) {
         nameString = likerNames[0] + ", " + likerNames[1] + ", " + likerNames[2] + ", and " + (likerNames.length - 3).toString() + " others";
       }
 

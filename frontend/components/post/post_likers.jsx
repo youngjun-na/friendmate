@@ -43,7 +43,7 @@ export default class PostLikers extends React.Component {
     else if (likerNames.length === 3) {
       nameString = likerNames[0] + ", " + likerNames[1] + ", and " + likerNames[2];
     }
-    else if (likerNames.length > 4) {
+    else if (likerNames.length >= 4) {
       nameString = likerNames[0] + ", " + likerNames[1] + ", " + likerNames[2] + ", and " + (likerNames.length-3).toString() + " others";
     }
     let likerNamelist = nameString ? (<div className="post-like-namelist">
