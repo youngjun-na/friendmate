@@ -19,7 +19,7 @@ export default class WallIndex extends React.Component {
     if (this.props.errors && this.props.errors.length && this.state.hasMore) this.setState({ hasMore: false })
   }
   // shouldComponentUpdate(nextProps, nextState) {
-  //   debugger;
+  //  
   //   if (this.state.posts && nextState.posts && this.state.posts.length === nextState.posts.length) {
   //     nextState.hasMore = false;
   //     return true;
@@ -35,7 +35,6 @@ export default class WallIndex extends React.Component {
     let posts = this.props.posts.map((post) => (
       <PostItemContainer post={post} key={post.id} />
     ));
-    console.log(this.props)
     if (!this.props.posts) return null;
     return (
       this.props.posts.length ?

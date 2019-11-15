@@ -5605,7 +5605,7 @@ function (_React$Component) {
         hasMore: false
       });
     } // shouldComponentUpdate(nextProps, nextState) {
-    //   debugger;
+    //  
     //   if (this.state.posts && nextState.posts && this.state.posts.length === nextState.posts.length) {
     //     nextState.hasMore = false;
     //     return true;
@@ -5633,7 +5633,6 @@ function (_React$Component) {
           key: post.id
         });
       });
-      console.log(this.props);
       if (!this.props.posts) return null;
       return this.props.posts.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_infinite_scroll_component__WEBPACK_IMPORTED_MODULE_2__["default"], {
         dataLength: posts.length,
