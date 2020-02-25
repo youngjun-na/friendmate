@@ -48,6 +48,12 @@ Users are able to react to other posts by commenting on them by text, pictures, 
 #### Friends
 Users are able to find other users and friend them, connecting different users in a communal network where they can see and interact with each other's content.
 
+<img src="/readme/fm_friends.png">
+
+<img src="/readme/friend_req.png">
+
+<img src="/readme/friend_update.gif">
+
 ### Future Features
 
 * Filters for post accessibility
