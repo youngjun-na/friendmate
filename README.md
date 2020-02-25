@@ -33,7 +33,9 @@ Users are able to create an account or log in with their credentials. Custom sel
 #### News Feed
 Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
 
+<img src="/readme/fm_feed.gif" width="1175" height="786">
 #### Profiles
+
 Each User has a personalized profile, which is customizable and serves as a platform for the user or their friends to communicate in a more intimate place.
 
 #### Posts
