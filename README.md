@@ -37,7 +37,7 @@ Each User has a personalized profile, which is customizable and serves as a plat
 #### Posts
 Users are able to create posts, with a combination of text and multimedia content. 
 
-<img src="/readme/fm_post.gif" width="400" height="333">
+<img src="/readme/fm_post.gif" width="600" height="500">
 
 Users are able to react to other posts by commenting on them by text, pictures, or a mix of both, or by liking them.
 
