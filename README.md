@@ -1,3 +1,10 @@
+<style type="text/css">
+img[src*="?thumbnail"] {
+   width:150px;
+   height:100px;
+}
+</style>
+
 # Friendmate
 
 Friendmate is a Facebook clone that replicates many of its core features, allowing users to sign up, add friends, and post multimedia and text to each other and respond to them via comments and likes.
@@ -20,6 +27,8 @@ Friendmate is built primarily with the following:
 
 #### User Creation and Sign Up
 Users are able to create an account or log in with their credentials. Custom selector fields for birthday and gender as well as individualized error bars for incomplete fields.
+
+<img src="/readme/fm_login.gif" width="400" height="364">
 
 #### News Feed
 Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
