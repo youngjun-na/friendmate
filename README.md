@@ -50,6 +50,12 @@ Users are able to find other users and friend them, connecting different users i
 
 <img src="/readme/fm_friends.png">
 
+Users are able to add different users as friends, pending their approval.
+
+<img src="/readme/add_friend.gif">
+
+Users are able to quickly see all other users who have sent a friend request, and can then either approve or delete the request with live updates.
+
 <img src="/readme/friend_req.png">
 
 <img src="/readme/friend_update.gif">
