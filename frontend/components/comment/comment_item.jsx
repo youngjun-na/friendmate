@@ -128,7 +128,7 @@ export default class CommentItem extends React.Component {
               <TextareaAutosize className="c-ta"
                 onChange={this.handleInput}
                 value={this.state.body}
-                onKeyDown={this.handleKeyDown} />
+                 />
             </form>
             <label className="comment-file-submit-overlay">
               <div className="edit-comment-button">
