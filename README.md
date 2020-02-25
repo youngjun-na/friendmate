@@ -39,7 +39,7 @@ Each User when they log in is greeted by a Feed, which is a compilation of all t
 
 Each User has a personalized profile, which is customizable and serves as a platform for the user or their friends to communicate in a more intimate place.
 
-<img src="/readme/fm_wall">
+<img src="/readme/fm_wall.png">
 
 #### Posts
 Users are able to create posts, with a combination of text and multimedia content. 
@@ -48,9 +48,9 @@ Users are able to create posts, with a combination of text and multimedia conten
 
 Users are able to react to other posts by commenting on them by text, pictures, or a mix of both, or by liking them.
 
-<img src="/readme/fm_comment.gif" width="400" height="328">
+<img src="/readme/fm_comment.gif" width="400" height="211">
 
-<img src="/readme/fm_like.gif" width="400" height="211">
+<img src="/readme/fm_like.gif" width="400" height="328">
 
 #### Friends
 Users are able to find other users and friend them, connecting different users in a communal network where they can see and interact with each other's content.
