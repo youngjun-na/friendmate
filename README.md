@@ -34,12 +34,23 @@ Users are able to create an account or log in with their credentials. Custom sel
 Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
 
 <img src="/readme/fm_feed.gif">
+
 #### Profiles
 
 Each User has a personalized profile, which is customizable and serves as a platform for the user or their friends to communicate in a more intimate place.
 
+<img src="/readme/fm_wall">
+
 #### Posts
 Users are able to create posts, with a combination of text and multimedia content. Users are able to react to other posts by commenting on them by text, pictures, or a mix of both, or by liking them.
+
+<img src="/readme/fm_post.gif">
+
+<img src="/readme/post.gif">
+
+<img src="/readme/fm_comment.gif">
+
+<img src="/readme/fm_like.gif">
 
 #### Friends
 Users are able to find other users and friend them, connecting different users in a communal network where they can see and interact with each other's content.
