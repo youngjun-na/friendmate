@@ -48,7 +48,7 @@ Users are able to create posts, with a combination of text and multimedia conten
 
 Users are able to react to other posts by commenting on them by text, pictures, or a mix of both, or by liking them.
 
-<img src="/readme/fm_comment.gif" width="400" height="211">
+<img src="/readme/fm_comment.gif" width="400" height="209">
 
 <img src="/readme/fm_like.gif" width="400" height="328">
 
