@@ -43,7 +43,7 @@ Users are able to react to other posts by commenting on them by text, pictures, 
 
 <img src="/readme/fm_comment.gif" width="400" height="209">
 
-<img src="/readme/fm_like.gif" width="400" height="328">
+<img src="/readme/fm_like.gif" width="400" height="209">
 
 #### Friends
 Users are able to find other users and friend them, connecting different users in a communal network where they can see and interact with each other's content.
