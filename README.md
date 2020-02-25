@@ -28,7 +28,7 @@ Friendmate is built primarily with the following:
 #### User Creation and Sign Up
 Users are able to create an account or log in with their credentials. Custom selector fields for birthday and gender as well as individualized error bars for incomplete fields.
 
-<img src="/readme/fm_login.gif" width="400" height="400">
+<img src="/readme/fm_login.gif" width="400" height="300">
 
 #### News Feed
 Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
