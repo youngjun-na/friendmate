@@ -1,10 +1,12 @@
-# README
-
-## friendmate
+# Friendmate
 
 Friendmate is a Facebook clone that replicates many of its core features, allowing users to sign up, add friends, and post multimedia and text to each other and respond to them via comments and likes.
 
+Friendmate Live
+
 ### Technologies
+
+Friendmate is built primarily with the following: 
 
 * PostgreSQL
 * Ruby on Rails
@@ -17,7 +19,7 @@ Friendmate is a Facebook clone that replicates many of its core features, allowi
 ### Features
 
 #### User Creation and Sign Up
-Users are able to create an account or log in with their credentials. Individual errors are processed and visualized for the user to recognize.
+Users are able to create an account or log in with their credentials. Custom selector fields for birthday and gender as well as individualized error bars for incomplete fields.
 
 #### News Feed
 Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
