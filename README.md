@@ -1,3 +1,10 @@
+
+``` css
+img[src*="#small"] {
+   width:150px;
+   height:100px;
+}
+```
 # Friendmate
 
 Friendmate is a Facebook clone that replicates many of its core features, allowing users to sign up, add friends, and post multimedia and text to each other and respond to them via comments and likes.
