@@ -24,7 +24,7 @@ Users are able to create an account or log in with their credentials. Custom sel
 <img src="/readme/fm_login.gif" width="400" height="364">
 
 #### News Feed
-Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
+Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends. Posts and associated comments are loaded on demand as the user scrolls to optimize load speed.
 
 <img src="/readme/fm_feed.gif">
 
