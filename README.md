@@ -24,7 +24,7 @@ Users are able to create an account or log in with their credentials. Custom sel
 <img src="/readme/fm_login.gif" width="400" height="364">
 
 #### News Feed
-Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends.
+Each User when they log in is greeted by a Feed, which is a compilation of all the content created by the user and their network of friends. Posts and associated comments are loaded on demand as the user scrolls to optimize load speed.
 
 <img src="/readme/fm_feed.gif">
 
@@ -37,7 +37,7 @@ Each User has a personalized profile, which is customizable and serves as a plat
 #### Posts
 Users are able to create posts, with a combination of text and multimedia content. 
 
-<img src="/readme/fm_post.gif" width="400" height="333">
+<img src="/readme/fm_post.gif" width="600" height="500">
 
 Users are able to react to other posts by commenting on them by text, pictures, or a mix of both, or by liking them.
 
@@ -47,6 +47,16 @@ Users are able to react to other posts by commenting on them by text, pictures, 
 
 #### Friends
 Users are able to find other users and friend them, connecting different users in a communal network where they can see and interact with each other's content.
+
+<img src="/readme/fm_friends.png">
+
+Users are able to add different users as friends, pending their approval.
+
+<img src="/readme/add_friend.gif">
+
+Users are able to quickly see all other users who have sent a friend request, and can then either approve or delete the request with live updates.
+
+<img src="/readme/friend_update.gif">
 
 ### Future Features
 
